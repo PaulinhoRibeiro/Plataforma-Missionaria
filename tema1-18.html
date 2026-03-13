@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 18 - Jesus e o Dom de Profecia | Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Jesus+e+o+Dom+de+Profecia');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de destaque especial para a história */
+        .historia-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+        }
+
+        .historia-box::before {
+            content: "🌾";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #0b1a2e;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .historia-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .historia-box strong {
+            color: #c9a05e;
+        }
+
+        /* Destaque especial para lições */
+        .destaque-especial {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #FFD700;
+        }
+
+        .destaque-especial h4 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .destaque-especial p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .destaque-especial ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Player de vídeo - VERSÃO COM LINK DIRETO */
+        .video-link-container {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 40px 20px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .video-link-container:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transform: scale(1.02);
+        }
+
+        .video-link-icon {
+            font-size: 5rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+        }
+
+        .video-link-title {
+            font-size: 1.5rem;
+            color: #c9a05e;
+            margin-bottom: 10px;
+        }
+
+        .video-link-description {
+            color: #ddd;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .video-link-button {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .video-link-button:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        .video-privacy-note {
+            text-align: center;
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Player de recapitulação */
+        .recap-player {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0 10px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Características do profeta */
+        .caracteristicas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .caracteristica-card {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 3px solid #3498db;
+        }
+
+        .caracteristica-card strong {
+            color: #3498db;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .caracteristica-card small {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .caracteristicas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="estudo1.html">Jesus Restaurador da Vida</a> > 
+            <span>Tema 18</span>
+        </div>
+        <h1>ESTUDO 18</h1>
+        <h2>Jesus e o Dom de Profecia</h2>
+        <p>"Certamente o Senhor Deus não fará coisa alguma, sem primeiro revelar o seu segredo aos seus servos, os profetas" (Amós 3:7)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar que Deus sempre falou ao Seu povo por meio dos profetas, e que o dom de profecia é uma manifestação do Espírito Santo para guiar, advertir e edificar a igreja.</p>
+            <p><strong>Texto base:</strong> Lucas 20:9-18 (Parábola dos Lavradores Maus); Amós 3:7; Apocalipse 12:17; 19:10</p>
+            <p><strong>Versículos-chave:</strong> Amós 3:7, Apocalipse 19:10, 2 Crônicas 20:20</p>
+            <p><strong>Destaque especial:</strong> A igreja verdadeira nos últimos dias é caracterizada por guardar os mandamentos de Deus e ter o testemunho de Jesus, que é o espírito de profecia.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔮</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Quando ouvimos falar em profecia, pensamos em predições. Desde a Antiguidade, sábios e estudiosos buscavam na natureza padrões que, segundo eles, escondiam os segredos do futuro.</p>
+                
+                <p style="margin-top: 15px;">Ainda hoje, milhões de pessoas acreditam que o destino está escrito nas estrelas e até recorrem a práticas místicas. Muitos também confiam em análises e previsões, que são suposições sobre o que o amanhã trará com base no que vemos hoje.</p>
+                
+                <p style="margin-top: 15px;">Porém, a Bíblia é clara: <strong>o futuro pertence a Deus.</strong> Como todo-poderoso e onisciente Deus do Universo, Ele conhece o futuro e somente Ele pode revelá-lo. Para o tempo presente, Deus tem mensagens proféticas seguras para nos guiar, assim como no passado.</p>
+                
+                <p style="margin-top: 15px;">Para nos ajudar a saber em quem acreditar, a Bíblia estabelece critérios para identificação do verdadeiro profeta. Unicamente confiando em Seus profetas podemos prosperar (2 Crônicas 20:20).</p>
+                
+                <p style="margin-top: 15px;">Vamos estudar sobre o dom de profecia.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo - VERSÃO COM LINK DIRETO -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎬</div>
+                <h3>Introdução em Vídeo</h3>
+            </div>
+            
+            <a href="https://vimeo.com/520693145" target="_blank" style="text-decoration: none;">
+                <div class="video-link-container">
+                    <div class="video-link-icon">▶️</div>
+                    <div class="video-link-title">ESTUDO 18 - Introdução</div>
+                    <div class="video-link-description">Clique para assistir ao vídeo de introdução no Vimeo</div>
+                    <span class="video-link-button">Assistir Agora</span>
+                </div>
+            </a>
+            <p class="video-privacy-note">Nota: O vídeo será aberto em uma nova aba devido às configurações de privacidade.</p>
+        </div>
+
+        <!-- História Bíblica - PARÁBOLA DOS LAVRADORES MAUS -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🌾</div>
+                <h3>A Parábola dos Lavradores Maus</h3>
+            </div>
+            
+            <div class="section-subtitulo">Sua vez de procurar: Lucas 20:9 a 18</div>
+            
+            <div class="historia-box">
+                <p><strong>A parábola dos lavradores maus</strong></p>
+                
+                <p style="margin-top: 15px;">Certa vez, Jesus Se encontrou com os doutores da lei. Eles eram chamados assim por serem profundos estudiosos das Escrituras Sagradas. Porém, a vaidade do conhecimento dava a esses homens uma falsa sensação de autoridade.</p>
+                
+                <p style="margin-top: 15px;">Os doutores da lei se sentiam donos de Deus. Consideravam-se os únicos capazes de entender e ensinar a verdade revelada. Contudo, muitas vezes eles se negavam a repartir essa verdade com o povo comum.</p>
+                
+                <p style="margin-top: 15px;">Desprezaram a mensagem dos profetas que Deus havia enviado, os servos da parábola, e por fim mataram Jesus. No entanto, acabar com o mensageiro não significa destruir a mensagem.</p>
+            </div>
+
+            <!-- Destaque especial: Lições da história -->
+            <div class="destaque-especial">
+                <h4>🌾 Lições da Parábola</h4>
+                
+                <p><strong>1. Deus enviou muitos profetas:</strong> Os servos representam os profetas enviados por Deus ao longo da história.</p>
+                
+                <p><strong>2. Rejeição aos mensageiros:</strong> Muitos rejeitaram e maltrataram os profetas porque sua mensagem confrontava seus interesses.</p>
+                
+                <p><strong>3. Rejeição ao Filho:</strong> Por fim, rejeitaram e mataram o próprio Filho de Deus.</p>
+                
+                <p><strong>4. A mensagem permanece:</strong> Mesmo que os mensageiros sejam rejeitados, a mensagem de Deus continua.</p>
+                
+                <p style="margin-top: 15px;"><strong>🤔 Para refletir:</strong> Por que muitos rejeitam os mensageiros de Deus?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Certamente o Senhor Deus não fará coisa alguma, sem primeiro revelar o seu segredo aos seus servos, os profetas."
+                <span class="versiculo-ref">Amós 3:7</span>
+            </div>
+        </div>
+
+        <!-- Perguntas do Estudo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>Perguntas para Reflexão</h3>
+            </div>
+
+            <!-- Pergunta 1 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">A respeito de quem Moisés e os profetas escreveram? João 1:45</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Filipe encontrou a Natanael e disse-lhe: Achamos aquele de quem Moisés escreveu na lei, e a quem se referiram os profetas: Jesus, o Nazareno, filho de José." <strong>Moisés e os profetas escreveram sobre Jesus.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Antes de Deus realizar Suas obras na Terra, o que Ele faz? Amós 3:7</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Revela o que vai fazer aos profetas ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Age de surpresa</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> Revela o que vai fazer aos profetas. "Certamente o Senhor Deus não fará coisa alguma, sem primeiro revelar o seu segredo aos seus servos, os profetas." Deus age com transparência com Seu povo.
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">De que modo Deus revela Suas mensagens aos profetas? Números 12:6</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">Por meio de pessoas</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">Por meio de visões e sonhos ✓</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Por meio de visões e sonhos. "Ouvi agora as minhas palavras; se entre vós há profeta, eu, o Senhor, em visão a ele me faço conhecer, ou em sonhos falo com ele." Deus se revela através de visões e sonhos.
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Qual o propósito de Deus ao chamar os profetas? Oseias 12:13</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Conduzir e guardar Seu povo ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Somente informar sobre o futuro</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Conduzir e guardar Seu povo. "Por meio de um profeta, o Senhor tirou a Israel do Egito, e por um profeta o guardou." Os profetas têm o propósito de guiar e proteger o povo de Deus.
+                </div>
+            </div>
+
+            <!-- Pergunta 5 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Quais são as duas características da igreja verdadeira? Apocalipse 12:17</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Irou-se o dragão contra a mulher e foi pelejar com os restantes da sua descendência, os que guardam os mandamentos de Deus e têm o testemunho de Jesus." <strong>Guardam os mandamentos de Deus e têm o testemunho de Jesus.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 6 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">O que é o testemunho de Jesus? Apocalipse 19:10</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Eu sou conservo teu e dos teus irmãos que mantêm o testemunho de Jesus; adora a Deus. Pois o testemunho de Jesus é o espírito da profecia." <strong>O testemunho de Jesus é o espírito de profecia.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perguntas sobre Efésios -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>O Dom de Profecia em Efésios</h3>
+            </div>
+
+            <!-- Pergunta 7a -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7a</span>
+                <div class="pergunta-texto">O que Ele concedeu aos homens? Efésios 4:8</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('7a')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7a">
+                    <strong>Referência:</strong> "Quando ele subiu às alturas, levou cativo o cativeiro e concedeu <strong>dons</strong> aos homens." <strong>Deus concedeu dons espirituais.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 7b -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7b</span>
+                <div class="pergunta-texto">Quem escolhe os profetas? Efésios 4:11</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('7b')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7b">
+                    <strong>Referência:</strong> "E ele mesmo concedeu uns para <strong>apóstolos, outros para profetas</strong>, outros para evangelistas e outros para pastores e mestres." <strong>Cristo mesmo escolhe e concede os dons.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 7c -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7c</span>
+                <div class="pergunta-texto">Para que é dado o dom de profecia? Efésios 4:12 a 14</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('7c')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7c">
+                    <strong>Referência:</strong> "Com vistas ao aperfeiçoamento dos santos para o desempenho do seu serviço, para a edificação do corpo de Cristo, até que todos cheguemos à unidade da fé e do pleno conhecimento do Filho de Deus, à perfeita varonilidade, à medida da estatura da plenitude de Cristo, para que não mais sejamos como meninos, agitados de um lado para outro e levados ao redor por todo vento de doutrina." <strong>Para aperfeiçoar os santos, edificar a igreja e proteger contra falsas doutrinas.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 7d -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7d</span>
+                <div class="pergunta-texto">De que modo a verdade e o crescimento devem ocorrer? Efésios 4:15 e 16</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('7d')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7d">
+                    <strong>Referência:</strong> "Mas, seguindo a verdade em amor, cresçamos em tudo naquele que é a cabeça, Cristo, de quem todo o corpo, bem ajustado e consolidado pelo auxílio de toda junta, segundo a justa cooperação de cada parte, efetua o seu próprio aumento para a edificação de si mesmo em amor." <strong>Em amor, com cooperação de cada parte, ajustados e consolidados.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pergunta 8 (aberta) -->
+        <div class="pergunta-item">
+            <span class="pergunta-numero">Pergunta 8</span>
+            <div class="pergunta-texto">O que Jesus disse que haveria nos últimos dias? Mateus 24:24</div>
+            
+            <div class="pergunta-aberta">
+                <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+            </div>
+            
+            <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+            
+            <div class="gabarito" id="gabarito8">
+                <strong>Referência:</strong> "Porque surgirão falsos cristos e falsos profetas, e farão tão grandes sinais e prodígios, que, se possível fora, enganariam até os escolhidos." <strong>Falsos profetas surgiriam, enganando muitos.</strong>
+            </div>
+        </div>
+
+        <!-- Características do Profeta Verdadeiro -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✅</div>
+                <h3>Características de um Profeta Verdadeiro</h3>
+            </div>
+            
+            <div class="caracteristicas-grid">
+                <div class="caracteristica-card">
+                    <strong>1ª Característica</strong>
+                    <small>1 João 4:1-2 - Confessa que Jesus Cristo veio em carne</small>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>2ª Característica</strong>
+                    <small>Mateus 7:15-16 - Pelos seus frutos os conhecereis</small>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>3ª Característica</strong>
+                    <small>Isaías 8:19-20 - À lei e ao testemunho! Se não falarem segundo esta palavra, é porque não há luz neles</small>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>4ª Característica</strong>
+                    <small>Deuteronômio 18:21-22 - A profecia deve se cumprir</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pergunta 10 - Mulheres profetisas -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👩</div>
+                <h3>Deus também chamou mulheres para serem profetisas?</h3>
+            </div>
+
+            <!-- Pergunta 10a -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 10a</span>
+                <div class="pergunta-texto">Juízes 4:4</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('10a')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito10a">
+                    <strong>Referência:</strong> "Débora, profetisa, mulher de Lapidote, julgava a Israel naquele tempo." <strong>Débora foi profetisa e juíza em Israel.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 10b -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 10b</span>
+                <div class="pergunta-texto">Lucas 2:36</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('10b')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito10b">
+                    <strong>Referência:</strong> "Havia uma profetisa, chamada Ana, filha de Fanuel, da tribo de Aser." <strong>Ana foi profetisa que reconheceu Jesus no templo.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pergunta 11 (aberta) -->
+        <div class="pergunta-item">
+            <span class="pergunta-numero">Pergunta 11</span>
+            <div class="pergunta-texto">Qual é o segredo para nossa segurança e prosperidade? 2 Crônicas 20:20</div>
+            
+            <div class="pergunta-aberta">
+                <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+            </div>
+            
+            <button class="btn-resposta" onclick="mostrarGabarito(11)">Ver referência</button>
+            
+            <div class="gabarito" id="gabarito11">
+                <strong>Referência:</strong> "Crede no Senhor vosso Deus, e estareis seguros; crede nos seus profetas, e prosperareis." <strong>Crer em Deus e nos Seus profetas.</strong>
+            </div>
+        </div>
+
+        <!-- Player de recapitulação -->
+        <div class="estudo-section">
+            <div class="recap-player">
+                <div class="player-placeholder">
+                    <div class="player-icon">📼</div>
+                    <p>Clique no player abaixo e assista a recapitulação e compromisso</p>
+                    <button class="player-button" onclick="alert('Player de recapitulação seria incorporado aqui')">Assistir Recapitulação</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="estudo-section">
+            <div class="compromisso-box">
+                <h4>📝 Compromisso de fé</h4>
+                <div class="compromisso-texto">
+                    "Creio que Deus enviou profetas ao longo dos tempos para revelar Sua vontade. Portanto, aceito a revelação de Jesus mediante os profetas verdadeiros como vinda de Deus."
+                </div>
+                
+                <div class="compromisso-campos">
+                    <div class="campo">
+                        <label>Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo">
+                        <label>Data:</label>
+                        <input type="text" id="data" placeholder="__/__/____">
+                    </div>
+                </div>
+                
+                <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+                <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+            </div>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema1-17.html" class="btn-nav">← Tema anterior</a>
+            <a href="estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema1-19.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"O testemunho de Jesus é o espírito da profecia" - Apocalipse 19:10</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Jesus e o Dom de Profecia",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_tema18', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_tema18');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

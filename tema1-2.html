@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 2 - Jesus e o Amor Divino | Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Jesus+e+o+Amor+Divino');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de destaque especial para a história */
+        .historia-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+        }
+
+        .historia-box::before {
+            content: "📖";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #0b1a2e;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .historia-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .historia-box strong {
+            color: #c9a05e;
+        }
+
+        /* Destaque especial para "cair em si" */
+        .destaque-especial {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #FFD700;
+        }
+
+        .destaque-especial h4 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .destaque-especial p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Player de vídeo - atualizado */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-caption {
+            text-align: center;
+            margin-top: 10px;
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 100px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Para pensar */
+        .para-pensar {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .para-pensar p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .para-pensar strong {
+            color: #c9a05e;
+        }
+
+        /* Dicas */
+        .dicas-box {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .dicas-box h4 {
+            color: #3498db;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dicas-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .dicas-box li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .dicas-box li::before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="estudo1.html">Jesus Restaurador da Vida</a> > 
+            <span>Tema 2</span>
+        </div>
+        <h1>ESTUDO 2</h1>
+        <h2>Jesus e o Amor Divino</h2>
+        <p>"Aquele que não ama não conhece a Deus, pois Deus é amor" (1 João 4:8)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar que Deus é amor em Sua essência, e que esse amor é a base para a restauração e transformação da vida.</p>
+            <p><strong>Texto base:</strong> Lucas 15:11-24 (Parábola do Filho Perdido); 1 João 4:8-16; João 3:16</p>
+            <p><strong>Versículos-chave:</strong> 1 João 4:8, João 3:16, Romanos 8:38-39</p>
+            <p><strong>Destaque especial:</strong> Explique o significado de "cair em si" (v. 17) - é o momento do despertar espiritual, quando o pecador reconhece sua real condição e decide voltar para Deus.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❤️</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Vivemos em tempos de muita emoção e pouco amor. Na verdade, amor e emoção não são a mesma coisa. O verdadeiro amor é muito mais que sentimento.</p>
+                
+                <p style="margin-top: 15px;"><strong>A maior história de amor foi escrita na Palavra de Deus.</strong> É o relato de um amor que não teme a humilhação e a rejeição, que busca a pessoa amada, gasta tudo para reconquistá-la e, por fim, Se entrega à morte por ela.</p>
+                
+                <p style="margin-top: 15px;">Deus é amor: amor não é o que Ele tem, mas o que Ele é. O amor de Deus é tão grande que Ele entregou Seu único Filho. O Filho sofreu e morreu por amor. <strong>E a razão de todo esse amor é você!</strong></p>
+                
+                <p style="margin-top: 15px;">Somente esse amor é capaz de resgatar você e lhe conceder perdão e paz para seguir em frente. Só o amor de Deus pode restaurar verdadeiramente a vida. Neste estudo, vamos refletir sobre o doce tema do amor divino.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo - AGORA COM O VÍDEO REAL -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎬</div>
+                <h3>Introdução em Vídeo</h3>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/520674953?badge=0&autopause=0&player_id=0&app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        title="ESTUDO 02 - Introdução">
+                </iframe>
+            </div>
+            <p class="video-caption">Clique no player para assistir à introdução do estudo</p>
+        </div>
+
+        <!-- História Bíblica - FILHO PRÓDIGO -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>A Maior História de Amor</h3>
+            </div>
+            
+            <div class="section-subtitulo">Sua vez de procurar: Lucas 15:11 a 24</div>
+            
+            <div class="historia-box">
+                <p><strong>A parábola do filho perdido</strong></p>
+                
+                <p style="margin-top: 15px;">Essa é a história de um filho que desejou a morte do pai. Para ele, o pai era apenas uma conta bancária. A presença, o tempo, o amor e a vida do pai não tinham valor para o filho. O filho queria uma vida longe do pai, mais livre, para fazer o que quisesse com sua herança. Impaciente, o filho pede o direito à sua parte dos bens, mesmo o pai estando vivo. É como se ele tivesse matado o velho pai.</p>
+                
+                <p style="margin-top: 15px;">O filho ingrato vai embora para uma terra distante. O pai o espera por muito tempo. Certo dia, um vulto estranho surge ao longe, magro, sujo e esfarrapado. Mais de perto, parece ser o filho. O pai não hesita. Sai correndo ao encontro dele e o abraça entre lágrimas. Assim é o amor de Deus por você. Ele nunca o rejeita, sempre está de braços abertos. Ele quer devolver sua dignidade como filho de Deus.</p>
+            </div>
+
+            <!-- Explicação sobre "cair em si" -->
+            <div class="destaque-especial">
+                <h4>🔍 O que significa "cair em si"?</h4>
+                <p>Jesus diz que o moço, <strong>"caindo em si"</strong>, decidiu retornar (v. 17). Esta expressão é profundamente significativa:</p>
+                
+                <p style="margin-top: 15px;"><strong>"Cair em si"</strong> significa despertar do engano, sair da ilusão, recuperar a lucidez. É o momento em que o pecador:</p>
+                
+                <ul style="margin-top: 15px; margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Reconhece sua miséria:</strong> "Eu estou morrendo de fome"</li>
+                    <li><strong>Lembra-se da bondade do pai:</strong> "Na casa do meu pai há pão com fartura"</li>
+                    <li><strong>Toma uma decisão:</strong> "Levantar-me-ei e irei ter com meu pai"</li>
+                    <li><strong>Confessa seus erros:</strong> "Pequei contra o céu e diante de ti"</li>
+                </ul>
+                
+                <p style="margin-top: 15px;"><strong>Lição espiritual:</strong> O primeiro passo para a restauração é "cair em si" - reconhecer nossa real condição longe de Deus e decidir voltar para Seus braços de amor.</p>
+            </div>
+            
+            <div class="para-pensar">
+                <p><strong>🤔 Para pensar:</strong> Você já passou por um momento de "cair em si" em sua vida espiritual? O que te levou a esse despertar?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Aquele que não ama não conhece a Deus, porque Deus é amor."
+                <span class="versiculo-ref">1 João 4:8</span>
+            </div>
+        </div>
+
+        <!-- Perguntas do Estudo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>Perguntas para Reflexão</h3>
+            </div>
+
+            <!-- Pergunta 1 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Qual é a essência do caráter de Deus? 1 João 4:8</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Tirania</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Amor ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Indiferença</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Amor. "Aquele que não ama não conhece a Deus, porque Deus é amor." O amor não é apenas um atributo de Deus, é a própria essência do Seu caráter.
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Qual foi a maior prova do amor de Deus a todo o mundo? João 3:16</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Enviar Jesus</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Salvar os que Nele creem</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">Dar a vida eterna</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Todas as alternativas estão corretas, mas a maior prova foi:</strong> "Porque Deus amou ao mundo de tal maneira que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna." O ato de enviar Jesus é a maior expressão do amor divino.
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Deus tem prazer... Miqueias 7:18</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">No castigo</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">Na morte</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">Na misericórdia ✓</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Na misericórdia. "Quem, ó Deus, é semelhante a ti, que perdoas a iniquidade e te esqueces da transgressão do restante da tua herança? O Senhor não retém a sua ira para sempre, porque tem prazer na misericórdia."
+                </div>
+            </div>
+
+            <!-- Pergunta 4 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Quais são as três Pessoas da Divindade, unidas em amor? Mateus 28:19</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Portanto, ide, fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo." <strong>A Trindade Santa: Pai, Filho e Espírito Santo, unidos em perfeito amor.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Ao que a Bíblia compara a compaixão de Deus? Salmo 103:13 e 14</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Como um pai se compadece de seus filhos, assim o Senhor se compadece dos que o temem. Pois ele conhece a nossa estrutura e sabe que somos pó." <strong>A compaixão de Deus é comparada à compaixão de um pai por seus filhos.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 6 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Que imagem Jesus apresentou do Pai celestial? Mateus 7:9 a 11</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Qual dentre vós é o homem que, se seu filho lhe pedir pão, lhe dará uma pedra? Ou, se lhe pedir peixe, lhe dará uma cobra? Ora, se vós, que sois maus, sabeis dar boas coisas aos vossos filhos, quanto mais vosso Pai, que está nos céus, dará boas coisas aos que lhe pedirem?" <strong>Jesus apresentou o Pai como um Pai amoroso e generoso.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 7 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">O que pode nos separar do amor de Deus? Romanos 8:38 e 39</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Porque eu estou bem certo de que nem a morte, nem a vida, nem os anjos, nem os principados, nem as coisas do presente, nem do porvir, nem os poderes, nem a altura, nem a profundidade, nem qualquer outra criatura poderá separar-nos do amor de Deus, que está em Cristo Jesus, nosso Senhor." <strong>ABSOLUTAMENTE NADA pode nos separar do amor de Deus!</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Para pensar - Reflexões -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💭</div>
+                <h3>Para pensar</h3>
+            </div>
+            
+            <div class="para-pensar">
+                <p><strong>O amor de Deus é incondicional:</strong> Não importa o que você fez, de onde veio ou para onde está indo. Deus ama você com um amor eterno.</p>
+                
+                <p><strong>O amor de Deus é sacrificial:</strong> "Nisto conhecemos o amor: que Cristo deu a sua vida por nós" (1 João 3:16).</p>
+                
+                <p><strong>O amor de Deus é restaurador:</strong> Ele não apenas perdoa, mas transforma e dá um novo começo. Como o pai do filho pródigo, Deus espera de braços abertos.</p>
+                
+                <p style="margin-top: 20px;"><strong>Reflita:</strong> Você tem experimentado esse amor em sua vida? Tem permitido que ele transforme seus relacionamentos? Você já "caiu em si" e decidiu voltar para os braços do Pai?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Dicas para conhecer a Deus -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💡</div>
+                <h3>Dicas para conhecer a Deus mais de perto</h3>
+            </div>
+            
+            <div class="dicas-box">
+                <ul>
+                    <li><strong>Coloque Deus em primeiro lugar a cada dia</strong> (Mateus 6:33). Busque a Deus logo pela manhã em oração e leitura da Palavra.</li>
+                    <li><strong>Ame a Deus de todo coração e o próximo como a si mesmo</strong> (Mateus 22:37-39). O amor a Deus se expressa no amor ao próximo.</li>
+                    <li><strong>Ame e acolha todas as pessoas, principalmente as mais vulneráveis, não só de palavra, mas na prática</strong> (1 João 3:16-18). O amor verdadeiro se demonstra em ações concretas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="estudo-section">
+            <div class="compromisso-box">
+                <h4>📝 Compromisso de fé</h4>
+                <div class="compromisso-texto">
+                    "Enxergar a Deus do jeito certo gera amor espontâneo, afeto, bondade, perdão e adoração (Tiago 4:8 e 9). Ao conhecer mais o amor de Deus, sinto o desejo de viver e andar com Ele todos os dias. Quero ser verdadeiro em minhas ações e intenções para com Ele e com as outras pessoas. Quero 'cair em mim' sempre que necessário e voltar para os braços do Pai."
+                </div>
+                
+                <div class="compromisso-campos">
+                    <div class="campo">
+                        <label>Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo">
+                        <label>Data:</label>
+                        <input type="text" id="data" placeholder="__/__/____">
+                    </div>
+                </div>
+                
+                <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+                <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+            </div>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema1-1.html" class="btn-nav">← Tema anterior</a>
+            <a href="estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema1-3.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Nós amamos porque Ele nos amou primeiro" - 1 João 4:19</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            radio.checked = true;
+            
+            // Pequeno feedback visual
+            elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+            setTimeout(() => {
+                elemento.style.backgroundColor = '';
+            }, 200);
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Jesus e o Amor Divino",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_tema2', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_tema2');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

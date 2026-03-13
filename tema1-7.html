@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 7 - Jesus e o Destino do Mundo | Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Jesus+e+o+Destino+do+Mundo');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de destaque especial para a história */
+        .historia-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+        }
+
+        .historia-box::before {
+            content: "🕯️";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #0b1a2e;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .historia-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .historia-box strong {
+            color: #c9a05e;
+        }
+
+        /* Destaque especial para lições */
+        .destaque-especial {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #FFD700;
+        }
+
+        .destaque-especial h4 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .destaque-especial p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .destaque-especial ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Player de vídeo - atualizado */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-caption {
+            text-align: center;
+            margin-top: 10px;
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 100px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Para pensar */
+        .para-pensar {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .para-pensar p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .para-pensar strong {
+            color: #c9a05e;
+        }
+
+        /* Lista de tópicos */
+        .topicos-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .topico-item {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 3px solid #3498db;
+        }
+
+        .topico-item strong {
+            color: #3498db;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .topico-item small {
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        /* Conversa com instrutor */
+        .conversa-box {
+            background: rgba(52, 152, 219, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+
+        .conversa-box h4 {
+            color: #3498db;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .conversa-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .topicos-lista {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="estudo1.html">Jesus Restaurador da Vida</a> > 
+            <span>Tema 7</span>
+        </div>
+        <h1>ESTUDO 7</h1>
+        <h2>Jesus e o Destino do Mundo</h2>
+        <p>"Aquele que vem virá e não tardará" (Hebreus 10:37)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar que a volta de Jesus é a grande esperança cristã, um evento literal e visível, e que devemos estar preparados.</p>
+            <p><strong>Texto base:</strong> Mateus 25:1-13 (Parábola das Dez Virgens); João 14:1-3; 1 Tessalonicenses 4:13-18</p>
+            <p><strong>Versículos-chave:</strong> João 14:1-3, Mateus 24:30, Apocalipse 1:7</p>
+            <p><strong>Destaque especial:</strong> A parábola das dez virgens ensina que a preparação para a volta de Jesus é individual e intransferível. Ninguém pode emprestar sua fé para outro.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🌍</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>Você cumpre sua palavra? Como se sente quando alguém não honra o que prometeu?</strong></p>
+                
+                <p style="margin-top: 15px;">Por milênios, o que as pessoas combinavam tinha valor. Atualmente, a palavra sem nenhuma garantia não vale muito. É preciso se comprometer por escrito.</p>
+                
+                <p style="margin-top: 15px;">A Bíblia registra a maior de todas as promessas de Deus: <strong>Jesus voltará para resgatar Seus filhos.</strong> Sua volta será vista e ouvida por todos, literalmente.</p>
+                
+                <p style="margin-top: 15px;">Embora as Escrituras não revelem o dia nem a hora desse grande acontecimento, todas as promessas feitas por Jesus se cumpriram até aqui, e esta também se cumprirá. <strong>Hebreus 10:37 nos assegura: "Aquele que vem virá e não tardará."</strong></p>
+                
+                <p style="margin-top: 15px;">Vamos estudar sobre a segunda vinda de Cristo.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo - AGORA COM O VÍDEO REAL -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎬</div>
+                <h3>Introdução em Vídeo</h3>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/520682400?badge=0&autopause=0&player_id=0&app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        title="ESTUDO 07 - Introdução">
+                </iframe>
+            </div>
+            <p class="video-caption">Clique no player para assistir à introdução do estudo</p>
+        </div>
+
+        <!-- História Bíblica - PARÁBOLA DAS DEZ VIRGENS -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🕯️</div>
+                <h3>A Parábola das Dez Virgens</h3>
+            </div>
+            
+            <div class="section-subtitulo">Sua vez de procurar: Mateus 25:1 a 13</div>
+            
+            <div class="historia-box">
+                <p><strong>A parábola das dez virgens</strong></p>
+                
+                <p style="margin-top: 15px;">Todos estavam ansiosos para participar do casamento. Dez virgens, que eram as damas da noiva, estavam com seus lindos vestidos. Para caminhar na noite escura, levavam lâmpadas abastecidas com azeite. Deveriam acender a luz assim que o noivo passasse com uma procissão em direção à casa da noiva.</p>
+                
+                <p style="margin-top: 15px;">O trabalho delas era iluminar o caminho. Tudo o que precisavam era ter azeite necessário para que não faltasse luz quando o noivo chegasse. Porém, o noivo demorou mais do que o esperado, ficou tarde, e todas adormeceram.</p>
+                
+                <p style="margin-top: 15px;">Metade das damas se preparou para o imprevisto e trouxe mais azeite. Quando o noivo chegou, todas acordaram, mas somente cinco tinham luz. As outras cinco ficaram desesperadas e tentaram pedir óleo às moças prevenidas. Porém, não havia óleo suficiente para todas.</p>
+                
+                <p style="margin-top: 15px;">Cinco donzelas tentaram buscar ajuda na noite escura, mas em vão. Perderam o tão esperado casamento.</p>
+            </div>
+
+            <!-- Destaque especial: Lições da parábola -->
+            <div class="destaque-especial">
+                <h4>🕯️ Lições das Dez Virgens</h4>
+                
+                <p><strong>1. A demora do noivo:</strong> Jesus pode demorar mais do que esperamos, mas isso não significa que não virá. A demora testa nossa paciência e preparação.</p>
+                
+                <p><strong>2. Preparação individual:</strong> O azeite não pode ser emprestado. Ninguém pode ter fé por outra pessoa. A preparação espiritual é pessoal e intransferível.</p>
+                
+                <p><strong>3. Todas dormiram:</strong> Tanto as prudentes quanto as insensatas dormiram. O problema não foi dormir, mas não estar preparada para o despertar.</p>
+                
+                <p><strong>4. Porta fechada:</strong> Quando o noivo chegou, a porta se fechou. Há um tempo limite para a preparação. Agora é o tempo de nos prepararmos.</p>
+                
+                <p style="margin-top: 15px;"><strong>🤔 Para refletir:</strong> Como estar preparado para o retorno de Jesus? O que significa o "azeite" em sua vida?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Não se turbe o vosso coração; credes em Deus, crede também em mim. Na casa de meu Pai há muitas moradas... Vou preparar-vos lugar. E, quando eu for e vos preparar lugar, voltarei e vos receberei para mim mesmo."
+                <span class="versiculo-ref">João 14:1-3</span>
+            </div>
+        </div>
+
+        <!-- O que a Bíblia diz sobre a volta de Jesus -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>O que a Bíblia diz sobre a volta de Jesus</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>• <strong>Veremos e ouviremos tudo:</strong> "Porque o Senhor mesmo, dada a sua palavra de ordem, ouvida a voz do arcanjo, e ressoada a trombeta de Deus, descerá dos céus" (1 Tessalonicenses 4:16-18).</p>
+                
+                <p>• <strong>Jesus retribuirá a cada um conforme as suas obras:</strong> "Porque o Filho do homem há de vir na glória de seu Pai, com os seus anjos, e então retribuirá a cada um segundo as suas obras" (Mateus 16:27).</p>
+                
+                <p>• <strong>Os que amam a vinda de Jesus receberão uma coroa de justiça:</strong> "Já agora a coroa da justiça me está guardada, a qual o Senhor, reto juiz, me dará naquele Dia; e não somente a mim, mas também a todos quantos amam a sua vinda" (2 Timóteo 4:8).</p>
+            </div>
+        </div>
+
+        <!-- Sinais que antecedem a volta de Jesus -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚠️</div>
+                <h3>Sinais que antecedem a volta de Jesus</h3>
+            </div>
+            
+            <div class="topicos-lista">
+                <div class="topico-item">
+                    <strong>Opressão</strong>
+                    <small>Tiago 5:1-4</small>
+                </div>
+                <div class="topico-item">
+                    <strong>Decadência moral</strong>
+                    <small>2 Timóteo 3:1-5</small>
+                </div>
+                <div class="topico-item">
+                    <strong>Enfermidades</strong>
+                    <small>Lucas 21:11 e 26</small>
+                </div>
+                <div class="topico-item">
+                    <strong>Calamidades na natureza</strong>
+                    <small>Mateus 24:3-14</small>
+                </div>
+                <div class="topico-item">
+                    <strong>Falsos profetas</strong>
+                    <small>Mateus 7:15-23</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perguntas do Estudo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>Perguntas para Reflexão</h3>
+            </div>
+
+            <!-- Pergunta 1 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Qual é a promessa registrada em João 14:1 a 3?</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Jesus voltará outra vez ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Bênçãos materiais</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Muita saúde</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Jesus voltará outra vez. "Não se turbe o vosso coração; credes em Deus, crede também em mim. Na casa de meu Pai há muitas moradas... Vou preparar-vos lugar. E, quando eu for e vos preparar lugar, voltarei e vos receberei para mim mesmo."
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Como devemos considerar a promessa da volta de Jesus? Tito 2:13</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Interessante</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Bendita ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">Irrelevante</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> Bendita. "Aguardando a bendita esperança e a manifestação da glória do nosso grande Deus e Salvador Cristo Jesus." A volta de Jesus é a bendita esperança do cristão.
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Como Jesus virá pela segunda vez? Mateus 24:30</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">Nas nuvens do céu ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">De forma secreta</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">Como um mendigo</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Nas nuvens do céu. "Então, aparecerá no céu o sinal do Filho do Homem; todos os povos da terra se lamentarão e verão o Filho do Homem vindo sobre as nuvens do céu, com poder e grande glória."
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Quantos verão Seu glorioso retorno? Apocalipse 1:7</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Somente quem tem fé</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Todos ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">Alguns</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Todos. "Eis que vem com as nuvens, e todo olho o verá, até quantos o traspassaram. E todas as tribos da terra se lamentarão sobre ele." A volta de Jesus será visível a todos.
+                </div>
+            </div>
+
+            <!-- Pergunta 5 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Qual será o propósito da volta de Jesus? Mateus 16:27</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Porque o Filho do Homem há de vir na glória de seu Pai, com os seus anjos, e então retribuirá a cada um segundo as suas obras." <strong>Jesus virá para retribuir a cada um conforme suas obras.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 6 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">O que acontecerá com os que tiverem morrido fiéis a Deus? 1 Tessalonicenses 4:13 a 16</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Não queremos, porém, irmãos, que sejais ignorantes com respeito aos que dormem, para não vos entristecerdes como os demais, que não têm esperança... O Senhor mesmo, dada a sua palavra de ordem... descerá dos céus, e os mortos em Cristo ressuscitarão primeiro." <strong>Os mortos em Cristo ressuscitarão primeiro.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 7 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">O que acontecerá com todos os justos? 1 Tessalonicenses 4:17</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Depois, nós, os vivos, os que ficarmos, seremos arrebatados juntamente com eles, entre nuvens, para o encontro do Senhor nos ares, e, assim, estaremos para sempre com o Senhor." <strong>Os justos vivos serão arrebatados juntamente com os ressuscitados para encontrar o Senhor.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 8 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">De que precisamos nos lembrar no preparo diário para a volta de Jesus? 2 Pedro 3:8 a 10</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência:</strong> "Não retarda o Senhor a sua promessa, como alguns a julgam demorada; pelo contrário, ele é longânimo para convosco, não querendo que nenhum pereça, senão que todos cheguem ao arrependimento... O Dia do Senhor, porém, virá como ladrão." <strong>Precisamos lembrar que Deus é paciente, mas o Dia virá inesperadamente. Devemos viver em constante preparação.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conversa com instrutor -->
+        <div class="estudo-section">
+            <div class="conversa-box">
+                <h4>💬 Converse com seu instrutor bíblico</h4>
+                <p><strong>Quais as características da volta de Jesus?</strong></p>
+                <textarea placeholder="Exemplos: Visível, audível, gloriosa, com anjos, para todos, etc." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="estudo-section">
+            <div class="compromisso-box">
+                <h4>📝 Compromisso de fé</h4>
+                <div class="compromisso-texto">
+                    "Quero me preparar para encontrar Jesus quando Ele vier como Rei dos reis e Senhor dos senhores."
+                </div>
+                
+                <div class="compromisso-campos">
+                    <div class="campo">
+                        <label>Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo">
+                        <label>Data:</label>
+                        <input type="text" id="data" placeholder="__/__/____">
+                    </div>
+                </div>
+                
+                <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+                <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+            </div>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema1-6.html" class="btn-nav">← Tema anterior</a>
+            <a href="estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema1-8.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Aguardando a bendita esperança e a manifestação da glória do nosso grande Deus e Salvador Cristo Jesus" - Tito 2:13</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Jesus e o Destino do Mundo",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_tema7', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_tema7');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

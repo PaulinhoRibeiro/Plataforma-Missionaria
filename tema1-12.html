@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 12 - Jesus e a Igreja | Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Jesus+e+a+Igreja');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de destaque especial para a história */
+        .historia-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+        }
+
+        .historia-box::before {
+            content: "🚪";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #0b1a2e;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .historia-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .historia-box strong {
+            color: #c9a05e;
+        }
+
+        /* Destaque especial para lições */
+        .destaque-especial {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #FFD700;
+        }
+
+        .destaque-especial h4 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .destaque-especial p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .destaque-especial ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Player de vídeo - VERSÃO COM LINK DIRETO */
+        .video-link-container {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 40px 20px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .video-link-container:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transform: scale(1.02);
+        }
+
+        .video-link-icon {
+            font-size: 5rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+        }
+
+        .video-link-title {
+            font-size: 1.5rem;
+            color: #c9a05e;
+            margin-bottom: 10px;
+        }
+
+        .video-link-description {
+            color: #ddd;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .video-link-button {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .video-link-button:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        .video-privacy-note {
+            text-align: center;
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 100px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Características da igreja */
+        .caracteristicas-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .caracteristica-item {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 3px solid #3498db;
+        }
+
+        .caracteristica-item strong {
+            color: #3498db;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .caracteristica-item small {
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        /* Por que a igreja é importante */
+        .importancia-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .importancia-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .importancia-box textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 120px;
+        }
+
+        /* Conversa com instrutor */
+        .conversa-box {
+            background: rgba(52, 152, 219, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+
+        .conversa-box h4 {
+            color: #3498db;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .conversa-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .caracteristicas-lista {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="estudo1.html">Jesus Restaurador da Vida</a> > 
+            <span>Tema 12</span>
+        </div>
+        <h1>ESTUDO 12</h1>
+        <h2>Jesus e a Igreja</h2>
+        <p>"Sobre esta pedra edificarei a minha igreja, e as portas do inferno não prevalecerão contra ela" (Mateus 16:18)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar que a igreja é uma comunidade de amor, crescimento e apoio, idealizada por Deus para ser um hospital espiritual onde todos trabalham juntos para salvar vidas.</p>
+            <p><strong>Texto base:</strong> Lucas 13:22-30 (A porta estreita); Mateus 16:16-18; Efésios 2:19-20</p>
+            <p><strong>Versículos-chave:</strong> Mateus 16:18, 1 Pedro 2:9, Apocalipse 14:12</p>
+            <p><strong>Destaque especial:</strong> Não existe cristianismo individualista. A fé se enfraquece longe da comunidade, como uma brasa longe da fogueira.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⛪</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Nunca o planeta Terra teve tantos habitantes como agora, bilhões de pessoas. Porém, é cada vez mais comum encontrarmos gente solitária. Tudo parece projetado para a vida individual. As moradias são pequenas, os veículos são compactos e as famílias diminuem.</p>
+                
+                <p style="margin-top: 15px;">A igreja foi idealizada por Deus como uma comunidade de amor, crescimento e apoio. Não deve ser fechada como um clube, mas receptiva como um hospital que abriga qualquer pessoa doente.</p>
+                
+                <p style="margin-top: 15px;">Um hospital funciona bem quando todos os funcionários sabem porque estão ali e como desempenhar suas funções. Todos trabalham juntos com o objetivo de salvar vidas.</p>
+                
+                <p style="margin-top: 15px;"><strong>Que ninguém se engane: não existe cristianismo individualista. O cristianismo é para ser vivido em comunidade. Longe da comunidade, a fé se enfraquece e se apaga como uma brasa longe da fogueira.</strong></p>
+                
+                <p style="margin-top: 15px;">Vamos entender agora qual o plano de Deus para a igreja.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo - VERSÃO COM LINK DIRETO -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎬</div>
+                <h3>Introdução em Vídeo</h3>
+            </div>
+            
+            <a href="https://vimeo.com/520688116" target="_blank" style="text-decoration: none;">
+                <div class="video-link-container">
+                    <div class="video-link-icon">▶️</div>
+                    <div class="video-link-title">ESTUDO 12 - Introdução</div>
+                    <div class="video-link-description">Clique para assistir ao vídeo de introdução no Vimeo</div>
+                    <span class="video-link-button">Assistir Agora</span>
+                </div>
+            </a>
+            <p class="video-privacy-note">Nota: O vídeo será aberto em uma nova aba devido às configurações de privacidade.</p>
+        </div>
+
+        <!-- História Bíblica - A PORTA ESTREITA -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🚪</div>
+                <h3>A Porta Estreita</h3>
+            </div>
+            
+            <div class="section-subtitulo">Sua vez de procurar: Lucas 13:22 a 30</div>
+            
+            <div class="historia-box">
+                <p><strong>A analogia da porta estreita</strong></p>
+                
+                <p style="margin-top: 15px;">Para falar sobre o esforço necessário para entrar no reino de Deus, Jesus apresentou a analogia da porta estreita. Seu público estava acostumado a pensar que, para ser salvo, bastava seguir as regras da tradição ou simplesmente nascer judeu.</p>
+                
+                <p style="margin-top: 15px;">Jesus, porém, disse àquelas pessoas que, para serem salvas, era necessário passar pela "porta estreita". Cristo ensinou que passar pela porta estreita significava deixar para trás o que está sobrando e reter só o essencial.</p>
+                
+                <p style="margin-top: 15px;">E o essencial no Reino dos Céus é deixar de lado os interesses pessoais para cumprir a vontade de Deus em comunhão com Seu povo.</p>
+            </div>
+
+            <!-- Destaque especial: Lições da história -->
+            <div class="destaque-especial">
+                <h4>🚪 Lições da Porta Estreita</h4>
+                
+                <p><strong>1. Nem todos que pensam estar salvos o serão:</strong> Muitos dirão "Comemos e bebemos na tua presença", mas Jesus responderá "Não vos conheço".</p>
+                
+                <p><strong>2. O esforço é necessário:</strong> "Esforçai-vos por entrar pela porta estreita." A salvação é pela graça, mas requer decisão e compromisso.</p>
+                
+                <p><strong>3. A porta se fechará:</strong> Há um tempo limite para a decisão. "Quando o dono da casa se levantar e fechar a porta."</p>
+                
+                <p><strong>4. Muitos virão de todas as partes:</strong> Pessoas de todo o mundo se assentarão no Reino, enquanto alguns dos primeiros serão deixados de fora.</p>
+                
+                <p style="margin-top: 15px;"><strong>🤔 Para refletir:</strong> Ao longo destes estudos, você tem percebido que seguir Jesus exige que façamos algumas escolhas que também vão contra nossa natureza humana egoísta. O que fazer diante disso?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Sobre esta pedra edificarei a minha igreja, e as portas do inferno não prevalecerão contra ela."
+                <span class="versiculo-ref">Mateus 16:18</span>
+            </div>
+        </div>
+
+        <!-- Perguntas do Estudo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>Perguntas para Reflexão</h3>
+            </div>
+
+            <!-- Pergunta 1 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Quem fundou a igreja? Mateus 16:16 a 18</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Cristo ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Pedro</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">João</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Cristo. "Também eu te digo que tu és Pedro, e sobre esta pedra edificarei a minha igreja, e as portas do inferno não prevalecerão contra ela." Jesus é o fundador da igreja.
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Sobre qual fundamento a igreja foi edificada? Efésios 2:19 e 20</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">A razão</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Cristo ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">A tradição</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> Cristo. "Assim, já não sois estrangeiros e peregrinos, mas concidadãos dos santos e membros da família de Deus, edificados sobre o fundamento dos apóstolos e profetas, sendo ele mesmo, Cristo Jesus, a pedra angular."
+                </div>
+            </div>
+
+            <!-- Pergunta 3 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Para que Deus escolheu Seu povo? 1 Pedro 2:9</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "Vós, porém, sois raça eleita, sacerdócio real, nação santa, povo de propriedade exclusiva de Deus, a fim de proclamardes as virtudes daquele que vos chamou das trevas para a sua maravilhosa luz." <strong>Para proclamar as virtudes de Deus.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Qual comparação a Bíblia utiliza para se referir à igreja? 1 Coríntios 12:12, 13 e 20</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Porque, assim como o corpo é um e tem muitos membros, e todos os membros, sendo muitos, constituem um só corpo, assim também com respeito a Cristo... vós sois corpo de Cristo e, individualmente, membros desse corpo." <strong>A igreja é comparada ao corpo de Cristo.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Por que Deus estabeleceu a liderança da igreja? Atos 20:28 e 29</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Atendei por vós e por todo o rebanho sobre o qual o Espírito Santo vos constituiu bispos, para pastoreardes a igreja de Deus, a qual ele comprou com o seu próprio sangue. Eu sei que, depois da minha partida, lobos vorazes penetrarão no meio de vós e não pouparão o rebanho." <strong>Para pastorear e proteger o rebanho.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 6 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Quais devem ser as qualificações dos líderes de igreja? 1 Timóteo 3:1 a 13</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "É necessário, pois, que o bispo seja irrepreensível, esposo de uma só mulher, temperante, sóbrio, modesto, hospitaleiro, apto para ensinar; não dado ao vinho, não violento, porém cordato, inimigo de contendas, não avarento; e que governe bem a própria casa, criando os filhos sob disciplina, com todo o respeito." <strong>Líderes devem ter caráter exemplar e boa administração da família.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 7 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Quais são as marcas da identidade da igreja nos últimos dias? Apocalipse 14:12</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Aqui está a perseverança dos santos, os que guardam os mandamentos de Deus e a fé em Jesus." <strong>Guardar os mandamentos de Deus e ter a fé de Jesus.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 8 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Qual é a missão da igreja? Mateus 28:18 a 20</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência:</strong> "Ide, portanto, fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo; ensinando-os a guardar todas as coisas que vos tenho ordenado." <strong>Fazer discípulos, batizar e ensinar.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Características da igreja do "Deus vivo" -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✨</div>
+                <h3>Características da igreja do "Deus vivo"</h3>
+            </div>
+            
+            <div class="caracteristicas-lista">
+                <div class="caracteristica-item">
+                    <strong>Crê no Senhor Jesus</strong>
+                    <small>Atos 16:30 e 31</small>
+                </div>
+                <div class="caracteristica-item">
+                    <strong>Prepara-se para a volta de Cristo</strong>
+                    <small>João 14:1 a 3</small>
+                </div>
+                <div class="caracteristica-item">
+                    <strong>Anuncia que é chegada a hora do juízo</strong>
+                    <small>Apocalipse 14:7</small>
+                </div>
+                <div class="caracteristica-item">
+                    <strong>Crê em toda a Bíblia e no dom de profecia</strong>
+                    <small>2 Timóteo 3:14-17; Apocalipse 12:17; 19:10</small>
+                </div>
+                <div class="caracteristica-item">
+                    <strong>Cumpre a grande comissão deixada por Jesus</strong>
+                    <small>Mateus 24:14; 28:18-20</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conversa com instrutor -->
+        <div class="estudo-section">
+            <div class="conversa-box">
+                <h4>💬 Converse com seu instrutor bíblico</h4>
+                <p><strong>Qual foi a principal lição que você aprendeu neste estudo?</strong></p>
+                <textarea placeholder="Escreva aqui..." rows="3"></textarea>
+                
+                <p style="margin-top: 15px;"><strong>Alguma parte não ficou clara?</strong></p>
+                <textarea placeholder="Escreva aqui..." rows="3"></textarea>
+            </div>
+        </div>
+
+        <!-- Por que a igreja é importante -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❤️</div>
+                <h3>Por que a igreja é importante?</h3>
+            </div>
+            
+            <div class="importancia-box">
+                <p><strong>Por que a igreja é importante tanto para você como para as pessoas que não conhecem Jesus?</strong></p>
+                <textarea placeholder="Escreva sua resposta aqui..." rows="5"></textarea>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="estudo-section">
+            <div class="compromisso-box">
+                <h4>📝 Compromisso de fé</h4>
+                <div class="compromisso-texto">
+                    "Desejo fazer parte da igreja de Deus e contribuir com os dons que Ele me deu para ajudar a salvar outras pessoas."
+                </div>
+                
+                <div class="compromisso-campos">
+                    <div class="campo">
+                        <label>Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo">
+                        <label>Data:</label>
+                        <input type="text" id="data" placeholder="__/__/____">
+                    </div>
+                </div>
+                
+                <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+                <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+            </div>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema1-11.html" class="btn-nav">← Tema anterior</a>
+            <a href="estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema1-13.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Assim, já não sois estrangeiros e peregrinos, mas concidadãos dos santos e membros da família de Deus" - Efésios 2:19</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Jesus e a Igreja",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_tema12', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_tema12');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

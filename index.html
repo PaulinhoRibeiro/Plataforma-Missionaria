@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminho da Revelação - Estudos Bíblicos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header com a arte */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('sua-arte-aqui.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #c9a05e;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #c9a05e;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Grid dos estudos */
+        .estudos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .estudo-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .estudo-card:hover {
+            transform: translateY(-10px);
+            border-color: #c9a05e;
+            box-shadow: 0 10px 30px rgba(201, 160, 94, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .estudo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #c9a05e;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .estudo-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .estudo-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #c9a05e;
+            border: 2px solid #c9a05e;
+            transition: all 0.3s ease;
+        }
+
+        .estudo-card:hover .estudo-icon {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        .estudo-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .estudo-card p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .btn-saiba-mais {
+            display: inline-block;
+            padding: 10px 25px;
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .estudo-card:hover .btn-saiba-mais {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Seção de boas-vindas */
+        .welcome-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+            text-align: center;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .welcome-section h3 {
+            font-size: 2rem;
+            color: #c9a05e;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section p {
+            font-size: 1.1rem;
+            color: #ddd;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .estudos-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+
+            .welcome-section {
+                padding: 30px 20px;
+            }
+
+            .welcome-section h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section {
+                height: 300px;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .estudo-card {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .estudo-card:nth-child(1) { animation-delay: 0.1s; }
+        .estudo-card:nth-child(2) { animation-delay: 0.2s; }
+        .estudo-card:nth-child(3) { animation-delay: 0.3s; }
+        .estudo-card:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <!-- Hero Section com a arte -->
+    <section class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080/1a2f3f/c9a05e?text=Caminho+da+Revela%C3%A7%C3%A3o');">
+        <div class="hero-content">
+            <h1>Caminho da Revelação</h1>
+            <p>Explore as verdades profundas da Palavra de Deus e fortaleça sua jornada espiritual através de estudos bíblicos transformadores</p>
+        </div>
+    </section>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Seção de boas-vindas -->
+        <div class="welcome-section">
+            <h3>Bem-vindo ao Caminho da Revelação</h3>
+            <p>Descubra os mistérios da fé cristã através de quatro estudos bíblicos cuidadosamente preparados para edificar sua vida espiritual e aprofundar seu conhecimento das Escrituras.</p>
+        </div>
+
+        <!-- Título da seção de estudos -->
+        <div class="section-title">
+            <h2>Nossos Estudos Bíblicos</h2>
+            <p>Escolha um dos quatro caminhos para iniciar sua jornada de descobertas espirituais</p>
+        </div>
+
+        <!-- Grid com os 4 estudos -->
+        <div class="estudos-grid">
+            <!-- Estudo 1: Jesus Restaurador da Vida -->
+            <div class="estudo-card" onclick="window.location.href='estudo1.html'">
+                <div class="estudo-icon">✝️</div>
+                <h3>Jesus Restaurador da Vida</h3>
+                <p>Descubra como Jesus transforma e restaura vidas através de seu amor e poder. Um estudo profundo sobre encontros transformadores com o Mestre.</p>
+                <a href="#" class="btn-saiba-mais">Iniciar Jornada</a>
+            </div>
+
+            <!-- Estudo 2: Profecias de Daniel -->
+            <div class="estudo-card" onclick="window.location.href='estudo2.html'">
+                <div class="estudo-icon">📜</div>
+                <h3>Profecias de Daniel</h3>
+                <p>Explore as fascinantes profecias de Daniel e compreenda o plano de Deus para as nações ao longo da história até os dias atuais.</p>
+                <a href="#" class="btn-saiba-mais">Iniciar Jornada</a>
+            </div>
+
+            <!-- Estudo 3: Revelações do Apocalipse -->
+            <div class="estudo-card" onclick="window.location.href='estudo3.html'">
+                <div class="estudo-icon">👑</div>
+                <h3>Revelações do Apocalipse</h3>
+                <p>Desvende as simbologias e mensagens do livro do Apocalipse, compreendendo a vitória final de Cristo e a esperança para a Igreja.</p>
+                <a href="#" class="btn-saiba-mais">Iniciar Jornada</a>
+            </div>
+
+            <!-- Estudo 4: Vivendo em Cristo -->
+            <div class="estudo-card" onclick="window.location.href='estudo4.html'">
+                <div class="estudo-icon">🌿</div>
+                <h3>Vivendo em Cristo</h3>
+                <p>Aprenda como aplicar os ensinamentos de Cristo no dia a dia, desenvolvendo uma vida cristã autêntica e frutífera.</p>
+                <a href="#" class="btn-saiba-mais">Iniciar Jornada</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho" - Salmo 119:105</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para substituir a imagem de fundo quando você tiver sua arte
+        document.addEventListener('DOMContentLoaded', function() {
+            // Aqui você pode adicionar funcionalidades interativas
+            const cards = document.querySelectorAll('.estudo-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.cursor = 'pointer';
+                });
+            });
+
+            // Para substituir a imagem de fundo, descomente a linha abaixo e adicione o caminho da sua imagem
+            // document.querySelector('.hero-section').style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('caminho/para/sua/arte.jpg')";
+        });
+    </script>
+</body>
+</html>

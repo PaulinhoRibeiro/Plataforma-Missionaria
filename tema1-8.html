@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 8 - Jesus e a Vida Eterna | Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Jesus+e+a+Vida+Eterna');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de destaque especial para a história */
+        .historia-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+        }
+
+        .historia-box::before {
+            content: "⚰️";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #0b1a2e;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .historia-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .historia-box strong {
+            color: #c9a05e;
+        }
+
+        /* Destaque especial para lições */
+        .destaque-especial {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #FFD700;
+        }
+
+        .destaque-especial h4 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .destaque-especial p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .destaque-especial ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Player de vídeo - atualizado */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-caption {
+            text-align: center;
+            margin-top: 10px;
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 100px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Para pensar */
+        .para-pensar {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .para-pensar p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .para-pensar strong {
+            color: #c9a05e;
+        }
+
+        /* Diagrama da alma */
+        .diagrama-alma {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .diagrama-item {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .diagrama-seta {
+            font-size: 2rem;
+            color: #c9a05e;
+        }
+
+        .diagrama-item p {
+            margin-top: 10px;
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+
+        /* O que a Bíblia diz */
+        .topicos-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .topico-item {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 3px solid #3498db;
+        }
+
+        .topico-item strong {
+            color: #3498db;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .topico-item small {
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .diagrama-alma {
+                flex-direction: column;
+            }
+
+            .diagrama-seta {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="estudo1.html">Jesus Restaurador da Vida</a> > 
+            <span>Tema 8</span>
+        </div>
+        <h1>ESTUDO 8</h1>
+        <h2>Jesus e a Vida Eterna</h2>
+        <p>"Eu sou a ressurreição e a vida. Quem crê em mim, ainda que morra, viverá" (João 11:25)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Esclarecer o que a Bíblia ensina sobre a morte, o estado dos mortos e a esperança da ressurreição em Cristo.</p>
+            <p><strong>Texto base:</strong> João 11:1-45 (Ressurreição de Lázaro); Gênesis 2:7; Eclesiastes 9:5-6</p>
+            <p><strong>Versículos-chave:</strong> João 11:25, 1 Coríntios 15:21-23, Eclesiastes 9:5</p>
+            <p><strong>Destaque especial:</strong> A Bíblia compara a morte a um sono. Os mortos não estão conscientes nem em sofrimento, aguardando o dia da ressurreição.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚰️</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>Você tem medo da morte? Será que existe algo além-túmulo?</strong></p>
+                
+                <p style="margin-top: 15px;">Certa vez, um grande escritor revelou sua maior curiosidade: <strong>"Afinal, a morte é uma vírgula, um ponto e vírgula ou um ponto-final?"</strong></p>
+                
+                <p style="margin-top: 15px;">Após a entrada do pecado na Terra, o ser humano ficou sujeito a doenças e à morte. A Bíblia compara a morte a um sono. Ela não é o fim de tudo, pois Cristo Jesus venceu o pecado para destruir a morte.</p>
+                
+                <p style="margin-top: 15px;">O grande plano da redenção foi executado: Cristo morreu e ressuscitou, e essa vitória nos assegura que a dor, o pecado e até a morte têm solução. Pela fé em Jesus, temos garantia de vida eterna.</p>
+                
+                <p style="margin-top: 15px;">Mas o que a Bíblia diz sobre a vida após a morte? Como, quando e onde veremos nossos queridos que já se foram? Neste estudo, a Bíblia responderá a essas questões.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo - AGORA COM O VÍDEO REAL -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎬</div>
+                <h3>Introdução em Vídeo</h3>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/520683447?badge=0&autopause=0&player_id=0&app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        title="ESTUDO 08 - Introdução">
+                </iframe>
+            </div>
+            <p class="video-caption">Clique no player para assistir à introdução do estudo</p>
+        </div>
+
+        <!-- História Bíblica - RESSURREIÇÃO DE LÁZARO -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚰️</div>
+                <h3>A Ressurreição de Lázaro</h3>
+            </div>
+            
+            <div class="section-subtitulo">Sua vez de procurar: João 11:1 a 45</div>
+            
+            <div class="historia-box">
+                <p><strong>A ressurreição de Lázaro</strong></p>
+                
+                <p style="margin-top: 15px;">Marta e Maria enviaram um recado a Cristo, pedindo-Lhe que fosse até lá com urgência para curar seu irmão Lázaro. Ele, porém, morreu. Ao encontrar Marta e Maria e contemplar sua dor, Jesus chorou.</p>
+                
+                <p style="margin-top: 15px;">Mas Cristo ordenou que o morto voltasse à vida, o que aconteceu para o assombro de todos. A ressurreição de Lázaro foi uma pequena amostra do que acontecerá no futuro.</p>
+                
+                <p style="margin-top: 15px;">Cristo mesmo assegurou: <strong>"Eu sou a ressurreição e a vida. Quem crê em Mim, ainda que morra, viverá. E todo o que vive e crê em Mim não morrerá eternamente" (João 11:25).</strong></p>
+            </div>
+
+            <!-- Destaque especial: Lições da história -->
+            <div class="destaque-especial">
+                <h4>⚰️ Lições da Ressurreição de Lázaro</h4>
+                
+                <p><strong>1. Jesus chorou:</strong> Ele se compadece de nossa dor. Não é um Deus distante e insensível.</p>
+                
+                <p><strong>2. A morte não é o fim:</strong> Lázaro voltou à vida. Isso aponta para a ressurreição final.</p>
+                
+                <p><strong>3. Jesus tem poder sobre a morte:</strong> Como Criador da vida, Ele pode restaurá-la.</p>
+                
+                <p><strong>4. A ressurreição é uma promessa:</strong> O que Jesus fez com Lázaro é uma amostra do que fará por todos os que creem.</p>
+                
+                <p style="margin-top: 15px;"><strong>🤔 Para refletir:</strong> O que Jesus ensinou sobre a morte nesse relato? De que maneira o fato de pensar na morte como um sono pode ajudar você a enfrentar essa terrível realidade?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Eu sou a ressurreição e a vida. Quem crê em mim, ainda que morra, viverá; e todo o que vive e crê em mim não morrerá eternamente."
+                <span class="versiculo-ref">João 11:25-26</span>
+            </div>
+        </div>
+
+        <!-- Diagrama da Alma -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🧬</div>
+                <h3>O que é a alma?</h3>
+            </div>
+            
+            <div class="diagrama-alma">
+                <div class="diagrama-item">
+                    <div style="font-size: 2rem;">🌍</div>
+                    <p><strong>Corpo inerte</strong></p>
+                    <p>(feito do pó)</p>
+                </div>
+                <div class="diagrama-seta">+</div>
+                <div class="diagrama-item">
+                    <div style="font-size: 2rem;">💨</div>
+                    <p><strong>Fôlego de vida</strong></p>
+                    <p>(vindo de Deus)</p>
+                </div>
+                <div class="diagrama-seta">=</div>
+                <div class="diagrama-item">
+                    <div style="font-size: 2rem;">🧑</div>
+                    <p><strong>Alma vivente</strong></p>
+                    <p>(ser vivente)</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; color: #ddd; margin-top: 10px;">Em muitas versões bíblicas, o termo hebraico <em>nefesh</em> é traduzido por "alma", que significa "ser vivente", ou seja, a junção do "pó da terra" com o "fôlego de vida" (Gênesis 2:7).</p>
+        </div>
+
+        <!-- O que a Bíblia diz sobre a vida restaurada -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>O que a Bíblia diz sobre a vida restaurada</h3>
+            </div>
+            
+            <div class="topicos-lista">
+                <div class="topico-item">
+                    <strong>A vida está em Jesus</strong>
+                    <small>João 3:16; 11:25; 14:6</small>
+                </div>
+                <div class="topico-item">
+                    <strong>Aparição de mortos é engano</strong>
+                    <small>2 Coríntios 11:13-15; Isaías 8:19-20</small>
+                </div>
+                <div class="topico-item">
+                    <strong>Promessa de ressurreição</strong>
+                    <small>1 Tessalonicenses 4:13-18</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perguntas do Estudo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>Perguntas para Reflexão</h3>
+            </div>
+
+            <!-- Pergunta 1 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Quem criou o ser humano? Gênesis 1:27</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">O acaso</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Deus ✓</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Deus. "Criou Deus, pois, o homem à sua imagem, à imagem de Deus o criou; homem e mulher os criou."
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Como o Senhor deu vida ao ser humano? Gênesis 2:7</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Com Sua palavra</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Soprando-lhe nas narinas o fôlego de vida ✓</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> Soprando-lhe nas narinas o fôlego de vida. "Então, formou o Senhor Deus ao homem do pó da terra e lhe soprou nas narinas o fôlego de vida, e o homem passou a ser alma vivente."
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que é a morte? Eclesiastes 12:7</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">Separação entre o pó da terra e o fôlego de vida: estado de total inconsciência ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">Libertação de uma alma imortal para viver num plano espiritual</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Separação entre o pó da terra e o fôlego de vida: estado de total inconsciência. "E o pó volte à terra, como o era, e o espírito volte a Deus, que o deu." A morte é o inverso da criação.
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Qual era o plano de Deus para o ser humano? Gênesis 2:16 e 17</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Vida eterna ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Vida e morte</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Vida eterna. Deus ordenou que não comessem da árvore do conhecimento, pois isso traria a morte. Seu plano original era vida eterna.
+                </div>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">O que os mortos sabem? Eclesiastes 9:5, 6 e 10</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 5, 'a')">
+                        <input type="radio" name="pergunta5" id="p5a">
+                        <label for="p5a">Mais do que nós sabemos</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 5, 'b')">
+                        <input type="radio" name="pergunta5" id="p5b">
+                        <label for="p5b">Não sabem nada ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 5, 'c')">
+                        <input type="radio" name="pergunta5" id="p5c">
+                        <label for="p5c">Menos do que nós sabemos</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>✓ Resposta correta:</strong> Não sabem nada. "Os mortos não sabem coisa nenhuma... o seu amor, o seu ódio e a sua inveja já pereceram... Não há obra, nem planos, nem conhecimento, nem sabedoria na sepultura."
+                </div>
+            </div>
+
+            <!-- Pergunta 6 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Qual foi a mentira da serpente? Como essa mentira se repete hoje? Gênesis 3:4</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Então, a serpente disse à mulher: É certo que não morrereis." <strong>A mentira é que o ser humano não morre, que a alma é imortal. Essa mentira se repete hoje em doutrinas que ensinam que os mortos estão vivos em outro plano.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 7 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">O que é alma e o que acontece com ela? Ezequiel 18:4 e 20</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Eis que todas as almas são minhas; tanto a alma do pai como a alma do filho são minhas; a alma que pecar, essa morrerá." <strong>Em Ezequiel, "alma" se refere à pessoa completa, não a uma parte imortal. A alma (pessoa) que pecar, essa morrerá.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 8 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Devemos consultar os mortos? Deuteronômio 18:10 e 11</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência:</strong> "Não se achará entre ti quem... consulte os mortos." <strong>É terminantemente proibido consultar os mortos. Isso é abominação ao Senhor.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 9 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">Quando Jesus restaurará para nós a vida eterna? 1 Coríntios 15:21 a 23</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência:</strong> "Visto que a morte veio por um homem, também por um homem veio a ressurreição dos mortos. Porque, assim como, em Adão, todos morrem, assim também todos serão vivificados em Cristo. Cada um, porém, por sua própria ordem: Cristo, as primícias; depois, os que são de Cristo, na sua vinda." <strong>Na volta de Jesus.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="estudo-section">
+            <div class="compromisso-box">
+                <h4>📝 Compromisso de fé</h4>
+                <div class="compromisso-texto">
+                    "Se eu morrer antes de Jesus voltar, quero fazer parte da ressurreição dos justos. Por isso, comprometo-me a viver na companhia de Cristo."
+                </div>
+                
+                <div class="compromisso-campos">
+                    <div class="campo">
+                        <label>Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo">
+                        <label>Data:</label>
+                        <input type="text" id="data" placeholder="__/__/____">
+                    </div>
+                </div>
+                
+                <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+                <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+            </div>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema1-7.html" class="btn-nav">← Tema anterior</a>
+            <a href="estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema1-9.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Onde está, ó morte, a tua vitória? Onde está, ó morte, o teu aguilhão?" - 1 Coríntios 15:55</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Jesus e a Vida Eterna",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_tema8', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_tema8');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

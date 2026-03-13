@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 19 - Jesus e o Espírito Santo | Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Jesus+e+o+Espírito+Santo');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de destaque especial para a história */
+        .historia-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+        }
+
+        .historia-box::before {
+            content: "🕊️";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #0b1a2e;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .historia-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .historia-box strong {
+            color: #c9a05e;
+        }
+
+        /* Destaque especial para lições */
+        .destaque-especial {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #FFD700;
+        }
+
+        .destaque-especial h4 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .destaque-especial p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .destaque-especial ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Player de vídeo - VERSÃO COM LINK DIRETO */
+        .video-link-container {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 40px 20px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .video-link-container:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transform: scale(1.02);
+        }
+
+        .video-link-icon {
+            font-size: 5rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+        }
+
+        .video-link-title {
+            font-size: 1.5rem;
+            color: #c9a05e;
+            margin-bottom: 10px;
+        }
+
+        .video-link-description {
+            color: #ddd;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .video-link-button {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .video-link-button:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        .video-privacy-note {
+            text-align: center;
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Obra do Espírito */
+        .obra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .obra-item {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 3px solid #3498db;
+        }
+
+        .obra-item strong {
+            color: #3498db;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .obra-item small {
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        /* Fruto do Espírito */
+        .fruto-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .fruto-item {
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            border-left: 3px solid #4CAF50;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .fruto-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="estudo1.html">Jesus Restaurador da Vida</a> > 
+            <span>Tema 19</span>
+        </div>
+        <h1>ESTUDO 19</h1>
+        <h2>Jesus e o Espírito Santo</h2>
+        <p>"Mas o Consolador, o Espírito Santo, a quem o Pai enviará em meu nome, esse vos ensinará todas as coisas e vos fará lembrar de tudo o que vos tenho dito" (João 14:26)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar a pessoa e a obra do Espírito Santo, Consolador enviado por Jesus para guiar, ensinar, convencer e capacitar a igreja.</p>
+            <p><strong>Texto base:</strong> João 14:16-31 (Promessa do Espírito Santo); Atos 2 (Pentecostes)</p>
+            <p><strong>Versículos-chave:</strong> João 14:26, Atos 1:8, Gálatas 5:22-23</p>
+            <p><strong>Destaque especial:</strong> O Espírito Santo não é uma força impessoal, mas uma Pessoa divina que age no mundo e na vida do crente.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🕊️</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Após completar Sua missão de sofrimento e sacrifício em nosso favor, Jesus subiu ao Céu para continuar a obra de redenção pelos seres humanos. Quando nossos pecados são confessados a Deus e pedimos Seu perdão, Jesus oferece o próprio sangue como pagamento por nossas transgressões.</p>
+                
+                <p style="margin-top: 15px;">Após Sua morte e ressurreição, era necessário que Cristo subisse ao Céu para interceder por nós junto ao Pai. Jesus, contudo, assegurou que não nos deixaria sós. Ele prometeu enviar o Espírito Santo, o Consolador.</p>
+                
+                <p style="margin-top: 15px;">O Espírito da verdade atua poderosamente naqueles que se entregam a Seu controle. Por intermédio Dele, o Pai realiza Seus propósitos em favor da humanidade caída.</p>
+                
+                <p style="margin-top: 15px;">Vamos conhecer mais o Espírito Santo de Deus.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo - VERSÃO COM LINK DIRETO -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎬</div>
+                <h3>Introdução em Vídeo</h3>
+            </div>
+            
+            <a href="https://vimeo.com/520694438" target="_blank" style="text-decoration: none;">
+                <div class="video-link-container">
+                    <div class="video-link-icon">▶️</div>
+                    <div class="video-link-title">ESTUDO 19 - Introdução</div>
+                    <div class="video-link-description">Clique para assistir ao vídeo de introdução no Vimeo</div>
+                    <span class="video-link-button">Assistir Agora</span>
+                </div>
+            </a>
+            <p class="video-privacy-note">Nota: O vídeo será aberto em uma nova aba devido às configurações de privacidade.</p>
+        </div>
+
+        <!-- História Bíblica - JESUS PROMETE O ESPÍRITO SANTO -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>Jesus Promete o Espírito Santo</h3>
+            </div>
+            
+            <div class="section-subtitulo">Sua vez de procurar: João 14:16 a 31</div>
+            
+            <div class="historia-box">
+                <p><strong>A promessa do Consolador</strong></p>
+                
+                <p style="margin-top: 15px;">Enquanto esteve na Terra, Jesus restaurou a saúde de pessoas enfermas, o conceito de adoração e a confiança dos seres humanos no amor de Deus. Mas não foi apenas isso. Por ser a verdade encarnada, Jesus nos apresentou a verdade restaurada.</p>
+                
+                <p style="margin-top: 15px;">Os discípulos passaram a depender dessa verdade. Quando aprendemos a viver na verdade, nada mais nos satisfaz. E a verdade não é uma coisa abstrata; ela é uma pessoa: Jesus Cristo. Ele é o caminho, a verdade e a vida.</p>
+                
+                <p style="margin-top: 15px;">Jesus nunca nos abandona. Por isso Ele enviou o Espírito Santo para confortar nosso coração, nos acompanhar em todos os momentos e guiar a toda a Verdade.</p>
+            </div>
+
+            <!-- Destaque especial: Lições da história -->
+            <div class="destaque-especial">
+                <h4>🕊️ Lições sobre o Espírito Santo</h4>
+                
+                <p><strong>1. O Espírito é o Consolador:</strong> A palavra grega é "Parakletos" - alguém chamado para estar ao lado, para ajudar e confortar.</p>
+                
+                <p><strong>2. O Espírito ensina:</strong> "Ele vos ensinará todas as coisas." O Espírito é o grande Mestre que nos guia à verdade.</p>
+                
+                <p><strong>3. O Espírito faz lembrar:</strong> "Vos fará lembrar de tudo o que vos tenho dito." Ele traz à memória as palavras de Cristo.</p>
+                
+                <p><strong>4. O Espírito testifica de Jesus:</strong> Sua obra é sempre apontar para Cristo, nunca para Si mesmo.</p>
+                
+                <p style="margin-top: 15px;"><strong>🤔 Para refletir:</strong> Por que precisamos do Espírito Santo para andar com Deus neste mundo?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Mas o Consolador, o Espírito Santo, a quem o Pai enviará em meu nome, esse vos ensinará todas as coisas e vos fará lembrar de tudo o que vos tenho dito."
+                <span class="versiculo-ref">João 14:26</span>
+            </div>
+        </div>
+
+        <!-- Perguntas do Estudo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>Perguntas para Reflexão</h3>
+            </div>
+
+            <!-- Pergunta 1 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Jesus instruiu os discípulos a esperar o derramamento do poder do Espírito Santo. Como isso se cumpriu? Atos 2:1 a 4</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Ao cumprir-se o dia de Pentecostes, estavam todos reunidos no mesmo lugar; de repente, veio do céu um som, como de um vento impetuoso, e encheu toda a casa onde estavam assentados. E apareceram, distribuídas entre eles, línguas, como de fogo, e pousou uma sobre cada um deles. Todos ficaram cheios do Espírito Santo e passaram a falar em outras línguas, segundo o Espírito lhes concedia que falassem." <strong>No dia de Pentecostes, com vento, fogo e línguas.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Quais os principais resultados do Pentecostes para a igreja apostólica? Atos 2:38</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "Pedro então lhes respondeu: Arrependei-vos, e cada um de vós seja batizado em nome de Jesus Cristo para remissão dos vossos pecados, e recebereis o dom do Espírito Santo." <strong>Arrependimento, batismo, remissão de pecados e o dom do Espírito Santo.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Para que é concedido o Espírito Santo? Tito 3:4 a 7</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "Quando, porém, se manifestou a bondade de Deus, nosso Salvador, e o seu amor para com todos, não por obras de justiça praticadas por nós, mas segundo sua misericórdia, ele nos salvou mediante o lavar regenerador e renovador do Espírito Santo, que ele derramou sobre nós ricamente, por meio de Jesus Cristo, nosso Salvador, para que, justificados por sua graça, nos tornemos seus herdeiros, segundo a esperança da vida eterna." <strong>Para regenerar, renovar e justificar, tornando-nos herdeiros da vida eterna.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Qual é a obra do Espírito Santo no mundo? João 16:8 e 13</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Quando ele vier, convencerá o mundo do pecado, da justiça e do juíjo... Quando vier, porém, o Espírito da verdade, ele vos guiará a toda a verdade." <strong>Convencer do pecado, da justiça e do juízo, e guiar a toda a verdade.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Obra do Espírito na vida do cristão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✨</div>
+                <h3>Obra do Espírito Santo na vida do cristão</h3>
+            </div>
+            
+            <div class="obra-grid">
+                <div class="obra-item">
+                    <strong>a) Salmo 51:10-12</strong>
+                    <small>Cria em mim um coração puro e renova em mim um espírito reto. Não me lances fora da tua presença, nem retires de mim o teu Santo Espírito.</small>
+                </div>
+                <div class="obra-item">
+                    <strong>b) Ezequiel 36:26-27</strong>
+                    <small>Dar-vos-ei coração novo e porei dentro de vós espírito novo... Porei dentro de vós o meu Espírito e farei que andeis nos meus estatutos.</small>
+                </div>
+                <div class="obra-item">
+                    <strong>c) Romanos 8:26-27</strong>
+                    <small>O Espírito nos ajuda em nossas fraquezas; porque não sabemos orar como convém, mas o Espírito mesmo intercede por nós com gemidos inexprimíveis.</small>
+                </div>
+                <div class="obra-item">
+                    <strong>d) 1 Coríntios 12:7-11</strong>
+                    <small>A manifestação do Espírito é concedida a cada um visando a um fim proveitoso... Um só e o mesmo Espírito realiza todas estas coisas, distribuindo-as a cada um, individualmente, conforme quer.</small>
+                </div>
+                <div class="obra-item">
+                    <strong>e) Gálatas 5:22-23</strong>
+                    <small>O fruto do Espírito é: amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, mansidão, domínio próprio.</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fruto do Espírito -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🍎</div>
+                <h3>O Fruto do Espírito</h3>
+            </div>
+            
+            <div class="fruto-grid">
+                <div class="fruto-item">Amor</div>
+                <div class="fruto-item">Alegria</div>
+                <div class="fruto-item">Paz</div>
+                <div class="fruto-item">Longanimidade</div>
+                <div class="fruto-item">Benignidade</div>
+                <div class="fruto-item">Bondade</div>
+                <div class="fruto-item">Fidelidade</div>
+                <div class="fruto-item">Mansidão</div>
+                <div class="fruto-item">Domínio próprio</div>
+            </div>
+            
+            <p style="text-align: center; color: #ddd; margin-top: 15px;">Gálatas 5:22-23</p>
+        </div>
+
+        <!-- Pergunta 6 (aberta) -->
+        <div class="pergunta-item">
+            <span class="pergunta-numero">Pergunta 6</span>
+            <div class="pergunta-texto">Sobre o que o Espírito de Cristo testemunhou por meio dos profetas? 1 Pedro 1:11</div>
+            
+            <div class="pergunta-aberta">
+                <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+            </div>
+            
+            <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+            
+            <div class="gabarito" id="gabarito6">
+                <strong>Referência:</strong> "Investigando, pois, qual a ocasião ou quais as circunstâncias oportunas, que indicava o Espírito de Cristo, que neles estava, ao dar de antemão testemunho sobre os sofrimentos referentes a Cristo e sobre as glórias que os seguiriam." <strong>Sobre os sofrimentos de Cristo e as glórias que se seguiriam.</strong>
+            </div>
+        </div>
+
+        <!-- Pergunta 7 (aberta) -->
+        <div class="pergunta-item">
+            <span class="pergunta-numero">Pergunta 7</span>
+            <div class="pergunta-texto">Qual é a principal razão para a existência da igreja e como o Espírito Santo Se relaciona com isso? Mateus 28:18 a 20</div>
+            
+            <div class="pergunta-aberta">
+                <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+            </div>
+            
+            <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+            
+            <div class="gabarito" id="gabarito7">
+                <strong>Referência:</strong> "Ide, portanto, fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo; ensinando-os a guardar todas as coisas que vos tenho ordenado. E eis que estou convosco todos os dias até à consumação do século." <strong>A missão de fazer discípulos, e o Espírito Santo é invocado no batismo e capacita para essa missão.</strong>
+            </div>
+        </div>
+
+        <!-- Pergunta 8 (aberta) -->
+        <div class="pergunta-item">
+            <span class="pergunta-numero">Pergunta 8</span>
+            <div class="pergunta-texto">Qual é o papel do Espírito Santo no processo de santificação do crente? 1 Tessalonicenses 4:3 a 8</div>
+            
+            <div class="pergunta-aberta">
+                <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+            </div>
+            
+            <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+            
+            <div class="gabarito" id="gabarito8">
+                <strong>Referência:</strong> "Porque esta é a vontade de Deus: a vossa santificação... Deus não nos chamou para a impureza, e sim para a santificação. Portanto, quem rejeita estas coisas não rejeita o homem, e sim a Deus, que também vos dá o seu Espírito Santo." <strong>O Espírito Santo é dado por Deus para nos capacitar a viver em santificação.</strong>
+            </div>
+        </div>
+
+        <!-- Áreas influenciadas -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💭</div>
+                <h3>Autoavaliação</h3>
+            </div>
+            
+            <div class="pergunta-aberta">
+                <p><strong>Que áreas da minha vida precisam ser influenciadas pelo Espírito Santo?</strong></p>
+                <textarea placeholder="Exemplos: Pensamentos, palavras, atitudes, relacionamentos, decisões, temperamento..." rows="5"></textarea>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="estudo-section">
+            <div class="compromisso-box">
+                <h4>📝 Compromisso de fé</h4>
+                <div class="compromisso-texto">
+                    "Compreendi que o Espírito Santo me guia em direção às melhores escolhas. Portanto, quero permitir que Ele produza Seus frutos em mim e vou dedicar meus dons espirituais, levando pessoas a conhecer Jesus."
+                </div>
+                
+                <div class="compromisso-campos">
+                    <div class="campo">
+                        <label>Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo">
+                        <label>Data:</label>
+                        <input type="text" id="data" placeholder="__/__/____">
+                    </div>
+                </div>
+                
+                <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+                <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+            </div>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema1-18.html" class="btn-nav">← Tema anterior</a>
+            <a href="estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema1-20.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"O fruto do Espírito é: amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, mansidão, domínio próprio" - Gálatas 5:22-23</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Jesus e o Espírito Santo",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_tema19', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_tema19');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

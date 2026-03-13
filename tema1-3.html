@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3 - Jesus e a Restauração do Bem | Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Jesus+e+a+Restauração+do+Bem');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de destaque especial para a história */
+        .historia-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+        }
+
+        .historia-box::before {
+            content: "🌾";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #0b1a2e;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .historia-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .historia-box strong {
+            color: #c9a05e;
+        }
+
+        /* Destaque especial para lições */
+        .destaque-especial {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #FFD700;
+        }
+
+        .destaque-especial h4 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .destaque-especial p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .destaque-especial ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Player de vídeo - atualizado */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-caption {
+            text-align: center;
+            margin-top: 10px;
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 100px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Para pensar */
+        .para-pensar {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .para-pensar p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .para-pensar strong {
+            color: #c9a05e;
+        }
+
+        /* Dicas */
+        .dicas-box {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .dicas-box h4 {
+            color: #3498db;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dicas-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .dicas-box li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .dicas-box li::before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="estudo1.html">Jesus Restaurador da Vida</a> > 
+            <span>Tema 3</span>
+        </div>
+        <h1>ESTUDO 3</h1>
+        <h2>Jesus e a Restauração do Bem</h2>
+        <p>"O ladrão vem apenas para roubar, matar e destruir; eu vim para que tenham vida e a tenham plenamente" (João 10:10)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar a origem do mal e do pecado, e como Deus age para restaurar o bem através de Jesus Cristo.</p>
+            <p><strong>Texto base:</strong> Mateus 13:24-30, 36-43 (Parábola do Joio); Apocalipse 12:7-10; Gênesis 3</p>
+            <p><strong>Versículos-chave:</strong> Romanos 6:23, 1 João 3:4, Apocalipse 12:7-10</p>
+            <p><strong>Destaque especial:</strong> A parábola do joio ensina sobre a paciência de Deus e o perigo de julgar prematuramente. O bem e o mal crescem juntos até a colheita.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚔️</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Deus nos criou livres e não nos obriga a amá-Lo. Escolheu assumir o risco de ser rejeitado, sabendo que o verdadeiro amor só é real onde existe liberdade.</p>
+                
+                <p style="margin-top: 15px;">Por outro lado, não aceitar o amor divino produz as consequências da falta de amor: medo, ódio e morte. Quando Satanás, o inimigo de Deus, se rebelou contra esse amor, tudo mudou. O Universo ficou manchado pela tristeza.</p>
+                
+                <p style="margin-top: 15px;">Não satisfeito em se separar do amor de Deus, o inimigo levou outros pelo mesmo caminho. E ele faz isso até hoje. Jesus, porém, nos liga a Deus. Sem Ele, jamais poderíamos estar em contato com o Senhor.</p>
+                
+                <p style="margin-top: 15px;">Ao viver e morrer por você e por mim, Jesus nos garantiu a chance de permanecermos ligados a Ele. Cabe a nós segurar firme Sua mão para vencer o mal que nos rodeia. Neste estudo vamos entender mais sobre o grande conflito entre o bem e o mal e como Deus atua para trazer a vida e a paz ao mundo.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo - AGORA COM O VÍDEO REAL -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎬</div>
+                <h3>Introdução em Vídeo</h3>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/520675285?badge=0&autopause=0&player_id=0&app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        title="ESTUDO 03 - Introdução">
+                </iframe>
+            </div>
+            <p class="video-caption">Clique no player para assistir à introdução do estudo</p>
+        </div>
+
+        <!-- História Bíblica - PARÁBOLA DO JOIO -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🌾</div>
+                <h3>A Parábola do Joio</h3>
+            </div>
+            
+            <div class="section-subtitulo">Sua vez de procurar: Mateus 13:24 a 30 e 36 a 43</div>
+            
+            <div class="historia-box">
+                <p><strong>A parábola do trigo e do joio</strong></p>
+                
+                <p style="margin-top: 15px;">Parábola é uma história que nos faz pensar e extrair lições que vão além do que está sendo contado. É um jeito simples e sábio de ensinar verdades profundas.</p>
+                
+                <p style="margin-top: 15px;">Na parábola do trigo e do joio, Jesus falou sobre um semeador que plantava sementes boas em terra fértil. Também havia um inimigo que sabotou a plantação, jogando sementes de ervas daninhas. Como as sementes eram pequenas, as ervas daninhas só apareceram quando tudo começou a brotar.</p>
+                
+                <p style="margin-top: 15px;">Então os trabalhadores se espantaram ao perceber o joio no meio do campo de trigo. "Como isso teria acontecido?" A vontade deles era de arrancar o joio. Pacientemente, o sábio dono do campo disse para eles esperarem. As raízes das plantas de trigo estavam frágeis. Qualquer movimento brusco poderia arrancá-las, e todo o trabalho seria em vão.</p>
+                
+                <p style="margin-top: 15px;">Jesus comparou os filhos de Deus ao trigo, e os maus, ao joio semeado pelo inimigo de Deus.</p>
+            </div>
+
+            <!-- Destaque especial: Lições da parábola -->
+            <div class="destaque-especial">
+                <h4>🌾 Lições da Parábola do Joio</h4>
+                
+                <p><strong>1. O bem e o mal coexistem:</strong> Vivemos em um mundo onde justos e injustos crescem juntos. Nem sempre é fácil distinguir quem é quem.</p>
+                
+                <p><strong>2. Cuidado ao julgar:</strong> "Temos condição de dizer quem é trigo e quem é erva daninha em meio ao povo de Deus?" A resposta é NÃO. Julgar prematuramente pode prejudicar os que são genuínos.</p>
+                
+                <p><strong>3. A paciência de Deus:</strong> O dono do campo ordena que esperem até a colheita. Deus é paciente, dando tempo para o arrependimento.</p>
+                
+                <p><strong>4. A colheita virá:</strong> No final dos tempos, haverá a separação. O joio será queimado e o trigo será recolhido no celeiro.</p>
+                
+                <p style="margin-top: 15px;"><strong>🤔 Para refletir:</strong> O que essa parábola ensina sobre julgar os outros? Como podemos conviver com pessoas difíceis sem perder nossa fé?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "O ladrão vem apenas para roubar, matar e destruir; eu vim para que tenham vida e a tenham plenamente."
+                <span class="versiculo-ref">João 10:10</span>
+            </div>
+        </div>
+
+        <!-- Perguntas do Estudo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>Perguntas para Reflexão</h3>
+            </div>
+
+            <!-- Pergunta 1 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Onde o mal começou? Apocalipse 12:7 a 10</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Na Terra</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">No Céu ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">No jardim do Éden</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> No Céu. "Houve peleja no céu. Miguel e os seus anjos pelejaram contra o dragão. Também o dragão e os seus anjos pelejaram; todavia, não prevaleceram; nem mais se achou no céu o lugar deles. E foi expulso o grande dragão, a antiga serpente, que se chama diabo e Satanás, o sedutor de todo o mundo." O mal teve origem no céu, com a rebelião de Lúcifer.
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Quem originou o pecado? Ezequiel 28:14 a 17</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Um anjo exaltado ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Um ser humano teimoso</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> Um anjo exaltado. "Tu eras querubim da guarda ungido, e te estabeleci; permanecias no monte santo de Deus, no brilho das pedras andavas. Perfeito eras nos teus caminhos, desde o dia em que foste criado, até que se achou iniquidade em ti. Elevou-se o teu coração por causa da tua formosura, corrompeste a tua sabedoria por causa do teu resplendor." O pecado originou-se com Lúcifer, um anjo de alta posição.
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que Deus estabeleceu para preservar o livre-arbítrio da humanidade? Gênesis 2:15 a 17</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">A árvore do conhecimento do bem e do mal ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">A árvore da vida</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> A árvore do conhecimento do bem e do mal. Deus colocou essa árvore no jardim como um teste de livre-arbítrio. Eles poderiam escolher obedecer ou desobedecer. O amor verdadeiro só existe onde há liberdade de escolha.
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Qual foi a essência do primeiro pecado? Gênesis 3:1 a 6</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Gula</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Sexo</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">Rebeldia ✓</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Rebeldia. A essência do pecado foi desobedecer a Deus, duvidar de Sua palavra e agir independentemente. Não foi o ato de comer em si, mas a desobediência à clara ordem divina.
+                </div>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">O que é o pecado? 1 João 3:4</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 5, 'a')">
+                        <input type="radio" name="pergunta5" id="p5a">
+                        <label for="p5a">A transgressão da lei de Deus ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 5, 'b')">
+                        <input type="radio" name="pergunta5" id="p5b">
+                        <label for="p5b">Uma convenção social</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>✓ Resposta correta:</strong> A transgressão da lei de Deus. "Todo aquele que pratica o pecado também transgride a lei, porque o pecado é a transgressão da lei."
+                </div>
+            </div>
+
+            <!-- Pergunta 6 (completar) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Qual é a consequência final do pecado e qual é a resposta de Deus a todo o mal?</div>
+                
+                <div class="pergunta-aberta">
+                    <p style="margin-bottom: 10px;">Complete: "Porque o salário do pecado é a _____, mas o dom gratuito de Deus é a _____ eterna em Cristo Jesus, nosso Senhor" (Romanos 6:23).</p>
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Porque o salário do pecado é a <strong>MORTE</strong>, mas o dom gratuito de Deus é a <strong>VIDA</strong> eterna em Cristo Jesus, nosso Senhor." O pecado leva à morte, mas Deus oferece a vida eterna como um dom gratuito através de Jesus.
+                </div>
+            </div>
+        </div>
+
+        <!-- Para pensar - Reflexões -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💭</div>
+                <h3>Para pensar</h3>
+            </div>
+            
+            <div class="para-pensar">
+                <p><strong>O grande conflito:</strong> Vivemos em um campo onde o bem e o mal crescem juntos. Às vezes é difícil distinguir quem é trigo e quem é joio.</p>
+                
+                <p><strong>A paciência de Deus:</strong> Deus não age com violência imediata. Ele espera, dá tempo, oferece oportunidades de arrependimento.</p>
+                
+                <p><strong>Nossa responsabilidade:</strong> Não cabe a nós julgar quem é salvo ou não. Nosso papel é viver como trigo, frutificando para o Reino.</p>
+                
+                <p><strong>A certeza da vitória:</strong> O mal terá um fim. No tempo da colheita, haverá separação e o bem prevalecerá.</p>
+                
+                <p style="margin-top: 20px;"><strong>Reflita:</strong> Como você tem lidado com as pessoas que parecem "joio" ao seu redor? Tem sido paciente como o dono da seara?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="3"></textarea>
+            </div>
+        </div>
+
+        <!-- Aprenda a confiar em Jesus e vencer o mal -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💪</div>
+                <h3>Aprenda a confiar em Jesus e vencer o mal</h3>
+            </div>
+            
+            <div class="dicas-box">
+                <ul>
+                    <li><strong>Permaneça na presença de Jesus</strong> (1 João 3:6). Quem está ligado a Cristo não vive em pecado deliberado.</li>
+                    <li><strong>Não brinque com o pecado</strong> (Romanos 6:12). Não deixe o pecado reinar em seu corpo mortal.</li>
+                    <li><strong>Ore para não cair em tentação</strong> (Mateus 26:41). Vigie e ore para não ser vencido.</li>
+                    <li><strong>Resista a Satanás em nome de Jesus</strong> (Tiago 4:7). Resista ao diabo, e ele fugirá de você.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="estudo-section">
+            <div class="compromisso-box">
+                <h4>📝 Compromisso de fé</h4>
+                <div class="compromisso-texto">
+                    "Ao ler na Bíblia sobre o grande conflito entre o bem e o mal e entender a gravidade dele, quero me juntar ao exército de Jesus e Lhe entregar meu coração para não permitir que o inimigo tome posse de minha vida."
+                </div>
+                
+                <div class="compromisso-campos">
+                    <div class="campo">
+                        <label>Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo">
+                        <label>Data:</label>
+                        <input type="text" id="data" placeholder="__/__/____">
+                    </div>
+                </div>
+                
+                <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+                <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+            </div>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema1-2.html" class="btn-nav">← Tema anterior</a>
+            <a href="estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema1-4.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Onde abundou o pecado, superabundou a graça" - Romanos 5:20</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            radio.checked = true;
+            
+            // Pequeno feedback visual
+            elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+            setTimeout(() => {
+                elemento.style.backgroundColor = '';
+            }, 200);
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Jesus e a Restauração do Bem",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_tema3', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_tema3');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 17 - Jesus e a Missão da Igreja | Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Jesus+e+a+Missão+da+Igreja');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de destaque especial para a história */
+        .historia-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+        }
+
+        .historia-box::before {
+            content: "🎣";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #0b1a2e;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .historia-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .historia-box strong {
+            color: #c9a05e;
+        }
+
+        /* Destaque especial para lições */
+        .destaque-especial {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #FFD700;
+        }
+
+        .destaque-especial h4 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .destaque-especial p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .destaque-especial ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Player de vídeo - VERSÃO COM LINK DIRETO */
+        .video-link-container {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 40px 20px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .video-link-container:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transform: scale(1.02);
+        }
+
+        .video-link-icon {
+            font-size: 5rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+        }
+
+        .video-link-title {
+            font-size: 1.5rem;
+            color: #c9a05e;
+            margin-bottom: 10px;
+        }
+
+        .video-link-description {
+            color: #ddd;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .video-link-button {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .video-link-button:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        .video-privacy-note {
+            text-align: center;
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 100px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Pontos a considerar */
+        .pontos-box {
+            background: rgba(52, 152, 219, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+
+        .pontos-box h4 {
+            color: #3498db;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pontos-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pontos-box li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.8;
+            color: #ddd;
+        }
+
+        .pontos-box li::before {
+            content: "✓";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .pontos-box a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .pontos-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="estudo1.html">Jesus Restaurador da Vida</a> > 
+            <span>Tema 17</span>
+        </div>
+        <h1>ESTUDO 17</h1>
+        <h2>Jesus e a Missão da Igreja</h2>
+        <p>"Ide, portanto, fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo" (Mateus 28:19)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar que todo cristão é chamado para a missão de fazer discípulos, e que essa é a maior alegria e propósito da vida.</p>
+            <p><strong>Texto base:</strong> Lucas 5:1-11 (A pesca maravilhosa); Mateus 28:18-20 (A grande comissão)</p>
+            <p><strong>Versículos-chave:</strong> Mateus 28:19-20, Atos 1:8, 3 João 4</p>
+            <p><strong>Destaque especial:</strong> A missão não é opcional, é um chamado para todos os seguidores de Jesus. Temos a promessa da presença de Cristo e do poder do Espírito Santo.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎯</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>Qual é a razão de sua vida?</strong> A resposta a essa questão define qual é sua missão. Viver sem uma missão é como caminhar sem rumo.</p>
+                
+                <p style="margin-top: 15px;">Acima de tantos objetivos nobres, que têm sua razão de existir, há uma missão que vale a pena o investimento de todos os nossos recursos: <strong>a salvação de pessoas.</strong></p>
+                
+                <p style="margin-top: 15px;">Essa é a solução definitiva para os dramas humanos e todas as formas de injustiça. Essa missão é uma tarefa de grande responsabilidade entregue por Deus a cada um de Seus seguidores.</p>
+                
+                <p style="margin-top: 15px;">De fato, Jesus nos atribuiu uma importante missão: <strong>"Vão e façam discípulos" (Mateus 28:19).</strong> Todos que são chamados ao reino de Deus devem sair em busca de novas pessoas, ensinando-as sobre o Salvador.</p>
+                
+                <p style="margin-top: 15px;">Embora essa pareça uma missão muito difícil, não devemos temer. Recebemos de Cristo a maravilhosa promessa de que Ele vai à nossa frente. Nosso Consolador, o Espírito Santo, está conosco todos os dias em nossa missão, <strong>"até o fim dos tempos" (Mateus 28:20).</strong></p>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo - VERSÃO COM LINK DIRETO -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎬</div>
+                <h3>Introdução em Vídeo</h3>
+            </div>
+            
+            <a href="https://vimeo.com/520692572" target="_blank" style="text-decoration: none;">
+                <div class="video-link-container">
+                    <div class="video-link-icon">▶️</div>
+                    <div class="video-link-title">ESTUDO 17 - Introdução</div>
+                    <div class="video-link-description">Clique para assistir ao vídeo de introdução no Vimeo</div>
+                    <span class="video-link-button">Assistir Agora</span>
+                </div>
+            </a>
+            <p class="video-privacy-note">Nota: O vídeo será aberto em uma nova aba devido às configurações de privacidade.</p>
+        </div>
+
+        <!-- História Bíblica - A PESCA MARAVILHOSA -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎣</div>
+                <h3>A Pesca Maravilhosa</h3>
+            </div>
+            
+            <div class="section-subtitulo">Sua vez de procurar: Lucas 5:1 a 11</div>
+            
+            <div class="historia-box">
+                <p><strong>O chamado de Pedro</strong></p>
+                
+                <p style="margin-top: 15px;">Alguns dos discípulos de Jesus eram pescadores. Homens simples, mas acostumados à dura atividade do mar. A pesca também era seu meio de sobrevivência. Quando havia peixe, eles tinham condições de manter a família.</p>
+                
+                <p style="margin-top: 15px;">Naquele dia, além do cuidado do Pai para com eles, Cristo queria lhes ensinar uma lição mais profunda. Os discípulos não haviam conseguido nada, mas Jesus disse a Pedro que voltasse e lançasse as redes novamente.</p>
+                
+                <p style="margin-top: 15px;">Talvez Pedro tivesse respirado fundo e pensado consigo mesmo: <strong>"O que esse homem entende de pescaria?"</strong> Pedro, porém, confiava em Jesus. O que ele não esperava era que essa confiança lhe renderia muitíssimo mais do que ele poderia imaginar. Ao puxar, as redes quase se rasgaram de tanto peixe!</p>
+                
+                <p style="margin-top: 15px;">Diante do maravilhoso milagre, restou a esse discípulo se prostrar aos pés de Cristo e aceitar imediatamente o convite do Mestre.</p>
+            </div>
+
+            <!-- Destaque especial: Lições da história -->
+            <div class="destaque-especial">
+                <h4>🎣 Lições da Pesca Maravilhosa</h4>
+                
+                <p><strong>1. Obediência apesar da dúvida:</strong> Pedro questionou, mas obedeceu. "Sob a tua palavra, lançarei a rede."</p>
+                
+                <p><strong>2. O milagre vem pela confiança:</strong> Quando confiamos em Jesus, Ele faz muito mais do que pedimos ou pensamos.</p>
+                
+                <p><strong>3. Humildade diante do divino:</strong> Pedro prostrou-se aos pés de Jesus, reconhecendo sua pequenez.</p>
+                
+                <p><strong>4. Novo propósito:</strong> "De agora em diante serás pescador de homens." A missão muda: não mais peixes, mas pessoas.</p>
+                
+                <p style="margin-top: 15px;"><strong>🤔 Para refletir:</strong> Qual foi o convite de Jesus a Pedro que também é feito a você hoje?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Ide, portanto, fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo; ensinando-os a guardar todas as coisas que vos tenho ordenado."
+                <span class="versiculo-ref">Mateus 28:19-20</span>
+            </div>
+        </div>
+
+        <!-- Perguntas do Estudo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>Perguntas para Reflexão</h3>
+            </div>
+
+            <!-- Pergunta 1a -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1a</span>
+                <div class="pergunta-texto">Que missão Jesus nos confiou? Atos 1:8</div>
+                
+                <div class="pergunta-aberta">
+                    <p style="margin-bottom: 10px;">Complete: "Mas vocês [...] serão Minhas <input type="text" style="background:rgba(255,255,255,0.1); border:1px solid #c9a05e; color:#fff; padding:5px; width:100px;"> tanto em Jerusalém como em toda a Judeia e Samaria até os confins da Terra."</p>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('1a')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1a">
+                    <strong>Referência:</strong> "Mas vocês receberão poder quando o Espírito Santo descer sobre vocês, e serão Minhas <strong>testemunhas</strong> tanto em Jerusalém como em toda a Judeia e Samaria até os confins da Terra."
+                </div>
+            </div>
+
+            <!-- Pergunta 1b -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1b</span>
+                <div class="pergunta-texto">Que missão Jesus nos confiou? 2 Coríntios 5:18</div>
+                
+                <div class="pergunta-aberta">
+                    <p style="margin-bottom: 10px;">Complete: "Cristo [...] nos deu o ministério da <input type="text" style="background:rgba(255,255,255,0.1); border:1px solid #c9a05e; color:#fff; padding:5px; width:150px;">."</p>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('1b')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1b">
+                    <strong>Referência:</strong> "E tudo isto provém de Deus, que nos reconciliou consigo mesmo por Cristo e nos deu o ministério da <strong>reconciliação</strong>."
+                </div>
+            </div>
+
+            <!-- Pergunta 1c -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1c</span>
+                <div class="pergunta-texto">Que missão Jesus nos confiou? 2 Coríntios 5:20</div>
+                
+                <div class="pergunta-aberta">
+                    <p style="margin-bottom: 10px;">Complete: "Somos <input type="text" style="background:rgba(255,255,255,0.1); border:1px solid #c9a05e; color:#fff; padding:5px; width:150px;"> em nome de Cristo."</p>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('1c')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1c">
+                    <strong>Referência:</strong> "De sorte que somos <strong>embaixadores</strong> em nome de Cristo, como se Deus exortasse por nosso intermédio." <strong>Somos embaixadores do Reino de Deus.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Qual é a maior alegria de um servo de Deus? 3 João 4</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "Não tenho maior alegria do que esta, ouvir que meus filhos andam na verdade." <strong>A maior alegria é ver aqueles que ganhamos para Cristo andando na verdade.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Qual é o chamado de todo filho de Deus? Atos 13:47</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "Porque o Senhor assim no-lo ordenou: Eu te constituí para luz dos gentios, a fim de que sejas para salvação até os confins da terra." <strong>Ser luz para os gentios e instrumento de salvação.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Como nossa vida pode ser um testemunho ao mundo? João 13:34 e 35</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Novo mandamento vos dou: que vos ameis uns aos outros; assim como eu vos amei, que também vos ameis uns aos outros. Nisto conhecerão todos que sois meus discípulos: se tiverdes amor uns aos outros." <strong>Pelo amor que demonstramos uns pelos outros.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Por que devemos testemunhar? 2 Coríntios 5:17 e 20</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "E, assim, se alguém está em Cristo, é nova criatura; as coisas antigas já passaram; eis que se fizeram novas... De sorte que somos embaixadores em nome de Cristo, como se Deus exortasse por nosso intermédio." <strong>Porque fomos reconciliados e agora temos a missão de reconciliar outros.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 6 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">O que Deus nos concede a fim de testemunharmos? Efésios 4:8 e 11</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Quando ele subiu às alturas, levou cativo o cativeiro e concedeu dons aos homens... E ele mesmo concedeu uns para apóstolos, outros para profetas, outros para evangelistas e outros para pastores e mestres." <strong>Deus concede dons espirituais para capacitar Sua igreja.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 7 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Como testemunhar aos que não conhecem Jesus? Colossenses 4:2, 5 e 6</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Perseverai na oração... Portai-vos com sabedoria para com os que são de fora, remindo o tempo. A vossa palavra seja sempre agradável, temperada com sal, para saberdes como deveis responder a cada um." <strong>Com oração, sabedoria, bom testemunho e palavras agradáveis.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pontos a considerar -->
+        <div class="estudo-section">
+            <div class="pontos-box">
+                <h4>📌 Pontos a considerar</h4>
+                <ul>
+                    <li><strong>Forme uma dupla missionária</strong> com seu instrutor bíblico e juntos orem pela salvação de cinco amigos.</li>
+                    <li><strong>Ofereça ajuda</strong> a essas pessoas.</li>
+                    <li><strong>Ore com esses cinco amigos</strong> e compartilhe com eles uma revista ou um livro sobre Deus. Acesse: <a href="https://livro.esperanca.com.br" target="_blank">livro.esperanca.com.br</a></li>
+                    <li><strong>Compartilhe este curso bíblico:</strong> "Jesus, Restaurador da Vida".</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Lista de 5 amigos para oração -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✏️</div>
+                <h3>Meus 5 amigos por quem vou orar</h3>
+            </div>
+            
+            <div class="pergunta-aberta">
+                <p style="margin-bottom: 10px;">1. <input type="text" style="width:80%; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; color:#fff; padding:8px; margin-bottom:10px;" placeholder="Nome do amigo 1"></p>
+                <p style="margin-bottom: 10px;">2. <input type="text" style="width:80%; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; color:#fff; padding:8px; margin-bottom:10px;" placeholder="Nome do amigo 2"></p>
+                <p style="margin-bottom: 10px;">3. <input type="text" style="width:80%; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; color:#fff; padding:8px; margin-bottom:10px;" placeholder="Nome do amigo 3"></p>
+                <p style="margin-bottom: 10px;">4. <input type="text" style="width:80%; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; color:#fff; padding:8px; margin-bottom:10px;" placeholder="Nome do amigo 4"></p>
+                <p style="margin-bottom: 10px;">5. <input type="text" style="width:80%; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; color:#fff; padding:8px; margin-bottom:10px;" placeholder="Nome do amigo 5"></p>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="estudo-section">
+            <div class="compromisso-box">
+                <h4>📝 Compromisso de fé</h4>
+                <div class="compromisso-texto">
+                    "Entendi que a maior alegria de Deus é saber que Seus filhos andam na verdade. Portanto, quero honrar o Senhor levando pessoas a Ele."
+                </div>
+                
+                <div class="compromisso-campos">
+                    <div class="campo">
+                        <label>Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo">
+                        <label>Data:</label>
+                        <input type="text" id="data" placeholder="__/__/____">
+                    </div>
+                </div>
+                
+                <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+                <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+            </div>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema1-16.html" class="btn-nav">← Tema anterior</a>
+            <a href="estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema1-18.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Eis-me aqui, envia-me a mim" - Isaías 6:8</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Jesus e a Missão da Igreja",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_tema17', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_tema17');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

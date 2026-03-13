@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 14 - Jesus e a Fidelidade | Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Jesus+e+a+Fidelidade');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de destaque especial para a história */
+        .historia-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+        }
+
+        .historia-box::before {
+            content: "💰";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #0b1a2e;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .historia-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .historia-box strong {
+            color: #c9a05e;
+        }
+
+        /* Destaque especial para lições */
+        .destaque-especial {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #FFD700;
+        }
+
+        .destaque-especial h4 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .destaque-especial p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .destaque-especial ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Player de vídeo - VERSÃO COM LINK DIRETO */
+        .video-link-container {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 40px 20px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .video-link-container:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transform: scale(1.02);
+        }
+
+        .video-link-icon {
+            font-size: 5rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+        }
+
+        .video-link-title {
+            font-size: 1.5rem;
+            color: #c9a05e;
+            margin-bottom: 10px;
+        }
+
+        .video-link-description {
+            color: #ddd;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .video-link-button {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .video-link-button:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        .video-privacy-note {
+            text-align: center;
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 100px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Listas de versículos */
+        .versiculos-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .versiculo-item {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 3px solid #3498db;
+        }
+
+        .versiculo-item strong {
+            color: #3498db;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .versiculo-item small {
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        /* Pontos a considerar */
+        .pontos-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .pontos-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .pontos-box p::before {
+            content: "•";
+            color: #c9a05e;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* Para pensar */
+        .para-pensar {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .para-pensar p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .para-pensar strong {
+            color: #c9a05e;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .versiculos-lista {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="estudo1.html">Jesus Restaurador da Vida</a> > 
+            <span>Tema 14</span>
+        </div>
+        <h1>ESTUDO 14</h1>
+        <h2>Jesus e a Fidelidade</h2>
+        <p>"Sê fiel até à morte, e dar-te-ei a coroa da vida" (Apocalipse 2:10)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar que a fidelidade a Deus envolve todas as áreas da vida, incluindo a mordomia dos recursos que Ele nos confia.</p>
+            <p><strong>Texto base:</strong> Lucas 19:11-27 (Parábola das dez minas); Malaquias 3:8-10; Mateus 23:23</p>
+            <p><strong>Versículos-chave:</strong> Apocalipse 2:10, Mateus 6:33, 2 Coríntios 9:7</p>
+            <p><strong>Destaque especial:</strong> A fidelidade nos dízimos e ofertas é uma expressão de confiança em Deus e gratidão por Sua provisão.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🤝</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Ninguém gosta de ser traído. A dor da traição é um dos piores sentimentos, pois a infidelidade só existe onde havia confiança. Alguém em quem você não confia não tem como traí-lo nem tirar nada de você, justamente porque antes não se esperava lealdade dessa pessoa.</p>
+                
+                <p style="margin-top: 15px;">A traição dói tanto porque, em algum momento, houve compromisso, entrega, proximidade e segurança. "Fidelidade" é uma palavra que vem do latim e significa <strong>"preservar as características originais"</strong>, "ser fiel à referência". Fidelidade é sinônimo de lealdade e honradez.</p>
+                
+                <p style="margin-top: 15px;">Como cristãos, nosso maior exemplo de fidelidade é Jesus. A Bíblia relata que Ele foi fiel até a morte, e morte de cruz. Cristo foi fiel ao Pai e ao plano de salvar a humanidade. Seu amor foi tão grande que nos ofereceu não apenas o melhor que tinha, mas tudo. Ele entregou a Si mesmo.</p>
+                
+                <p style="margin-top: 15px;">Neste estudo vamos aprender mais sobre a fidelidade que Deus nos inspira a praticar em nosso dia a dia.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo - VERSÃO COM LINK DIRETO -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎬</div>
+                <h3>Introdução em Vídeo</h3>
+            </div>
+            
+            <a href="https://vimeo.com/520689923" target="_blank" style="text-decoration: none;">
+                <div class="video-link-container">
+                    <div class="video-link-icon">▶️</div>
+                    <div class="video-link-title">ESTUDO 14 - Introdução</div>
+                    <div class="video-link-description">Clique para assistir ao vídeo de introdução no Vimeo</div>
+                    <span class="video-link-button">Assistir Agora</span>
+                </div>
+            </a>
+            <p class="video-privacy-note">Nota: O vídeo será aberto em uma nova aba devido às configurações de privacidade.</p>
+        </div>
+
+        <!-- História Bíblica - PARÁBOLA DAS DEZ MINAS -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💰</div>
+                <h3>A Parábola das Dez Minas</h3>
+            </div>
+            
+            <div class="section-subtitulo">Sua vez de procurar: Lucas 19:11 a 27</div>
+            
+            <div class="historia-box">
+                <p><strong>A parábola das dez minas</strong></p>
+                
+                <p style="margin-top: 15px;">No Reino de Deus, a fidelidade é um ponto fundamental. Segundo o relato bíblico, certo homem deu a seus dez servos a mesma quantidade de minas (uma moeda grega cujo valor era equivalente a cem dias de trabalho).</p>
+                
+                <p style="margin-top: 15px;">Um dos servos atendeu à única orientação, <strong>"negociem até que eu volte"</strong>, e conseguiu dez vezes mais. Outro trouxe cinco vezes mais, cada um conforme sua capacidade. Entretanto, o servo infiel não fez nada, e a mina que a princípio lhe havia sido confiada foi entregue ao que tinha mais.</p>
+                
+                <p style="margin-top: 15px;"><strong>"Sê fiel até a morte, e eu lhe darei a coroa da vida" (Apocalipse 2:10).</strong></p>
+            </div>
+
+            <!-- Destaque especial: Lições da parábola -->
+            <div class="destaque-especial">
+                <h4>💰 Lições das Dez Minas</h4>
+                
+                <p><strong>1. Todos recebem dons:</strong> Cada servo recebeu a mesma quantia. Deus dá a todos oportunidades e recursos.</p>
+                
+                <p><strong>2. A fidelidade é recompensada:</strong> Os que foram fiéis com o pouco foram colocados sobre muito.</p>
+                
+                <p><strong>3. A infidelidade tem consequências:</strong> O servo infiel perdeu até o que tinha.</p>
+                
+                <p><strong>4. Somos mordomos, não donos:</strong> Os bens pertencem ao senhor. Nós apenas administramos.</p>
+                
+                <p style="margin-top: 15px;"><strong>🤔 Para refletir:</strong> Por que fidelidade a Deus é importante em nossa caminhada espiritual?</p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Sê fiel até à morte, e dar-te-ei a coroa da vida."
+                <span class="versiculo-ref">Apocalipse 2:10</span>
+            </div>
+        </div>
+
+        <!-- Perguntas do Estudo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>Perguntas para Reflexão</h3>
+            </div>
+
+            <!-- Pergunta 1 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Qual deve ser a prioridade de minha vida? Mateus 6:33</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">A família</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">O reino de Deus ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">O trabalho</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> O reino de Deus. "Buscai, pois, em primeiro lugar, o seu reino e a sua justiça, e todas estas coisas vos serão acrescentadas." A prioridade máxima deve ser o Reino de Deus.
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Em última instância, graças a quem obtemos nossos bens? Deuteronômio 8:17 e 18</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Ao esforço pessoal</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">À família</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">A Deus ✓</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> A Deus. "Não digas, pois, no teu coração: A minha força e o poder do meu braço me adquiriram estas riquezas. Antes, te lembrarás do Senhor, teu Deus, porque é ele o que te dá força para adquirires riquezas." Deus é a fonte de toda provisão.
+                </div>
+            </div>
+
+            <!-- Pergunta 3 (aberta) -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Do que devemos devolver o dízimo? Gênesis 28:20 a 22</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "De tudo o que me deres, certamente te darei o dízimo." <strong>O dízimo deve ser devolvido de tudo o que Deus nos dá.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Para que servem os dízimos -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📊</div>
+                <h3>Para que servem os dízimos?</h3>
+            </div>
+            
+            <div class="versiculos-lista">
+                <div class="versiculo-item">
+                    <strong>a) Números 18:21</strong>
+                    <small>"Aos filhos de Levi dei todos os dízimos em Israel por herança, pelo serviço que prestam, serviço da tenda da congregação."</small>
+                </div>
+                <div class="versiculo-item">
+                    <strong>b) Malaquias 3:10</strong>
+                    <small>"Trazei todos os dízimos à casa do Tesouro, para que haja mantimento na minha casa."</small>
+                </div>
+                <div class="versiculo-item">
+                    <strong>c) 1 Coríntios 9:13-14</strong>
+                    <small>"Não sabeis vós que os que prestam serviços sagrados do sagrado se alimentam? E os que servem ao altar, do altar tiram a sua parte? Assim ordenou o Senhor aos que pregam o evangelho que vivam do evangelho."</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Para que servem as ofertas -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎁</div>
+                <h3>Para que servem as ofertas?</h3>
+            </div>
+            
+            <div class="versiculos-lista">
+                <div class="versiculo-item">
+                    <strong>a) Êxodo 35:29</strong>
+                    <small>"Todos os homens e mulheres, cujo coração os moveu a trazer alguma coisa para toda a obra que o Senhor ordenara se fizesse por meio de Moisés, a trouxeram como oferta voluntária ao Senhor."</small>
+                </div>
+                <div class="versiculo-item">
+                    <strong>b) 1 Crônicas 29:9 e 16</strong>
+                    <small>"O povo se alegrou com tudo o que fizeram voluntariamente; porque de todo o coração fizeram ofertas voluntárias ao Senhor."</small>
+                </div>
+                <div class="versiculo-item">
+                    <strong>c) 2 Coríntios 9:7</strong>
+                    <small>"Cada um contribua segundo tiver proposto no coração, não com tristeza ou por necessidade; porque Deus ama a quem dá com alegria."</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- O que Jesus ensinou sobre dízimos e ofertas -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✝️</div>
+                <h3>O que Jesus ensinou sobre o dízimo e as ofertas?</h3>
+            </div>
+            
+            <div class="versiculos-lista">
+                <div class="versiculo-item">
+                    <strong>a) Mateus 23:23</strong>
+                    <small>"Ai de vós, escribas e fariseus, hipócritas, porque dais o dízimo da hortelã, do endro e do cominho e tendes negligenciado os preceitos mais importantes da lei: a justiça, a misericórdia e a fé. Devíeis, porém, fazer estas coisas, sem omitir aquelas." Jesus ensinou que devemos praticar tanto a justiça quanto a fidelidade nos dízimos.</small>
+                </div>
+                <div class="versiculo-item">
+                    <strong>b) Marcos 12:41-44</strong>
+                    <small>"Estando Jesus assentado diante do gazofilácio, observava como o povo depositava ali o dinheiro. Muitos ricos depositavam grandes quantias. Vindo, porém, uma viúva pobre, depositou duas pequenas moedas, correspondentes a um quadrante. E, chamando os seus discípulos, disse-lhes: Em verdade vos digo que esta viúva pobre depositou no gazofilácio mais do que todos os ofertantes." Jesus valorizou a oferta sacrificial, não a quantidade.</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pontos a considerar -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📌</div>
+                <h3>Pontos a considerar</h3>
+            </div>
+            
+            <div class="pontos-box">
+                <p>A Bíblia ensina que os dízimos e as ofertas são parte da adoração (Deuteronômio 12:6).</p>
+                
+                <p>O ato de entregar voluntariamente o dízimo mostra em quem eu confio. É a minha dádiva de gratidão pelo que Deus me concede (Levítico 27:30 e 32).</p>
+                
+                <p>As ofertas representam nossa gratidão pela salvação oferecida por Cristo na cruz, o que Ele faz hoje como intercessor e o que fará quando voltar. A Bíblia não prescreve o percentual da oferta. Portanto, ela pode ser menor, igual ou maior que o dízimo.</p>
+                
+                <p>Os dízimos e as ofertas são um meio fundamental para cumprir a missão de pregar o evangelho a todo o mundo (Mateus 24:14).</p>
+            </div>
+        </div>
+
+        <!-- Para pensar -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💭</div>
+                <h3>Para pensar</h3>
+            </div>
+            
+            <div class="para-pensar">
+                <p><strong>Como você se sente ao ver o que Jesus fez, faz e fará por você?</strong></p>
+                <textarea placeholder="Escreva sua reflexão aqui..." rows="5"></textarea>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="estudo-section">
+            <div class="compromisso-box">
+                <h4>📝 Compromisso de fé</h4>
+                <div class="compromisso-texto">
+                    "Entendo que a devolução dos dízimos e das ofertas é uma forma de adorar a Deus e demonstrar minha fidelidade a Ele. Portanto, desejo empregar não apenas meus recursos na causa de Deus, mas também minha vida, meus dons e meu tempo."
+                </div>
+                
+                <div class="compromisso-campos">
+                    <div class="campo">
+                        <label>Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo">
+                        <label>Data:</label>
+                        <input type="text" id="data" placeholder="__/__/____">
+                    </div>
+                </div>
+                
+                <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+                <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+            </div>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema1-13.html" class="btn-nav">← Tema anterior</a>
+            <a href="estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema1-15.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Cada um contribua segundo tiver proposto no coração, não com tristeza ou por necessidade; porque Deus ama a quem dá com alegria" - 2 Coríntios 9:7</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Jesus e a Fidelidade",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_tema14', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_tema14');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesus Restaurador da Vida - Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header */
+        .study-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Jesus+Restaurador+da+Vida');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #c9a05e;
+        }
+
+        .study-header-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .study-header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #c9a05e;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .study-header-content p {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Informações do estudo */
+        .study-info {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            text-align: center;
+        }
+
+        .study-info h2 {
+            font-size: 2.2rem;
+            color: #c9a05e;
+            margin-bottom: 20px;
+        }
+
+        .study-info p {
+            font-size: 1.1rem;
+            color: #ddd;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .study-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(201, 160, 94, 0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .meta-icon {
+            font-size: 1.3rem;
+        }
+
+        /* Título da seção de temas */
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h3 {
+            font-size: 2rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #ddd;
+            font-size: 1.1rem;
+        }
+
+        /* Grid de temas */
+        .temas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .tema-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tema-card:hover {
+            transform: translateY(-5px);
+            border-color: #c9a05e;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .tema-number {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
+
+        .tema-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+            line-height: 1.4;
+        }
+
+        .tema-description {
+            color: #aaa;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .btn-tema {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn-tema:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Navegação */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .study-header-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .study-header {
+                height: 250px;
+            }
+
+            .study-info h2 {
+                font-size: 1.8rem;
+            }
+
+            .temas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .study-header-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .breadcrumb {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tema-card {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .tema-card:nth-child(1) { animation-delay: 0.05s; }
+        .tema-card:nth-child(2) { animation-delay: 0.1s; }
+        .tema-card:nth-child(3) { animation-delay: 0.15s; }
+        .tema-card:nth-child(4) { animation-delay: 0.2s; }
+        .tema-card:nth-child(5) { animation-delay: 0.25s; }
+        .tema-card:nth-child(6) { animation-delay: 0.3s; }
+        .tema-card:nth-child(7) { animation-delay: 0.35s; }
+        .tema-card:nth-child(8) { animation-delay: 0.4s; }
+        .tema-card:nth-child(9) { animation-delay: 0.45s; }
+        .tema-card:nth-child(10) { animation-delay: 0.5s; }
+        .tema-card:nth-child(11) { animation-delay: 0.55s; }
+        .tema-card:nth-child(12) { animation-delay: 0.6s; }
+        .tema-card:nth-child(13) { animation-delay: 0.65s; }
+        .tema-card:nth-child(14) { animation-delay: 0.7s; }
+        .tema-card:nth-child(15) { animation-delay: 0.75s; }
+        .tema-card:nth-child(16) { animation-delay: 0.8s; }
+        .tema-card:nth-child(17) { animation-delay: 0.85s; }
+        .tema-card:nth-child(18) { animation-delay: 0.9s; }
+        .tema-card:nth-child(19) { animation-delay: 0.95s; }
+        .tema-card:nth-child(20) { animation-delay: 1s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="study-header">
+        <div class="breadcrumb">
+            <a href="index.html">Página Inicial</a> > <span>Jesus Restaurador da Vida</span>
+        </div>
+        <div class="study-header-content">
+            <h1>Jesus Restaurador da Vida</h1>
+            <p>20 temas para transformar sua jornada espiritual</p>
+        </div>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Informações do estudo -->
+        <div class="study-info">
+            <h2>Estudo 1: Jesus Restaurador da Vida</h2>
+            <p>Embarque em uma jornada de 20 estudos que revelam como Jesus Cristo restaura, transforma e dá propósito à nossa vida através de Seus ensinamentos e amor incomparável.</p>
+            
+            <div class="study-meta">
+                <div class="meta-item">
+                    <span class="meta-icon">📖</span>
+                    <span>20 Temas</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Título da seção de temas -->
+        <div class="section-title">
+            <h3>Temas do Estudo</h3>
+            <p>Clique em cada tema para acessar o conteúdo</p>
+        </div>
+
+        <!-- Grid de temas -->
+        <div class="temas-grid">
+            <!-- ESTUDO 1 -->
+            <div class="tema-card" onclick="window.location.href='tema1-1.html'">
+                <span class="tema-number">Tema 1</span>
+                <h4>Jesus e as Escrituras Sagradas</h4>
+                <p class="tema-description">Descubra como Jesus se revela através das Escrituras e como elas testificam dEle como o Filho de Deus.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 2 -->
+            <div class="tema-card" onclick="window.location.href='tema1-2.html'">
+                <span class="tema-number">Tema 2</span>
+                <h4>Jesus e o Amor Divino</h4>
+                <p class="tema-description">Explore a profundidade do amor de Deus revelado em Jesus Cristo e como esse amor transforma vidas.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 3 -->
+            <div class="tema-card" onclick="window.location.href='tema1-3.html'">
+                <span class="tema-number">Tema 3</span>
+                <h4>Jesus e a Restauração do Bem</h4>
+                <p class="tema-description">Aprenda como Jesus restaura o que está quebrado, trazendo cura e esperança para os corações aflitos.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 4 -->
+            <div class="tema-card" onclick="window.location.href='tema1-4.html'">
+                <span class="tema-number">Tema 4</span>
+                <h4>Jesus e a Oração</h4>
+                <p class="tema-description">Estude o exemplo de Jesus na oração e aprenda a desenvolver uma vida de comunhão com o Pai.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 5 -->
+            <div class="tema-card" onclick="window.location.href='tema1-5.html'">
+                <span class="tema-number">Tema 5</span>
+                <h4>Jesus e a Salvação</h4>
+                <p class="tema-description">Compreenda o plano da salvação através de Jesus Cristo e o que isso significa para sua vida.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 6 -->
+            <div class="tema-card" onclick="window.location.href='tema1-6.html'">
+                <span class="tema-number">Tema 6</span>
+                <h4>Jesus e a Intercessão</h4>
+                <p class="tema-description">Descubra como Jesus intercede por nós e como podemos ser intercessores segundo Seu exemplo.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 7 -->
+            <div class="tema-card" onclick="window.location.href='tema1-7.html'">
+                <span class="tema-number">Tema 7</span>
+                <h4>Jesus e o Destino do Mundo</h4>
+                <p class="tema-description">Explore as profecias sobre o destino do mundo e o papel de Jesus no plano divino.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 8 -->
+            <div class="tema-card" onclick="window.location.href='tema1-8.html'">
+                <span class="tema-number">Tema 8</span>
+                <h4>Jesus e a Vida Eterna</h4>
+                <p class="tema-description">Medite sobre a promessa da vida eterna em Cristo e o que significa viver essa realidade hoje.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 9 -->
+            <div class="tema-card" onclick="window.location.href='tema1-9.html'">
+                <span class="tema-number">Tema 9</span>
+                <h4>Jesus e o Juízo</h4>
+                <p class="tema-description">Entenda o juízo divino à luz do caráter de Jesus e da justiça de Deus.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 10 -->
+            <div class="tema-card" onclick="window.location.href='tema1-10.html'">
+                <span class="tema-number">Tema 10</span>
+                <h4>Jesus e a Lei de Deus</h4>
+                <p class="tema-description">Aprenda sobre a relação entre Jesus e a lei divina, e como ela se aplica aos cristãos.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 11 -->
+            <div class="tema-card" onclick="window.location.href='tema1-11.html'">
+                <span class="tema-number">Tema 11</span>
+                <h4>Jesus e o Sábado</h4>
+                <p class="tema-description">Descubra o significado do sábado à luz dos ensinamentos de Jesus e seu propósito para hoje.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 12 -->
+            <div class="tema-card" onclick="window.location.href='tema1-12.html'">
+                <span class="tema-number">Tema 12</span>
+                <h4>Jesus e a Igreja</h4>
+                <p class="tema-description">Estude o papel da igreja como corpo de Cristo e sua missão no mundo.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 13 -->
+            <div class="tema-card" onclick="window.location.href='tema1-13.html'">
+                <span class="tema-number">Tema 13</span>
+                <h4>Jesus e o Crescimento Espiritual</h4>
+                <p class="tema-description">Aprenda princípios para crescer espiritualmente seguindo o exemplo de Jesus.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 14 -->
+            <div class="tema-card" onclick="window.location.href='tema1-14.html'">
+                <span class="tema-number">Tema 14</span>
+                <h4>Jesus e a Fidelidade</h4>
+                <p class="tema-description">Explore o que significa ser fiel a Deus nos dias atuais, seguindo o exemplo de Cristo.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 15 -->
+            <div class="tema-card" onclick="window.location.href='tema1-15.html'">
+                <span class="tema-number">Tema 15</span>
+                <h4>Jesus e o Batismo</h4>
+                <p class="tema-description">Compreenda o significado do batismo e sua importância na jornada cristã.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 16 -->
+            <div class="tema-card" onclick="window.location.href='tema1-16.html'">
+                <span class="tema-number">Tema 16</span>
+                <h4>Jesus e o Estilo de Vida Cristão</h4>
+                <p class="tema-description">Descubra como viver um estilo de vida que reflita os valores do Reino de Deus.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 17 -->
+            <div class="tema-card" onclick="window.location.href='tema1-17.html'">
+                <span class="tema-number">Tema 17</span>
+                <h4>Jesus e a Missão da Igreja</h4>
+                <p class="tema-description">Entenda a missão da igreja e seu papel na proclamação do evangelho.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 18 -->
+            <div class="tema-card" onclick="window.location.href='tema1-18.html'">
+                <span class="tema-number">Tema 18</span>
+                <h4>Jesus e o Dom de Profecia</h4>
+                <p class="tema-description">Estude o dom de profecia e sua relevância para a igreja hoje.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 19 -->
+            <div class="tema-card" onclick="window.location.href='tema1-19.html'">
+                <span class="tema-number">Tema 19</span>
+                <h4>Jesus e o Espírito Santo</h4>
+                <p class="tema-description">Aprenda sobre a pessoa e obra do Espírito Santo na vida do crente.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- ESTUDO 20 -->
+            <div class="tema-card" onclick="window.location.href='tema1-20.html'">
+                <span class="tema-number">Tema 20</span>
+                <h4>Jesus e a Nova Terra</h4>
+                <p class="tema-description">Contemple a esperança da nova terra e como ela motiva nossa caminhada presente.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+        </div>
+
+        <!-- Navegação -->
+        <div class="navigation-buttons">
+            <a href="index.html" class="btn-nav">← Voltar para Página Inicial</a>
+            <a href="estudo2.html" class="btn-nav">Próximo Estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Eu vim para que tenham vida, e a tenham em abundância" - João 10:10</p>
+        </div>
+    </footer>
+</body>
+</html>
