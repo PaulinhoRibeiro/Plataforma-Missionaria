@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 6 - A Queda de Babilônia | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=A+Queda+de+Babilônia');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Card da Escrita na Parede */
+        .escrita-card {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .escrita-card::before {
+            content: "✋";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+
+        .escrita-palavras {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #c9a05e;
+            letter-spacing: 10px;
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(201, 160, 94, 0.5);
+        }
+
+        .escrita-significado {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .significado-item {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .significado-item h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .significado-item p {
+            color: #ddd;
+            font-size: 0.95rem;
+        }
+
+        /* Linha do tempo */
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(201, 160, 94, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .timeline-ano {
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .timeline-descricao {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Comparação Babilônia Antiga vs Mística */
+        .comparacao-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .comparacao-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid;
+        }
+
+        .comparacao-card.antiga {
+            border-left-color: #c9a05e;
+        }
+
+        .comparacao-card.mistica {
+            border-left-color: #e74c3c;
+        }
+
+        .comparacao-card h5 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .comparacao-card.antiga h5 {
+            color: #c9a05e;
+        }
+
+        .comparacao-card.mistica h5 {
+            color: #e74c3c;
+        }
+
+        .comparacao-card p {
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .comparacao-card small {
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .escrita-significado {
+                grid-template-columns: 1fr;
+            }
+
+            .comparacao-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 6</span>
+        </div>
+        <h1>ESTUDO 6</h1>
+        <h2>A Queda de Babilônia</h2>
+        <p>"Na mesma noite, foi morto Belsazar, rei dos caldeus." (Daniel 5:30)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar o cumprimento da profecia da estátua (capítulo 2) com a queda de Babilônia e a ascensão da Medo-Pérsia, e estabelecer o paralelo com a Babilônia mística do Apocalipse.</p>
+            <p><strong>Texto base:</strong> Daniel 5; Jeremias 25:11-12; Isaías 44:27-28; Apocalipse 18</p>
+            <p><strong>Versículos-chave:</strong> Daniel 5:27, Apocalipse 18:4, João 8:32</p>
+            <p><strong>Destaque especial:</strong> A história de Belsazar nos ensina que há um limite para a paciência divina e que o conhecimento das lições do passado não salva ninguém - é preciso arrependimento genuíno.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📅</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Você já observou que a maioria das coisas que compramos tem prazo de validade? Procuramos nas embalagens a data da fabricação e a data que o produto perderá a validade. Esse cuidado é para evitar ingestão de produtos impróprios para o consumo e que podem trazer prejuízo à nossa saúde.</p>
+                
+                <p style="margin-top: 15px;">A Bíblia nos ensina que, na história das nações, os impérios têm data de validade, e Deus determina o período de domínio que cada um exercerá. <strong>Daniel 2:21 diz que "é Ele (Deus) que muda o tempo e as estações, remove reis e estabelece reis..."</strong></p>
+                
+                <p style="margin-top: 15px;">Na lição de hoje veremos o cumprimento parcial da profecia do capítulo 2 de Daniel (a estátua de metais), quando a grande Babilônia (cabeça de ouro) seria conquistada por um reino inferior (braços de prata).</p>
+            </div>
+        </div>
+
+        <!-- Contexto Histórico -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👑</div>
+                <h3>Quem era Belsazar?</h3>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-ano">605-562 a.C.</span>
+                <span class="timeline-descricao">Reinado de Nabucodonosor (43 anos) - apogeu de Babilônia.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">556 a.C.</span>
+                <span class="timeline-descricao">Nabonido sobe ao trono, genro de Nabucodonosor.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">553 a.C.</span>
+                <span class="timeline-descricao">Belsazar é nomeado co-regente com seu pai Nabonido.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">539 a.C.</span>
+                <span class="timeline-descricao"><strong>13 de outubro:</strong> Queda de Babilônia e morte de Belsazar.</span>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Quem era Belsazar e o que ele fez no banquete que ofereceu aos príncipes de Babilônia? Daniel 5:1-4</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "O rei Belsazar deu um grande banquete a mil dos seus grandes e bebeu vinho na presença dos mil. Havendo provado o vinho, mandou trazer os vasos de ouro e de prata que Nabucodonosor, seu pai, tinha tirado do templo de Jerusalém... Beberam vinho e louvaram os deuses de ouro, de prata, de bronze, de ferro, de madeira e de pedra." <strong>Belsazar era neto de Nabucodonosor, co-regente com seu pai Nabonido. No auge de sua embriaguez, profanou os utensílios sagrados do templo para blasfemar contra Deus.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Escrita na Parede -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✋</div>
+                <h3>A Escrita na Parede</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que aconteceu enquanto o rei e seus convidados se embriagavam? Daniel 5:5, 6</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "Na mesma hora, apareceram uns dedos de mão de homem e escreviam defronte do castiçal, na caiadura da parede do palácio real; e o rei via a parte da mão que estava escrevendo. Mudou-se então o semblante do rei, e os seus pensamentos o turbaram; as juntas dos seus lombos se relaxaram, e os seus joelhos batiam um no outro." <strong>No momento em que blasfemavam, Deus agiu para punir o rei displicente. Uma mão misteriosa escreveu na parede, enchendo a todos de terror.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Que atitude tomou o rei diante da escritura na parede? Daniel 5:7-9</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">Chamou os astrólogos e sábios ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">Fugiu do palácio</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">Ofereceu sacrifícios</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Chamou os astrólogos e sábios. Como nos capítulos 2 e 4, os sábios da Babilônia foram convocados, mas não puderam interpretar a mensagem de Deus. Lucas 10:21 se cumpre mais uma vez: Deus oculta estas coisas dos sábios e as revela aos pequeninos.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Que conselho a rainha-mãe deu ao rei? Daniel 5:10-12</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "A rainha-mãe, por causa das palavras do rei e dos seus grandes, entrou na casa do banquete; e respondeu: Ó rei, vive para sempre! Não te perturbem os teus pensamentos... Há um homem no teu reino no qual há o espírito dos deuses santos; ele mostrou interpretação de sonhos... chama-se Daniel." <strong>A rainha-mãe (Nitócris) conhecia as histórias de Nabucodonosor e aconselhou Belsazar a chamar Daniel.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Repreensão de Daniel -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚖️</div>
+                <h3>Daniel Repreende o Rei</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Antes de Daniel dizer ao rei a interpretação da escritura na parede, ele o repreende severamente. Ao falar de Nabucodonosor, Daniel relembrou ao rei como Deus lhe havia concedido "o reino e a grandeza, a glória e majestade" (Daniel 5:18). Disse também que quando o coração de Nabucodonosor se elevou, e o seu espírito se tornou soberbo e arrogante, Deus o derribou do seu trono real, e foi expulso dentre os filhos dos homens, e viveu semelhante aos animais (Daniel 5:21).</p>
+                
+                <p style="margin-top: 15px;">Então disse Daniel: <strong>"E tu, Belsazar, não humilhaste o teu coração, ainda que sabias de tudo isto" (Daniel 5:22).</strong> As histórias do passado deveriam ter impressionado seu coração e o levado a adorar o verdadeiro Deus, assim como fez o seu avô. Mas em vez disso, deu lugar ao pecado e ao orgulho, e preferiu seguir seu próprio caminho.</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Qual foi o pecado de Belsazar? Daniel 5:23</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Antes te levantaste contra o Senhor do céu, pois trouxeram à tua presença os vasos da casa dele, e tu, os teus grandes, as tuas mulheres e as tuas concubinas bebestes vinho neles. Além disso, deste louvores aos deuses de prata, de ouro, de bronze, de ferro, de madeira e de pedra, que não veem, não ouvem, nem sabem; mas a Deus, em cuja mão está a tua vida e todos os teus caminhos, a ele não glorificaste." <strong>Belsazar foi acusado de: falta de humildade, blasfêmia, idolatria, glutonaria. Ao profanar os vasos sagrados, ultrapassou os limites da paciência divina e selou sua sorte.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Interpretação -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📝</div>
+                <h3>A Interpretação da Escrita</h3>
+            </div>
+            
+            <div class="escrita-card">
+                <div class="escrita-palavras">MENE MENE TEQUEL PARSIM</div>
+                
+                <div class="escrita-significado">
+                    <div class="significado-item">
+                        <h5>MENE</h5>
+                        <p>"Deus contou o teu reino e o acabou."</p>
+                        <small>O número que Deus marcara aos anos de seu reinado se completaria - só lhe restava pouquíssimo tempo de vida.</small>
+                    </div>
+                    <div class="significado-item">
+                        <h5>TEQUEL</h5>
+                        <p>"Pesado foste na balança e foste achado em falta."</p>
+                        <small>Deus o havia pesado na Sua justa balança e seu reinado teria fim.</small>
+                    </div>
+                    <div class="significado-item">
+                        <h5>PERES (PARSIM)</h5>
+                        <p>"Dividido foi o teu reino e dado aos medos e persas."</p>
+                        <small>Seu reino seria dividido entre os medos e os persas.</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Que significava a escritura na parede? Daniel 5:24-28</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Esta é a interpretação daquilo: MENE: Deus contou o teu reino e o acabou. TEQUEL: Pesado foste na balança e foste achado em falta. PERES: Dividido foi o teu reino e dado aos medos e aos persas." <strong>O historiador Flávio Josefo explica: Mene = número, indicando que o tempo se completara; Tequel = peso, indicando que fora achado em falta; Parsim = fragmento/divisão, indicando a divisão do reino.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Queda -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💥</div>
+                <h3>A Queda de Babilônia</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">O que ocorreu com Belsazar naquela mesma noite? Daniel 5:30-31</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Na mesma noite, foi morto Belsazar, rei dos caldeus. E Dario, o medo, com cerca de sessenta e dois anos, se apoderou do reino." <strong>Na noite de 13 de outubro de 539 a.C., o exército de Ciro invadiu Babilônia. Segundo Heródoto, as águas do Eufrates foram desviadas, facilitando a passagem do exército. Enquanto os babilônios festejavam, a cidade caiu.</strong>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Na mesma noite, foi morto Belsazar, rei dos caldeus."
+                <span class="versiculo-ref">Daniel 5:30</span>
+            </div>
+        </div>
+
+        <!-- Profecias sobre a Queda -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>Profecias sobre a Queda de Babilônia</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8a</span>
+                <div class="pergunta-texto">Quanto tempo o povo de Deus ficaria escravo em Babilônia? Jeremias 25:11, 12</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('8a')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8a">
+                    <strong>Referência:</strong> "Toda esta terra virá a ser um deserto e um espanto; e estas nações servirão ao rei da Babilônia setenta anos. Acontecerá, porém, que, quando se cumprirem os setenta anos, castigarei o rei da Babilônia." <strong>70 anos de cativeiro (605-536 a.C.).</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8b</span>
+                <div class="pergunta-texto">Quem seria o libertador do povo? Isaías 45:1</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('8b')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8b">
+                    <strong>Referência:</strong> "Assim diz o Senhor ao seu ungido, a Ciro, a quem tomo pela mão direita, para abater as nações diante de sua face." <strong>Ciro, rei da Pérsia, seria o libertador.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8c</span>
+                <div class="pergunta-texto">Que estratégia militar Ciro usaria para derrotar Babilônia? Isaías 44:27, 28</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito('8c')">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8c">
+                    <strong>Referência:</strong> "Eu digo ao abismo: Seca-te, e secarei os teus rios. Eu digo de Ciro: É meu pastor e cumprirá tudo o que me apraz." <strong>As águas do rio Eufrates seriam secadas/desviadas, permitindo a invasão.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paralelo com Apocalipse -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>Paralelo com Apocalipse</h3>
+            </div>
+            
+            <div class="comparacao-grid">
+                <div class="comparacao-card antiga">
+                    <h5>🏛️ Babilônia Antiga</h5>
+                    <p><strong>Capital:</strong> Babilônia histórica</p>
+                    <p><strong>Queda:</strong> 539 a.C. por Ciro</p>
+                    <p><strong>Estratégia:</strong> Águas do Eufrates secaram</p>
+                    <p><strong>Libertação:</strong> Judeus libertados do cativeiro</p>
+                </div>
+                
+                <div class="comparacao-card mistica">
+                    <h5>🗼 Babilônia Mística (Apocalipse)</h5>
+                    <p><strong>Capital:</strong> Confusão religiosa mundial</p>
+                    <p><strong>Queda:</strong> Nos últimos dias</p>
+                    <p><strong>Estratégia:</strong> Águas (povos) secarão (Apoc 16:12)</p>
+                    <p><strong>Libertação:</strong> Povo de Deus liberto do erro</p>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p>O livro do Apocalipse também fala de uma grande Babilônia que simboliza a confusão religiosa nos últimos dias (Apocalipse 14:8; 17:5). O vinho com o qual Babilônia embriaga os habitantes da Terra (Apocalipse 17:2) são suas falsas doutrinas (Apocalipse 17:4), porque entorpecem a mente e afetam a capacidade de discernir o erro.</p>
+                
+                <p style="margin-top: 15px;">Assim como no passado, as águas do rio Eufrates secarão (Apocalipse 16:12), e esta Babilônia mística também vai cair (Apocalipse 14:8; 18:2). Então, o caminho estará preparado para os reis que vêm do Oriente (Cristo e Seus anjos). <strong>Ciro é um tipo de Cristo</strong> e a libertação dos judeus da Babilônia antiga é uma representação da libertação final do povo de Deus quando finalmente for estabelecido o eterno reino de Cristo (Apocalipse 19:11-16).</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">Qual é o último apelo de Deus à humanidade? Apocalipse 18:4</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência:</strong> "Ouvi outra voz do céu, dizendo: Sai dela, povo meu, para não serdes cúmplices em seus pecados e para não participardes dos seus flagelos." <strong>"Deixar Babilônia" significa afastar-se dos erros e tradições hoje ensinados em muitas igrejas e se apegar unicamente à Palavra de Deus. Jesus declarou: "Conhecereis a verdade e a verdade vos libertará" (João 8:32).</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Sai dela, povo meu, para não serdes cúmplices em seus pecados."
+                <span class="versiculo-ref">Apocalipse 18:4</span>
+            </div>
+        </div>
+
+        <!-- Lições -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💭</div>
+                <h3>Lições para Nossos Dias</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>1. O conhecimento não salva:</strong> Belsazar sabia da história de Nabucodonosor, mas não se arrependeu. Conhecer a verdade não é suficiente - é preciso agir.</p>
+                <p><strong>2. Há um limite para a paciência divina:</strong> Deus é longânimo, mas há um ponto em que o juízo se torna inevitável.</p>
+                <p><strong>3. A soberba precede a ruína:</strong> Belsazar se exaltou contra o Senhor e caiu.</p>
+                <p><strong>4. O juízo pode vir quando menos se espera:</strong> Enquanto festejavam, a cidade caiu. "Na mesma noite" - o juízo pode vir repentinamente.</p>
+                <p><strong>5. O apelo divino:</strong> "Sai dela, povo meu" - Deus ainda chama Seu povo para fora da confusão religiosa.</p>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Após estudar sobre a queda de Babilônia, e descobrir todo o simbolismo nela envolvido, desejo tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Confiarei plenamente nas Escrituras, pois as profecias se cumpriram com exatidão.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Estudarei com oração e fervor todos os ensinamentos da Palavra de Deus para não ser "embriagado" com o "vinho" de Babilônia.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Buscarei sabedoria e graça dos céus para partilhar com outros as verdades que estou aprendendo.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Reconheço que o juízo de Deus é certo e que há um limite para Sua paciência. Por isso, decido hoje sair de toda confusão espiritual e me apegar unicamente à verdade da Palavra de Deus."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-5.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-7.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Conhecereis a verdade, e a verdade vos libertará" - João 8:32</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "A Queda de Babilônia",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel6', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel6');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

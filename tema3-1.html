@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 1: A Revelação de Jesus Cristo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=A+Revelação+de+Jesus+Cristo');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Tabela de símbolos */
+        .simbolos-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .simbolos-tabela {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .simbolos-tabela table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .simbolos-tabela th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .simbolos-tabela td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .simbolos-tabela tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 1</span>
+        </div>
+        <h1>ESTUDO 1</h1>
+        <h2>A Revelação de Jesus Cristo</h2>
+        <p>"Bem-aventurado aquele que lê e bem-aventurados os que ouvem as palavras desta profecia e guardam as coisas nela escritas, porque o tempo está próximo." (Apocalipse 1:3)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>A história da humanidade está marcada por pretensos profetas e suas profecias alusivas ao futuro. Entretanto, a nenhum mortal foi dada a capacidade de conhecer o futuro, a menos que o próprio Deus o tenha revelado. Os profetas bíblicos aí se enquadram. Deus, que conhece o futuro como o passado (Isaías 46:9,10), escolheu os profetas para guiar Seu povo através da palavra profética (Amós 3:7).</p>
+                <p style="margin-top: 15px;">Daniel, o cativo de Babilônia, e João, o cativo de Patmos, ocupam uma posição de destaque entre os profetas. Deus os escolheu para registrarem os eventos finais da história humana antes do estabelecimento do eterno reino de Cristo.</p>
+                <p style="margin-top: 15px;">No livro do Apocalipse são revelados os desígnios de Deus. O próprio nome, <strong>Apocalipse</strong>, que significa "revelação", contradiz a afirmação de que é um livro selado (Apocalipse 22:10). No Apocalipse, todos os livros da Bíblia se encontram e se cumprem. Ele é um complemento do livro de Daniel. Um é profecia e o outro é uma revelação; por isso, <strong>devemos estudá-los juntos</strong>.</p>
+            </div>
+        </div>
+
+        <!-- Origem e Autoria -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✍️</div>
+                <h3>Origem e Autoria do Livro</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Como o livro do Apocalipse chegou até nós? Apocalipse 1:1-2, 11</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Foi escrito por João por iniciativa própria, baseado em suas memórias.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">É uma revelação de Jesus Cristo, que Deus lhe deu, mostrada a João por um anjo. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Foi um sonho que João teve enquanto estava exilado, sem origem divina.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta completa</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> É uma revelação de Jesus Cristo, que Deus lhe deu, mostrada a João por um anjo.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) O Apocalipse é uma revelação de <strong>Jesus Cristo</strong>.<br>
+                    b) <strong>Deus</strong> deu essa revelação a Jesus.<br>
+                    c) Jesus enviou a mensagem através do <strong>Seu anjo</strong>.<br>
+                    d) O anjo entregou a mensagem a <strong>João</strong>.<br>
+                    e) João recebeu a ordem de <strong>escrever num livro</strong> e enviar às sete igrejas.
+                </div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h5>📋 Quem era João?</h5>
+                    <p>Era um dos mais íntimos discípulos de Jesus, conhecido como "o discípulo amado". Esteve com Jesus na transfiguração, no Getsêmani e foi quem cuidou de Maria, mãe de Jesus. Inicialmente de temperamento forte (chamado "filho do trovão"), foi transformado pela convivência com Cristo, tornando-se manso e meigo.</p>
+                    <p class="referencia">João 21:20; Marcos 3:17; Lucas 9:54</p>
+                </div>
+                
+                <div class="info-card">
+                    <h5>🏝️ A Prisão em Patmos</h5>
+                    <p>João foi preso por causa da palavra de Deus e do testemunho de Jesus. Foi banido para a ilha de Patmos pelo imperador Domiciano por volta de 95-96 d.C. Tradicionalmente, antes do exílio, teria sido lançado em óleo fervente em Roma, mas Deus o preservou miraculosamente.</p>
+                    <p class="referencia">Apocalipse 1:9</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Reencontro com Cristo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👑</div>
+                <h3>O Reencontro com o Cristo Glorificado</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Em que dia João recebeu sua primeira visão? Apocalipse 1:10</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">No primeiro dia da semana (domingo).</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">No dia do Senhor (sábado). ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">Numa data comemorativa qualquer.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> No dia do Senhor (sábado).<br><br>
+                    A expressão "achei-me em espírito" indica o início de suas visões. E foi num sábado, o dia do Senhor (Êxodo 20:8-11; Marcos 2:27-28), que Deus começou a revelar Seus mistérios para a última geração.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Que descrição João faz de Jesus em seu encontro? Apocalipse 1:12-16.</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Descreva como João viu Jesus..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência bíblica</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência completa:</strong><br>
+                    a) Era semelhante a <strong>um filho de homem</strong> (v. 13)<br>
+                    b) Vestia uma <strong>veste talar</strong> com uma <strong>cinta de ouro</strong> (v. 13)<br>
+                    c) Cabeça e cabelos <strong>brancos como alva lã</strong> (v. 14)<br>
+                    d) Olhos <strong>como chama de fogo</strong> (v. 14)<br>
+                    e) Pés <strong>semelhantes ao bronze polido</strong> (v. 15)<br>
+                    f) Voz <strong>como voz de muitas águas</strong> (v. 15)<br>
+                    g) Rosto <strong>brilhava como o sol na sua força</strong> (v. 16)
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Quando o vi, caí a seus pés como morto. Porém ele pôs sobre mim a mão direita, dizendo: Não temas; eu sou o primeiro e o último."
+                <span class="versiculo-ref">Apocalipse 1:17</span>
+            </div>
+        </div>
+
+        <!-- Símbolos Proféticos -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔑</div>
+                <h3>Apocalipse - Um Código Profético</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Decifre os símbolos proféticos: Apocalipse 1:12, 16, 20</div>
+                
+                <div class="simbolos-box">
+                    <div class="simbolos-tabela">
+                        <table>
+                            <tr>
+                                <th>Símbolo</th>
+                                <th>Significado</th>
+                            </tr>
+                            <tr>
+                                <td>Sete candeeiros de ouro</td>
+                                <td><input type="text" placeholder="Digite sua resposta..." style="width:100%; padding:8px; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; border-radius:5px; color:#fff;"></td>
+                            </tr>
+                            <tr>
+                                <td>Sete estrelas</td>
+                                <td><input type="text" placeholder="Digite sua resposta..." style="width:100%; padding:8px; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; border-radius:5px; color:#fff;"></td>
+                            </tr>
+                            <tr>
+                                <td>Espada afiada de dois gumes</td>
+                                <td><input type="text" placeholder="Digite sua resposta..." style="width:100%; padding:8px; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; border-radius:5px; color:#fff;"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver interpretação</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Interpretação dos símbolos:</strong><br>
+                    - <strong>Sete candeeiros de ouro:</strong> Representam as <strong>sete igrejas</strong>. Jesus andando entre eles mostra Sua constante presença com a igreja (Apocalipse 1:20).<br>
+                    - <strong>Sete estrelas:</strong> Representam os <strong>anjos (mensageiros) das igrejas</strong>. Estão na mão direita de Cristo, mostrando que são instrumentos em Suas mãos (Apocalipse 1:20).<br>
+                    - <strong>Espada afiada de dois gumes:</strong> Representa a <strong>Palavra de Deus</strong>, que é viva, eficaz e mais cortante do que qualquer espada de dois gumes (Hebreus 4:12).
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>Importante:</strong> Se todas as verdades contidas no Apocalipse tivessem sido reveladas numa linguagem mais clara e aberta, possivelmente não teríamos este livro hoje. Mas Jesus revelou suas verdades com códigos proféticos, e o próprio Cristo nos fornece as <strong>chaves para interpretação</strong> destes mistérios, pois a Bíblia é sua própria intérprete (Lucas 24:27).</p>
+            </div>
+        </div>
+
+        <!-- Objetivo e Promessa -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎯</div>
+                <h3>Objetivo e Promessa do Livro</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Com que objetivo o livro do Apocalipse foi escrito? Apocalipse 1:1</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "para mostrar aos seus servos as coisas que em breve devem acontecer."<br><br>
+                    Há um sentido de urgência que percorre todo o livro: "o tempo está próximo" (1:3); "Venho sem demora" (3:11); "Já não haverá demora" (10:6). Isso nos mostra que não há tempo a perder.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Que promessa especial é feita aos estudantes do Apocalipse? Apocalipse 1:3</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'a')">
+                        <input type="radio" name="pergunta6" id="p6a">
+                        <label for="p6a">Serão ricos e prósperos neste mundo.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'b')">
+                        <input type="radio" name="pergunta6" id="p6b">
+                        <label for="p6b">Serão bem-aventurados (felizes) os que leem, ouvem e guardam as palavras da profecia. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'c')">
+                        <input type="radio" name="pergunta6" id="p6c">
+                        <label for="p6c">Receberão revelações especiais para si mesmos.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>✓ Resposta correta:</strong> Serão bem-aventurados (felizes) os que leem, ouvem e guardam as palavras da profecia.<br><br>
+                    A felicidade está em compreender os planos de Deus para nossa vida e encontrar a verdadeira razão do existir. Feliz é aquele que não apenas lê e ouve, mas também <strong>guarda</strong> (obedece) as coisas nela escritas.
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Bem-aventurado aquele que lê e bem-aventurados os que ouvem as palavras desta profecia e guardam as coisas nela escritas, porque o tempo está próximo."
+                <span class="versiculo-ref">Apocalipse 1:3</span>
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Creio na origem divina do livro do Apocalipse e prometo dedicar tempo para compreender seus ensinos.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Concordo que Jesus é o personagem central do Apocalipse e desejo aprofundar minha experiência com Ele através do estudo do livro.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Acredito que Deus nunca se esquece de Seus filhos, assim como nunca se esqueceu do apóstolo João (Isaías 49:15; Lucas 12:7; Romanos 5:8).</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Creio na origem divina do Apocalipse e reconheço Jesus como o centro de toda a revelação. Quero ser um estudante fiel das profecias e guardar as palavras deste livro, pois o tempo está próximo."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado! Bem-aventurado és tu!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="#" class="btn-nav" style="visibility: hidden;">← Tema anterior</a>
+            <a href="apocalipse-menu.html" class="btn-nav">Voltar ao menu</a>
+            <a href="apocalipse-estudo2.html" class="btn-nav">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Bem-aventurado aquele que lê e bem-aventurados os que ouvem as palavras desta profecia." - Apocalipse 1:3</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 1 - A Revelação de Jesus Cristo",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse1', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse1');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

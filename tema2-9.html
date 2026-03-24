@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 9 - O Chifre Pequeno e o Ataque à Lei de Deus | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=O+Chifre+Pequeno');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Modelos 3D */
+        .modelos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .modelo-card {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .modelo-card h4 {
+            color: #c9a05e;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .sketchfab-embed-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .sketchfab-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .modelo-credit {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .modelo-credit a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        /* Tabela das 10 Características */
+        .caracteristicas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .caracteristica-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            border-left: 4px solid #c9a05e;
+        }
+
+        .caracteristica-card strong {
+            color: #c9a05e;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .caracteristica-card p {
+            color: #ddd;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Tabela das Tribos Bárbaras */
+        .tabela-tribos {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+            overflow-x: auto;
+        }
+
+        .tabela-tribos table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-tribos th {
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px;
+            font-size: 1rem;
+        }
+
+        .tabela-tribos td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        /* Comparação dos Mandamentos */
+        .mandamentos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .mandamento-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .mandamento-card h5 {
+            color: #c9a05e;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .mandamento-card.biblico {
+            border-left: 5px solid #2ecc71;
+        }
+
+        .mandamento-card.romano {
+            border-left: 5px solid #e74c3c;
+        }
+
+        .mandamento-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mandamento-card li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #ddd;
+        }
+
+        .mandamento-card li::before {
+            content: "•";
+            color: #c9a05e;
+            position: absolute;
+            left: 0;
+        }
+
+        .mandamento-card.romano .alterado {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .modelos-grid,
+            .caracteristicas-grid,
+            .mandamentos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabela-tribos {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 9</span>
+        </div>
+        <h1>ESTUDO 9</h1>
+        <h2>O Chifre Pequeno e o Ataque à Lei de Deus</h2>
+        <p>"Ele proferirá palavras contra o Altíssimo, magoará os santos do Altíssimo e cuidará em mudar os tempos e a lei." (Daniel 7:25)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Identificar o chifre pequeno da profecia de Daniel 7, suas características e seu ataque à lei de Deus, bem como o período de 1.260 anos de supremacia papal.</p>
+            <p><strong>Texto base:</strong> Daniel 7; Apocalipse 12-13</p>
+            <p><strong>Versículos-chave:</strong> Daniel 7:25, Apocalipse 12:17, Apocalipse 13:5-7</p>
+            <p><strong>Destaque especial:</strong> O chifre pequeno "cuidaria em mudar os tempos e a lei" - isso se cumpriu na mudança do sábado para o domingo e na alteração dos Dez Mandamentos.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👁️</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Você alguma dia já teve uma ilusão de ótica? Parecia que você estava vendo uma coisa, mas quando olhou com mais atenção, enxergou outra? O termo "ilusão de ótica" é empregado para se referir ao nosso sistema visual quando enxergamos de maneira irreal, diferente ou distorcida.</p>
+                
+                <p style="margin-top: 15px;">Na vida, nem tudo aquilo que parece ser de fato é. No dia a dia, a percepção que temos das coisas e objetos podem nos iludir, mas se o assunto tem a ver com as verdades eternas, como ensinadas na Palavra de Deus, temos que estar convictos de que realmente enxergamos as coisas como são na realidade.</p>
+                
+                <p style="margin-top: 15px;">No estudo de hoje você terá a oportunidade de enxergar verdades como realmente elas são. Pegue sua Bíblia agora e ore para que o Espírito Santo ilumine sua mente.</p>
+            </div>
+        </div>
+
+        <!-- Modelos 3D -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🦁</div>
+                <h3>Visualização 3D</h3>
+            </div>
+            
+            <div class="modelos-grid">
+                <div class="modelo-card">
+                    <h4>👹 Animal Terrível com 10 Chifres</h4>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Daniel 7 Terrible Beast with Ten Horns" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                src="https://sketchfab.com/models/4c15f041b5464a8ea9a6574c14af017a/embed">
+                        </iframe>
+                    </div>
+                    <div class="modelo-credit">
+                        <a href="https://sketchfab.com/3d-models/daniel-7-terrible-beast-with-ten-horns-4c15f041b5464a8ea9a6574c14af017a" target="_blank">Daniel 7 Terrible Beast</a> by Upcoming Project
+                    </div>
+                </div>
+                
+                <div class="modelo-card">
+                    <h4>🔴 O "Chifre Pequeno"</h4>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Daniel 7 - The &quot;Little&quot; Horn" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                src="https://sketchfab.com/models/19a65516ff9a4dfeb0bb4f9588c7ab08/embed">
+                        </iframe>
+                    </div>
+                    <div class="modelo-credit">
+                        <a href="https://sketchfab.com/3d-models/daniel-7-the-little-horn-19a65516ff9a4dfeb0bb4f9588c7ab08" target="_blank">Daniel 7 - The "Little" Horn</a> by Upcoming Project
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Quarto Animal -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>O Quarto Animal e Seus Chifres</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Dos quatro animais vistos na última lição, qual deles Daniel teve maior interesse em conhecer? Por quê? Daniel 7:19-21</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Então, tive desejo de conhecer a verdade acerca do quarto animal, que era diferente de todos os outros, muito terrível, cujos dentes eram de ferro, e as unhas, de bronze; que devorava, fazia em pedaços e pisava aos pés o que sobejava; e acerca dos dez chifres que tinha na cabeça, e do outro que subia e diante do qual caíram três, daquele chifre que tinha olhos e uma boca que falava com insolência e parecia mais robusto do que os seus companheiros." <strong>O quarto animal era diferente de todos os demais, terrível, destruía tudo, tinha dez chifres, dos quais três caíram devido ao surgimento de outro chifre pequeno.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que representam os dez chifres do quarto animal? Daniel 7:24</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Dez anjos do céu</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Dez reis que se levantarão daquele reino ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">Dez profetas</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> Dez reis que se levantarão daquele reino. "Os dez chifres significam que dez reis se levantarão daquele mesmo reino." Esses dez chifres representam as dez tribos bárbaras que dividiram o Império Romano entre 351 e 476 d.C.
+                </div>
+            </div>
+        </div>
+
+        <!-- As Dez Tribos Bárbaras -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏛️</div>
+                <h3>As Dez Tribos que Dividiram Roma</h3>
+            </div>
+            
+            <div class="tabela-tribos">
+                <table>
+                    <tr>
+                        <th>Ano</th>
+                        <th>Tribo</th>
+                        <th>Nação Formada</th>
+                    </tr>
+                    <tr><td>351 d.C.</td><td>Alamanos</td><td>Germânia / Alemanha</td></tr>
+                    <tr><td>351 d.C.</td><td>Francos</td><td>França</td></tr>
+                    <tr><td>406 d.C.</td><td>Borguinhões</td><td>Suíça</td></tr>
+                    <tr><td>406 d.C.</td><td>Suevos</td><td>Portugal</td></tr>
+                    <tr><td>408 d.C.</td><td>Visigodos</td><td>Espanha</td></tr>
+                    <tr><td>409 d.C.</td><td>Anglo-saxões</td><td>Bretanha/Inglaterra</td></tr>
+                    <tr><td>453 d.C.</td><td>Lombardos</td><td>Itália</td></tr>
+                    <tr><td>406 d.C.</td><td>Vândalos</td><td>Extintos</td></tr>
+                    <tr><td>453 d.C.</td><td>Ostrogodos</td><td>Extintos</td></tr>
+                    <tr><td>476 d.C.</td><td>Hérulos</td><td>Extintos</td></tr>
+                </table>
+            </div>
+            
+            <div class="destaque-box">
+                <p>O férreo Império de Roma manteve seu poder até o ano 476 d.C., quando finalmente foi dividido e caiu seu último imperador - Rômulo Augusto. Assim como os pés da estátua (Daniel 2) possuíam dez dedos, e o quarto animal (Daniel 7) dez chifres, Roma perdeu seu poder para dez tribos bárbaras que, ao longo de décadas, foram minando sua autoridade.</p>
+            </div>
+        </div>
+
+        <!-- O Chifre Pequeno -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔴</div>
+                <h3>O Surgimento do Chifre Pequeno</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Enquanto Daniel observava os 10 chifres do quarto animal, o que mais ele percebeu? Daniel 7:8, 20</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "Eu considerava os chifres, e eis que, entre eles, subiu outro chifre pequeno, diante do qual três dos primeiros chifres foram arrancados; e eis que nesse chifre havia olhos, como os de homem, e uma boca que falava com insolência." <strong>Daniel vê surgir um 11º chifre, chamado de "chifre pequeno", que era mais robusto que os outros dez.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- As 10 Características -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔍</div>
+                <h3>As 10 Características do Chifre Pequeno</h3>
+            </div>
+            
+            <div class="caracteristicas-grid">
+                <div class="caracteristica-card">
+                    <strong>1. Surgimento</strong>
+                    <p>Surgiria entre os dez chifres do 4° animal (v.8) e depois deles (v.24). Roma Papal já operava antes de 476 d.C., mas consolidou-se após arrancar os três chifres (hérulos, vândalos e ostrogodos) em 538 d.C.</p>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>2. Arrancaria três chifres</strong>
+                    <p>Arrancaria três chifres para se firmar (v.8,20,24). As três tribos arianas (hérulos, vândalos e ostrogodos) foram extintas pelo papado.</p>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>3. Olhos e boca insolente</strong>
+                    <p>Possuía "olhos como de homem" e "boca que falava com insolência" (v.8,20). Representa um poder com inteligência e que fala arrogantemente.</p>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>4. Mais robusto</strong>
+                    <p>Parecia mais robusto que seus companheiros (v.20). O poder papal tornou-se mais forte que os reinos que o precederam.</p>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>5. Guerra contra os santos</strong>
+                    <p>Faria guerra contra os santos e prevaleceria contra eles (v.21). Perseguição aos fiéis durante a Idade Média.</p>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>6. Palavras contra o Altíssimo</strong>
+                    <p>Proferiria palavras contra o Altíssimo (v.25). Blasfêmias - pretender ser igual a Deus e perdoar pecados.</p>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>7. Magoaria os santos</strong>
+                    <p>Magoaria os santos do Altíssimo (v.25). Perseguição aos que se opunham às doutrinas papais.</p>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>8. Mudaria os tempos e a lei</strong>
+                    <p>Cuidaria em mudar os tempos e a lei (v.25). Alteração dos Dez Mandamentos e introdução do domingo.</p>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>9. Período de domínio</strong>
+                    <p>Os santos lhes seriam entregues por um tempo, dois tempos e metade de um tempo (v.25). 1.260 anos (538-1798 d.C.).</p>
+                </div>
+                <div class="caracteristica-card">
+                    <strong>10. Destruição final</strong>
+                    <p>Seu domínio seria tirado por um tribunal e ele seria destruído (v.26). Juízo final e fim do poder papal.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Identificação Histórica -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>Identificação Histórica</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Ao analisar este poder na história universal, estudiosos como Isaac Newton e Martinho Lutero chegaram à mesma conclusão: <strong>o chifre pequeno representa Roma Papal.</strong> Vejamos as evidências:</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Evidência A</span>
+                <div class="pergunta-texto">Surgimento entre os dez chifres (v.8) e depois deles (v.24)</div>
+                <p style="color: #ddd; margin-top: 5px;">Roma Papal já operava antes da queda do império em 476 d.C. (2 Tessalonicenses 2:7-8). Foi somente depois de arrancar os três chifres (hérulos, vândalos e ostrogodos) que o papado pôde exercer seu domínio. A última tribo a ser extinta foi os ostrogodos em <strong>538 d.C.</strong></p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Evidência B</span>
+                <div class="pergunta-texto">Boca que falava com insolência (v.8,20) e palavras contra o Altíssimo (v.25)</div>
+                <p style="color: #ddd; margin-top: 5px;">Blasfêmia na Bíblia significa pretender ser igual a Deus (Mateus 26:64-65; João 10:33) ou perdoar pecados (Marcos 2:7). A Igreja Romana pratica ambas: oferece perdão através do sacerdote (confissão auricular) e afirma que o Papa "ocupa na terra o lugar do Deus Altíssimo" (Papa Leão XIII).</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Evidência C</span>
+                <div class="pergunta-texto">Guerra contra os santos por 1.260 anos (v.25)</div>
+                <p style="color: #ddd; margin-top: 5px;">Este período se situa na história dos anos <strong>538 d.C. a 1798 d.C.</strong> Em 533 d.C., Justiniano promulgou um edito confirmando o bispo de Roma como "cabeça de todas as igrejas". Mas a consolidação só foi possível em 538 d.C., com a expulsão dos ostrogodos.</p>
+                <p style="color: #ddd; margin-top: 10px;">Em janeiro de 1798, o general Berthier prendeu o Papa Pio VI, que morreu no exílio. Terminava assim a supremacia papal de 1.260 anos.</p>
+            </div>
+        </div>
+
+        <!-- O Ataque à Lei de Deus -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📋</div>
+                <h3>O Ataque à Lei de Deus</h3>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Cuidaria em mudar os tempos e a lei."
+                <span class="versiculo-ref">Daniel 7:25</span>
+            </div>
+            
+            <div class="mandamentos-grid">
+                <div class="mandamento-card biblico">
+                    <h5>📖 Os Dez Mandamentos (Bíblia)</h5>
+                    <ul>
+                        <li>1º - Não terás outros deuses</li>
+                        <li>2º - Não farás imagem de escultura</li>
+                        <li>3º - Não tomarás o nome de Deus em vão</li>
+                        <li>4º - Lembra-te do sábado</li>
+                        <li>5º - Honra pai e mãe</li>
+                        <li>6º - Não matarás</li>
+                        <li>7º - Não adulterarás</li>
+                        <li>8º - Não furtarás</li>
+                        <li>9º - Não dirás falso testemunho</li>
+                        <li>10º - Não cobiçarás</li>
+                    </ul>
+                </div>
+                
+                <div class="mandamento-card romano">
+                    <h5>✝️ Catecismo Romano</h5>
+                    <ul>
+                        <li>1º - Não terás outros deuses</li>
+                        <li class="alterado">2º - (EXCLUÍDO) Não farás imagens</li>
+                        <li>3º - Não tomarás o nome de Deus em vão</li>
+                        <li class="alterado">4º - Santificarás o domingo</li>
+                        <li>5º - Honrar pai e mãe</li>
+                        <li>6º - Não matarás</li>
+                        <li>7º - Guardar castidade</li>
+                        <li>8º - Não furtarás</li>
+                        <li>9º - Não desejar a mulher do próximo</li>
+                        <li>10º - Não cobiçar as coisas alheias</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>Mudanças efetuadas:</strong></p>
+                <p>1. <strong>Exclusão do 2º mandamento:</strong> A proibição de adorar imagens foi removida para permitir o culto a imagens e santos.</p>
+                <p>2. <strong>Divisão do 10º mandamento:</strong> Para manter o número de dez, o 10º mandamento foi dividido em dois.</p>
+                <p>3. <strong>Mudança do 4º mandamento:</strong> O sábado (sétimo dia) foi substituído pelo domingo (primeiro dia).</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">A mudança do sábado</span>
+                <div class="pergunta-texto">O Canon 29, do Concílio de Laodicéia (364 d.C.), decidiu:</div>
+                <p style="color: #ddd; font-style: italic; margin-top: 10px;">"Os cristãos não devem judaizar e estar ociosos no sábado, mas devem trabalhar nesse dia; porém, o dia do Senhor devem honrar especialmente, e, sendo cristãos, não deverão, se possível, fazer nenhum trabalho nesse dia."</p>
+                <p style="color: #ddd; margin-top: 10px;">O Papa João Paulo II, em 1998, publicou a carta apostólica <em>Dies Domini</em> (Dia do Senhor), afirmando: "Do sábado passa-se ao primeiro dia depois do sábado... o dies Domini torna-se o dies Christi!"</p>
+            </div>
+        </div>
+
+        <!-- O Juízo Final -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚖️</div>
+                <h3>O Juízo e a Vitória Final</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Após o período de 1.260 anos, Daniel viu uma cena de juízo: "Foram postos uns tronos, e o Ancião de Dias se assentou... o tribunal se assentou, e os livros foram abertos" (Daniel 7:9-10).</p>
+                
+                <p style="margin-top: 15px;">Esse julgamento iniciou-se após 1798 d.C. e corresponde ao juízo pré-advento de Cristo. Quando terminar, o poder será tirado do "chifre pequeno" e dado aos santos do Altíssimo, culminando com a gloriosa Segunda Vinda de Jesus (Mateus 24:30; Apocalipse 1:7).</p>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "O reino, e o domínio, e a majestade dos reinos debaixo de todo o céu serão dados ao povo dos santos do Altíssimo; o seu reino será reino eterno."
+                <span class="versiculo-ref">Daniel 7:27</span>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Após identificar o "chifre pequeno" na profecia bíblica, conhecer suas ações e como opera contra Deus, Seu povo e Sua Lei, desejo tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Adorarei somente a Deus e a nenhum "santo ou imagem", pois estes nada podem fazer por mim (Isaías 42:8; 44:15).</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Aceito a Jesus como meu Advogado junto ao Pai e confiarei apenas nEle para o perdão dos meus pecados (1 Timóteo 2:5; 1 João 1:9; 2:1).</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Aceito o sábado como sendo o quarto mandamento da santa Lei de Deus e decido, a partir de hoje, santificar esse dia em honra e glória ao Deus que tudo criou.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Reconheço que a Lei de Deus é imutável e que o sábado é o memorial da criação. Decido seguir a Cristo e guardar todos os Seus mandamentos, confiando em Sua graça."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-8.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-10.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Ele proferirá palavras contra o Altíssimo, magoará os santos do Altíssimo e cuidará em mudar os tempos e a lei" - Daniel 7:25</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "O Chifre Pequeno e o Ataque à Lei de Deus",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel9', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel9');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

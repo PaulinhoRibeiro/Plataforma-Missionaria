@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 15 - Um Tempo de Angústia sem Precedentes | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Um+Tempo+de+Angústia');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Card de Miguel */
+        .miguel-card {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .miguel-card::before {
+            content: "⚔️";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+
+        .miguel-card h4 {
+            color: #c9a05e;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .miguel-card p {
+            color: #ddd;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .miguel-card .versiculo {
+            color: #c9a05e;
+            font-style: italic;
+            margin-top: 15px;
+        }
+
+        /* Paralelo Jacó x Remanescentes */
+        .paralelo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .paralelo-item {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .paralelo-item h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .paralelo-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .paralelo-item li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .paralelo-item li::before {
+            content: "•";
+            color: #c9a05e;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .paralelo-item.jaco li::before {
+            content: "👤";
+        }
+
+        .paralelo-item.remanescente li::before {
+            content: "✨";
+        }
+
+        /* Atividades de Relacionar */
+        .relacionar-container {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .relacionar-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .relacionar-item input[type="text"] {
+            width: 60px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #c9a05e;
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .relacionar-item label {
+            flex: 1;
+            color: #ddd;
+        }
+
+        .btn-verificar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .btn-verificar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Cards de eventos */
+        .eventos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .evento-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .evento-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .evento-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .evento-card .referencia {
+            color: #c9a05e;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* Linha do tempo */
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(201, 160, 94, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .timeline-ano {
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .timeline-descricao {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Gabarito das atividades */
+        .gabarito-atividade {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .gabarito-atividade.mostrar {
+            display: block;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .paralelo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .relacionar-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 15</span>
+        </div>
+        <h1>ESTUDO 15</h1>
+        <h2>Um Tempo de Angústia sem Precedentes</h2>
+        <p>"Nesse tempo, se levantará Miguel, o grande príncipe, o defensor dos filhos do teu povo." (Daniel 12:1)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Compreender os eventos finais descritos em Daniel 12 e seu paralelo com Apocalipse, incluindo o tempo de angústia, a ressurreição e o livramento final.</p>
+            <p><strong>Texto base:</strong> Daniel 12; Apocalipse 20-22; Gênesis 32 (Jacó)</p>
+            <p><strong>Versículos-chave:</strong> Daniel 12:1-2, 13, Apocalipse 22:11-12</p>
+            <p><strong>Destaque especial:</strong> O tempo de angústia será o período mais difícil da história, mas Miguel (Cristo) Se levantará para livrar Seu povo.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Antes do retorno de Jesus a esta terra haverá um tempo de grande prova para o povo de Deus. As provações são permitidas por Deus com o objetivo de transformar nosso caráter (1 Pedro 4:12-14) e nos preparar para o Céu.</p>
+                
+                <p style="margin-top: 15px;">A boa notícia do livro de Daniel é que nesse tempo de prova <strong>se levantará Miguel, que é o próprio Cristo, para salvar Seus filhos fiéis.</strong></p>
+            </div>
+        </div>
+
+        <!-- Miguel se Levanta -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚔️</div>
+                <h3>Miguel se Levanta</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Que revelação foi apresentada a Daniel com relação aos últimos dias? Daniel 12:1</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Nesse tempo, se levantará Miguel, o grande príncipe, o defensor dos filhos do teu povo, e será tempo de angústia, qual nunca houve, desde que houve nação até àquele tempo; mas, naquele tempo, será salvo o teu povo, todo aquele que for achado inscrito no livro." <strong>Esta frase está relacionada ao "tempo do fim" de Daniel 11:40, situando os acontecimentos após 1798 e 1844.</strong>
+                </div>
+            </div>
+            
+            <div class="miguel-card">
+                <h4>⚔️ Miguel, o Grande Príncipe</h4>
+                <p>Miguel (que significa "Quem é como Deus?") é o próprio Cristo, o líder dos exércitos celestiais. No tempo de angústia, Ele Se levantará para defender Seu povo.</p>
+                <p class="versiculo">"Naquele tempo, será salvo o teu povo, todo aquele que for achado inscrito no livro."</p>
+            </div>
+        </div>
+
+        <!-- A Angústia de Jacó -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">😰</div>
+                <h3>A Angústia de Jacó como Símbolo</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Que descrição faz o profeta Jeremias deste mesmo evento? Jeremias 30:5-7</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "Assim diz o Senhor: Ouvimos uma voz de tremor, de temor, e não de paz. Perguntai, pois, e vede, se um homem pode dar à luz? Por que, pois, vejo a mão de cada homem sobre os seus lombos, como a que está de parto? E por que se tornaram pálidos todos os rostos? Ah! Porque aquele dia é tão grande, que não houve outro semelhante; e é tempo de angústia para Jacó; ele, porém, será livrado dela." <strong>O profeta faz um paralelo entre a angústia final do povo de Deus e a angústia vivenciada por Jacó em Gênesis 32.</strong>
+                </div>
+            </div>
+            
+            <div class="paralelo-grid">
+                <div class="paralelo-item jaco">
+                    <h5>👤 JACÓ (Gênesis 32)</h5>
+                    <ul>
+                        <li>Jacó foi ameaçado de morte por Esaú</li>
+                        <li>Jacó lutou para conseguir o livramento</li>
+                        <li>Satanás levou Esaú a marchar contra Jacó</li>
+                        <li>Satanás se esforçou para impor sobre Jacó a intuição da culpa</li>
+                        <li>Jacó se apegou ao Anjo e insistiu até prevalecer</li>
+                    </ul>
+                </div>
+                
+                <div class="paralelo-item remanescente">
+                    <h5>✨ REMANESCENTES (Tempo do Fim)</h5>
+                    <ul>
+                        <li>Os remanescentes serão ameaçados de morte</li>
+                        <li>Os remanescentes clamarão a Deus de dia e de noite</li>
+                        <li>Os ímpios marcharão contra os remanescentes</li>
+                        <li>Satanás se esforçará para fazê-los pensar que seu caso é sem esperança</li>
+                        <li>O remanescente se apegará a Deus em oração</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Antes do Fechamento da Porta -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🚪</div>
+                <h3>Antes do Fechamento da Porta da Graça</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Que evento assinala o início deste período de prova para o povo de Deus? Apocalipse 15:8; 22:11</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "O santuário se encheu do fumo da glória de Deus e do seu poder; e ninguém podia entrar no santuário, enquanto não se cumprissem as sete pragas dos sete anjos." (Apocalipse 15:8) <strong>Quando Jesus deixar o Santuário Celestial, encerrará a oportunidade de salvação. Este é o "fechamento da porta da graça" (Mateus 25:10; Lucas 13:25).</strong>
+                </div>
+            </div>
+            
+            <div class="relacionar-container">
+                <h4 style="color: #c9a05e; text-align: center; margin-bottom: 20px;">📝 Pergunta 4 - Relacione as colunas</h4>
+                <p style="color: #ddd; margin-bottom: 15px;">Leia os textos abaixo e relacione os eventos que ocorrerão ANTES do fechamento da porta da graça:</p>
+                
+                <div class="relacionar-item">
+                    <input type="text" id="resp4a" placeholder="_">
+                    <label>a) Joel 2:23, 28 - O Espírito Santo será derramado e capacitará os cristãos a anunciar a última mensagem.</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp4b" placeholder="_">
+                    <label>b) Mateus 24:14 - O evangelho será pregado a todo o mundo.</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp4c" placeholder="_">
+                    <label>c) Apocalipse 13:14-17 - Decreto obrigando a receber a marca da besta.</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp4d" placeholder="_">
+                    <label>d) 2 Coríntios 11:14 e 2 Tessalonicenses 2:8-10 - Satanás tentará imitar a Volta de Jesus.</label>
+                </div>
+                
+                <button class="btn-verificar" onclick="verificarRespostas4()">Verificar respostas</button>
+                
+                <div class="gabarito-atividade" id="gabarito4">
+                    <strong>Gabarito:</strong> a=2, b=3, c=4, d=1. (1-d, 2-a, 3-b, 4-c)
+                </div>
+            </div>
+        </div>
+
+        <!-- Depois do Fechamento da Porta -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💢</div>
+                <h3>Depois do Fechamento da Porta</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">O que ocorrerá quando Cristo encerrar Sua obra mediadora no Santuário Celestial? Apocalipse 15:6; 16:1</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Ouvi, vinda do santuário, uma grande voz, dizendo aos sete anjos: Ide e derramai pela terra as sete taças da cólera de Deus." <strong>O primeiro evento após Jesus deixar o santuário será o derramamento das sete pragas (Apocalipse 16). A ira de Deus se manifestará porque os pecados de Babilônia "se acumularam até ao céu" (Apocalipse 18:5).</strong>
+                </div>
+            </div>
+            
+            <div class="relacionar-container">
+                <h4 style="color: #c9a05e; text-align: center; margin-bottom: 20px;">📝 Pergunta 6 - Relacione as colunas</h4>
+                <p style="color: #ddd; margin-bottom: 15px;">Leia os textos abaixo e relacione os eventos que ocorrerão DEPOIS do fechamento da porta da graça:</p>
+                
+                <div class="relacionar-item">
+                    <input type="text" id="resp6a" placeholder="_">
+                    <label>a) Daniel 12:1 - Um tempo de angústia sem precedentes.</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp6b" placeholder="_">
+                    <label>b) Apocalipse 16:1-21 - Queda das sete últimas pragas.</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp6c" placeholder="_">
+                    <label>c) Apocalipse 1:7 - A Volta de Jesus.</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp6d" placeholder="_">
+                    <label>d) Daniel 12:2 - Primeira ressurreição (salvos).</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp6e" placeholder="_">
+                    <label>e) 1 Tessalonicenses 4:16 - Uma ressurreição especial onde salvos e perdidos ressuscitam juntos.</label>
+                </div>
+                
+                <button class="btn-verificar" onclick="verificarRespostas6()">Verificar respostas</button>
+                
+                <div class="gabarito-atividade" id="gabarito6">
+                    <strong>Gabarito:</strong> a=3, b=1, c=2, d=4, e=5. (1-b, 2-c, 3-a, 4-d, 5-e)
+                </div>
+            </div>
+        </div>
+
+        <!-- O Milênio -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏱️</div>
+                <h3>O Milênio</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">A Volta de Jesus dará início a qual período de tempo? Apocalipse 20:4</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Vi tronos, e aos que se assentaram sobre eles foi dado poder de julgar. Vi ainda as almas dos decapitados por causa do testemunho de Jesus... Viveram e reinaram com Cristo durante mil anos." <strong>Jesus levará os remidos para a casa do Pai (João 14:1-3), e juntos reinarão por mil anos (Apocalipse 3:21; 20:4).</strong>
+                </div>
+            </div>
+            
+            <div class="eventos-grid">
+                <div class="evento-card">
+                    <h5>📖 Primeira Ressurreição</h5>
+                    <p>Os mortos em Cristo ressuscitam e sobem com os vivos para encontrar Jesus nos ares.</p>
+                    <p class="referencia">1 Tessalonicenses 4:16-17</p>
+                </div>
+                
+                <div class="evento-card">
+                    <h5>👑 Reinar com Cristo</h5>
+                    <p>Os salvos reinam com Cristo por mil anos, participando do juízo dos ímpios.</p>
+                    <p class="referencia">Apocalipse 20:4</p>
+                </div>
+                
+                <div class="evento-card">
+                    <h5>🌍 Terra Desolada</h5>
+                    <p>Durante o milênio, a Terra fica vazia, com Satanás preso aqui.</p>
+                    <p class="referencia">Apocalipse 20:1-3</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Depois do Milênio -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🌍</div>
+                <h3>Depois do Milênio</h3>
+            </div>
+            
+            <div class="relacionar-container">
+                <h4 style="color: #c9a05e; text-align: center; margin-bottom: 20px;">📝 Pergunta 8 - Relacione as colunas</h4>
+                <p style="color: #ddd; margin-bottom: 15px;">Leia os textos abaixo e relacione os eventos que ocorrerão DEPOIS do milênio:</p>
+                
+                <div class="relacionar-item">
+                    <input type="text" id="resp8a" placeholder="_">
+                    <label>a) Apocalipse 21:1 - Novos céus e nova terra.</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp8b" placeholder="_">
+                    <label>b) Apocalipse 20:7 - Satanás é solto de sua prisão.</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp8c" placeholder="_">
+                    <label>c) Apocalipse 20:5 - Os perdidos mortos ressuscitam.</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp8d" placeholder="_">
+                    <label>d) Apocalipse 20:8, 9 - Satanás e os ímpios são destruídos.</label>
+                </div>
+                <div class="relacionar-item">
+                    <input type="text" id="resp8e" placeholder="_">
+                    <label>e) Apocalipse 21:2 - A Nova Jerusalém desce do céu.</label>
+                </div>
+                
+                <button class="btn-verificar" onclick="verificarRespostas8()">Verificar respostas</button>
+                
+                <div class="gabarito-atividade" id="gabarito8">
+                    <strong>Gabarito:</strong> a=5, b=2, c=3, d=4, e=1. (1-e, 2-b, 3-c, 4-d, 5-a)
+                </div>
+            </div>
+        </div>
+
+        <!-- O Livro da Vida -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>O Livro da Vida</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">Quem somente poderá entrar na cidade que Deus está preparando? Daniel 12:1; Apocalipse 21:27</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência:</strong> "Naquele tempo, será salvo o teu povo, todo aquele que for achado inscrito no livro. E não entrará nela coisa alguma que contamine, nem o que pratica abominação e mentira, mas somente os inscritos no Livro da Vida do Cordeiro." <strong>Todo aquele que aceita Jesus tem seu nome registrado no Livro da Vida. Um dia este livro será aberto (Apocalipse 20:12), e somente os inscritos nele receberão a vida eterna.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 10</span>
+                <div class="pergunta-texto">Quais palavras foram ditas pelo anjo a Daniel? Daniel 12:4, 13</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(10)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito10">
+                    <strong>Referência:</strong> "Tu, porém, Daniel, encerra as palavras e sela o livro, até ao tempo do fim; muitos o esquadrinharão, e o saber se multiplicará. Tu, porém, segue o teu caminho até ao fim; pois descansarás e, ao fim dos dias, te levantarás para receber a tua herança." <strong>O anjo ordenou que Daniel selasse o livro até o tempo do fim, quando muitos o estudariam. E deu a Daniel a certeza de que ele descansaria (morreria), mas ressuscitaria para receber a vida eterna.</strong>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Tu, porém, segue o teu caminho até ao fim; pois descansarás e, ao fim dos dias, te levantarás para receber a tua herança."
+                <span class="versiculo-ref">Daniel 12:13</span>
+            </div>
+        </div>
+
+        <!-- Linha do Tempo Final -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>Linha do Tempo dos Eventos Finais</h3>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-ano">1844</span>
+                <span class="timeline-descricao">Início do juízo investigativo no Santuário Celestial.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">Pré-adoção</span>
+                <span class="timeline-descricao">Evangelho pregado, Espírito Santo derramado, decreto da marca da besta.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">Fim da graça</span>
+                <span class="timeline-descricao">Jesus encerra Seu ministério. Início do tempo de angústia.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">Pragas</span>
+                <span class="timeline-descricao">Sete últimas pragas são derramadas.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">Volta de Jesus</span>
+                <span class="timeline-descricao">Primeira ressurreição. Salvos são arrebatados.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">Milênio</span>
+                <span class="timeline-descricao">Salvos reinam com Cristo no Céu. Terra desolada.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">Pós-milênio</span>
+                <span class="timeline-descricao">Nova Jerusalém desce. Segunda ressurreição. Juízo final. Nova terra.</span>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Tu, porém, segue o teu caminho até ao fim; pois descansarás e, ao fim dos dias, te levantarás para receber a tua herança."
+                <span class="versiculo-ref">Daniel 12:13</span>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Ao descobrir que estamos nos aproximando dos últimos dias da história deste mundo, quando acontecimentos extraordinários ocorrerão, desejo me preparar e tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Estudarei com humildade e oração a Palavra de Deus e buscarei seguir todas as Suas orientações.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Dedicarei minha vida ao serviço de Cristo e trabalharei zelosamente para alertar outros a respeito dos eventos que se aproximam.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Dedicarei tempo todas as semanas para assistir aos cultos de adoração na igreja.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Creio que Miguel, o grande Príncipe, Se levantará em meu favor no tempo de angústia. Meu nome está escrito no Livro da Vida, e aguardo com esperança a ressurreição e a herança eterna."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-14.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-16.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Tu, porém, segue o teu caminho até ao fim; pois descansarás e, ao fim dos dias, te levantarás para receber a tua herança." - Daniel 12:13</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Funções para verificar as atividades de relacionar
+        function verificarRespostas4() {
+            const gabarito = document.getElementById('gabarito4');
+            gabarito.classList.toggle('mostrar');
+        }
+
+        function verificarRespostas6() {
+            const gabarito = document.getElementById('gabarito6');
+            gabarito.classList.toggle('mostrar');
+        }
+
+        function verificarRespostas8() {
+            const gabarito = document.getElementById('gabarito8');
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Um Tempo de Angústia sem Precedentes",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel15', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel15');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 11 - 2.300 Tardes e Manhãs (Parte 1) | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=2.300+Tardes+e+Manhãs+Parte+1');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Modelos 3D */
+        .modelos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .modelo-card {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .modelo-card h4 {
+            color: #c9a05e;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .sketchfab-embed-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .sketchfab-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .modelo-credit {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .modelo-credit a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        /* Cards do Santuário */
+        .santuario-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .santuario-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid #c9a05e;
+            text-align: center;
+        }
+
+        .santuario-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .santuario-card p {
+            color: #ddd;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .santuario-card .icone {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #c9a05e;
+        }
+
+        /* Comparação dos Bodes */
+        .bodes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .bode-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid;
+        }
+
+        .bode-card.senhor {
+            border-left-color: #2ecc71;
+        }
+
+        .bode-card.azazel {
+            border-left-color: #e74c3c;
+        }
+
+        .bode-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .bode-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Linha do tempo do Santuário */
+        .timeline-santuario {
+            margin: 30px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(201, 160, 94, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .timeline-ano {
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .timeline-descricao {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .modelos-grid,
+            .santuario-grid,
+            .bodes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 11</span>
+        </div>
+        <h1>ESTUDO 11</h1>
+        <h2>2.300 Tardes e Manhãs e a Purificação do Santuário (Parte 1)</h2>
+        <p>"Até duas mil e trezentas tardes e manhãs; e o santuário será purificado." (Daniel 8:14)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Compreender o significado da profecia das 2.300 tardes e manhãs, o propósito do santuário terrestre e sua relação com o Santuário Celestial.</p>
+            <p><strong>Texto base:</strong> Daniel 8:13-14; Êxodo 25-30; Levítico 16; Hebreus 8-9</p>
+            <p><strong>Versículos-chave:</strong> Daniel 8:14, Hebreus 9:23-24, Apocalipse 11:19</p>
+            <p><strong>Destaque especial:</strong> O santuário é o tema central da Bíblia, e sua purificação aponta para o juízo investigativo no Santuário Celestial.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Nos primeiros séculos da história do cristianismo, milhares de cristãos perderam a vida por amor a Cristo. Muitos foram lançados às feras no coliseu romano, queimados em praça pública ou mortos em prisões sombrias. Satanás perseguia todos aqueles que ousassem partilhar o evangelho de Cristo com outros. Tertuliano chegou a afirmar: <strong>"O sangue dos mártires é semente"</strong>, ou seja, quanto mais cristãos morriam, maior era o número dos novos conversos.</p>
+                
+                <p style="margin-top: 15px;">Satanás então mudou de estratégia. Ao invés de perseguir os que pregavam o puro evangelho de Cristo, ele se insinuou dentro da Igreja Cristã e corrompeu a verdadeira fé. A pura doutrina apostólica logo deu lugar às tradições e dogmas vindos do paganismo, e a Igreja Cristã perdeu sua pureza doutrinária.</p>
+                
+                <p style="margin-top: 15px;">A profecia das 2.300 tardes e manhãs, que estudaremos hoje, fala de dois acontecimentos: (1) na Terra, surgiria a igreja remanescente restaurando a verdade de Deus pisada pelo chifre pequeno (Daniel 8:12; Isaías 58:12); (2) no Céu, se iniciaria o juízo de investigação e quando este terminasse, o chifre pequeno seria finalmente destruído e o reino dado aos santos do Altíssimo (Daniel 7:18 e 27).</p>
+            </div>
+        </div>
+
+        <!-- Modelos 3D -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏛️</div>
+                <h3>Visualização 3D</h3>
+            </div>
+            
+            <div class="modelos-grid">
+                <div class="modelo-card">
+                    <h4>⏳ A Profecia das 2.300 Tardes e Manhãs</h4>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Los 2300 días/The 2300 days" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                src="https://sketchfab.com/models/9d4ea8becfe141fdba83bcf79b78bf82/embed">
+                        </iframe>
+                    </div>
+                    <div class="modelo-credit">
+                        <a href="https://sketchfab.com/3d-models/los-2300-diasthe-2300-days-9d4ea8becfe141fdba83bcf79b78bf82" target="_blank">Los 2300 días/The 2300 days</a> by VIRTUAL BIBLICAL MUSEUM
+                    </div>
+                </div>
+                
+                <div class="modelo-card">
+                    <h4>🏕️ O Tabernáculo no Deserto</h4>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Tabernáculo 3D" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                src="https://sketchfab.com/models/75005841394e4bd08f42c7e4a24c9621/embed">
+                        </iframe>
+                    </div>
+                    <div class="modelo-credit">
+                        <a href="https://sketchfab.com/3d-models/tabernaculo-3d-75005841394e4bd08f42c7e4a24c9621" target="_blank">Tabernáculo 3D</a> by NTKids
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Profecia -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>A Profecia das 2.300 Tardes e Manhãs</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Até quando o chifre pequeno atacaria o povo de Deus e à Sua Lei? Daniel 8:13, 14</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Até duas mil e trezentas tardes e manhãs; e o santuário será purificado." <strong>A profecia das "2.300 tardes e manhãs" é a profecia que cobre o maior período de tempo na Bíblia. A expressão "tarde e manhã" é tomada de Gênesis, significando um dia literal de 24 horas. Aplicando o princípio dia-ano (Números 14:34; Ezequiel 4:6), temos 2.300 anos.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Santuário -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏛️</div>
+                <h3>O Santuário Terrestre</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Qual foi a ordem de Deus a Moisés após a saída do Egito? Êxodo 25:8</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "E me farão um santuário, para que eu possa habitar no meio deles." <strong>Moisés recebeu a ordem de construir um santuário conforme o modelo que lhe foi mostrado no monte (Êxodo 25:40; Hebreus 8:5), que era uma cópia do Santuário Celestial.</strong>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p>O santuário é o principal tema da Bíblia. No Pentateuco, 45 capítulos são dedicados ao tema do santuário. Nos livros dos profetas, outros 45 capítulos também tratam deste tema. Nos demais livros da Bíblia, há cerca de 150 referências ao santuário. Os Salmos foram escritos para servirem de coletânea para os louvores do santuário. O Apocalipse é estruturado no santuário, com sete divisões iniciando-se com uma cena no Santuário Celestial. As epístolas descrevem Jesus como sacerdote, sumo-sacerdote, propiciatório e oferta.</p>
+            </div>
+            
+            <div class="santuario-grid">
+                <div class="santuario-card">
+                    <div class="icone">🏛️</div>
+                    <h5>Pátio</h5>
+                    <p>Altar do holocausto, pia de bronze. Lugar do sacrifício. Representava a morte de Cristo na cruz.</p>
+                </div>
+                <div class="santuario-card">
+                    <div class="icone">🕯️</div>
+                    <h5>Lugar Santo</h5>
+                    <p>Mesa dos pães, candelabro, altar de incenso. Ministério diário de Cristo como intercessor.</p>
+                </div>
+                <div class="santuario-card">
+                    <div class="icone">👑</div>
+                    <h5>Santo dos Santos</h5>
+                    <p>Arca da Aliança, propiciatório. Dia da Expiação - juízo final e purificação.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serviço Diário -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🐑</div>
+                <h3>O Serviço Diário</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Quantos cordeiros deveriam morrer todos os dias no santuário? Êxodo 29:38, 39</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">Um cordeiro por dia</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">Dois cordeiros por dia (manhã e tarde) ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">Sete cordeiros por dia</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Dois cordeiros por dia (manhã e tarde). "Isto é o que oferecerás sobre o altar: dois cordeiros de um ano, cada dia, continuamente. Um cordeiro oferecerás pela manhã e o outro cordeiro oferecerás à tarde." Esses sacrifícios eram chamados "contínuos" (TAMID) e prefiguravam o sacrifício de Cristo.
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Os sacrifícios da manhã e da tarde eram oferecidos diariamente, mesmo nas festas especiais. Por isso chamavam-se sacrifícios <strong>"contínuos"</strong> (TAMID), que não cessam (Êxodo 29:42). Esse sacrifício não era providenciado por qualquer pessoa, mas oferecido em favor do povo como um todo. Beneficiava especialmente os pobres e os israelitas distantes do santuário, como Daniel, que orava com o rosto voltado para Jerusalém.</p>
+                
+                <p style="margin-top: 15px;">Quando um israelita cometia um pecado, deveria levar um animal ao santuário, impor as mãos sobre sua cabeça, confessar o pecado e imolá-lo. O sacerdote tomava o sangue e o levava para dentro do Lugar Santo, aspergindo na cortina ou nos chifres do altar de incenso. Assim, o pecado era transferido para o santuário, que era contaminado e precisava ser purificado.</p>
+            </div>
+        </div>
+
+        <!-- Dia da Expiação -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚖️</div>
+                <h3>O Dia da Expiação (Yom Kippur)</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Que outro serviço havia no santuário e quando era realizado? Levítico 16:29, 30</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Isso vos será por estatuto perpétuo: no sétimo mês, aos dez do mês, afligireis a vossa alma e nenhuma obra fareis... porque, naquele dia, se fará expiação por vós, para purificar-vos." <strong>O Dia da Expiação ocorria uma vez por ano, no décimo dia do sétimo mês (Tishri). Era a purificação do santuário, que havia sido contaminado pelos pecados transferidos durante o ano.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Antes de realizar o cerimonial do Dia da Expiação, o que fazia o sumo sacerdote? Levítico 16:3, 4, 11-14</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Com isto entrará Arão no santuário: com um novilho, para oferta pelo pecado, e com um carneiro, para holocausto. Vestirá a túnica sagrada de linho... banhará o seu corpo em água e as vestirá. Fará expiação por si e pela sua casa." <strong>O sumo sacerdote preparava-se por 10 dias, mudava-se para o templo, não dormia no dia anterior, banhava-se e vestia vestes santas, e primeiro fazia expiação por seus próprios pecados.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Os Dois Bodes -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🐐</div>
+                <h3>Os Dois Bodes do Dia da Expiação</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Que animais entravam em cena no Dia da Expiação? Levítico 16:5-10</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Tomará dois bodes para oferta pelo pecado e um carneiro para holocausto. Arão lançará sortes sobre os dois bodes: uma sorte para o Senhor e a outra sorte para o bode emissário (Azazel)." <strong>Dois bodes eram separados: um para o Senhor (que morria) e outro para Azazel (bode emissário, enviado ao deserto).</strong>
+                </div>
+            </div>
+            
+            <div class="bodes-grid">
+                <div class="bode-card senhor">
+                    <h5>🐐 BODE PARA O SENHOR</h5>
+                    <p><strong>Simboliza:</strong> Jesus Cristo, que morreu pelos pecados da humanidade.</p>
+                    <p><strong>Destino:</strong> Era morto e seu sangue levado ao Santo dos Santos.</p>
+                    <p><strong>Referências:</strong> Isaías 53:7; João 1:29; Hebreus 9:11-14</p>
+                </div>
+                
+                <div class="bode-card azazel">
+                    <h5>🐐 BODE EMISSÁRIO (AZAZEL)</h5>
+                    <p><strong>Simboliza:</strong> Satanás, o originador do pecado.</p>
+                    <p><strong>Destino:</strong> Era enviado ao deserto, lugar desolado, onde perecia.</p>
+                    <p><strong>Referências:</strong> Apocalipse 20:1-3, 9-10; Jeremias 4:23-26</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">O que simbolizavam estes animais? Hebreus 9:11-14; Apocalipse 20:1-3, 9, 10</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Cristo, porém, tendo vindo como sumo sacerdote dos bens já realizados... não por meio de sangue de bodes e bezerros, mas pelo seu próprio sangue, entrou no Santo dos Santos, uma vez por todas, tendo obtido eterna redenção." <strong>O bode para o Senhor simboliza Cristo; o bode emissário simboliza Satanás, que será aprisionado por 1.000 anos e depois destruído. Satanás não participa na expiação dos pecados, mas é destruído por seus próprios pecados.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Sacrifício de Cristo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✝️</div>
+                <h3>O Cumprimento em Cristo</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Como Jesus cumpriu a tipologia dos animais mortos no santuário? Mateus 27:50, 51; Lucas 24:44-47</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência:</strong> "Eis que o véu do santuário se rasgou em duas partes de alto a baixo; tremeu a terra, e fenderam-se as rochas." <strong>Quando Jesus morreu na cruz, o véu do templo rasgou-se, indicando o fim do sistema sacrifical de animais. Todos os sacrifícios apontavam para o sacrifício único e perfeito de Cristo (João 1:29).</strong>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Porque não temos sumo sacerdote que não possa compadecer-se das nossas fraquezas; antes, foi ele tentado em todas as coisas, à nossa semelhança, mas sem pecado."
+                <span class="versiculo-ref">Hebreus 4:15</span>
+            </div>
+        </div>
+
+        <!-- Trajetória do Santuário -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>A Trajetória do Santuário Terrestre</h3>
+            </div>
+            
+            <div class="timeline-santuario">
+                <div class="timeline-item">
+                    <span class="timeline-ano">1445 a.C.</span>
+                    <span class="timeline-descricao">Moisés constrói o Tabernáculo no deserto, conforme o modelo divino.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-ano">959 a.C.</span>
+                    <span class="timeline-descricao">Salomão constrói o Templo em Jerusalém. A Arca é colocada no Santo dos Santos.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-ano">586 a.C.</span>
+                    <span class="timeline-descricao">Nabucodonosor destrói o Templo de Salomão. Início do cativeiro babilônico.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-ano">516 a.C.</span>
+                    <span class="timeline-descricao">Templo de Zorobabel é reconstruído após o retorno do exílio.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-ano">19 a.C.</span>
+                    <span class="timeline-descricao">Herodes, o Grande, reforma e expande o Templo.</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-ano">70 d.C.</span>
+                    <span class="timeline-descricao">Tito destrói Jerusalém e o Templo, cumprindo a profecia de Jesus (Mateus 24:1-2).</span>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">O que aconteceu com o santuário terrestre? Mateus 24:1, 2</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência:</strong> "Jesus, porém, lhes disse: Não vedes tudo isto? Em verdade vos digo que não ficará aqui pedra sobre pedra que não seja derribada." <strong>O templo foi destruído em 70 d.C. por Tito, cumprindo-se a profecia.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 10</span>
+                <div class="pergunta-texto">De que santuário está falando Daniel 8:14?</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(10)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito10">
+                    <strong>Referência:</strong> "Era necessário, portanto, que as figuras das coisas que estão nos céus se purificassem com tais sacrifícios, mas as próprias coisas celestiais, com sacrifícios mais excelentes do que estes. Porque Cristo não entrou em santuário feito por mãos, figura do verdadeiro, porém no mesmo céu, para comparecer, agora, por nós, diante de Deus." (Hebreus 9:23-24) <strong>O santuário a ser purificado no fim das 2.300 tardes e manhãs é o Santuário Celestial.</strong>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Se a profecia foi feita nos dias de Daniel (cerca de 600 a.C.), então não pode estar falando do santuário terrestre, pois este foi destruído em 70 d.C., muito antes do término do período. A profecia apontava para a purificação do <strong>Santuário Celestial</strong> (Hebreus 9:23-24).</p>
+                
+                <p style="margin-top: 15px;">Assim como a purificação do santuário terrestre representava um juízo de vindicação do povo de Deus, o mesmo ocorrerá ao término da purificação do Santuário Celestial. O povo de Deus será vindicado, a Lei de Deus que fora pisada pelo chifre pequeno será restaurada, e a igreja remanescente que estivera oculta no deserto por anos será revelada (Apocalipse 12:6, 16).</p>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Acheguemo-nos, portanto, confiadamente, junto ao trono da graça, a fim de recebermos misericórdia e acharmos graça para socorro em ocasião oportuna."
+                <span class="versiculo-ref">Hebreus 4:16</span>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Depois de aprender sobre o maravilhoso sacrifício de Jesus na cruz por mim, cumprindo toda a simbologia do santuário terrestre, onde o inocente morria pelo pecador, desejo tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Aceito a Cristo como meu Salvador pessoal e quero dedicar minha vida a Ele.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Todas as vezes que pecar, irei pela fé, aos pés da cruz e implorarei por perdão e graça.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Contarei a todos os meus parentes e amigos sobre o grande amor de Jesus e dos planos maravilhosos que Ele tem para os Seus filhos.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Reconheço que Jesus é meu Sumo Sacerdote no Santuário Celestial e que Seu sacrifício foi único e perfeito. Aproximar-me-ei com confiança do trono da graça para receber misericórdia."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-10.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-12.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Até duas mil e trezentas tardes e manhãs; e o santuário será purificado" - Daniel 8:14</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "2.300 Tardes e Manhãs e a Purificação do Santuário (Parte 1)",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel11', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel11');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 8 - Quatro Animais Estranhos | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Quatro+Animais+Estranhos');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Grid de animais 3D */
+        .animais-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .animal-card {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .animal-card h4 {
+            color: #c9a05e;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .animal-card .imperio {
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .animal-card .periodo {
+            color: #aaa;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .sketchfab-embed-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%; /* Proporção 4:3 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .sketchfab-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .modelo-credit {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .modelo-credit a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        /* Tabela comparativa */
+        .tabela-comparativa {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+            overflow-x: auto;
+        }
+
+        .tabela-comparativa table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-comparativa th {
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px;
+            font-size: 1.1rem;
+        }
+
+        .tabela-comparativa td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-comparativa tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabela-comparativa td:first-child {
+            font-weight: bold;
+            color: #c9a05e;
+        }
+
+        /* Cards dos impérios */
+        .imperios-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .imperio-detalhe {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .imperio-detalhe h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .imperio-detalhe p {
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        /* Linha do tempo */
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(201, 160, 94, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .timeline-ano {
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .timeline-descricao {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .animais-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .imperios-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 8</span>
+        </div>
+        <h1>ESTUDO 8</h1>
+        <h2>Quatro Animais Estranhos</h2>
+        <p>"Estes grandes animais, que são quatro, são quatro reis que se levantarão da terra." (Daniel 7:17)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar a visão dos quatro animais que representam os mesmos impérios da estátua do capítulo 2, agora sob uma perspectiva divina.</p>
+            <p><strong>Texto base:</strong> Daniel 7; Daniel 2</p>
+            <p><strong>Versículos-chave:</strong> Daniel 7:17-18, 27</p>
+            <p><strong>Destaque especial:</strong> Esta visão ocorreu no primeiro ano de Belsazar (cerca de 550 a.C.), antes da queda de Babilônia, mostrando que Deus já havia revelado a sucessão dos impérios.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🦁</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Já observou que numa família, mesmo havendo muitos membros, cada um tem suas peculiaridades? Na natureza também é assim. Quando vamos a um zoológico, por exemplo, fica muito clara a diferença entre os diversos animais que existem ali. Cada um tem suas características próprias e seus hábitos.</p>
+                
+                <p style="margin-top: 15px;">No capítulo 7 de Daniel, Deus mostrou ao profeta vários animais com aparências bem diferentes das que estamos acostumados a ver hoje em dia. Vamos observar cada peculiaridade e descobrir o significado destes animais proféticos.</p>
+                
+                <p style="margin-top: 15px;"><strong>Observe:</strong> Os capítulos de Daniel não estão em ordem cronológica. Esta visão ocorreu no primeiro ano de Belsazar (cerca de 550 a.C.), antes da queda de Babilônia, quando Daniel tinha aproximadamente 73 anos.</p>
+            </div>
+        </div>
+
+        <!-- A Visão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🌊</div>
+                <h3>A Visão dos Quatro Animais</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">No primeiro ano do rei Belsazar, que sonho Daniel teve? Daniel 7:1-3</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Daniel teve um sonho e visões da sua cabeça, estando na sua cama; então, escreveu o sonho e relatou a suma das coisas. Falou Daniel e disse: Eu estava olhando, na minha visão da noite, e eis que os quatro ventos do céu agitavam o Mar Grande. E quatro animais grandes, diferentes uns dos outros, subiam do mar." <strong>Este sonho ocorreu no primeiro ano de Belsazar (cerca de 550 a.C.). Os quatro animais representam quatro reinos que se levantariam.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que representam os quatro animais que subiam do mar? Daniel 7:17</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Quatro anjos do céu</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Quatro reis (reinos) que se levantarão ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">Quatro profetas</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> Quatro reis (reinos). "Estes grandes animais, que são quatro, são quatro reis que se levantarão da terra." Esta visão está em paralelo com o sonho de Nabucodonosor (capítulo 2), onde os mesmos impérios são representados pelos metais da estátua.
+                </div>
+            </div>
+        </div>
+
+        <!-- Modelos 3D dos Quatro Animais -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🦁</div>
+                <h3>Os Quatro Animais em 3D</h3>
+            </div>
+            
+            <div class="animais-grid">
+                <!-- Leão com asas de águia - Babilônia -->
+                <div class="animal-card">
+                    <h4>🦁 Leão com Asas de Águia</h4>
+                    <div class="imperio">BABILÔNIA</div>
+                    <div class="periodo">605 a.C. - 539 a.C.</div>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Daniel 7 Winged Lion" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                src="https://sketchfab.com/models/f87c7e8bed41436f85c8f9ab487cf48b/embed">
+                        </iframe>
+                    </div>
+                    <div class="modelo-credit">
+                        <a href="https://sketchfab.com/3d-models/daniel-7-winged-lion-f87c7e8bed41436f85c8f9ab487cf48b" target="_blank">Daniel 7 Winged Lion</a> by Upcoming Project
+                    </div>
+                </div>
+                
+                <!-- Urso com costelas - Medo-Pérsia -->
+                <div class="animal-card">
+                    <h4>🐻 Urso com Costelas</h4>
+                    <div class="imperio">MEDO-PÉRSIA</div>
+                    <div class="periodo">539 a.C. - 331 a.C.</div>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Daniel 7 Bear with Ribs in its Mouth" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                src="https://sketchfab.com/models/dc341adb7c5f47c5b53cd08df0b4390f/embed">
+                        </iframe>
+                    </div>
+                    <div class="modelo-credit">
+                        <a href="https://sketchfab.com/3d-models/daniel-7-bear-with-ribs-in-its-mouth-dc341adb7c5f47c5b53cd08df0b4390f" target="_blank">Daniel 7 Bear with Ribs</a> by Upcoming Project
+                    </div>
+                </div>
+                
+                <!-- Leopardo de 4 asas e 4 cabeças - Grécia -->
+                <div class="animal-card">
+                    <h4>🐆 Leopardo de 4 Asas e 4 Cabeças</h4>
+                    <div class="imperio">GRÉCIA</div>
+                    <div class="periodo">331 a.C. - 168 a.C.</div>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Daniel 7 Four-Winged, Four-Headed Leopard" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                src="https://sketchfab.com/models/8f0815493a4548f98d7cf40d55a5bae2/embed">
+                        </iframe>
+                    </div>
+                    <div class="modelo-credit">
+                        <a href="https://sketchfab.com/3d-models/daniel-7-four-winged-four-headed-leopard-8f0815493a4548f98d7cf40d55a5bae2" target="_blank">Daniel 7 Four-Winged Leopard</a> by Upcoming Project
+                    </div>
+                </div>
+                
+                <!-- Animal terrível com dentes de ferro e 10 chifres - Roma -->
+                <div class="animal-card">
+                    <h4>👹 Animal Terrível com 10 Chifres</h4>
+                    <div class="imperio">ROMA</div>
+                    <div class="periodo">168 a.C. - 476 d.C.</div>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Daniel 7 Terrible Beast with Ten Horns" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                src="https://sketchfab.com/models/4c15f041b5464a8ea9a6574c14af017a/embed">
+                        </iframe>
+                    </div>
+                    <div class="modelo-credit">
+                        <a href="https://sketchfab.com/3d-models/daniel-7-terrible-beast-with-ten-horns-4c15f041b5464a8ea9a6574c14af017a" target="_blank">Daniel 7 Terrible Beast</a> by Upcoming Project
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Descrição dos Animais -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📝</div>
+                <h3>Descrição dos Animais</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Como era o primeiro animal? Daniel 7:4</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "O primeiro era como leão e tinha asas de águia; enquanto eu olhava, foram-lhe arrancadas as asas, foi levantado da terra e posto em pé como homem; e foi-lhe dado coração de homem." <strong>O leão com asas de águia representa o Império Babilônico. O leão como rei das feras e a águia como rainha das aves representavam adequadamente Babilônia no apogeu de sua glória (Jeremias 4:6-7; 50:17).</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Que características tinha o segundo animal? Daniel 7:5</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Continuei olhando, e eis aqui o segundo animal, semelhante a um urso, o qual se levantou sobre um dos seus lados; na boca, entre os dentes, trazia três costelas; e foi-lhe dito: Levanta-te, devora muita carne." <strong>O urso representa o Império Medo-Pérsia. As três costelas representam as três principais conquistas: Lídia (547 a.C.), Babilônia (539 a.C.) e Egito (525 a.C.).</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Descreva o terceiro animal? Daniel 7:6</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Depois disso, continuei olhando, e eis aqui outro, semelhante a um leopardo, e tinha quatro asas de ave nas costas; tinha também este animal quatro cabeças, e foi-lhe dado domínio." <strong>O leopardo representa a Grécia. As quatro asas simbolizam a velocidade das conquistas de Alexandre, o Grande. As quatro cabeças representam os quatro generais que dividiram o império após sua morte (Cassandro, Lisímaco, Ptolomeu e Seleuco).</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Como Daniel descreve o quarto animal? Daniel 7:7</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Depois disso, eu continuei olhando nas visões da noite, e eis aqui o quarto animal, terrível e espantoso, e muito forte, o qual tinha grandes dentes de ferro; ele devorava, fazia em pedaços e pisava aos pés o que sobejava; era diferente de todos os animais que apareceram antes dele e tinha dez chifres." <strong>O quarto animal representa Roma. Os dentes de ferro estão em paralelo com as pernas de ferro da estátua de Daniel 2, referindo-se à forma cruel com que Roma tratava seus inimigos. Os dez chifres representam as dez tribos bárbaras que dividiram o Império Romano.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela Comparativa -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📊</div>
+                <h3>Comparação: Capítulo 2 vs Capítulo 7</h3>
+            </div>
+            
+            <div class="tabela-comparativa">
+                <table>
+                    <tr>
+                        <th>Capítulo 2 (Estátua)</th>
+                        <th>Capítulo 7 (Animais)</th>
+                        <th>Império</th>
+                        <th>Período</th>
+                    </tr>
+                    <tr>
+                        <td>Cabeça de Ouro</td>
+                        <td>Leão com asas de águia</td>
+                        <td>Babilônia</td>
+                        <td>605-539 a.C.</td>
+                    </tr>
+                    <tr>
+                        <td>Peito e Braços de Prata</td>
+                        <td>Urso com três costelas</td>
+                        <td>Medo-Pérsia</td>
+                        <td>539-331 a.C.</td>
+                    </tr>
+                    <tr>
+                        <td>Ventre e Quadris de Bronze</td>
+                        <td>Leopardo com 4 asas e 4 cabeças</td>
+                        <td>Grécia</td>
+                        <td>331-168 a.C.</td>
+                    </tr>
+                    <tr>
+                        <td>Pernas de Ferro</td>
+                        <td>Animal terrível com dentes de ferro</td>
+                        <td>Roma</td>
+                        <td>168 a.C.-476 d.C.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Detalhes dos Impérios -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📚</div>
+                <h3>Detalhes Históricos</h3>
+            </div>
+            
+            <div class="imperios-grid">
+                <div class="imperio-detalhe">
+                    <h5>🦁 BABILÔNIA (Leão)</h5>
+                    <p>O leão como rei das feras e a águia como rainha das aves representavam adequadamente o Império de Babilônia no apogeu de sua glória. A figura de um leão pode ser vista em várias peças de arte e na arquitetura da antiga Babilônia.</p>
+                </div>
+                
+                <div class="imperio-detalhe">
+                    <h5>🐻 MEDO-PÉRSIA (Urso)</h5>
+                    <p>O urso levantou-se sobre um dos lados porque, quando ocorreu a queda de Babilônia, os medos eram superiores aos persas, situação que posteriormente foi invertida. As três costelas representam Lídia (547 a.C.), Babilônia (539 a.C.) e Egito (525 a.C.).</p>
+                </div>
+                
+                <div class="imperio-detalhe">
+                    <h5>🐆 GRÉCIA (Leopardo)</h5>
+                    <p>As quatro asas representam a velocidade com que Alexandre, o Grande, venceu os exércitos inimigos. As quatro cabeças representam os quatro generais que dominaram o Império Grego após sua morte: Cassandro, Lisímaco, Ptolomeu e Seleuco.</p>
+                </div>
+                
+                <div class="imperio-detalhe">
+                    <h5>👹 ROMA (Animal Terrível)</h5>
+                    <p>Os grandes dentes de ferro estão em paralelo com as pernas de ferro da estátua e referem-se à forma cruel com que Roma tratava seus inimigos. Os dez chifres representam as dez tribos bárbaras que provocaram a queda do Império Romano do Ocidente em 476 d.C.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Esperança -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✨</div>
+                <h3>A Vitória Final</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Que garantia Deus deu ao Seu povo em meio às ameaças das nações? Daniel 7:18, 22, 27</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Mas os santos do Altíssimo receberão o reino e o possuirão para todo o sempre, e de eternidade em eternidade... até que veio o Ancião de Dias, e foi dado o juízo aos santos do Altíssimo; e chegou o tempo em que os santos possuíram o reino... O reino, e o domínio, e a majestade dos reinos debaixo de todo o céu serão dados ao povo dos santos do Altíssimo; o seu reino será reino eterno, e todos os domínios o servirão e lhe obedecerão." <strong>Diante do cenário assustador, Daniel recebeu o conforto de que os santos receberiam a vitória final. Todos os reinos passariam, mas o reino de Deus pertencerá para sempre aos fiéis.</strong>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "O reino, e o domínio, e a majestade dos reinos debaixo de todo o céu serão dados ao povo dos santos do Altíssimo; o seu reino será reino eterno."
+                <span class="versiculo-ref">Daniel 7:27</span>
+            </div>
+        </div>
+
+        <!-- Linha do tempo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>Linha do Tempo dos Impérios</h3>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-ano">605-539 a.C.</span>
+                <span class="timeline-descricao"><strong>BABILÔNIA:</strong> Leão com asas de águia. Nabucodonosor, Evil-Merodaque, Nabonido, Belsazar.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">539-331 a.C.</span>
+                <span class="timeline-descricao"><strong>MEDO-PÉRSIA:</strong> Urso com três costelas. Ciro, Dario, Xerxes, Artaxerxes.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">331-168 a.C.</span>
+                <span class="timeline-descricao"><strong>GRÉCIA:</strong> Leopardo com quatro asas e quatro cabeças. Alexandre, o Grande, e seus quatro generais.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">168 a.C.-476 d.C.</span>
+                <span class="timeline-descricao"><strong>ROMA:</strong> Animal terrível com dentes de ferro e dez chifres. Império Romano e as tribos bárbaras.</span>
+            </div>
+        </div>
+
+        <!-- Lições -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💭</div>
+                <h3>Lições para Nossos Dias</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>1. Deus controla a história:</strong> Séculos antes, Ele já havia revelado a sucessão dos impérios.</p>
+                <p><strong>2. Os reinos humanos são passageiros:</strong> Por mais poderosos que pareçam, todos têm "data de validade".</p>
+                <p><strong>3. O reino de Deus é eterno:</strong> Em contraste com a fragilidade dos impérios humanos.</p>
+                <p><strong>4. Os santos herdarão o reino:</strong> A vitória final é dos que permanecem fiéis.</p>
+                <p><strong>5. A profecia nos fortalece:</strong> Saber o futuro nas mãos de Deus nos dá esperança e segurança.</p>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Mas os santos do Altíssimo receberão o reino e o possuirão para todo o sempre."
+                <span class="versiculo-ref">Daniel 7:18</span>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Depois de entender que os quatro animais proféticos representam os quatro impérios que dominaram o mundo, e que em breve os reinos deste mundo passarão aos "santos do Altíssimo", desejo tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Estudarei a Bíblia todos os dias para continuar aprendendo os seus ensinos.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Confiarei sempre que o Deus Eterno controla o destino das nações.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Entregarei meu coração e minha vontade a Deus para um dia ser cidadão do reino que em breve Ele estabelecerá, quando voltar.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Reconheço que os reinos deste mundo são passageiros, mas o reino de Deus é eterno. Quero ser contado entre os santos do Altíssimo que herdarão este reino."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-7.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-9.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Mas os santos do Altíssimo receberão o reino e o possuirão para todo o sempre" - Daniel 7:18</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Quatro Animais Estranhos",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel8', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel8');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

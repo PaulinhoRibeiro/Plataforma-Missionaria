@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 1 - Daniel: Um Livro para os Dias de Hoje | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Daniel+-+Um+Livro+para+os+Dias+de+Hoje');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de divisão dos Testamentos */
+        .testamentos-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .testamento {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid #c9a05e;
+        }
+
+        .testamento h4 {
+            color: #c9a05e;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .testamento ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .testamento li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: #ddd;
+        }
+
+        .testamento li::before {
+            content: "📖";
+            position: absolute;
+            left: 0;
+            color: #c9a05e;
+        }
+
+        /* Tabela de tempos proféticos */
+        .tabela-tempos {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .tabela-linha {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tabela-linha:last-child {
+            border-bottom: none;
+        }
+
+        .tabela-cabecalho {
+            font-weight: bold;
+            color: #c9a05e;
+        }
+
+        .tabela-item {
+            color: #fff;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .testamentos-box {
+                grid-template-columns: 1fr;
+            }
+
+            .tabela-linha {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 1</span>
+        </div>
+        <h1>ESTUDO 1</h1>
+        <h2>Daniel: Um Livro para os Dias de Hoje</h2>
+        <p>"Tu, porém, Daniel, encerra as palavras e sela o livro, até ao tempo do fim" (Daniel 12:4)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Introduzir o livro de Daniel, sua estrutura, autoria e importância profética para o tempo do fim.</p>
+            <p><strong>Texto base:</strong> Daniel 1; 12:4; Mateus 24:15</p>
+            <p><strong>Versículos-chave:</strong> Daniel 12:4, Amós 3:7, 2 Timóteo 3:1</p>
+            <p><strong>Destaque especial:</strong> O livro de Daniel foi selado até o tempo do fim, quando o conhecimento se multiplicaria e suas profecias seriam compreendidas. Vivemos neste tempo!</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Durante séculos a Bíblia foi proibida e censurada. Muitos perderam a vida porque acreditavam e ensinavam as verdades nela reveladas. No entanto, vivemos hoje um tempo de liberdade religiosa e temos que aproveitar cada minuto para descobrirmos a vontade de Deus para a nossa vida.</p>
+                
+                <p style="margin-top: 15px;">Por isso é um sagrado privilégio ter a Bíblia em nossas mãos e poder estudá-la. Antes de começar cada estudo, faça uma oração suplicando que o mesmo Espírito, que inspirou os apóstolos e profetas a escreverem este livro, ilumine sua mente enquanto você ouve a voz de Deus através de suas páginas.</p>
+                
+                <p style="margin-top: 15px;">Acreditamos que os livros proféticos de Daniel e Apocalipse têm mensagens específicas para nossos dias, por isso, escolhemos o livro de Daniel para nosso estudo. Este livro vai nos proporcionar uma viagem extraordinária ao passado, através de suas histórias, e ao futuro, através das enigmáticas profecias que ele apresenta.</p>
+                
+                <p style="margin-top: 15px;"><strong>O tema central do livro é o GRANDE CONFLITO</strong> entre o bem e o mal, entre a vontade de Deus e a vontade humana, entre as verdades do Céu e as crendices pagãs, entre o eterno Governante do Universo e os transitórios governantes da terra, entre o perseguido povo de Deus e seus inimigos perseguidores.</p>
+            </div>
+        </div>
+
+        <!-- Estrutura da Bíblia -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📚</div>
+                <h3>Estrutura da Bíblia</h3>
+            </div>
+            
+            <div class="testamentos-box">
+                <div class="testamento">
+                    <h4>ANTIGO TESTAMENTO</h4>
+                    <ul>
+                        <li><strong>Pentateuco:</strong> Gênesis, Êxodo, Levítico, Números, Deuteronômio</li>
+                        <li><strong>Livros históricos:</strong> Josué a Ester</li>
+                        <li><strong>Livros poéticos:</strong> Jó, Salmos, Provérbios, Eclesiastes, Cantares</li>
+                        <li><strong>Profetas maiores:</strong> Isaías, Jeremias, Lamentações, Ezequiel, Daniel</li>
+                        <li><strong>Profetas menores:</strong> Oséias a Malaquias</li>
+                    </ul>
+                </div>
+                
+                <div class="testamento">
+                    <h4>NOVO TESTAMENTO</h4>
+                    <ul>
+                        <li><strong>Evangelhos:</strong> Mateus, Marcos, Lucas, João</li>
+                        <li><strong>Histórico:</strong> Atos dos Apóstolos</li>
+                        <li><strong>Epístolas gerais:</strong> Tiago, Pedro, João, Judas</li>
+                        <li><strong>Epístolas paulinas:</strong> Romanos a Filemom</li>
+                        <li><strong>Profético:</strong> Apocalipse</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perguntas do Estudo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>Perguntas para Reflexão</h3>
+            </div>
+
+            <!-- Pergunta 1 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">De acordo com Jesus, quem é o autor do livro de Daniel? Mateus 24:15</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Quando, pois, virdes a abominação da desolação de que falou o profeta Daniel, no lugar santo (quem lê, entenda)." <strong>Jesus confirma que Daniel foi o profeta que escreveu o livro. A opinião tradicional, tanto de judeus como de cristãos, é que o livro de Daniel foi escrito por volta do ano 600 a.C., período em que Daniel esteve como prisioneiro no grande Império da Babilônia.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Quem era Daniel? Daniel 1:3-6</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "Então, o rei ordenou a Aspenaz, chefe dos seus eunucos, que trouxesse alguns dos filhos de Israel, tanto da linhagem real como dos nobres, jovens sem nenhum defeito, de boa aparência, instruídos em toda a sabedoria, doutos em ciência, versados no conhecimento e que tivessem habilidade para viver no palácio do rei... Entre estes se achavam, dos filhos de Judá, Daniel, Hananias, Misael e Azarias." <strong>Daniel era um jovem da linhagem real de Judá, levado cativo para Babilônia em 605 a.C.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Que tempo profético recebe grande ênfase no livro de Daniel? Daniel 2:28; 10:14</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "Mas há um Deus nos céus, o qual revela os mistérios, pois fez saber ao rei Nabucodonosor o que há de ser nos últimos dias... Vim para fazer-te entender o que há de acontecer ao teu povo nos últimos dias; porque a visão é para dias ainda distantes." <strong>O livro de Daniel enfatiza os "últimos dias" - período também mencionado em 2 Timóteo 3:1 e 2 Pedro 3:3.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Já que as profecias dadas a Daniel eram para o "tempo do fim", que ordem ele recebeu do anjo? Daniel 12:4, 9</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Tu, porém, Daniel, encerra as palavras e sela o livro, até ao tempo do fim; muitos o esquadrinharão, e o saber se multiplicará... Ele respondeu: Vai, Daniel, porque estas palavras estão encerradas e seladas até ao tempo do fim." <strong>O livro de Daniel teria uma parte selada que seria compreendida apenas no "tempo do fim".</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Quando se iniciaria o "tempo do fim" e os mistérios do livro poderiam então ser compreendidos? Daniel 12:6, 7</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "E ouvi o homem vestido de linho, que estava sobre as águas do rio, o qual levantou ao céu a mão direita e a esquerda, e jurou por aquele que vive eternamente que isso seria depois de um tempo, dois tempos e metade de um tempo." <strong>As profecias seladas seriam compreendidas depois de "um tempo, dois tempos e metade de um tempo" - período que se cumpriu em 1798 d.C., dando início ao tempo do fim.</strong>
+                </div>
+            </div>
+
+            <!-- Explicação dos tempos proféticos -->
+            <div class="tabela-tempos">
+                <h4 style="color: #c9a05e; margin-bottom: 15px; text-align: center;">📊 Cálculo do Tempo Profético</h4>
+                <div class="tabela-linha tabela-cabecalho">
+                    <div>Período</div>
+                    <div>Equivalência</div>
+                    <div>Meses</div>
+                    <div>Dias/Anos</div>
+                </div>
+                <div class="tabela-linha">
+                    <div>1 tempo</div>
+                    <div>1 ano</div>
+                    <div>12 meses</div>
+                    <div>360 dias</div>
+                </div>
+                <div class="tabela-linha">
+                    <div>2 tempos</div>
+                    <div>2 anos</div>
+                    <div>24 meses</div>
+                    <div>720 dias</div>
+                </div>
+                <div class="tabela-linha">
+                    <div>½ tempo</div>
+                    <div>½ ano</div>
+                    <div>6 meses</div>
+                    <div>180 dias</div>
+                </div>
+                <div class="tabela-linha">
+                    <div><strong>TOTAL</strong></div>
+                    <div><strong>3,5 anos</strong></div>
+                    <div><strong>42 meses</strong></div>
+                    <div><strong>1.260 dias</strong></div>
+                </div>
+                <p style="margin-top: 15px; color: #ddd; text-align: center;">Em profecias, 1 dia = 1 ano (Números 14:34; Ezequiel 4:6) → 1.260 anos</p>
+            </div>
+
+            <!-- Pergunta 6 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Em profecias, quanto tempo representa um dia literal? Números 14:34; Ezequiel 4:6</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'a')">
+                        <input type="radio" name="pergunta6" id="p6a">
+                        <label for="p6a">Um dia representa um mês</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'b')">
+                        <input type="radio" name="pergunta6" id="p6b">
+                        <label for="p6b">Um dia representa um ano ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'c')">
+                        <input type="radio" name="pergunta6" id="p6c">
+                        <label for="p6c">Um dia representa um século</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>✓ Resposta correta:</strong> Um dia representa um ano. "Segundo o número dos dias em que espiastes a terra, quarenta dias, cada dia representando um ano, levareis sobre as vossas iniquidades quarenta anos" (Números 14:34). Este é o princípio dia-ano usado na interpretação profética.
+                </div>
+            </div>
+
+            <!-- Pergunta 7 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Que segurança a Bíblia nos oferece quanto ao futuro? Amós 3:7</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Certamente o Senhor Deus não fará coisa alguma, sem primeiro revelar o seu segredo aos seus servos, os profetas." <strong>Deus sempre revela Seus planos através dos profetas, incluindo as profecias para o tempo do fim.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 8 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Qual é o resultado de rejeitar a mensagem profética? Provérbios 29:18</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência:</strong> "Não havendo profecia, o povo se corrompe." <strong>Quando as pessoas desprezam a mensagem profética, elas perdem o padrão moral de Deus para suas vidas. O resultado é a degradação, pois sem Deus o homem se corrompe.</strong>
+                </div>
+            </div>
+
+            <!-- Pergunta 9 -->
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">Que advertência deu Jesus ao falar sobre uma profecia de Daniel? Mateus 24:15</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência:</strong> "Quando, pois, virdes a abominação da desolação de que falou o profeta Daniel, no lugar santo (quem lê, entenda)." <strong>Jesus nos exorta a LER e ENTENDER as profecias de Daniel.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Tu, porém, Daniel, encerra as palavras e sela o livro, até ao tempo do fim; muitos o esquadrinharão, e o saber se multiplicará."
+                <span class="versiculo-ref">Daniel 12:4</span>
+            </div>
+        </div>
+
+        <!-- Para pensar -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💭</div>
+                <h3>Para pensar</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Agora que descobrimos que já estamos vivendo no "tempo do fim", quando as profecias de Daniel já podem ser desvendadas, somos chamados a aprofundar nosso estudo. O profeta Amós diz que Deus não fará "coisa alguma sem primeiro revelar Seus segredos aos Seus servos, os profetas".</p>
+                
+                <p style="margin-top: 15px;">Daniel, diferente da maioria dos profetas, foi chamado por Deus para receber revelações que se aplicam exclusivamente aos nossos dias. Veremos em cada história e profecia de seu livro, mensagens divinas que nos fortalecem e animam à medida que nos aproximamos da última grande crise da história (Daniel 12:1).</p>
+                
+                <p style="margin-top: 15px;">Assim, é imprescindível reservarmos tempo para o estudo desse livro, pois quando o homem despreza as profecias, ele se corrompe (Provérbios 29:18; 1 Tessalonicenses 5:20).</p>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Após descobrir que estamos vivendo no "tempo do fim", desejo tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Farei uma oração de gratidão a Deus pela oportunidade de conhecer mais a respeito de Sua palavra.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Dedicarei tempo todos os dias lendo a Bíblia.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Buscarei o auxílio de Deus para praticar todos os ensinamentos deste livro.</label>
+            </div>
+        </div>
+
+        <!-- Presente especial -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎁</div>
+                <h3>Presente Especial</h3>
+            </div>
+            
+            <div class="destaque-box" style="text-align: center;">
+                <p style="font-size: 1.2rem;">Hoje você iniciou o estudo do livro mais profético da Bíblia. Que esta jornada fortaleça sua fé e aumente sua esperança na volta de Jesus!</p>
+                <p style="margin-top: 15px; color: #c9a05e;"><strong>Na próxima lição descobriremos como Deus cuida de Seus filhos independentemente das circunstâncias adversas.</strong></p>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto" style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 25px; padding: 20px; background: rgba(0, 0, 0, 0.3); border-radius: 10px;">
+                "Reconheço que vivo no tempo do fim e que as profecias de Daniel são para mim. Comprometo-me a estudar diariamente a Bíblia e a buscar a Deus em oração para compreender Sua vontade."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="profecias-daniel.html" class="btn-nav">← Voltar ao menu</a>
+            <a href="tema2-2.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Certamente o Senhor Deus não fará coisa alguma, sem primeiro revelar o seu segredo aos seus servos, os profetas" - Amós 3:7</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Daniel: Um Livro para os Dias de Hoje",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel1', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel1');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

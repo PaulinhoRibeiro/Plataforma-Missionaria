@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 13: As Sete Últimas Pragas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=As+Sete+Últimas+Pragas');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo para imagens */
+        .imagem-destaque {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .imagem-destaque img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .imagem-legenda {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #ddd;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Estilo para incorporação do Sketchfab */
+        .sketchfab-wrapper {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .sketchfab-wrapper iframe {
+            width: 100%;
+            height: 450px;
+            display: block;
+        }
+
+        .sketchfab-credit {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #ddd;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .sketchfab-credit a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .sketchfab-credit a:hover {
+            text-decoration: underline;
+        }
+
+        /* Grid para imagens */
+        .imagens-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .imagem-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .imagem-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(201, 160, 94, 0.3);
+        }
+
+        .imagem-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .imagem-card .imagem-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .imagem-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-placeholder-icon {
+            color: #c9a05e;
+            font-size: 3rem;
+        }
+
+        .img-caption {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .img-nota {
+            color: #c9a05e;
+            font-size: 0.8rem;
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Grid para as sete pragas */
+        .pragas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .praga-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .praga-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .praga-card .imagem-placeholder {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .praga-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .praga-card p {
+            color: #ddd;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Tabela comparativa - Pragas do Egito x Apocalipse */
+        .tabela-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .tabela-pragas {
+            width: 100%;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .tabela-pragas table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-pragas th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1rem;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .tabela-pragas td {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-pragas tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Paralelo Êxodo */
+        .exodo-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .exodo-box p {
+            color: #ddd;
+            margin-bottom: 5px;
+        }
+
+        .exodo-box strong {
+            color: #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+            flex: 1;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .campo input:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid, 
+            .imagens-grid, 
+            .pragas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 13</span>
+        </div>
+        <h1>ESTUDO 13</h1>
+        <h2>As Sete Últimas Pragas</h2>
+        <p>"Grandes e admiráveis são as tuas obras, Senhor Deus Todo-Poderoso! Justos e verdadeiros são os teus caminhos, ó Rei das nações!" (Apocalipse 15:3)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>A composição literária do Apocalipse mostra que as pragas ocorrerão após o último chamado ao arrependimento (a proclamação das três mensagens angélicas de Apocalipse 14:6-12) e depois do selamento dos santos (Apocalipse 7:1-4). O povo de Deus do tempo do fim é chamado a separar-se de "Babilônia" e unir-se a Cristo, "para não serdes cúmplices em seus pecados e para não participardes dos seus flagelos" (Apocalipse 18:4).</p>
+                <p style="margin-top: 15px;">Aqui temos um paralelo com o episódio das dez pragas que caíram sobre o Egito. Assim como o Israel da antiguidade foi protegido pelo "sinal" do sangue nos umbrais das portas (Êxodo 12:13), o "Israel" do tempo do fim será protegido por um selo especial de Deus, que os anjos colocarão na fronte de cada um dos escolhidos (Apocalipse 7:3; 14:1).</p>
+            </div>
+            
+            <!-- Imagem principal - Sete anjos com as pragas -->
+            <div class="imagem-destaque">
+                <img src="img/sete-anjos-pragas.jpg" alt="Sete anjos com as sete pragas" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">👼👼👼👼👼👼👼</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Sete anjos com as pragas</span>
+                </div>
+                <div class="imagem-legenda">Sete anjos saindo do Santuário Celestial com as sete últimas pragas - img/sete-anjos-pragas.jpg</div>
+            </div>
+        </div>
+
+        <!-- O Tempo das Pragas -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>O Tempo das Pragas</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Qual é o tempo do derramamento das pragas? Apocalipse 15:5-8</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Durante a pregação do evangelho.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Depois do selamento dos santos e do fechamento da porta da graça. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Antes das três mensagens angélicas.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Depois do selamento dos santos e do fechamento da porta da graça.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Após o assinalamento, a humanidade estará dividida em dois grupos: salvos (selo de Deus) e perdidos (marca da besta).<br>
+                    b) Sete anjos sairão do Santuário Celestial com taças de ouro "cheias da cólera de Deus".<br>
+                    c) Anteriormente, os anjos seguravam "taças cheias de incenso" (orações dos santos - Apocalipse 5:8).<br>
+                    d) As pragas são resposta de Deus às orações dos santos pedindo justiça.<br>
+                    e) O Santuário "encheu-se de fumaça" = término do tempo de graça (Apocalipse 22:11).<br>
+                    f) "Se levantará Miguel" (Daniel 12:1) - fim da intercessão.
+                </div>
+            </div>
+            
+            <!-- Imagem do Santuário com fumaça -->
+            <div class="imagem-destaque">
+                <img src="img/santuario-fumaca.jpg" alt="Santuário Celestial cheio de fumaça" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🏛️</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Santuário Celestial</span>
+                </div>
+                <div class="imagem-legenda">O Santuário Celestial enche-se de fumaça - encerra-se o tempo de graça - img/santuario-fumaca.jpg</div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Por que motivo são estas pragas derramadas sobre a terra? Apocalipse 15:1</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que significa a 'ira de Deus'?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência completa:</strong><br>
+                    a) Apocalipse 15:1 indica que a <strong>"ira de Deus"</strong> será o motivo do derramamento das pragas.<br>
+                    b) <strong>Paralelo com as pragas do Egito</strong> (Êxodo 7-12):<br>
+                    - Faraó endureceu o coração diante dos apelos de Moisés<br>
+                    - As pragas vieram como forma divina de subjugar o opressor<br>
+                    - Serviram como agentes de libertação dos fiéis<br>
+                    c) <strong>A ira de Deus não é como a ira humana</strong> (cheia de ódio e egoísmo).<br>
+                    d) É a <strong>santa oposição de Deus ao mal</strong> - revela quão ofensivo é o pecado (Isaías 59:2).<br>
+                    e) É tão real quanto o amor de Deus - Ele não tolerará para sempre a rebelião.<br>
+                    f) Serve como instrumento de correção e extirpação do mal.
+                </div>
+            </div>
+            
+            <!-- Paralelo com o Egito -->
+            <div class="exodo-box">
+                <h5 style="color: #c9a05e; margin-bottom: 10px;">🇪🇬 Paralelo com as Pragas do Egito:</h5>
+                <p>📖 <strong>Êxodo 7-12:</strong> Dez pragas caíram sobre o Egito para libertar o povo de Deus.</p>
+                <p>🔴 <strong>Sangue nos umbrais:</strong> Protegia os israelitas do juízo (Êxodo 12:13).</p>
+                <p>⚡ <strong>O coração de Faraó:</strong> Endureceu-se diante dos apelos.</p>
+                <p>🛡️ <strong>Israel protegido:</strong> As pragas não atingiam os filhos de Deus.</p>
+                <p class="referencia">"O mesmo sol que amolece a cera, endurece o barro."</p>
+            </div>
+        </div>
+
+        <!-- As Sete Pragas - Grid -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚡</div>
+                <h3>As Sete Últimas Pragas</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>As pragas são literais ou simbólicas?</strong> A chave para decifrar o Apocalipse não é a aplicação rígida do literalismo ou alegorismo. O livro tece juntas a linguagem simbólica e literal. Exemplo: a "mulher" é simbólica (igreja), mas o "filho varão" é literal (Jesus). No caso das sete pragas, é prudente dizer que todas são <strong>literais</strong> (juízos históricos de Deus), embora sua descrição use imagens simbólicas.</p>
+                <p style="margin-top: 10px;"><strong>Serão universais?</strong> Provavelmente não universais, mas atingirão especificamente os ímpios. Porém, a ira de Deus será derramada "sem medida" (Apocalipse 14:10).</p>
+            </div>
+            
+            <!-- Grid das 7 pragas -->
+            <div class="pragas-grid">
+                <!-- Praga 1 -->
+                <div class="praga-card">
+                    <h5>1ª Praga</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/praga-ulceras.jpg" alt="Úlceras malignas" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🤕</div>
+                    </div>
+                    <p><strong>Úlceras malignas</strong></p>
+                    <p>Sobre os adoradores da besta</p>
+                </div>
+                
+                <!-- Praga 2 -->
+                <div class="praga-card">
+                    <h5>2ª Praga</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/praga-mar-sangue.jpg" alt="Mar em sangue" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🌊</div>
+                    </div>
+                    <p><strong>Mar em sangue</strong></p>
+                    <p>Todo ser vivo no mar morre</p>
+                </div>
+                
+                <!-- Praga 3 -->
+                <div class="praga-card">
+                    <h5>3ª Praga</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/praga-rios-sangue.jpg" alt="Rios em sangue" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🏞️</div>
+                    </div>
+                    <p><strong>Rios e fontes em sangue</strong></p>
+                    <p>"Dignos são, pois derramaram sangue de santos"</p>
+                </div>
+                
+                <!-- Praga 4 -->
+                <div class="praga-card">
+                    <h5>4ª Praga</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/praga-sol.jpg" alt="Sol queima" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">☀️</div>
+                    </div>
+                    <p><strong>Sol queima os homens</strong></p>
+                    <p>Blasfemaram, não se arrependeram</p>
+                </div>
+                
+                <!-- Praga 5 -->
+                <div class="praga-card">
+                    <h5>5ª Praga</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/praga-trono-besta.jpg" alt="Trono da besta" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">👑</div>
+                    </div>
+                    <p><strong>Trono da besta em trevas</strong></p>
+                    <p>Dor e trevas, blasfemaram</p>
+                </div>
+                
+                <!-- Praga 6 -->
+                <div class="praga-card">
+                    <h5>6ª Praga</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/praga-eufrates.jpg" alt="Eufrates seca" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🏜️</div>
+                    </div>
+                    <p><strong>Eufrates seca</strong></p>
+                    <p>Preparação para o Armagedom</p>
+                </div>
+                
+                <!-- Praga 7 -->
+                <div class="praga-card">
+                    <h5>7ª Praga</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/praga-final.jpg" alt="Grande terremoto" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🌍</div>
+                    </div>
+                    <p><strong>"Feito está!"</strong></p>
+                    <p>Terremoto, saraivada, ilhas desaparecem</p>
+                </div>
+                
+                <!-- Extra - Proteção -->
+                <div class="praga-card">
+                    <h5>🛡️ Proteção</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/protecao-salmos.jpg" alt="Proteção divina" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🛡️</div>
+                    </div>
+                    <p><strong>À sombra do Onipotente</strong></p>
+                    <p>Salmo 91 - Os fiéis protegidos</p>
+                </div>
+            </div>
+            
+            <div class="img-nota">
+                ⚠️ Imagens das sete pragas: úlceras, mar em sangue, rios em sangue, sol escaldante, trono em trevas, Eufrates seco, terremoto final
+            </div>
+        </div>
+
+        <!-- Primeira Praga -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">1️⃣</div>
+                <h3>Primeira Praga: Úlceras Malignas</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Sobre quem cairá a primeira praga e o que acontecerá a eles? Apocalipse 16:2</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">Sobre toda a terra, sem distinção.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">Sobre os portadores da marca da besta e adoradores da sua imagem - úlceras malignas. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">Apenas sobre os líderes religiosos.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Sobre os portadores da marca da besta e adoradores da sua imagem - úlceras malignas.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) A primeira praga corresponde a <strong>"úlceras malignas e perniciosas"</strong>.<br>
+                    b) <strong>Paralelo com o Egito:</strong> A sexta praga egípcia trouxe tumores sobre os egípcios (Êxodo 9:11).<br>
+                    c) Assim como os tumores afetaram apenas os egípcios e não os israelitas, as úlceras da primeira praga afligirão apenas os que têm a marca da besta.<br>
+                    d) Esta praga realiza a ameaça do terceiro anjo (Apocalipse 14:9-10).
+                </div>
+            </div>
+            
+            <!-- Imagem úlceras -->
+            <div class="imagem-destaque">
+                <img src="img/ulceras-malignas.jpg" alt="Úlceras malignas sobre os ímpios" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🤕</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Úlceras malignas</span>
+                </div>
+                <div class="imagem-legenda">Primeira praga: úlceras malignas sobre os adoradores da besta - img/ulceras-malignas.jpg</div>
+            </div>
+        </div>
+
+        <!-- Segunda e Terceira Pragas -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">2️⃣3️⃣</div>
+                <h3>Segunda e Terceira Pragas: Águas em Sangue</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">O que acontecerá aos oceanos na queda da segunda praga? Apocalipse 16:3</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">O mar ficará poluído, mas ainda haverá vida.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">O mar se tornará em sangue como de morto, e morrerá todo ser vivente no mar. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">O mar se tornará doce e potável.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> O mar se tornará em sangue como de morto, e morrerá todo ser vivente no mar.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) <strong>Paralelo com o Egito:</strong> A primeira praga do Egito atingiu o rio Nilo, que se tornou em sangue (Êxodo 7:17-22).<br>
+                    b) Não há espaço para "eufemismos exegéticos" - a Bíblia é categórica: o mar "se tornou em sangue como de morto".<br>
+                    c) É um juízo literal e devastador.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Em que local é derramada a terceira praga e que motivo é dado para esse juízo? Apocalipse 16:4-6</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que acontece com os rios e fontes?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência completa:</strong><br>
+                    a) A terceira praga é derramada sobre os <strong>rios e fontes das águas</strong>, que se tornam em sangue.<br>
+                    b) <strong>Motivo:</strong> "Derramaram sangue de santos e profetas, e sangue lhes deste a beber" (Apocalipse 16:6).<br>
+                    c) Assim como no Egito, os ímpios cavarão em busca de água (Êxodo 7:24), mas não encontrarão.<br>
+                    d) Os justos, porém, terão pão e água "certos" (Isaías 33:16) - nenhuma praga chegará em suas tendas (Salmo 91:10).<br>
+                    e) João ouviu uma voz do altar (a oração dos santos do quinto selo - 6:10) sendo respondida. A justiça está sendo vindicada.
+                </div>
+            </div>
+            
+            <!-- Imagem rios em sangue -->
+            <div class="imagem-destaque">
+                <img src="img/rios-sangue.jpg" alt="Rios e fontes em sangue" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🌊</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Rios em sangue</span>
+                </div>
+                <div class="imagem-legenda">Segunda e terceira pragas: mares, rios e fontes tornam-se em sangue - img/rios-sangue.jpg</div>
+            </div>
+        </div>
+
+        <!-- Quarta Praga -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">4️⃣</div>
+                <h3>Quarta Praga: O Sol Queima os Homens</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">O que acontece ao sol na queda da quarta praga? Apocalipse 16:8-9</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'a')">
+                        <input type="radio" name="pergunta6" id="p6a">
+                        <label for="p6a">O sol se apaga e não dá luz.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'b')">
+                        <input type="radio" name="pergunta6" id="p6b">
+                        <label for="p6b">É dado ao sol poder para queimar os homens com fogo. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'c')">
+                        <input type="radio" name="pergunta6" id="p6c">
+                        <label for="p6c">O sol se parte em pedaços.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>✓ Resposta correta:</strong> É dado ao sol poder para queimar os homens com fogo.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) O sol, criado por Deus no quarto dia, aumenta grandemente sua intensidade e castiga os homens.<br>
+                    b) Os ímpios, porém, não se arrependem - blasfemam o nome de Deus (como a besta em 13:6).<br>
+                    c) <strong>Lição:</strong> "O mesmo sol que amolece a cera, endurece o barro."<br>
+                    d) Desprezaram o "Sol da Justiça" (Malaquias 4:2) e agora só lhes resta blasfemar.
+                </div>
+            </div>
+            
+            <!-- Imagem sol queimando -->
+            <div class="imagem-destaque">
+                <img src="img/sol-queimando.jpg" alt="Sol queima os ímpios" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">☀️</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Sol queima os homens</span>
+                </div>
+                <div class="imagem-legenda">Quarta praga: o sol queima os homens com fogo - img/sol-queimando.jpg</div>
+            </div>
+        </div>
+
+        <!-- Quinta Praga -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">5️⃣</div>
+                <h3>Quinta Praga: Trevas sobre o Trono da Besta</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">O que acontecerá ao ser derramada a quinta praga? Apocalipse 16:10-11</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que acontece com o trono da besta?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência completa:</strong><br>
+                    a) A quinta praga é derramada sobre o <strong>trono da besta</strong>.<br>
+                    b) Enquanto as quatro primeiras pragas afetaram os ímpios em geral, a quinta mira a sede da autoridade de Satanás.<br>
+                    c) O reino da besta <strong>"se tornou em trevas"</strong> - paralelo com a nona praga do Egito (Êxodo 10:21-23).<br>
+                    d) As pessoas mordiam a língua de dor, mas não se arrependiam - blasfemavam contra Deus.<br>
+                    e) A autoridade da besta sofre grande humilhação diante dos olhos do mundo.
+                </div>
+            </div>
+            
+            <!-- Imagem trevas -->
+            <div class="imagem-destaque">
+                <img src="img/trevas-besta.jpg" alt="Trevas sobre o trono da besta" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🌑</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Trevas sobre o trono</span>
+                </div>
+                <div class="imagem-legenda">Quinta praga: trevas sobre o trono da besta - img/trevas-besta.jpg</div>
+            </div>
+        </div>
+
+        <!-- Sexta Praga e Armagedom -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">6️⃣</div>
+                <h3>Sexta Praga: O Eufrates e o Armagedom</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Aonde o anjo derramará a sexta praga? Apocalipse 16:12</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 8, 'a')">
+                        <input type="radio" name="pergunta8" id="p8a">
+                        <label for="p8a">Sobre o mar Mediterrâneo.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 8, 'b')">
+                        <input type="radio" name="pergunta8" id="p8b">
+                        <label for="p8b">Sobre o grande rio Eufrates, que secou para preparar o caminho dos reis do Oriente. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 8, 'c')">
+                        <input type="radio" name="pergunta8" id="p8c">
+                        <label for="p8c">Sobre o rio Jordão.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>✓ Resposta correta:</strong> Sobre o grande rio Eufrates, que secou para preparar o caminho dos reis do Oriente.<br><br>
+                    <strong>Detalhamento simbólico:</strong><br>
+                    a) O Eufrates irrigava a antiga Babilônia - sem ele, Babilônia não sobreviveria.<br>
+                    b) Foi desviando o Eufrates que Ciro conquistou Babilônia (Daniel 5; Isaías 45:1-7).<br>
+                    c) <strong>Significado das "águas":</strong> Simbolizam "povos, multidões, nações e línguas" (Apocalipse 17:15).<br>
+                    d) O ressecamento do Eufrates simboliza Deus removendo o apoio popular a Babilônia.<br>
+                    e) Paralelo com Êxodo: Mar Vermelho (Êxodo 14:21-22) e Jordão (Josué 3:14-17) secaram para o povo de Deus.<br>
+                    f) <strong>Armagedom:</strong> Não é uma guerra literal, mas o clímax da batalha espiritual entre Cristo e Satanás.<br>
+                    g) Os três espíritos imundos (rãs) - última tentativa de Satanás de falsificar a obra de Deus (paralelo com Êxodo 8:1-15).
+                </div>
+            </div>
+            
+            <!-- Imagem Eufrates seco -->
+            <div class="imagem-destaque">
+                <img src="img/eufrates-seco.jpg" alt="Rio Eufrates seco" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🏜️</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Eufrates seco</span>
+                </div>
+                <div class="imagem-legenda">Sexta praga: o rio Eufrates seca - preparação para o Armagedom - img/eufrates-seco.jpg</div>
+            </div>
+            
+            <!-- Imagem Armagedom -->
+            <div class="imagem-destaque">
+                <img src="img/armagedom.jpg" alt="Batalha do Armagedom" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">⚔️</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Armagedom</span>
+                </div>
+                <div class="imagem-legenda">A batalha espiritual do Armagedom - clímax do conflito - img/armagedom.jpg</div>
+            </div>
+        </div>
+
+        <!-- Sétima Praga -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">7️⃣</div>
+                <h3>Sétima Praga: "Feito Está!"</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">Que fenômenos serão vistos quando o anjo derramar a sétima praga? Apocalipse 16:17-21</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que acontece na sétima praga?" rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência completa:</strong><br>
+                    a) Uma voz do Santuário Celestial diz: <strong>"Feito está!"</strong> (mesma frase de Jesus na cruz - João 19:30).<br>
+                    b) <strong>Fenômenos:</strong><br>
+                    - <strong>Grande terremoto:</strong> como nunca houve igual<br>
+                    - <strong>Ilhas fugiram e montes não foram achados</strong><br>
+                    - <strong>Grande chuva de pedras</strong> (talentos de peso)<br>
+                    c) O fim realmente chegou - linha definida entre os dois grupos.<br>
+                    d) As cenas se assemelham a Apocalipse 6:14-17 (a vinda de Jesus em glória).<br>
+                    e) Toda a terra em convulsão testemunha o cumprimento das promessas.
+                </div>
+            </div>
+            
+            <!-- Imagem terremoto final -->
+            <div class="imagem-destaque">
+                <img src="img/terremoto-final.jpg" alt="Grande terremoto final" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🌍</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">"Feito está!"</span>
+                </div>
+                <div class="imagem-legenda">Sétima praga: grande terremoto, ilhas desaparecem, saraivada - img/terremoto-final.jpg</div>
+            </div>
+        </div>
+
+        <!-- Proteção dos Santos -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🛡️</div>
+                <h3>Proteção dos Santos</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 10</span>
+                <div class="pergunta-texto">O que fazer para estar protegido nesse tempo e não sofrer as consequências destes juízos? Apocalipse 15:2-4. Comparar com Salmo 91:1-10</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'a')">
+                        <input type="radio" name="pergunta10" id="p10a">
+                        <label for="p10a">Acumular alimentos e água em abrigos subterrâneos.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'b')">
+                        <input type="radio" name="pergunta10" id="p10b">
+                        <label for="p10b">Permanecer "à sombra do Onipotente", aceitando a Jesus e obedecendo a Seus ensinamentos. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'c')">
+                        <input type="radio" name="pergunta10" id="p10c">
+                        <label for="p10c">Fugir para lugares remotos.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(10)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito10">
+                    <strong>✓ Resposta correta:</strong> Permanecer "à sombra do Onipotente", aceitando a Jesus e obedecendo a Seus ensinamentos.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) <strong>Salmo 91:1-10:</strong> "Aquele que habita no esconderijo do Altíssimo, à sombra do Onipotente descansará... Nenhum mal te sucederá, nem praga alguma chegará à tua tenda."<br>
+                    b) Apocalipse 15:2-4 mostra os vitoriosos <strong>"junto ao mar de vidro"</strong> cantando o cântico de Moisés e do Cordeiro.<br>
+                    c) Só existe refúgio e segurança em Jesus, Aquele que verteu Seu precioso sangue (João 3:16).<br>
+                    d) A graça do Senhor ainda está disponível. Hoje é o dia da salvação - não endureça o coração.
+                </div>
+            </div>
+            
+            <!-- Imagem proteção Salmo 91 -->
+            <div class="imagem-destaque">
+                <img src="img/protecao-salmo91.jpg" alt="Proteção à sombra do Onipotente" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🛡️</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">À sombra do Onipotente</span>
+                </div>
+                <div class="imagem-legenda">"Nenhum mal te sucederá, nem praga alguma chegará à tua tenda" (Salmo 91:10) - img/protecao-salmo91.jpg</div>
+            </div>
+            
+            <!-- Imagem mar de vidro -->
+            <div class="imagem-destaque">
+                <img src="img/mar-vidro.jpg" alt="Vitoriosos junto ao mar de vidro" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">💎</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Mar de vidro</span>
+                </div>
+                <div class="imagem-legenda">Os vitoriosos junto ao mar de vidro, cantando o cântico de Moisés e do Cordeiro - img/mar-vidro.jpg</div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Grandes e admiráveis são as tuas obras, Senhor Deus Todo-Poderoso! Justos e verdadeiros são os teus caminhos, ó Rei das nações!" (Apocalipse 15:3)
+            </div>
+        </div>
+
+        <!-- Tabela Comparativa - Pragas do Egito x Apocalipse -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📋</div>
+                <h3>Paralelo: Pragas do Egito e as Sete Últimas Pragas</h3>
+            </div>
+            
+            <div class="tabela-box">
+                <div class="tabela-pragas">
+                    <table>
+                        <tr>
+                            <th>Praga no Egito</th>
+                            <th>Referência</th>
+                            <th>Praga no Apocalipse</th>
+                        </tr>
+                        <tr>
+                            <td>1ª praga: Águas em sangue</td>
+                            <td>Êxodo 7:17-22</td>
+                            <td>2ª e 3ª pragas: Mar, rios e fontes em sangue</td>
+                        </tr>
+                        <tr>
+                            <td>6ª praga: Úlceras/tumores</td>
+                            <td>Êxodo 9:8-12</td>
+                            <td>1ª praga: Úlceras malignas</td>
+                        </tr>
+                        <tr>
+                            <td>9ª praga: Trevas</td>
+                            <td>Êxodo 10:21-23</td>
+                            <td>5ª praga: Trevas sobre o trono da besta</td>
+                        </tr>
+                        <tr>
+                            <td>2ª praga: Rãs</td>
+                            <td>Êxodo 8:1-15</td>
+                            <td>6ª praga: Espíritos imundos como rãs</td>
+                        </tr>
+                        <tr>
+                            <td>7ª praga: Saraiva</td>
+                            <td>Êxodo 9:22-26</td>
+                            <td>7ª praga: Grande saraivada</td>
+                        </tr>
+                        <tr>
+                            <td>Sangue nos umbrais</td>
+                            <td>Êxodo 12:13</td>
+                            <td>Selo de Deus na fronte</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusão e Apelo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💝</div>
+                <h3>Conclusão e Apelo</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Você já aceitou a Jesus como Seu Salvador e Senhor? Já correu para o refúgio? Você já suplicou o perdão dos seus pecados?</p>
+                <p style="margin-top: 15px;">A graça do Senhor ainda está disponível para você. Existe paz e tranquilidade "debaixo de Suas asas". Hoje é o dia da sua salvação, amigo. Se você ouvir a voz de Cristo chamando-o para uma decisão, não endureça o coração. Se não fizer isso agora, amanhã poderá ser tarde demais.</p>
+            </div>
+            
+            <!-- Imagem apelo final -->
+            <div class="imagem-destaque">
+                <img src="img/decisao-hoje.jpg" alt="Hoje é o dia da decisão" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">⏰</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Hoje é o dia da salvação</span>
+                </div>
+                <div class="imagem-legenda">"Hoje, se ouvirdes a sua voz, não endureçais o vosso coração" (Hebreus 4:7) - img/decisao-hoje.jpg</div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Eis que agora é o tempo aceitável, eis que agora é o dia da salvação." (2 Coríntios 6:2)
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Amar a Jesus acima de todas as coisas, buscando-O em primeiro lugar na minha vida.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Não fazer parte de Babilônia, ou seja, daqueles que seguem e ensinam doutrinas contrárias à Palavra de Deus.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Permanecer ligado a Jesus, o Único capaz de me proteger contra os últimos flagelos que cairão sobre a humanidade.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 BÊNÇÃO FINAL</h4>
+            <div class="compromisso-texto">
+                "... Que a paz de Deus, que excede todo entendimento, guarde seu coração e sua mente em CRISTO JESUS" (Filipenses 4:7).
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Registrar minha declaração</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Declaração registrada! Maranata!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="apocalipse-estudo12.html" class="btn-nav">← Estudo anterior</a>
+            <a href="apocalipse-estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="apocalipse-estudo14.html" class="btn-nav">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Grandes e admiráveis são as tuas obras, Senhor Deus Todo-Poderoso!" - Apocalipse 15:3</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 13 - As Sete Últimas Pragas",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse13', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse13');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

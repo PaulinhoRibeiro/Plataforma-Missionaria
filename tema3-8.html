@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 8: As Duas Testemunhas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=As+Duas+Testemunhas');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo para imagens - PADRONIZADO */
+        .imagem-destaque {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .imagem-destaque img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .imagem-legenda {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #ddd;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Grid para imagens - 3 colunas padronizado */
+        .imagens-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .imagem-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .imagem-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(201, 160, 94, 0.3);
+        }
+
+        .imagem-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .imagem-card .imagem-placeholder {
+            width: 100%;
+            height: 150px; /* Altura fixa padronizada */
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .imagem-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+        }
+
+        .img-placeholder-icon {
+            color: #c9a05e;
+            font-size: 3rem;
+        }
+
+        .img-caption {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .img-nota {
+            color: #c9a05e;
+            font-size: 0.8rem;
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Grid para testemunhas - CORRIGIDO com altura padronizada */
+        .testemunhas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .testemunha-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .testemunha-card h5 {
+            color: #c9a05e;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .testemunha-card .imagem-placeholder {
+            width: 100%;
+            height: 180px; /* Altura fixa padronizada para as testemunhas */
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .testemunha-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Padroniza o tamanho das imagens */
+        }
+
+        .testemunha-card p {
+            color: #c9a05e;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* Linha do tempo */
+        .timeline-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #c9a05e;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .timeline-year {
+            min-width: 100px;
+            color: #c9a05e;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .timeline-desc {
+            color: #ddd;
+            flex: 1;
+        }
+
+        /* Tabela de eventos */
+        .tabela-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .tabela-eventos {
+            width: 100%;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .tabela-eventos table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-eventos th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1rem;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .tabela-eventos td {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-eventos tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+            flex: 1;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .campo input:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid, 
+            .imagens-grid, 
+            .testemunhas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-year {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 8</span>
+        </div>
+        <h1>ESTUDO 8</h1>
+        <h2>As Duas Testemunhas</h2>
+        <p>"Estas são as duas oliveiras e os dois candeeiros que estão diante do Senhor da terra." (Apocalipse 11:4)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Em nosso último estudo aprendemos sobre o grande desapontamento ocorrido no dia 22 de outubro de 1844. Após este evento, aqueles que continuaram estudando as profecias viram que, em lugar da Vinda de Cristo a esta Terra, no fim dos 2.300 anos, Cristo iniciou no santíssimo do Santuário Celestial uma obra de investigação e juízo.</p>
+                <p style="margin-top: 15px;">Hoje estudaremos o capítulo 11 de Apocalipse, versos 1-14 que, semelhante ao capítulo 10, é ainda um interlúdio antes do toque da sétima e última trombeta (Apocalipse 11:15-18). O que João estava para testemunhar era uma verdadeira batalha entre a Bíblia, a Palavra de Deus, e o ateísmo. Essa batalha alcançou seu clímax na Revolução Francesa, que ocupa um lugar na profecia bíblica, destacando-se por seu ódio ao Cristianismo.</p>
+            </div>
+            
+            <!-- Imagem principal - As duas testemunhas -->
+            <div class="imagem-destaque">
+                <img src="img/duas-testemunhas.jpg" alt="As duas testemunhas - Antigo e Novo Testamento" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">📖</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">As duas testemunhas</span>
+                </div>
+                <div class="imagem-legenda">As duas testemunhas profetizando vestidas de pano de saco - img/duas-testemunhas.jpg</div>
+            </div>
+        </div>
+
+        <!-- O Santuário de Deus em Destaque -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏛️</div>
+                <h3>O Santuário de Deus em Destaque</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Que ordem aparece em Apocalipse 11:1?</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">"Escreve num livro o que viste."</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">"Levanta-te e mede o santuário de Deus, o altar, e os que nele adoram." ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">"Sela o que os sete trovões falaram."</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta completa</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> "Levanta-te e mede o santuário de Deus, o altar, e os que nele adoram."<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Quando João recebeu a visão (96 d.C.), o santuário de Jerusalém havia sido destruído em 70 d.C.<br>
+                    b) Portanto, trata-se do <strong>Santuário Celestial</strong>.<br>
+                    c) A medição significa que uma obra cuidadosa de investigação deveria ter lugar.<br>
+                    d) Os adoradores representam os fiéis de Deus que passariam por um juízo.<br>
+                    e) Este juízo iniciou-se em 22 de outubro de 1844.<br>
+                    f) O átrio não medido representa a terra (os que não aceitaram a mensagem).<br>
+                    g) A cidade santa calcada por 42 meses é a igreja verdadeira perseguida (Apocalipse 12:6; 13:5-7).
+                </div>
+            </div>
+            
+            <!-- Imagem do Santuário Celestial -->
+            <div class="imagem-destaque">
+                <img src="img/santuario-celestial-juizo.jpg" alt="Santuário Celestial - Juízo Investigativo" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🏛️</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Santuário Celestial</span>
+                </div>
+                <div class="imagem-legenda">Cristo no Santuário Celestial iniciando o juízo investigativo em 1844 - img/santuario-celestial-juizo.jpg</div>
+            </div>
+        </div>
+
+        <!-- As Duas Testemunhas de Deus - CORRIGIDO com tamanho padronizado -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🕯️</div>
+                <h3>As Duas Testemunhas de Deus para a Humanidade</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que significam estas duas testemunhas? Apocalipse 11:3. Comparar com João 5:39</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Moisés e Elias.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">O Antigo e o Novo Testamento. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">Pedro e Paulo.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> O Antigo e o Novo Testamento.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Jesus disse: "São as Escrituras que testificam de mim" (João 5:39).<br>
+                    b) O Antigo Testamento testifica de Cristo profeticamente.<br>
+                    c) O Novo Testamento testifica de Cristo historicamente.<br>
+                    d) A Bíblia foi inspirada pelo Espírito Santo (2 Timóteo 3:16).<br>
+                    e) Examinar a Palavra desenvolve a mente e o caráter.<br>
+                    f) É um privilégio entrar em contato com a mente de Deus!
+                </div>
+            </div>
+            
+            <!-- Grid das duas testemunhas - CORRIGIDO com altura padronizada -->
+            <div class="testemunhas-grid">
+                <div class="testemunha-card">
+                    <h5>📜 Antigo Testamento</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/antigo-testamento.jpg" alt="Antigo Testamento" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 3rem;">📜</div>
+                    </div>
+                    <p>39 livros - A preparação para o Messias</p>
+                </div>
+                
+                <div class="testemunha-card">
+                    <h5>📖 Novo Testamento</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/novo-testamento.jpg" alt="Novo Testamento" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 3rem;">📖</div>
+                    </div>
+                    <p>27 livros - O cumprimento em Cristo</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que representam as duas oliveiras e os dois candeeiros? Apocalipse 11:4. Comparar com Zacarias 4:2-14; Salmo 119:105</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Qual o significado das oliveiras e candeeiros?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência completa:</strong><br>
+                    a) O profeta Zacarias viu um candelabro de ouro com sete lâmpadas alimentadas por duas oliveiras (Zacarias 4:2-14).<br>
+                    b) As oliveiras representam a unção do Espírito Santo que alimenta a luz da Palavra.<br>
+                    c) O salmista declarou: "Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho" (Salmo 119:105).<br>
+                    d) Portanto, as duas testemunhas (a Palavra de Deus) agem como candeeiros iluminando a vida de todo aquele que entra em contato com suas verdades.
+                </div>
+            </div>
+            
+            <!-- Imagem das oliveiras e candeeiros -->
+            <div class="imagem-destaque">
+                <img src="img/oliveiras-candeeiros.jpg" alt="As duas oliveiras e os candeeiros" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🕯️</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Oliveiras e candeeiros</span>
+                </div>
+                <div class="imagem-legenda">As duas oliveiras alimentando os candeeiros - Zacarias 4 - img/oliveiras-candeeiros.jpg</div>
+            </div>
+        </div>
+
+        <!-- O Período de Profecia -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>O Período de 1.260 Anos</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Quando na história se cumpre esse período em que as duas testemunhas profetizariam de pano de saco por 1.260 dias? Apocalipse 11:3. Comparar com Apocalipse 12:6, 14; 13:5</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Durante a Reforma Protestante (1517-1648).</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">De 538 d.C. a 1798 d.C. (supremacia papal). ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">Durante a Revolução Francesa.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> De 538 d.C. a 1798 d.C. (supremacia papal).<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Pano de saco simboliza luto e contrição (Gênesis 37:34; Isaías 37:1; Daniel 9:3).<br>
+                    b) Durante 1.260 anos, as Escrituras vestiram-se de pano de saco.<br>
+                    c) O poder papal procurou ocultar do povo a Palavra da verdade.<br>
+                    d) A Bíblia foi proscrita pela autoridade religiosa e secular.<br>
+                    e) Os mensageiros de Deus eram perseguidos, torturados e martirizados.<br>
+                    f) Muitos fugiram para fortalezas, montanhas e cavernas - mas continuaram testemunhando.
+                </div>
+            </div>
+            
+            <!-- Linha do tempo dos 1.260 anos -->
+            <div class="timeline-box">
+                <h5 style="color: #c9a05e; text-align: center; margin-bottom: 20px;">⏳ O Período de 1.260 Anos (538-1798)</h5>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">538 d.C.</div>
+                    <div class="timeline-desc">Início da supremacia papal - a última tribo ariana (Ostrogodos) é removida</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">538-1798</div>
+                    <div class="timeline-desc">1.260 anos - As duas testemunhas profetizam vestidas de pano de saco</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1798</div>
+                    <div class="timeline-desc">Prisão do papa Pio VI pelo general Berthier - fim do período</div>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">O que significa a autoridade para "fechar o céu para que não chova" e "converter águas em sangue"? Apocalipse 11:6. Comparar com 1 Reis 17:1; Lucas 4:25; Tiago 5:17-18</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Qual o significado desses sinais?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência completa:</strong><br>
+                    a) Pela Palavra de Deus, <strong>Elias fechou o céu</strong> por três anos e meio (1 Reis 17:1; Tiago 5:17-18).<br>
+                    b) Assim como o juízo de Elias se cumpriu, as ameaças da Palavra também se cumprirão.<br>
+                    c) "Fechar o céu" significa que os que resistem à Palavra não receberão seus benefícios.<br>
+                    d) "Converter águas em sangue" simboliza os juízos divinos contra os que rejeitam a verdade.<br>
+                    e) A Palavra de Deus tem poder para abençoar ou julgar.
+                </div>
+            </div>
+        </div>
+
+        <!-- A Besta que Surge do Abismo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👹</div>
+                <h3>A Besta que Surge do Abismo</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Quem é a besta que surge do abismo e o que faria com a Bíblia? Apocalipse 11:7. Comparar com Apocalipse 20:2-3</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'a')">
+                        <input type="radio" name="pergunta6" id="p6a">
+                        <label for="p6a">O Império Romano, que perseguiu os cristãos.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'b')">
+                        <input type="radio" name="pergunta6" id="p6b">
+                        <label for="p6b">Satanás, usando instrumentalidades humanas, especialmente durante a Revolução Francesa. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'c')">
+                        <input type="radio" name="pergunta6" id="p6c">
+                        <label for="p6c">O papado na Idade Média.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>✓ Resposta correta:</strong> Satanás, usando instrumentalidades humanas, especialmente durante a Revolução Francesa.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) A "grande cidade" (verso 8) é espiritualmente Sodoma e Egito.<br>
+                    b) <strong>Egito:</strong> Negou a existência de Deus (Êxodo 5:2) - representa o ateísmo.<br>
+                    c) <strong>Sodoma:</strong> Corrupção e licenciosidade - representa a imoralidade.<br>
+                    d) <strong>"Onde nosso Senhor foi crucificado":</strong> Perseguição aos seguidores de Cristo.<br>
+                    e) A França, durante a Revolução, reuniu estas características:<br>
+                    - Ateísmo oficial: "Não há Deus" declarado pela assembleia<br>
+                    - Licenciosidade: culto à deusa da razão<br>
+                    - Perseguição: massacre de São Bartolomeu (1572)
+                </div>
+            </div>
+            
+            <!-- Grid de imagens - Revolução Francesa -->
+            <div class="imagens-grid">
+                <div class="imagem-card">
+                    <h5>🇫🇷 Ateísmo na França</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/ateismo-franca.jpg" alt="Declaração de ateísmo na França" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🚫</div>
+                    </div>
+                    <p class="img-caption">"Não há Deus" - 1793</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>🔥 Queima de Bíblias</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/queima-biblias.jpg" alt="Queima de Bíblias na Revolução Francesa" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🔥</div>
+                    </div>
+                    <p class="img-caption">Bíblias recolhidas e queimadas</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>🗽 Deusa da Razão</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/deusa-razao.jpg" alt="Culto à deusa da razão" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">👑</div>
+                    </div>
+                    <p class="img-caption">Uma mulher como deusa da razão</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Por quanto tempo as duas testemunhas ficariam mortas? Apocalipse 11:9. Comparar com Números 14:34 e Ezequiel 4:6-7</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'a')">
+                        <input type="radio" name="pergunta7" id="p7a">
+                        <label for="p7a">Três dias e meio literais.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'b')">
+                        <input type="radio" name="pergunta7" id="p7b">
+                        <label for="p7b">Três anos e meio literais (aplicando dia-ano). ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'c')">
+                        <input type="radio" name="pergunta7" id="p7c">
+                        <label for="p7c">Trinta e cinco anos.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>✓ Resposta correta:</strong> Três anos e meio literais (aplicando o princípio dia-ano).<br><br>
+                    <strong>Cálculo:</strong><br>
+                    a) Princípio dia-ano: um dia profético = um ano literal (Números 14:34; Ezequiel 4:6-7).<br>
+                    b) Três dias e meio = 3,5 anos literais.<br>
+                    c) Este período se cumpriu durante o Reinado do Terror na Revolução Francesa.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Com que evento histórico se cumpre essa profecia de três anos e meio em que a Palavra de Deus estaria "morta"?</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Descreva o cumprimento histórico desta profecia..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Reinado do Terror na Revolução Francesa (1793-1797):</strong><br><br>
+                    <strong>Início: 26 de novembro de 1793</strong> - A Assembleia Legislativa declara: "Não há Deus".<br><br>
+                    <strong>Eventos durante este período:</strong><br>
+                    1. 📖 <strong>Bíblias queimadas</strong> - A Bíblia foi abolida na França, considerada "morta".<br>
+                    2. ⛪ <strong>Igrejas fechadas</strong> - Proibição da adoração a Deus por decreto.<br>
+                    3. 📅 <strong>Semana de 10 dias</strong> - O sábado foi abandonado; cada 10º dia era dedicado à orgia e blasfêmia.<br>
+                    4. 🚫 <strong>Negativa de Deus</strong> - Ateísmo oficial declarado.<br>
+                    5. 👑 <strong>Deusa da Razão</strong> - Uma mulher foi entronizada como deusa.<br>
+                    6. 🚷 <strong>Proibição do culto</strong> - Todo culto religioso foi proibido.<br><br>
+                    <strong>Término: 17 de junho de 1797</strong> - A assembleia reconhece que a religião é necessária à prosperidade da nação.<br>
+                    <strong>Duração exata:</strong> 3 anos, 6 meses e 22 dias.
+                </div>
+            </div>
+            
+            <!-- Linha do tempo da Revolução Francesa -->
+            <div class="timeline-box">
+                <h5 style="color: #c9a05e; text-align: center; margin-bottom: 20px;">📅 O Reinado do Terror - 3 Anos e Meio</h5>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">26/11/1793</div>
+                    <div class="timeline-desc"><strong>Início:</strong> França declara "Não há Deus" - Bíblia considerada "morta"</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1793-1797</div>
+                    <div class="timeline-desc">Queima de Bíblias, fechamento de igrejas, culto à deusa da razão</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">17/06/1797</div>
+                    <div class="timeline-desc"><strong>Término:</strong> Religião legitimada novamente - Bíblia "ressuscita"</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Bíblia Volta a Ser Exaltada -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📯</div>
+                <h3>A Bíblia Volta a Ser Exaltada</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">O que significa a ida para o Céu das duas testemunhas? Apocalipse 11:12</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 9, 'a')">
+                        <input type="radio" name="pergunta9" id="p9a">
+                        <label for="p9a">As Bíblias foram literalmente levadas ao céu.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 9, 'b')">
+                        <input type="radio" name="pergunta9" id="p9b">
+                        <label for="p9b">A Bíblia seria novamente exaltada e ganharia lugar de destaque no mundo. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 9, 'c')">
+                        <input type="radio" name="pergunta9" id="p9c">
+                        <label for="p9c">Os tradutores da Bíblia subiram ao céu.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>✓ Resposta correta:</strong> A Bíblia seria novamente exaltada e ganharia lugar de destaque no mundo.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Daniel disse a Nabucodonosor: "Sua grandeza cresceu e chega até ao Céu" (Daniel 4:22).<br>
+                    b) "Chegar ao céu" e "ida para o céu" têm o mesmo sentido: exaltação.<br>
+                    c) Após o período de 3,5 anos, a Bíblia seria novamente exaltada mundialmente.<br><br>
+                    <strong>Cumprimento histórico:</strong><br>
+                    - <strong>1804:</strong> Organização da Sociedade Bíblica Britânica<br>
+                    - <strong>1816:</strong> Organização da Sociedade Bíblica Americana<br>
+                    - Antes de 1804: Bíblia em apenas 15 línguas<br>
+                    - Atualmente: Bíblia em mais de 2.500 línguas
+                </div>
+            </div>
+            
+            <!-- Grid de imagens - Sociedades Bíblicas -->
+            <div class="imagens-grid">
+                <div class="imagem-card">
+                    <h5>🇬🇧 Soc. Bíblica Britânica</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/sociedade-biblica-britanica.jpg" alt="Sociedade Bíblica Britânica" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🇬🇧</div>
+                    </div>
+                    <p class="img-caption">Fundada em 1804</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>🇺🇸 Soc. Bíblica Americana</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/sociedade-biblica-americana.jpg" alt="Sociedade Bíblica Americana" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🇺🇸</div>
+                    </div>
+                    <p class="img-caption">Fundada em 1816</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>🌍 Bíblia no Mundo</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/biblia-linguas.jpg" alt="Bíblia em mais de 2.500 línguas" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🌍</div>
+                    </div>
+                    <p class="img-caption">Mais de 2.500 línguas</p>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "E ouviram uma grande voz do céu, que lhes dizia: Subi para cá. E subiram ao céu numa nuvem; e os seus inimigos os viram." (Apocalipse 11:12)
+            </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>Conclusão</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>A Palavra de Deus sofreu ataques terríveis no decorrer da história, mas o mais interessante é que ela mesma apresentava profecias acerca destas investidas, oferecendo inclusive datas e períodos. O que você acha disso?</p>
+                <p style="margin-top: 15px;">Deus, por meio da Sua Palavra, demonstra que podemos confiar em Suas revelações e, mais do que isso, que devemos examinar as Escrituras e viver conforme seus ensinos para termos uma vida segura e feliz.</p>
+            </div>
+            
+            <!-- Imagem final - Bíblia exaltada -->
+            <div class="imagem-destaque">
+                <img src="img/biblia-exaltada.jpg" alt="A Bíblia exaltada no mundo" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">📖</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">A Bíblia exaltada</span>
+                </div>
+                <div class="imagem-legenda">A Bíblia, Palavra de Deus, exaltada em todo o mundo - img/biblia-exaltada.jpg</div>
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Acredito que Deus está no comando da minha história e tem preservado Sua palavra para instruir Seus filhos nestes dias finais.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Darei valor à Bíblia que tenho e dedicarei tempo, todos os dias, para estudá-la.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Desejo crescer no conhecimento das Escrituras Sagradas com o objetivo de edificar minha vida espiritual e partilhar com outros as verdades que estou aprendendo.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 BÊNÇÃO FINAL</h4>
+            <div class="compromisso-texto">
+                "... Que a paz de Deus, que excede todo entendimento, guarde seu coração e sua mente em CRISTO JESUS" (Filipenses 4:7).
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Registrar minha declaração</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Declaração registrada! Maranata!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="apocalipse-estudo7.html" class="btn-nav">← Estudo anterior</a>
+            <a href="apocalipse-estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="apocalipse-estudo9.html" class="btn-nav">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Estas são as duas oliveiras e os dois candeeiros que estão diante do Senhor da terra." - Apocalipse 11:4</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 8 - As Duas Testemunhas",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse8', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse8');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

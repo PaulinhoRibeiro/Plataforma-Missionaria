@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 6: As Sete Trombetas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=As+Sete+Trombetas+do+Apocalipse');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo para imagens */
+        .imagem-destaque {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .imagem-destaque img {
+            width: 100%;
+            display: block;
+        }
+
+        .imagem-legenda {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #ddd;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Grid para imagens das trombetas */
+        .trombetas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .trombeta-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .trombeta-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(201, 160, 94, 0.3);
+        }
+
+        .trombeta-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .trombeta-imagem {
+            width: 100%;
+            height: 150px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .trombeta-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-placeholder {
+            color: #c9a05e;
+            font-size: 3rem;
+        }
+
+        .img-caption {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .img-nota {
+            color: #c9a05e;
+            font-size: 0.8rem;
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Grid para os três ais */
+        .ais-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .ai-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .ai-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+        }
+
+        /* Tabela comparativa */
+        .tabela-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .tabela-trombetas {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .tabela-trombetas table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-trombetas th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1rem;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .tabela-trombetas td {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-trombetas tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid, .trombetas-grid, .ais-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 6</span>
+        </div>
+        <h1>ESTUDO 6</h1>
+        <h2>As Sete Trombetas</h2>
+        <p>"E os sete anjos que tinham as sete trombetas prepararam-se para tocá-las." (Apocalipse 8:6)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📯</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>A linguagem e as imagens das sete trombetas são complexas. Sua aplicação a eventos históricos específicos tem resultado em vários pontos de vista. As sete trombetas recapitulam a história desde uma perspectiva particular e, de certa forma, os eventos que ocorrem no toque das trombetas estão em paralelo com outros eventos mencionados em outros ciclos de sete no Apocalipse, como as sete igrejas e os sete selos.</p>
+                <p style="margin-top: 15px;">Há uma grande semelhança entre as sete trombetas e as sete pragas. A diferença entre elas, contudo, levam-nos a concluir que as sete trombetas são <strong>"juízos de advertência"</strong>. Aqueles que aprenderem as lições ensinadas pelas trombetas não terão de sofrer as catastróficas consequências das sete últimas pragas.</p>
+                <p style="margin-top: 15px;">As trombetas e os selos estão arranjados em grupos de quatro e três. Os quatro primeiros selos formam um grupo - os quatro cavaleiros. As últimas três trombetas também formam um grupo - os três medonhos ais (Apocalipse 9:12; 11:14).</p>
+            </div>
+        </div>
+
+        <!-- Imagem principal - Anjos com trombetas -->
+        <div class="imagem-destaque">
+            <img src="img/sete-anjos-trombetas.jpg" alt="Sete anjos com trombetas" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display: none; text-align: center; padding: 50px; background: rgba(0,0,0,0.3);">📯 Sete anjos com trombetas</div>
+            <div class="imagem-legenda">Sete anjos diante do trono com as sete trombetas - img/sete-anjos-trombetas.png</div>
+        </div>
+
+        <!-- Cena no Santuário Celestial -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏛️</div>
+                <h3>Cena no Santuário Celestial</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Qual foi a cena vista por João que envolvia uma movimentação no santuário? Apocalipse 8:2-6</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Sete anjos com sete taças de ouro cheias da ira de Deus.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Sete anjos com sete trombetas; outro anjo com incenso de ouro no altar; fogo lançado à terra. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Os 24 anciãos adorando o Cordeiro.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta completa</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Sete anjos com sete trombetas; outro anjo com incenso de ouro no altar; fogo lançado à terra.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Temos aqui mais uma cena no Santuário Celestial.<br>
+                    b) Sete anjos estão diante do trono e recebem sete trombetas.<br>
+                    c) Ao ser tocada, cada trombeta apresenta um juízo divino.<br>
+                    d) Estes não são os juízos finais (como as sete pragas), mas juízos de admoestações preliminares.<br>
+                    e) O fato dos anjos saírem do altar de incenso sugere que o tempo de graça ainda não terminou durante as seis primeiras trombetas.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que representa na Bíblia o toque de uma trombeta? Números 10:1-10</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Qual o significado bíblico do toque de trombeta?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência completa:</strong><br>
+                    a) No Antigo Testamento, o toque da trombeta servia para <strong>convocações religiosas, guerras e anúncios</strong> (Números 10:2-12; Jeremias 4:19-20).<br>
+                    b) No Novo Testamento, o toque da trombeta está associado à <strong>Volta de Jesus</strong> (1 Coríntios 15:51-52; 1 Tessalonicenses 4:16).<br>
+                    c) As sete trombetas não são juízos finais, mas ocorrem dentro do fluxo da história.<br>
+                    d) Devemos distinguir claramente entre o propósito das trombetas e das sete pragas (Apocalipse 16) que ocorrerão depois de terminada a graça.
+                </div>
+            </div>
+        </div>
+
+        <!-- As Quatro Primeiras Trombetas - Grid de imagens -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🌪️</div>
+                <h3>As Quatro Primeiras Trombetas</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Não é fácil definir o cumprimento histórico preciso das profecias das sete trombetas. Toda interpretação sugerida necessita ser discutida em termos da validade da análise do texto bíblico e de seu cumprimento histórico. A visão apresentada trata-se de um consenso de alguns teólogos da modernidade.</p>
+            </div>
+            
+            <!-- Grid com as 4 primeiras trombetas -->
+            <div class="trombetas-grid">
+                <!-- 1ª Trombeta -->
+                <div class="trombeta-card">
+                    <h5>📯 1ª Trombeta</h5>
+                    <div class="trombeta-imagem">
+                        <img src="img/trombeta1-granizo.jpg" alt="1ª Trombeta - Saraiva e fogo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🌨️</div>
+                    </div>
+                    <p style="color: #c9a05e;">Saraiva, fogo e sangue</p>
+                    <p class="img-caption">trombeta1-granizo.jpg</p>
+                </div>
+                
+                <!-- 2ª Trombeta -->
+                <div class="trombeta-card">
+                    <h5>📯 2ª Trombeta</h5>
+                    <div class="trombeta-imagem">
+                        <img src="img/trombeta2-monte.jpg" alt="2ª Trombeta - Grande monte ardente" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🏔️🔥</div>
+                    </div>
+                    <p style="color: #c9a05e;">Grande monte ardente no mar</p>
+                    <p class="img-caption">trombeta2-monte.jpg</p>
+                </div>
+                
+                <!-- 3ª Trombeta -->
+                <div class="trombeta-card">
+                    <h5>📯 3ª Trombeta</h5>
+                    <div class="trombeta-imagem">
+                        <img src="img/trombeta3-estrela.jpg" alt="3ª Trombeta - Estrela Absinto" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">⭐🌊</div>
+                    </div>
+                    <p style="color: #c9a05e;">Estrela Absinto caindo</p>
+                    <p class="img-caption">trombeta3-estrela.jpg</p>
+                </div>
+                
+                <!-- 4ª Trombeta -->
+                <div class="trombeta-card">
+                    <h5>📯 4ª Trombeta</h5>
+                    <div class="trombeta-imagem">
+                        <img src="img/trombeta4-trevas.jpg" alt="4ª Trombeta - Trevas" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🌑</div>
+                    </div>
+                    <p style="color: #c9a05e;">Sol, lua e estrelas feridos</p>
+                    <p class="img-caption">trombeta4-trevas.jpg</p>
+                </div>
+            </div>
+            
+            <div class="img-nota">
+                ⚠️ Imagens devem ser salvas na pasta <strong>img</strong> com os nomes: trombeta1-granizo.png, trombeta2-monte.png, trombeta3-estrela.png, trombeta4-trevas.png
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que acontece quando o anjo toca a primeira trombeta? Apocalipse 8:7</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">Saraiva, fogo e sangue são lançados à terra; terça parte queimada. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">Um grande monte ardente é lançado ao mar.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">Uma grande estrela cai do céu.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta completa</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Saraiva, fogo e sangue são lançados à terra; terça parte queimada.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Saraiva, fogo e sangue são figuras de juízo na Bíblia (Ezequiel 38:21-22; Salmo 11:6).<br>
+                    b) "Terça parte" denota uma medida incompleta ou parcial.<br>
+                    c) Esta primeira trombeta tem seu cumprimento nos juízos divinos sobre Jerusalém.<br>
+                    d) Jesus advertiu sobre guerras (Mateus 24:6) e a queda de Jerusalém (Mateus 24:15-19).<br>
+                    e) Cumpre-se na destruição de Jerusalém no ano 70 d.C. e nas perseguições de Trajano e Adriano.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">O que acontece quando o anjo toca a segunda trombeta? Apocalipse 8:8-9</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Uma grande estrela cai sobre os rios.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Uma grande montanha ardente é lançada ao mar; terça parte do mar torna-se sangue. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">O sol, a lua e as estrelas são feridos.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Uma grande montanha ardente é lançada ao mar; terça parte do mar torna-se sangue.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Montanha simboliza um povo, nação ou poder (Isaías 2:2-3; Daniel 2:35,44-45).<br>
+                    b) Fogo simboliza poder de julgar e destruir (Isaías 10:16-17).<br>
+                    c) Mar representa povos, nações e multidões (Apocalipse 17:15).<br>
+                    d) Transformar-se em sangue = guerra e derramamento de sangue.<br>
+                    e) Refere-se às invasões das tribos bárbaras que provocaram a queda do Império Romano do Ocidente (352-476 d.C.).<br>
+                    f) As dez tribos bárbaras cumpriram a profecia de Daniel 2:41-44; 7:7,24.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">O que acontece quando o anjo toca a terceira trombeta? Apocalipse 8:10-11</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Descreva o que acontece na terceira trombeta..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência completa:</strong><br>
+                    a) Caiu do céu uma <strong>grande estrela</strong> ardendo como tocha, sobre a terça parte dos rios e fontes.<br>
+                    b) O nome da estrela é <strong>Absinto</strong> (Amargura).<br>
+                    c) A terça parte das águas tornou-se em absinto, e muitos morreram.<br><br>
+                    <strong>Interpretação:</strong><br>
+                    - Estrelas simbolizam líderes do povo de Deus (Apocalipse 1:16,20; 12:1).<br>
+                    - Judas refere-se a falsos mestres como "estrelas errantes" (Judas 1:12-13).<br>
+                    - Simboliza a apostasia da Igreja Cristã, um afastamento coletivo da verdade.<br>
+                    - Costumes do paganismo tiveram ingresso na igreja.<br>
+                    - Os ensinos da igreja tornaram-se como águas amargosas e mortais.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">O que acontece quando o anjo toca a quarta trombeta? Apocalipse 8:12-13</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'a')">
+                        <input type="radio" name="pergunta6" id="p6a">
+                        <label for="p6a">A terça parte do sol, da lua e das estrelas é ferida, e uma águia anuncia os três ais. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'b')">
+                        <input type="radio" name="pergunta6" id="p6b">
+                        <label for="p6b">Os quatro anjos soltos junto ao Eufrates.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'c')">
+                        <input type="radio" name="pergunta6" id="p6c">
+                        <label for="p6c">O abismo é aberto e saem gafanhotos.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>✓ Resposta correta:</strong> A terça parte do sol, da lua e das estrelas é ferida, e uma águia anuncia os três ais.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) O sol, lua e estrelas foram criados para iluminar a terra (Gênesis 1:14-16).<br>
+                    b) Deus havia predito trevas sobre o Egito como juízo (Ezequiel 32:7-8).<br>
+                    c) Simboliza um período de <strong>escuridão espiritual</strong>.<br>
+                    d) Cumpre-se na Idade Média (idade escura), quando trevas espirituais e morais atingiram a humanidade.<br>
+                    e) Milhares se afastaram da Palavra da verdade, propiciando o surgimento do ateísmo secular.
+                </div>
+            </div>
+        </div>
+
+        <!-- Os Três Ais - Grid de imagens -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚠️</div>
+                <h3>Os Três Ais - As Últimas Trombetas</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Apocalipse 8:13 introduz as últimas três trombetas, também chamadas de <strong>ais</strong>. Com estes ais ou maldições, Deus permite um aumento das manifestações demoníacas e trevas morais e espirituais sobre a Terra.</p>
+            </div>
+            
+            <!-- Grid com os 3 ais -->
+            <div class="ais-grid">
+                <div class="ai-card">
+                    <h5>⚠️ 1º Ai (5ª Trombeta)</h5>
+                    <div class="trombeta-imagem" style="height: 120px;">
+                        <img src="img/trombeta5-gafanhotos.jpg" alt="5ª Trombeta - Gafanhotos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🦗</div>
+                    </div>
+                    <p style="color: #c9a05e; font-size: 0.9rem;">Gafanhotos do abismo</p>
+                    <p class="img-caption">trombeta5-gafanhotos.jpg</p>
+                </div>
+                
+                <div class="ai-card">
+                    <h5>⚠️ 2º Ai (6ª Trombeta)</h5>
+                    <div class="trombeta-imagem" style="height: 120px;">
+                        <img src="img/trombeta6-eufrates.jpg" alt="6ª Trombeta - Eufrates" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🏞️</div>
+                    </div>
+                    <p style="color: #c9a05e; font-size: 0.9rem;">Anjos soltos no Eufrates</p>
+                    <p class="img-caption">trombeta6-eufrates.jpg</p>
+                </div>
+                
+                <div class="ai-card">
+                    <h5>⚠️ 3º Ai (7ª Trombeta)</h5>
+                    <div class="trombeta-imagem" style="height: 120px;">
+                        <img src="img/trombeta7-reino.jpg" alt="7ª Trombeta - O Reino" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">👑</div>
+                    </div>
+                    <p style="color: #c9a05e; font-size: 0.9rem;">O reino de Cristo</p>
+                    <p class="img-caption">trombeta7-reino.jpg</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">O que acontece quando o anjo toca a quinta trombeta? Apocalipse 9:1-2</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'a')">
+                        <input type="radio" name="pergunta7" id="p7a">
+                        <label for="p7a">Uma estrela cai do céu, recebe a chave do abismo, e dele sobe fumaça e gafanhotos. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'b')">
+                        <input type="radio" name="pergunta7" id="p7b">
+                        <label for="p7b">Quatro anjos são soltos junto ao Eufrates.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'c')">
+                        <input type="radio" name="pergunta7" id="p7c">
+                        <label for="p7c">O sétimo anjo toca e há grandes vozes no céu.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>✓ Resposta correta:</strong> Uma estrela cai do céu, recebe a chave do abismo, e dele sobe fumaça e gafanhotos.<br><br>
+                    <strong>Interpretação histórica:</strong><br>
+                    a) Muitos estudiosos veem aqui o surgimento do <strong>Islamismo</strong> na Arábia (século VII).<br>
+                    b) A Arábia é chamada "o poço do abismo" por seus desertos.<br>
+                    c) Maomé (570-632 d.C.) seria a "estrela caída".<br>
+                    d) Os árabes foram comparados a nuvens de gafanhotos invadindo o mundo.<br>
+                    e) O Alcorão ("recitação") seria a mensagem trazida pelo "selo dos profetas".
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Por quanto tempo esse poder causaria dano aos homens? Apocalipse 9:5, 10</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Qual o período de tempo mencionado?" rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência:</strong> "E foi-lhes dado que não os matassem, mas que por cinco meses fossem atormentados..."<br><br>
+                    <strong>Cálculo profético:</strong><br>
+                    a) Cinco meses em profecia = 150 dias proféticos.<br>
+                    b) 1 dia profético = 1 ano literal (Ezequiel 4:6; Números 14:34).<br>
+                    c) <strong>150 anos literais</strong>.<br>
+                    d) Cumprimento: 27 de julho de 1299 (invasão de Otman/Otomano em Nicomédia) até 27 de julho de 1449 (Constantino XII ao trono com permissão do sultão).<br>
+                    e) O rei chamava-se "Destruidor" (Abadom/Apolion - Apocalipse 9:11).<br>
+                    f) Este é o <strong>primeiro ai</strong> (Apocalipse 9:12).
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">O que acontece quando o anjo toca a sexta trombeta? Apocalipse 9:13-15</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 9, 'a')">
+                        <input type="radio" name="pergunta9" id="p9a">
+                        <label for="p9a">Uma voz do altar manda soltar quatro anjos atados junto ao Eufrates. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 9, 'b')">
+                        <input type="radio" name="pergunta9" id="p9b">
+                        <label for="p9b">O templo de Deus se abre no céu.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 9, 'c')">
+                        <input type="radio" name="pergunta9" id="p9c">
+                        <label for="p9c">O sétimo anjo toca e há relâmpagos e trovões.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>✓ Resposta correta:</strong> Uma voz do altar manda soltar quatro anjos atados junto ao Eufrates.<br><br>
+                    <strong>Interpretação:</strong><br>
+                    a) Estes quatro anjos representam os quatro sultanatos principais do Império Otomano: <strong>Alepo, Icônio, Damasco e Bagdá</strong>.<br>
+                    b) Estavam situados na região do Eufrates.<br>
+                    c) Foram soltos por um período específico: "uma hora, um dia, um mês e um ano".<br>
+                    d) Em tempo literal: <strong>391 anos e 15 dias</strong>.<br>
+                    e) Cumprimento: 27 de julho de 1449 a 11 de agosto de 1840 (abatimento do poderio otomano).<br>
+                    f) Este é o <strong>segundo ai</strong>.
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "O primeiro ai passou; eis que depois vêm ainda dois ais." (Apocalipse 9:12)
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 10</span>
+                <div class="pergunta-texto">O que acontece quando o anjo toca a sétima trombeta? Apocalipse 11:15</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'a')">
+                        <input type="radio" name="pergunta10" id="p10a">
+                        <label for="p10a">Grandes vozes no céu proclamam: O reino do mundo se tornou de nosso Senhor e do seu Cristo. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'b')">
+                        <input type="radio" name="pergunta10" id="p10b">
+                        <label for="p10b">As sete pragas começam a ser derramadas.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'c')">
+                        <input type="radio" name="pergunta10" id="p10c">
+                        <label for="p10c">O templo se enche de fumaça.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(10)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito10">
+                    <strong>✓ Resposta correta:</strong> Grandes vozes no céu proclamam: O reino do mundo se tornou de nosso Senhor e do seu Cristo.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Quando o sétimo anjo toca, "cumprir-se-á o mistério de Deus" (Apocalipse 10:7).<br>
+                    b) O toque da sétima trombeta é a <strong>Segunda Vinda de Jesus</strong> em glória e majestade (1 Tessalonicenses 4:16; Mateus 25:31).<br>
+                    c) O quinto reino do sonho de Daniel 2 (a pedra) agora chegou (Daniel 2:44-45).<br>
+                    d) Aquele que prometeu voltar com as nuvens, agora veio.<br>
+                    e) Este é o <strong>terceiro ai</strong>.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 11</span>
+                <div class="pergunta-texto">O que existe de diferente no cântico dos vinte e quatro anciãos após o soar da sétima trombeta? Apocalipse 11:16-17</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Compare com Apocalipse 1:8 e 4:8. O que mudou?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(11)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito11">
+                    <strong>Referência completa:</strong><br>
+                    a) Antes da sétima trombeta, Jesus era descrito como <strong>"Aquele que é, que era e que há de vir"</strong> (Apocalipse 1:8; 4:8).<br>
+                    b) Após a sétima trombeta, os anciãos declaram: <strong>"Que és e que eras"</strong> (Apocalipse 11:17).<br>
+                    c) A expressão "que há de vir" é omitida porque <strong>Sua vinda agora é uma realidade</strong>.<br>
+                    d) Jesus veio! O plano da redenção está completo.<br>
+                    e) Todas as criaturas se unem em louvor ao Deus Criador e Redentor.
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "O reino do mundo se tornou de nosso Senhor e do seu Cristo, e ele reinará pelos séculos dos séculos." (Apocalipse 11:15)
+            </div>
+        </div>
+
+        <!-- Tabela Resumo das Trombetas -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📋</div>
+                <h3>Resumo das Sete Trombetas</h3>
+            </div>
+            
+            <div class="tabela-box">
+                <div class="tabela-trombetas">
+                    <table>
+                        <tr>
+                            <th>Trombeta</th>
+                            <th>Evento</th>
+                            <th>Cumprimento Histórico</th>
+                        </tr>
+                        <tr>
+                            <td>1ª Trombeta</td>
+                            <td>Saraiva, fogo e sangue</td>
+                            <td>Queda de Jerusalém (70 d.C.) e perseguições</td>
+                        </tr>
+                        <tr>
+                            <td>2ª Trombeta</td>
+                            <td>Grande monte ardente no mar</td>
+                            <td>Invasões bárbaras (352-476 d.C.)</td>
+                        </tr>
+                        <tr>
+                            <td>3ª Trombeta</td>
+                            <td>Estrela Absinto cai</td>
+                            <td>Apostasia da Igreja, paganismo penetra</td>
+                        </tr>
+                        <tr>
+                            <td>4ª Trombeta</td>
+                            <td>Sol, lua e estrelas feridos</td>
+                            <td>Idade Média - trevas espirituais</td>
+                        </tr>
+                        <tr>
+                            <td>5ª Trombeta (1º Ai)</td>
+                            <td>Gafanhotos do abismo</td>
+                            <td>Surgimento do Islamismo (1299-1449)</td>
+                        </tr>
+                        <tr>
+                            <td>6ª Trombeta (2º Ai)</td>
+                            <td>Anjos soltos no Eufrates</td>
+                            <td>Império Otomano (1449-1840)</td>
+                        </tr>
+                        <tr>
+                            <td>7ª Trombeta (3º Ai)</td>
+                            <td>Reino de Cristo estabelecido</td>
+                            <td>Segunda Vinda de Jesus (futuro)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>Conclusão</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Como se diz no mundo do futebol, estamos jogando os últimos minutos do segundo tempo! Todos os anjos do Céu olham atentamente para cada ser humano no desejo que seus corações se rendam à graça maravilhosa de Jesus.</p>
+                <p style="margin-top: 15px;">Cada trombeta tocada ao longo dos séculos foram advertências divinas para produzir arrependimento e salvação. Aqueles que não atentarem ao toque das trombetas sofrerão os juízos de Deus, sem misericórdia, no derramar das sete últimas pragas.</p>
+                <p style="margin-top: 15px;"><strong>É uma questão de escolha. De que lado você ficará?</strong></p>
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Acredito que Deus está no comando da história e que estamos vivendo os dias em que a sétima trombeta será tocada.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Dedicarei minha vida a Cristo e estudarei Sua Palavra todos os dias no desejo de conhecer Sua vontade para minha vida.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Aproveitarei cada oportunidade para ensinar a outros as verdades da Bíblia que estou aprendendo e ajudar quantos puder a se prepararem para a Volta de Jesus.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 BÊNÇÃO FINAL</h4>
+            <div class="compromisso-texto">
+                "... Que a paz de Deus, que excede todo entendimento, guarde seu coração e sua mente em CRISTO JESUS" (Filipenses 4:7).
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Registrar minha declaração</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Declaração registrada! Maranata!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="apocalipse-estudo5.html" class="btn-nav">← Estudo anterior</a>
+            <a href="apocalipse-estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="apocalipse-estudo7.html" class="btn-nav">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"O reino do mundo se tornou de nosso Senhor e do seu Cristo, e ele reinará pelos séculos dos séculos." - Apocalipse 11:15</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 6 - As Sete Trombetas",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse6', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse6');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

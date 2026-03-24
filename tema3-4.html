@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 4: Os Sete Selos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Os+Sete+Selos+do+Apocalipse');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo para visualização dos cavaleiros (imagens) */
+        .cavaleiros-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .cavaleiro-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .cavaleiro-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(201, 160, 94, 0.3);
+        }
+
+        .cavaleiro-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .cavaleiro-imagem {
+            width: 100%;
+            height: 180px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .cavaleiro-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-placeholder {
+            color: #c9a05e;
+            font-size: 3rem;
+        }
+
+        .img-caption {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .img-nota {
+            color: #c9a05e;
+            font-size: 0.8rem;
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Estilo para incorporação do Sketchfab (apenas o modelo dos selos) */
+        .sketchfab-wrapper {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .sketchfab-wrapper iframe {
+            width: 100%;
+            height: 450px;
+            display: block;
+        }
+
+        .sketchfab-credit {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.8rem;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .sketchfab-credit a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .sketchfab-credit a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tabela de períodos */
+        .periodos-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .periodos-tabela {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .periodos-tabela table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .periodos-tabela th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .periodos-tabela td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .periodos-tabela tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid, .cavaleiros-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+            
+            .sketchfab-wrapper iframe {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 4</span>
+        </div>
+        <h1>ESTUDO 4</h1>
+        <h2>Os Sete Selos do Apocalipse</h2>
+        <p>"E vi quando o Cordeiro abriu o primeiro dos sete selos..." (Apocalipse 6:1)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Em nosso último estudo aprendemos sobre um livro selado com sete selos que estava nas mãos de Deus. Foi declarado que ninguém podia abrir o livro e, por isso, João chorava muito. Então veio a palavra de conforto de um dos anciãos: "Não chores; eis que o Leão da tribo de Judá, a Raiz de Davi, venceu para abrir o livro e os seus sete selos" (Apocalipse 5:5). Hoje, descobriremos quais eventos ocorrem à medida que o Cordeiro rompe os selos.</p>
+                <p style="margin-top: 15px;">Na abertura de cada selo vê-se um paralelismo com os eventos já descritos nas sete cartas às igrejas. São aspectos de um grande conflito envolvendo as forças do bem e as forças do mal, vistos de outro ângulo.</p>
+                <p style="margin-top: 15px;"><strong>Princípio fundamental:</strong> As profecias do Apocalipse não são sucessivas, mas repetitivas, isto é, elas refluem, cobrindo de novo os mesmos períodos de tempo. Os sete selos cobrem o mesmo período das sete igrejas. Enquanto as sete cartas tratavam da situação interna das igrejas, os sete selos destacam aspectos externos da Igreja Cristã, seus triunfos e fracassos.</p>
+            </div>
+        </div>
+
+        <!-- Visão Geral dos Sete Selos - Modelo 3D (mantido) -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔮</div>
+                <h3>Visão Panorâmica dos Sete Selos</h3>
+            </div>
+            
+            <div class="sketchfab-wrapper">
+                <iframe title="Los siete sellos/The seven seals" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/c12a1c6c3ed147c6b118b7f7931dde46/embed"></iframe>
+                <div class="sketchfab-credit">
+                    <a href="https://sketchfab.com/3d-models/los-siete-sellosthe-seven-seals-c12a1c6c3ed147c6b118b7f7931dde46" target="_blank" rel="nofollow">"Los siete sellos/The seven seals"</a> por <a href="https://sketchfab.com/nycspain" target="_blank" rel="nofollow">VIRTUAL BIBLICAL MUSEUM</a> no Sketchfab
+                </div>
+            </div>
+            
+            <p style="text-align: center; color: #ddd; margin-top: 10px;">Representação artística dos sete selos sendo abertos pelo Cordeiro</p>
+        </div>
+
+        <!-- Os Cavaleiros do Apocalipse - AGORA COM IMAGENS PNG -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🐎</div>
+                <h3>Os Cavaleiros do Apocalipse - Abertura dos Quatro Primeiros Selos</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Cavalos e carros simbolizam mensageiros da parte de Deus (ver Zacarias 1:8-11; Joel 2:4,11; 2 Reis 6:16,17). Quando Jesus abre os primeiros quatro selos, cada um dos quatro seres viventes diz a João: "Vem!". Isso indica que cada cavalo estava sob a orientação de um dos quatro seres viventes respectivamente. Quando o selo era aberto, cada cavalo, com seu cavaleiro, saía para cumprir sua missão.</p>
+            </div>
+            
+            <!-- Grid com os 4 cavaleiros - usando imagens da pasta img (formato PNG) -->
+            <div class="cavaleiros-grid">
+                <!-- Cavaleiro 1 - Cavalo Branco (Conquista) -->
+                <div class="cavaleiro-card">
+                    <h5>🐴 1º Cavalo - Branco</h5>
+                    <div class="cavaleiro-imagem">
+                        <!-- Imagem: cavalo-branco.png -->
+                        <img src="img/cavalo-branco.png" alt="Cavalo Branco - Conquista" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🐎</div>
+                    </div>
+                    <p style="color: #c9a05e;">"Venceu para vencer"</p>
+                    <p class="img-caption">img/cavalo-branco.png</p>
+                </div>
+                
+                <!-- Cavaleiro 2 - Cavalo Vermelho (Guerra) -->
+                <div class="cavaleiro-card">
+                    <h5>🐴 2º Cavalo - Vermelho</h5>
+                    <div class="cavaleiro-imagem">
+                        <!-- Imagem: cavalo-vermelho.png -->
+                        <img src="img/cavalo-vermelho.png" alt="Cavalo Vermelho - Guerra" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🐎</div>
+                    </div>
+                    <p style="color: #c9a05e;">"Tirou a paz da terra"</p>
+                    <p class="img-caption">img/cavalo-vermelho.png</p>
+                </div>
+                
+                <!-- Cavaleiro 3 - Cavalo Preto (Fome) -->
+                <div class="cavaleiro-card">
+                    <h5>🐴 3º Cavalo - Preto</h5>
+                    <div class="cavaleiro-imagem">
+                        <!-- Imagem: cavalo-preto.png -->
+                        <img src="img/cavalo-preto.png" alt="Cavalo Preto - Fome" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🐎</div>
+                    </div>
+                    <p style="color: #c9a05e;">"Uma balança na mão"</p>
+                    <p class="img-caption">img/cavalo-preto.png</p>
+                </div>
+                
+                <!-- Cavaleiro 4 - Cavalo Amarelo/Pálido (Morte) -->
+                <div class="cavaleiro-card">
+                    <h5>🐴 4º Cavalo - Pálido</h5>
+                    <div class="cavaleiro-imagem">
+                        <!-- Imagem: cavalo-palido.png -->
+                        <img src="img/cavalo-palido.png" alt="Cavalo Pálido - Morte" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🐎</div>
+                    </div>
+                    <p style="color: #c9a05e;">"Chamava-se Morte"</p>
+                    <p class="img-caption">img/cavalo-palido.png</p>
+                </div>
+            </div>
+            
+            <div class="img-nota">
+                ⚠️ Imagens devem ser salvas na pasta <strong>img</strong> com os nomes: cavalo-branco.png, cavalo-vermelho.png, cavalo-preto.png, cavalo-palido.png
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">O que João viu quando o Cordeiro abriu o primeiro selo? Apocalipse 6:1-2</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Um cavalo vermelho e seu cavaleiro com uma grande espada.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Um cavalo branco e seu cavaleiro com um arco; foi-lhe dada uma coroa e ele saiu vencendo e para vencer. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Um cavalo preto e seu cavaleiro com uma balança.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta completa</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Um cavalo branco e seu cavaleiro com um arco; foi-lhe dada uma coroa e ele saiu vencendo e para vencer.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Este é um belo símbolo das vitórias do evangelho no primeiro século.<br>
+                    b) Cumprimento da profecia de Habacuque 3:8,9 e Salmo 45:5.<br>
+                    c) Estima-se que havia 5 milhões de cristãos no Império Romano no primeiro século.<br>
+                    d) Corresponde ao período da igreja de Éfeso (31 d.C. a 100 d.C.).
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que João viu quando o Cordeiro abriu o segundo selo? Apocalipse 6:3-4</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Um cavalo branco e seu cavaleiro com um arco.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Um cavalo vermelho; foi dado ao seu cavaleiro tirar a paz da terra e recebeu uma grande espada. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">Um cavalo amarelo e seu cavaleiro chamado Morte.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> Um cavalo vermelho; foi dado ao seu cavaleiro tirar a paz da terra e recebeu uma grande espada.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) A cor vermelha está associada na Bíblia às guerras e mortandade (2 Reis 3:22; Naum 2:3).<br>
+                    b) Representa o Império Romano perseguindo os cristãos.<br>
+                    c) Corresponde ao período da igreja de Esmirna (100 d.C. a 313 d.C.).<br>
+                    d) O Edito de Tolerância de Milão (313 d.C.) trouxe um breve período de paz.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que João viu quando o Cordeiro abriu o terceiro selo? Apocalipse 6:5-6</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Descreva o cavalo e seu cavaleiro, e a voz que João ouviu..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência bíblica</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência completa:</strong><br>
+                    a) João viu um <strong>cavalo preto</strong> e seu cavaleiro com uma <strong>balança</strong> na mão.<br>
+                    b) Ouviu uma voz dizendo: "Uma medida de trigo por um denário; três medidas de cevada por um denário; e não danifiques o azeite e o vinho."<br><br>
+                    <strong>Interpretação:</strong><br>
+                    - Cavalo preto representa o período de trevas morais e apostasia.<br>
+                    - Balança simboliza julgamento (Jó 31:6; Daniel 5:27).<br>
+                    - Denário era o salário de um dia; a escassez representa fome espiritual (Ezequiel 4:16).<br>
+                    - Trigo (evangelho puro) escasso; cevada (doutrinas falsas) abundante.<br>
+                    - Azeite (Espírito Santo) e vinho (sangue de Cristo) não devem ser danificados.<br>
+                    - Corresponde à igreja de Pérgamo.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">O que João viu quando o Cordeiro abriu o quarto selo? Apocalipse 6:7-8</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Um cavalo branco e seu cavaleiro vencendo.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Um cavalo pálido; seu cavaleiro chamava-se Morte, e o inferno o seguia. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">Um cavalo vermelho e seu cavaleiro com uma espada.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Um cavalo pálido; seu cavaleiro chamava-se Morte, e o inferno o seguia.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) A palavra grega "Chloros" (pálido) indica perda de vitalidade, como planta sem sol.<br>
+                    b) A igreja afastou-se da fé apostólica, perdendo a luz do Sol da Justiça (Malaquias 4:2).<br>
+                    c) Simboliza a obra nefasta contra os fiéis na Idade Média.<br>
+                    d) Corresponde à igreja de Tiatira (538 d.C. a 1798 d.C.).<br>
+                    e) Período de 1260 anos de domínio papal (Daniel 7:25; Apocalipse 12:6,14; 13:5).
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "E olhei, e eis um cavalo pálido, e o seu cavaleiro chamava-se Morte; e o inferno o seguia. E foi-lhes dado poder para matar com a espada, com a fome, com a peste e com as feras da terra." (Apocalipse 6:8)
+            </div>
+        </div>
+
+        <!-- Tabela Comparativa dos Primeiros Quatro Selos -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📊</div>
+                <h3>Comparação dos Primeiros Quatro Selos</h3>
+            </div>
+            
+            <div class="periodos-box">
+                <div class="periodos-tabela">
+                    <table>
+                        <tr>
+                            <th>Selo</th>
+                            <th>Cavalo</th>
+                            <th>Período</th>
+                            <th>Igreja Correspondente</th>
+                        </tr>
+                        <tr>
+                            <td>1º Selo</td>
+                            <td>Branco (Vitória do Evangelho)</td>
+                            <td>31 d.C. - 100 d.C.</td>
+                            <td>Éfeso</td>
+                        </tr>
+                        <tr>
+                            <td>2º Selo</td>
+                            <td>Vermelho (Perseguição)</td>
+                            <td>100 d.C. - 313 d.C.</td>
+                            <td>Esmirna</td>
+                        </tr>
+                        <tr>
+                            <td>3º Selo</td>
+                            <td>Preto (Apostasia)</td>
+                            <td>313 d.C. - 538 d.C.</td>
+                            <td>Pérgamo</td>
+                        </tr>
+                        <tr>
+                            <td>4º Selo</td>
+                            <td>Pálido (Morte espiritual)</td>
+                            <td>538 d.C. - 1798 d.C.</td>
+                            <td>Tiatira</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abertura dos Últimos Três Selos -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚖️</div>
+                <h3>Abertura dos Últimos Três Selos</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">O que João viu quando o Cordeiro abriu o quinto selo? Apocalipse 6:9-11</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que João viu debaixo do altar?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência completa:</strong><br>
+                    a) João viu <strong>debaixo do altar as almas daqueles que foram mortos por causa da Palavra de Deus</strong>.<br>
+                    b) Clamavam: "Até quando, ó Soberano Senhor, santo e verdadeiro, não julgas e vingas o nosso sangue?"<br>
+                    c) Foi-lhes dada uma <strong>vestidura branca</strong> (justiça de Cristo) e disseram que repousassem até que se completasse o número de seus conservos.<br><br>
+                    <strong>Interpretação:</strong><br>
+                    - "Almas" (psyche) refere-se a pessoas, não entidades imateriais (Atos 2:41; 7:14).<br>
+                    - O altar representa o sacrifício dos mártires (2 Timóteo 4:6).<br>
+                    - Clamor por justiça dos mártires da Idade Média.<br>
+                    - Vestes brancas = vitória e justificação.<br>
+                    - Corresponde à igreja de Sardes.
+                </div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h5>🩸 O Clamor dos Mártires</h5>
+                    <p>O massacre de São Bartolomeu na França (1572) é um exemplo de que muitos ainda morreriam pelo puro evangelho. A Reforma Protestante não conseguiu frear completamente as perseguições, pois o período de domínio papal se estendeu até 1798.</p>
+                    <p class="referencia">Apocalipse 6:11; 3:2</p>
+                </div>
+                
+                <div class="info-card">
+                    <h5>👕 Vestidura Branca</h5>
+                    <p>As vestes brancas são símbolos da justiça de Cristo e de vitória (Apocalipse 19:8; 3:5). Estes mártires estão salvos aguardando apenas o recebimento da recompensa, quando Jesus voltar à terra (Apocalipse 22:12).</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">O que João viu quando o Cordeiro abriu o sexto selo? Apocalipse 6:12-17</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'a')">
+                        <input type="radio" name="pergunta6" id="p6a">
+                        <label for="p6a">Um grande terremoto, o sol se tornou negro, a lua como sangue e estrelas caíram. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'b')">
+                        <input type="radio" name="pergunta6" id="p6b">
+                        <label for="p6b">Sete trombetas começaram a soar.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'c')">
+                        <input type="radio" name="pergunta6" id="p6c">
+                        <label for="p6c">Um anjo desceu do céu com uma chave do abismo.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>✓ Resposta correta:</strong> Um grande terremoto, o sol se tornou negro, a lua como sangue e estrelas caíram.<br><br>
+                    <strong>Eventos históricos correspondentes:</strong><br>
+                    a) <strong>Grande terremoto</strong> - Lisboa, 1º de novembro de 1755.<br>
+                    b) <strong>Sol se tornou negro</strong> - Nova Inglaterra, EUA, 19 de maio de 1780.<br>
+                    c) <strong>Lua como sangue</strong> - Nova Inglaterra, EUA, 19 de maio de 1780.<br>
+                    d) <strong>Estrelas caíram</strong> - Costa Leste dos EUA, 13 de novembro de 1833.<br><br>
+                    <strong>Contexto profético:</strong> Estes sinais foram profetizados por Cristo (Mateus 24:29). Vivemos após o verso 13 e antes do verso 14 do capítulo 6.
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "E o céu recolheu-se como um pergaminho quando se enrola. Então, todos os montes e ilhas foram movidos do seu lugar." (Apocalipse 6:14)
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">O que João viu quando o Cordeiro abriu o sétimo selo? Apocalipse 8:1</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que aconteceu quando o sétimo selo foi aberto?" rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "E, havendo aberto o sétimo selo, fez-se silêncio no céu quase por meia hora."<br><br>
+                    <strong>Interpretação:</strong><br>
+                    a) O Céu, que é cheio de música (Apocalipse 4:8), ficará em silêncio porque estará vazio.<br>
+                    b) Não ficará um só anjo, pois todos virão com Cristo (Mateus 25:31).<br>
+                    c) Meia hora profética = 7,5 dias literais (um dia profético = 1 ano; 12 meses = 12 horas; 6 meses = 6 horas; etc.).<br>
+                    d) Os anjos aguardam com fremente desejo a ordem de Cristo para vir à Terra buscar os salvos.
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <h5 style="color: #c9a05e; margin-bottom: 10px;">⏳ Cálculo do Tempo Profético:</h5>
+                <p>1 dia profético = 1 ano literal (12 meses)</p>
+                <p>12 horas = 6 meses</p>
+                <p>6 horas = 3 meses</p>
+                <p>2 horas = 1 mês</p>
+                <p>1 hora = 15 dias</p>
+                <p><strong>Meia hora = 7,5 dias</strong></p>
+            </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💫</div>
+                <h3>Conclusão</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>O capítulo 6 termina com uma pergunta: "... porque chegou o grande Dia da ira deles; e quem é que pode suster-se?" (Apocalipse 6:17). Há apenas uma resposta para esta pergunta: os 144 mil selados (Apocalipse 7). Só eles subsistirão neste tempo de prova.</p>
+                <p style="margin-top: 15px;">Os anjos de Deus aguardam com fremente desejo a ordem de Cristo para vir à Terra buscar os salvos. Maravilhoso é pensar neste dia, em que todas as famílias serão reunidas. Nunca mais haverá morte, nem luto, nem pranto nem dor, pois as primeiras coisas passarão (Apocalipse 21:4).</p>
+                <p style="margin-top: 15px;">Todos nós temos um Céu a alcançar e um inferno a evitar. Qual será hoje sua decisão? Seu coração pertence completamente a Cristo?</p>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Eis que venho sem demora; guarda o que tens, para que ninguém tome a tua coroa." (Apocalipse 3:11)
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Acredito que Deus está no controle da história e governa para o bem de Seus filhos.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Desejo entregar minha história para que Jesus possa dirigi-la.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Creio que os sinais do sexto selo já se cumpriram e aguardo a volta de Jesus.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 BÊNÇÃO FINAL</h4>
+            <div class="compromisso-texto">
+                "... Que a paz de Deus, que excede todo entendimento, guarde seu coração e sua mente em CRISTO JESUS" (Filipenses 4:7).
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Registrar minha declaração</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Declaração registrada! Maranata!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="apocalipse-estudo3.html" class="btn-nav">← Estudo anterior</a>
+            <a href="apocalipse-estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="apocalipse-estudo5.html" class="btn-nav">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"E vi quando o Cordeiro abriu o primeiro dos sete selos..." - Apocalipse 6:1</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 4 - Os Sete Selos",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse4', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse4');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

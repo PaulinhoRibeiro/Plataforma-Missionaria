@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 5 - Do Palácio ao Pasto | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Do+Palácio+ao+Pasto');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Carta do Rei */
+        .carta-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+            font-style: italic;
+        }
+
+        .carta-box::before {
+            content: "📜";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #0b1a2e;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .carta-box p {
+            color: #f0f0f0;
+            line-height: 1.8;
+        }
+
+        /* Visualização da Árvore */
+        .arvore-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .arvore-simbolo {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 50%;
+            padding: 30px;
+            border: 3px solid #c9a05e;
+            display: inline-block;
+        }
+
+        .arvore-simbolo span {
+            font-size: 5rem;
+        }
+
+        /* Linha do tempo */
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(201, 160, 94, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .timeline-ano {
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .timeline-descricao {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Card do Orgulho vs Humildade */
+        .comparacao-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .comparacao-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid;
+        }
+
+        .comparacao-card.orgulho {
+            border-left-color: #e74c3c;
+        }
+
+        .comparacao-card.humildade {
+            border-left-color: #2ecc71;
+        }
+
+        .comparacao-card h5 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .comparacao-card.orgulho h5 {
+            color: #e74c3c;
+        }
+
+        .comparacao-card.humildade h5 {
+            color: #2ecc71;
+        }
+
+        .comparacao-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .comparacao-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 5</span>
+        </div>
+        <h1>ESTUDO 5</h1>
+        <h2>Do Palácio ao Pasto</h2>
+        <p>"Agora, eu, Nabucodonosor, louvo, exalço e glorifico ao Rei do céu" (Daniel 4:37)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar como Deus lida com o orgulho humano e como Ele é paciente, dando oportunidades de arrependimento até mesmo a um rei pagão.</p>
+            <p><strong>Texto base:</strong> Daniel 4; Isaías 14:12-14</p>
+            <p><strong>Versículos-chave:</strong> Daniel 4:34-35, Provérbios 16:18, Tiago 4:6</p>
+            <p><strong>Destaque especial:</strong> O capítulo 4 é uma carta escrita pelo próprio Nabucodonosor, testemunhando sua conversão e reconhecendo a soberania de Deus.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Daniel é o autor do livro que leva seu próprio nome. Contudo, o quarto capítulo é claramente uma confissão de Nabucodonosor escrita na forma de carta, a qual Daniel incorporou ao seu livro. Através de uma proclamação real ele desejava que todos os homens da terra soubessem de sua experiência com o Deus de Daniel (Daniel 4:1-2).</p>
+                
+                <p style="margin-top: 15px;">Este decreto reflete o sentimento do rei quando suas faculdades mentais foram completamente restabelecidas depois de sete anos de insanidade. Ele, que tinha sido um orgulhoso monarca, tornou-se um humilde filho de Deus. Nesta história encontramos profundas lições espirituais e como Deus manifestou Sua misericórdia a um rei pagão e idólatra. Hoje vamos conhecer mais sobre essa história de arrependimento e conversão.</p>
+            </div>
+        </div>
+
+        <!-- A Carta do Rei -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✉️</div>
+                <h3>A Proclamação Real</h3>
+            </div>
+            
+            <div class="carta-box">
+                <p>"Nabucodonosor, rei, a todos os povos, nações e línguas que moram em toda a terra: Paz vos seja multiplicada! Pareceu-me bem fazer conhecidos os sinais e maravilhas que o Deus Altíssimo tem feito para comigo. Quão grandes são os seus sinais, e quão poderosas, as suas maravilhas! O seu reino é reino sempiterno, e o seu domínio, de geração em geração."</p>
+                <p style="text-align: right; margin-top: 10px;">— Daniel 4:1-3</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Que declaração fez o rei Nabucodonosor a respeito de Deus? Daniel 4:3</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Quão grandes são os seus sinais, e quão poderosas, as suas maravilhas! O seu reino é reino sempiterno, e o seu domínio, de geração em geração." <strong>O capítulo 4 inicia com o reconhecimento do rei acerca da soberania e domínio de Deus sobre todos os reinos da Terra. Esse poderoso testemunho foi proclamado a todos os povos num edito real, demonstrando que Daniel e seus amigos influenciaram tremendamente a corte babilônica.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Sonho da Árvore -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🌳</div>
+                <h3>O Sonho da Grande Árvore</h3>
+            </div>
+            
+            <div class="arvore-container">
+                <div class="arvore-simbolo">
+                    <span>🌳</span>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que trouxe espanto ao rei Nabucodonosor? Daniel 4:5</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "Tive um sonho, que me espantou; e as imaginações na minha cama e as visões da minha cabeça me turbaram." <strong>Os babilônios costumavam ver um significado em todo sonho. Deus empregou mais uma vez um sonho como instrumento para expor Seus intuitos. Ao contrário do capítulo 2, desta vez o rei se lembrava do sonho, porém ainda não sabia a sua interpretação.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Que pessoas foram novamente chamadas para decifrarem o sonho? Daniel 4:7</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">Apenas Daniel</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">Os magos, encantadores, caldeus e feiticeiros ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">Os sacerdotes de Bel</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Os magos, encantadores, caldeus e feiticeiros. Assim como no capítulo 2, eles não puderam dar ao rei a interpretação do sonho. Mais uma vez ficou provada a incapacidade de qualquer homem revelar os mistérios que o Altíssimo reservou para Si.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Descreva o sonho de Nabucodonosor. Daniel 4:10-17</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Eu estava olhando, e eis uma árvore no meio da terra, cuja altura era grande; crescia esta árvore, e se fazia forte, de maneira que a sua altura chegava até ao céu, e era vista até aos confins da terra. A sua folhagem era formosa, e o seu fruto, abundante, e nela havia sustento para todos. Os animais do campo achavam sombra debaixo dela, e as aves do céu faziam morada nos seus ramos." <strong>Um santo desceu do céu, cortou a árvore, deixando apenas a raiz e parte do tronco amarrada em cadeias, permanecendo nessa situação por sete tempos (anos).</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Interpretação e o Juízo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚖️</div>
+                <h3>A Interpretação e o Juízo</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Segundo a interpretação de Daniel, o que aconteceria ao rei? Daniel 4:20-22, 25</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "A árvore que viste, que cresceu e se fez forte... és tu, ó rei. Serás expulso de entre os homens, e a tua morada será com os animais do campo, e far-te-ão comer erva como os bois, e serás molhado do orvalho do céu, e passar-se-ão sete tempos por cima de ti, até que conheças que o Altíssimo tem domínio sobre o reino dos homens e o dá a quem quer." <strong>Deus predisse que Nabucodonosor seria cortado de seu reino e passaria a viver como um animal durante sete anos.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Que declaração feita pelo rei trouxe-lhe o juízo divino? Daniel 4:30, 31</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Falou o rei, dizendo: Não é esta a grande Babilônia que eu edifiquei para a casa real, com a força do meu poder e para glória da minha magnificência? Ainda estava a palavra na boca do rei, quando desceu uma voz do céu: A ti se diz, ó rei Nabucodonosor: Passou de ti o reino." <strong>No exato momento em que o rei se orgulhava das maravilhas da cidade que construiu, veio o juízo do Céu, transformando seu coração de homem em coração de animal. Esse mesmo sentimento de orgulho fez com que Lúcifer fosse expulso do Céu (Isaías 14:12-14).</strong>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Não é esta a grande Babilônia que eu edifiquei para a casa real, com a força do meu poder e para glória da minha magnificência?"
+                <span class="versiculo-ref">Daniel 4:30</span>
+            </div>
+        </div>
+
+        <!-- O Orgulho de Lúcifer -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👑</div>
+                <h3>A Raiz do Orgulho: Lúcifer</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>O mesmo sentimento que dominou Nabucodonosor foi o que originou o pecado no Universo:</p>
+                
+                <div style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 10px; margin-top: 15px;">
+                    <p><strong>Isaías 14:12-14</strong> - "Como caíste desde o céu, ó Lúcifer, filho da alva! ... Tu dizias no teu coração: Eu subirei ao céu; acima das estrelas de Deus exaltarei o meu trono... serei semelhante ao Altíssimo."</p>
+                </div>
+                
+                <p style="margin-top: 15px;">O orgulho foi o pecado original que transformou Lúcifer em Satanás. Nabucodonosor repetiu o mesmo erro, mas diferentemente de Lúcifer, ele se arrependeu e foi restaurado.</p>
+            </div>
+        </div>
+
+        <!-- A Restauração -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🙏</div>
+                <h3>O Arrependimento e a Restauração</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Após os sete anos de loucura, o que reconheceu o rei Nabucodonosor? Daniel 4:34-37</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Ao fim daqueles dias, eu, Nabucodonosor, levantei os meus olhos ao céu, e tornou-me a vir o meu entendimento... Então, bendisse o Altíssimo, e louvei, e glorifiquei ao que vive para sempre, cujo domínio é sempiterno, e cujo reino é de geração em geração." <strong>Nabucodonosor reconheceu que "o céu reina" (v.26) e que "o Altíssimo tem domínio sobre o reino dos homens". Este rei, que no passado havia sido orgulhoso e tirano, tornou-se um humilde filho de Deus. Finalmente, aprendeu que a verdadeira grandeza consiste em reconhecer e glorificar o único Deus verdadeiro.</strong>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Agora, eu, Nabucodonosor, louvo, exalço e glorifico ao Rei do céu; porque todas as suas obras são verdade, e os seus caminhos, juízo, e pode humilhar aos que andam na soberba."
+                <span class="versiculo-ref">Daniel 4:37</span>
+            </div>
+        </div>
+
+        <!-- Comparação: Orgulho vs Humildade -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚖️</div>
+                <h3>Orgulho vs. Humildade</h3>
+            </div>
+            
+            <div class="comparacao-grid">
+                <div class="comparacao-card orgulho">
+                    <h5>😤 ORGULHO</h5>
+                    <p>• "Não é esta a grande Babilônia que EU edifiquei?"</p>
+                    <p>• "Com a FORÇA do MEU poder"</p>
+                    <p>• "Para glória da MINHA magnificência"</p>
+                    <p>• Resultado: juízo e humilhação</p>
+                    <p style="margin-top: 10px;"><small>Provérbios 16:18 - "A soberba precede a ruína"</small></p>
+                </div>
+                
+                <div class="comparacao-card humildade">
+                    <h5>🕊️ HUMILDADE</h5>
+                    <p>• "Levantei os meus olhos ao céu"</p>
+                    <p>• "Bendisse ao Altíssimo"</p>
+                    <p>• "Louvei e glorifiquei a Deus"</p>
+                    <p>• Resultado: restauração e bênção</p>
+                    <p style="margin-top: 10px;"><small>Tiago 4:6 - "Deus resiste aos soberbos, dá graça aos humildes"</small></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha do tempo da vida de Nabucodonosor -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>A Jornada de Nabucodonosor</h3>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-ano">605 a.C.</span>
+                <span class="timeline-descricao">Sobe ao trono e conquista Jerusalém. Daniel é levado cativo.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">603 a.C.</span>
+                <span class="timeline-descricao">Sonho da estátua - reconhece que Deus revela mistérios.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">594 a.C.</span>
+                <span class="timeline-descricao">Constrói a imagem de ouro e enfrenta os três jovens na fornalha.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">587 a.C.</span>
+                <span class="timeline-descricao">Sonho da árvore. Orgulha-se de suas conquistas.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">587-580 a.C.</span>
+                <span class="timeline-descricao">SETE ANOS de loucura - vive como animal.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">580 a.C.</span>
+                <span class="timeline-descricao">Restauração e conversão. Escreve sua carta-testemunho.</span>
+            </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💭</div>
+                <h3>Lições para Nossos Dias</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>1. Deus é paciente:</strong> Deu a Nabucodonosor várias oportunidades antes do juízo final.</p>
+                <p><strong>2. O orgulho cega:</strong> O rei atribuiu a si mesmo a glória que pertencia a Deus.</p>
+                <p><strong>3. O juízo pode ser tardio, mas é certo:</strong> Anos após a fornalha, o orgulho finalmente foi tratado.</p>
+                <p><strong>4. A humildade restaura:</strong> Quando Nabucodonosor levantou os olhos ao céu, seu entendimento voltou.</p>
+                <p><strong>5. Testemunho transformado:</strong> O mesmo rei que ameaçou matar os servos de Deus agora escreve uma carta louvando ao Altíssimo.</p>
+            </div>
+            
+            <div class="carta-box" style="margin-top: 20px;">
+                <p>O propósito de Deus era que o maior reino do mundo reconhecesse a justiça divina e agora isto estava cumprido. Esta proclamação pública, em que Nabucodonosor reconhecia a misericórdia, bondade e autoridade de Deus, foi o último ato de sua vida registrado na história sacra.</p>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Depois de ver como Deus foi paciente com este rei, até que finalmente ele O aceitasse como o único verdadeiro Deus, desejo tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Reconheço que sou pecador e que meu coração é continuamente mau, por isso desejo ser purificado pelo sangue de Jesus.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Nunca me orgulharei das coisas que Deus me permita realizar, mas sempre darei a Ele toda a glória.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Assim como Nabucodonosor, vou usar minha influência junto aos amigos e familiares para exaltar as obras de Deus e mostrar Sua salvação.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Reconheço que Deus é soberano sobre todos os reinos e sobre minha vida. Humilho-me diante dEle e entrego todo orgulho, para que Ele me exalte no tempo devido."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-4.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-6.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Deus resiste aos soberbos, mas dá graça aos humildes" - Tiago 4:6</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Do Palácio ao Pasto",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel5', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel5');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

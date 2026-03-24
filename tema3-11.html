@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 11: A Besta que Sobe da Terra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=A+Besta+que+Sobe+da+Terra');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo para imagens */
+        .imagem-destaque {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .imagem-destaque img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .imagem-legenda {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #ddd;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Estilo para incorporação do Sketchfab */
+        .sketchfab-wrapper {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .sketchfab-wrapper iframe {
+            width: 100%;
+            height: 450px;
+            display: block;
+        }
+
+        .sketchfab-credit {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #ddd;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .sketchfab-credit a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .sketchfab-credit a:hover {
+            text-decoration: underline;
+        }
+
+        /* Grid para imagens */
+        .imagens-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .imagem-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .imagem-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(201, 160, 94, 0.3);
+        }
+
+        .imagem-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .imagem-card .imagem-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .imagem-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-placeholder-icon {
+            color: #c9a05e;
+            font-size: 3rem;
+        }
+
+        .img-caption {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .img-nota {
+            color: #c9a05e;
+            font-size: 0.8rem;
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Grid para bestas */
+        .bestas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .besta-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .besta-card h5 {
+            color: #c9a05e;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .besta-card .imagem-placeholder {
+            width: 100%;
+            height: 180px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .besta-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .besta-card p {
+            color: #c9a05e;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* Tabela comparativa */
+        .tabela-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .tabela-marcas {
+            width: 100%;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .tabela-marcas table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-marcas th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1rem;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .tabela-marcas td {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-marcas tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Linha do tempo */
+        .timeline-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #c9a05e;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .timeline-year {
+            min-width: 100px;
+            color: #c9a05e;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .timeline-desc {
+            color: #ddd;
+            flex: 1;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+            flex: 1;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .campo input:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid, 
+            .imagens-grid, 
+            .bestas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-year {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 11</span>
+        </div>
+        <h1>ESTUDO 11</h1>
+        <h2>A Besta que Sobe da Terra</h2>
+        <p>"Vi ainda outra besta emergir da terra; possuía dois chifres, parecendo cordeiro, mas falava como dragão." (Apocalipse 13:11)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>No estudo anterior conhecemos as características da besta que sobe do mar, que é Roma em suas duas fases: Imperial e Papal. Entretanto, na continuidade do Apocalipse 13 encontramos uma segunda besta. Ela possui características distintas e emerge da Terra.</p>
+                <p style="margin-top: 15px;">No estudo de hoje descobriremos que poder é representado por essa besta, de que forma ela se unirá e apoiará a primeira besta em seus propósitos, o que significa o enigmático número 666 e ainda aprenderemos sobre o selo de Deus, que no Apocalipse está em oposição ao selo da besta.</p>
+            </div>
+            
+            <!-- Imagem principal - A besta que sobe da terra (cordeiro/dragão) -->
+            <div class="imagem-destaque">
+                <img src="img/besta-terra.jpg" alt="A besta que sobe da terra com dois chifres de cordeiro" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🐑</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">A besta que sobe da terra</span>
+                </div>
+                <div class="imagem-legenda">A besta com dois chifres de cordeiro que falava como dragão - img/besta-terra.jpg</div>
+            </div>
+        </div>
+
+        <!-- Identificando a Segunda Besta -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔍</div>
+                <h3>Identificando a Segunda Besta</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">João vê agora uma segunda besta. De onde ela surge? Apocalipse 13:11</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Do mar, como a primeira besta.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Da terra. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Do céu.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Da terra.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) O "mar" simboliza densas populações (Apocalipse 17:15).<br>
+                    b) "Terra" representa o oposto: uma <strong>população escassa</strong>.<br>
+                    c) A nação assim representada não surgiria pela guerra, conquista e ocupação.<br>
+                    d) Se desenvolveria alcançando grandeza numa região de poucos habitantes.<br>
+                    e) O profeta viu esta nação "emergindo" (grego: anabainom) - crescendo como uma planta.<br>
+                    f) <strong>Cumprimento histórico:</strong> Os Estados Unidos da América.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Quantos chifres possuía esta besta e o que eles representam? Apocalipse 13:11</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que significam os dois chifres de cordeiro?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência completa:</strong><br>
+                    a) A segunda besta possuía <strong>dois chifres como de cordeiro</strong>.<br>
+                    b) Chifres significam poder, rei ou reino (Apocalipse 17:2; Daniel 8:21-22; Daniel 7:24).<br>
+                    c) "Cordeiro" no Apocalipse (29 ocorrências) refere-se a Jesus.<br>
+                    d) "Chifres como de cordeiro" simboliza um <strong>poder governamental gentil, quase "cristão"</strong>.<br>
+                    e) Os chifres <strong>não têm coroas</strong> - significa que não haverá nem papa, nem rei, mas uma <strong>república ou poder democrático</strong>.<br>
+                    f) Dois chifres podem aludir à <strong>liberdade civil e religiosa</strong>.<br>
+                    g) <strong>Os Estados Unidos da América</strong> preenchem acuradamente estas especificações:<br>
+                    - Fundados sobre princípios de liberdade religiosa<br>
+                    - Constituição: "nenhum teste religioso jamais será requerido" (Artigo VI, seção 4)<br>
+                    - Emergiram após a primeira besta (1798) - independência em 1776, reconhecida em 1783
+                </div>
+            </div>
+            
+            <!-- Grid comparativo das duas bestas -->
+            <div class="bestas-grid">
+                <div class="besta-card">
+                    <h5>🐉 1ª Besta - do Mar</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/besta-mar.jpg" alt="Besta do mar" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🐉</div>
+                    </div>
+                    <p>Roma papal - poder religioso e político</p>
+                </div>
+                
+                <div class="besta-card">
+                    <h5>🐑 2ª Besta - da Terra</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/besta-terra-dois-chifres.jpg" alt="Besta da terra com dois chifres" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🐑</div>
+                    </div>
+                    <p>EUA - poder democrático, liberdade religiosa</p>
+                </div>
+            </div>
+            
+            <!-- Imagem dos EUA (fundação) -->
+            <div class="imagem-destaque">
+                <img src="img/eua-fundacao.jpg" alt="Fundação dos Estados Unidos - liberdade religiosa" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🗽</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Fundação dos EUA</span>
+                </div>
+                <div class="imagem-legenda">Os Estados Unidos, fundados sobre princípios de liberdade civil e religiosa - img/eua-fundacao.jpg</div>
+            </div>
+        </div>
+
+        <!-- A Mudança da Besta -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🐉</div>
+                <h3>Falava como Dragão</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>A besta que parecia um cordeiro, agora começa a falar como um dragão. Como fala uma nação? Um governo fala por meio de suas leis. De acordo com esta profecia, aqueles que obedecem à Lei de Deus podem esperar perseguições, mesmo nesta república da liberdade.</p>
+                <p style="margin-top: 10px;">Quando esta besta fala como um dragão, isso quer dizer que sua natureza muda de cordeiro para dragão, e que ela faz o mesmo tipo de obras do dragão que veio antes dela.</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que faz esta segunda besta, ou poder? Apocalipse 13:12-13</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">Exerce autoridade para fazer a terra adorar a primeira besta e opera grandes sinais. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">Declara guerra contra os santos.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">Sobe do mar com grande poder.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Exerce autoridade para fazer a terra adorar a primeira besta e opera grandes sinais.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) A segunda besta passa a exercer toda autoridade para fazer com que a Terra adore a primeira besta.<br>
+                    b) Os protestantes fundamentalistas costumavam insistir na separação entre Igreja e Estado.<br>
+                    c) Atualmente, organizações estão exigindo regulamentações morais patrocinadas pelo governo.<br>
+                    d) <strong>Relembrando a ferida mortal:</strong><br>
+                    - <strong>1798:</strong> Prisão do papa Pio VI por Napoleão - ferida mortal (Apocalipse 13:3)<br>
+                    - <strong>1929:</strong> Tratado de Latrão - Mussolini restitui poder temporal ao papado (início da cura)<br>
+                    e) <strong>Os sinais:</strong> EUA - terra da ciência, invenção, produção em massa, cura, velocidade, glamour.
+                </div>
+            </div>
+            
+            <!-- Linha do tempo da cura da ferida -->
+            <div class="timeline-box">
+                <h5 style="color: #c9a05e; text-align: center; margin-bottom: 20px;">⏳ A Cura da Ferida Mortal</h5>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1798</div>
+                    <div class="timeline-desc"><strong>Ferida mortal:</strong> General Berthier prende o papa Pio VI - fim do poder temporal</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1799-1929</div>
+                    <div class="timeline-desc">Papas reclusos no Vaticano, sem poder temporal</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1929</div>
+                    <div class="timeline-desc"><strong>Início da cura:</strong> Tratado de Latrão - Mussolini restitui 44 hectares (Vaticano)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">Atual</div>
+                    <div class="timeline-desc">Crescente prestígio papal - viagens mundiais, aclamações em países protestantes</div>
+                </div>
+            </div>
+            
+            <!-- Imagem do Tratado de Latrão -->
+            <div class="imagem-destaque">
+                <img src="img/tratado-latrao.jpg" alt="Tratado de Latrão 1929 - Mussolini e o Vaticano" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">📜</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Tratado de Latrão - 1929</span>
+                </div>
+                <div class="imagem-legenda">Mussolini assina o Tratado de Latrão em 1929, iniciando a cura da ferida mortal - img/tratado-latrao.jpg</div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Em homenagem à primeira besta, o que este segundo poder pede aos habitantes da terra que façam? Apocalipse 13:14</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Que construam uma grande estátua.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Que façam uma imagem à primeira besta. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">Que ofereçam sacrifícios.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Que façam uma imagem à primeira besta.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) As pessoas são levadas a adorar a primeira besta.<br>
+                    b) Adoração significa submissão à autoridade daquele a quem se presta reverência.<br>
+                    c) Este é o retrato da adoração dedicada ao papado pelos chamados protestantes.<br>
+                    d) No ato de impor uma adoração, este poder se coloca no lugar de Deus, único ser digno de ser adorado.
+                </div>
+            </div>
+        </div>
+
+        <!-- Perseguição e Marca da Besta -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚖️</div>
+                <h3>Perseguição e Marca da Besta</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Qual a consequência para todos aqueles que não adoram a primeira besta? Apocalipse 13:15</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que acontecerá com quem não adorar a imagem da besta?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência completa:</strong><br>
+                    a) "Fossem mortos todos os que não adorassem a imagem da besta." (Apocalipse 13:15)<br>
+                    b) A severa medida de <strong>pena de morte</strong> será tomada num esforço para conformidade.<br>
+                    c) Os que se recusarem a alinhar-se com essa confederação político-religiosa serão considerados dissidentes.<br>
+                    d) A eles serão negados emprego, sustento e, finalmente, serão perseguidos de morte.<br>
+                    e) <strong>Mas Deus cuidará dos Seus fiéis</strong> (Salmo 91).
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">O que representa esta marca da besta, que todos devem possuir a fim de comprar ou vender? Apocalipse 13:16, 17 (comparar com Ezequiel 20:12, 20)</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Qual o significado da marca da besta?" rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência completa:</strong><br>
+                    <strong>Características da marca da besta:</strong><br>
+                    a) É concreta e reconhecível.<br>
+                    b) É imposta sobre os habitantes do mundo.<br>
+                    c) Os indivíduos podem rapidamente identificá-la e, consequentemente, aceitá-la ou rejeitá-la.<br>
+                    d) A atitude pessoal diante dessa imposição implica em vida ou morte.<br><br>
+                    <strong>Contraponto com o selo de Deus:</strong><br>
+                    - <strong>Selo de Deus (Ezequiel 20:12,20):</strong> Obediência, adoração e submissão ao Criador - representado pelo sábado (Êxodo 20:8-11).<br>
+                    - <strong>Marca da besta:</strong> Desobediência, rebelião contra Deus, adoração ao dragão - representada pela observância do domingo como dia sagrado.<br><br>
+                    Este aspecto na adoração se tornará fundamental e representará um diferencial visível entre dois grupos:<br>
+                    - Os fiéis a Deus: guardam toda a lei, inclusive o sábado.<br>
+                    - Os fiéis à besta: guardam o domingo.
+                </div>
+            </div>
+            
+            <!-- Tabela comparativa: Selo de Deus x Marca da Besta -->
+            <div class="tabela-box">
+                <h5 style="color: #c9a05e; text-align: center; margin-bottom: 15px;">⚖️ Selo de Deus vs. Marca da Besta</h5>
+                <div class="tabela-marcas">
+                    <table>
+                        <tr>
+                            <th>Selo de Deus</th>
+                            <th>Marca da Besta</th>
+                        </tr>
+                        <tr>
+                            <td>Obediência a Deus</td>
+                            <td>Desobediência, rebelião</td>
+                        </tr>
+                        <tr>
+                            <td>Adoração ao Criador</td>
+                            <td>Adoração ao dragão/besta</td>
+                        </tr>
+                        <tr>
+                            <td>Submissão ao Senhor</td>
+                            <td>Submissão ao poder terreno</td>
+                        </tr>
+                        <tr>
+                            <td>Guardam o sábado (Êxodo 20:8-11)</td>
+                            <td>Guardam o domingo (tradição humana)</td>
+                        </tr>
+                        <tr>
+                            <td>Escritos no Livro da Vida</td>
+                            <td>Não inscritos no Livro da Vida</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Grid de imagens - Sábado vs Domingo -->
+            <div class="imagens-grid">
+                <div class="imagem-card">
+                    <h5>📜 Selo de Deus - Sábado</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/sabado-selo.jpg" alt="Sábado - selo de Deus" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">📜</div>
+                    </div>
+                    <p class="img-caption">O sétimo dia - memorial da criação</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>⚠️ Marca da Besta - Domingo</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/domingo-marca.jpg" alt="Domingo - marca da besta" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">⚠️</div>
+                    </div>
+                    <p class="img-caption">O primeiro dia - tradição humana</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>👑 Adoração ao Criador</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/adoracao-criador.jpg" alt="Adoração a Deus" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">👑</div>
+                    </div>
+                    <p class="img-caption">"Adorai Aquele que fez o céu e a terra"</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Qual é o número da besta de acordo com o Apocalipse e qual seu significado? Apocalipse 13:18 (comparar com Daniel 3:1)</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'a')">
+                        <input type="radio" name="pergunta7" id="p7a">
+                        <label for="p7a">888 - número de Jesus.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'b')">
+                        <input type="radio" name="pergunta7" id="p7b">
+                        <label for="p7b">666 - número de homem, representando um sistema em oposição a Deus. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'c')">
+                        <input type="radio" name="pergunta7" id="p7c">
+                        <label for="p7c">777 - número da perfeição divina.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>✓ Resposta correta:</strong> 666 - número de homem, representando um sistema em oposição a Deus.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Assim como Nabucodonosor exigiu ser adorado por meio de uma imagem (Daniel 3:1 - 60 côvados de altura, 6 de largura), Satanás levará o mundo a adorá-lo.<br>
+                    b) Os judeus acreditavam que havia uma maldição no número seis, mesmo estando ele sozinho.<br>
+                    c) Multiplicado por três, tem uma potência para o mal impossível de ser superada.<br>
+                    d) Em Babilônia, os deuses eram classificados por números: deus menor = 6, deus maior = 60, todos os deuses = 600.<br>
+                    e) <strong>666 representa um sistema, em vez de um indivíduo.</strong> É usado num sentido simbólico, não literal.<br>
+                    f) Está em oposição a Deus e busca ocupar Seu lugar.
+                </div>
+            </div>
+            
+            <!-- Imagem de Daniel 3 - Estátua de Nabucodonosor -->
+            <div class="imagem-destaque">
+                <img src="img/estatua-nabucodonosor.jpg" alt="Estátua de Nabucodonosor - 60x6" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🗿</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Estátua de Nabucodonosor</span>
+                </div>
+                <div class="imagem-legenda">A estátua de ouro: 60 côvados de altura, 6 de largura - paralelo com o 666 - img/estatua-nabucodonosor.jpg</div>
+            </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💫</div>
+                <h3>Conclusão</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Diante destas duas últimas lições sobre Apocalipse 13, o destaque é que elas estão em fase adiantada em seu cumprimento. Podemos observar hoje, pelos veículos de comunicação, uma forte onda de ecumenismo, uma busca pela união das religiões mundiais. Diversas questões políticas-religiosas estão em discussão, a exaltação do domingo como dia sagrado da família e outras.</p>
+                <p style="margin-top: 15px;">Por outro lado, os Estados Unidos estão oferecendo todo apoio aos propósitos deste movimento e oferecendo respaldo à Igreja Romana.</p>
+                <p style="margin-top: 15px;">Embora a profecia aponte dias desafiadores para os fiéis filhos de Deus, podemos contar com suas promessas de proteção e vitória (Salmo 91). Aqueles que firmarem seus pés na Palavra de Deus andarão em segurança na luz de Cristo e brilharão para o mundo como estrelas, sempre e eternamente (Daniel 12:3).</p>
+            </div>
+            
+            <!-- Imagem final - Estrelas que brilham -->
+            <div class="imagem-destaque">
+                <img src="img/estrelas-brilhando.jpg" alt="Os justos brilharão como estrelas" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">⭐</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Os sábios resplandecerão</span>
+                </div>
+                <div class="imagem-legenda">"Os sábios resplandecerão como o fulgor do firmamento" (Daniel 12:3) - img/estrelas-brilhando.jpg</div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Os sábios, pois, resplandecerão como o fulgor do firmamento; e os que a muitos conduzirem à justiça, como as estrelas, sempre e eternamente." (Daniel 12:3)
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Acredito que o Senhor me dará forças para manter-me firme em minha decisão de permanecer ao lado de Cristo.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Desejo continuar estudando a Bíblia para conhecer a vontade do Senhor para minha vida.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Desejo adorar somente a Deus e não me inclinarei a outro poder que busque ocupar Seu lugar.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 BÊNÇÃO FINAL</h4>
+            <div class="compromisso-texto">
+                "... Que a paz de Deus, que excede todo entendimento, guarde seu coração e sua mente em CRISTO JESUS" (Filipenses 4:7).
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Registrar minha declaração</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Declaração registrada! Maranata!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="apocalipse-estudo10.html" class="btn-nav">← Estudo anterior</a>
+            <a href="apocalipse-estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="apocalipse-estudo12.html" class="btn-nav">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Vi ainda outra besta emergir da terra; possuía dois chifres, parecendo cordeiro, mas falava como dragão." - Apocalipse 13:11</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 11 - A Besta que Sobe da Terra",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse11', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse11');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

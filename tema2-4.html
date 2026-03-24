@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 4 - Prova de Fogo | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Prova+de+Fogo');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Card da Fornalha */
+        .fornalha-card {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fornalha-card::before {
+            content: "🔥";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+
+        .fornalha-card h4 {
+            color: #c9a05e;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .fornalha-card p {
+            color: #ddd;
+            line-height: 1.8;
+        }
+
+        /* Linha do tempo */
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(201, 160, 94, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .timeline-ano {
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .timeline-descricao {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 4</span>
+        </div>
+        <h1>ESTUDO 4</h1>
+        <h2>Prova de Fogo</h2>
+        <p>"O nosso Deus, a quem servimos, é que nos pode livrar; e ele nos livrará" (Daniel 3:17)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar como a fidelidade a Deus deve ser inegociável, mesmo diante de ameaças de morte, e que Deus está conosco em todas as provações.</p>
+            <p><strong>Texto base:</strong> Daniel 3; Êxodo 20:4-6; Isaías 43:2</p>
+            <p><strong>Versículos-chave:</strong> Daniel 3:17-18, Isaías 43:2, João 16:33</p>
+            <p><strong>Destaque especial:</strong> A fé inabalável dos três jovens hebreus - "Se Deus nos livrará, ainda assim não adoraremos"</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔥</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>O rei Nabucodonosor ficou por um tempo impressionado com a interpretação do sonho da estátua que abriu perante ele acontecimentos que chegariam até os "últimos dias" (Daniel 2:28). Ele foi instruído acerca da parte que lhe cabia na sucessão dos impérios mundiais. Sabia que o seu domínio passaria a outro reino e assim sucessivamente até o estabelecimento do reino de Cristo.</p>
+                
+                <p style="margin-top: 15px;">Mas esta impressão não durou muito tempo. Seu coração não estava purificado da ambição e do desejo de exaltação. A prosperidade que acompanhou o seu reinado encheu seu coração de orgulho e presunção.</p>
+                
+                <p style="margin-top: 15px;">Passaram-se cerca de nove anos desde o sonho com a estátua do capítulo 2 e o episódio descrito no capítulo 3, que estudaremos agora. Certamente foi com o intuito de consolidar e fortalecer o seu reino que Nabucodonosor decidiu construir uma imagem. O capítulo 3 de Daniel descreve uma história surpreendente que nos ensina como Deus protege e livra Seus filhos dos perigos e da morte.</p>
+            </div>
+        </div>
+
+        <!-- Linha do tempo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>Linha do Tempo</h3>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-ano">605 a.C.</span>
+                <span class="timeline-descricao">Daniel e seus amigos são levados cativos para Babilônia.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">603 a.C.</span>
+                <span class="timeline-descricao">Sonho da estátua (capítulo 2) - Nabucodonosor impressionado.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">594 a.C.</span>
+                <span class="timeline-descricao"><strong>Cerca de 9 anos depois:</strong> Construção da imagem de ouro na planície de Dura (capítulo 3).</span>
+            </div>
+        </div>
+
+        <!-- A Construção da Imagem -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🗿</div>
+                <h3>A Imagem de Ouro</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">O que o rei Nabucodonosor construiu na planície de Dura? Daniel 3:1</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Um palácio de ouro</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Uma imagem de ouro (estátua) ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Um templo pagão</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Uma imagem de ouro. "O rei Nabucodonosor fez uma imagem de ouro, cuja altura era de sessenta côvados, e a sua largura, de seis côvados; levantou-a no campo de Dura, na província de Babilônia." (Aproximadamente 30 metros de altura). Este ato indica sua intenção de perpetuar a glória de seu império e que este jamais seria vencido.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que deveriam fazer todos os que estivessem presentes à cerimônia? Daniel 3:5</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "No momento em que ouvirdes o som da trombeta, do pífaro, da harpa, da cítara, do saltério, da gaita de foles e de toda sorte de música, vos prostrareis e adorareis a imagem de ouro que o rei Nabucodonosor levantou." <strong>Todos deveriam se prostrar em reverência e adorar a imagem de ouro e, consequentemente, ao poder que ela simbolizava - Nabucodonosor, rei de Babilônia.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que aconteceria com os que desobedecessem à ordem do rei? Daniel 3:6</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "Qualquer, porém, que não se prostrar e não adorar, será no mesmo instante lançado na fornalha de fogo ardente." <strong>Uma fornalha seria acesa e os desobedientes seriam jogados, ainda vivos, em suas labaredas. Era uma adoração imposta, não espontânea. O objeto da adoração não era Deus, mas um rei que pretendia assumir o lugar de Deus.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Fidelidade dos Jovens -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💪</div>
+                <h3>A Fidelidade Inabalável</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Alguém presente à cerimônia ousou desobedecer? Daniel 3:12</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Estão alguns judeus, a saber: Sadraque, Mesaque e Abede-Nego, os quais constituíste sobre os negócios da província de Babilônia; estes homens, ó rei, não fizeram caso de ti; a teus deuses não servem, nem adoram a imagem de ouro que levantaste." <strong>O segundo mandamento da Lei de Deus proíbe qualquer tipo de adoração às imagens de escultura (Êxodo 20:4-6). Esses jovens hebreus foram criados no temor de Deus e tinham conhecimento dos preceitos da Lei. Na hora da provação, permaneceram fiéis.</strong>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>Onde estava Daniel nessa ocasião?</strong> A Bíblia não informa. Provavelmente estivesse em alguma viagem a serviço do reino. Pode até ser que Nabucodonosor, conhecendo bem a Daniel e sabendo que certamente não se encurvaria diante da imagem, tenha planejado sua ausência para não sentenciar a morte alguém tão especial. Mas são apenas suposições.</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Uma nova oportunidade foi dada aos jovens para evitar sua morte. Qual foi a resposta dada ao rei? Daniel 3:16-18</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Sadraque, Mesaque e Abede-Nego responderam ao rei: Ó Nabucodonosor, quanto a isto não nos preocupamos em responder-te. Se o nosso Deus, a quem servimos, quer livrar-nos, ele nos livrará da fornalha de fogo ardente e das tuas mãos, ó rei. E, se não, fica sabendo, ó rei, que não serviremos a teus deuses, nem adoraremos a imagem de ouro que levantaste." <strong>Com a mesma convicção que demonstraram em recusar os manjares, demonstraram que seu amor a Deus era inegociável. Este tipo de firmeza moral somente é encontrado no coração daqueles que decidem ser fiéis a Deus, custe o que custar.</strong>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Se o nosso Deus nos livrará, ele nos livrará; mas, se não, fica sabendo que não adoraremos a imagem."
+                <span class="versiculo-ref">Daniel 3:17-18</span>
+            </div>
+        </div>
+
+        <!-- A Fornalha Ardente -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔥</div>
+                <h3>A Fornalha de Fogo</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">O que fez o rei diante da resistência dos jovens? Daniel 3:19-23</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Então, Nabucodonosor se encheu de fúria e se lhe mudou o aspecto do rosto contra Sadraque, Mesaque e Abede-Nego; ordenou que a fornalha fosse aquecida sete vezes mais do que o costume... E a estes três homens, Sadraque, Mesaque e Abede-Nego, caíram atados dentro da fornalha de fogo ardente." <strong>Irado com o fato de ver suas ordens sendo desafiadas, o monarca ordenou que a fornalha fosse aquecida sete vezes mais.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Como Deus recompensou a fidelidade dos três jovens? Daniel 3:24-27</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Então, o rei Nabucodonosor se espantou, e se levantou depressa, e falou, dizendo aos seus conselheiros: Não lançamos nós três homens atados dentro do fogo? Responderam ao rei: É verdade, ó rei. E disse: Eu, porém, vejo quatro homens soltos, que andam passeando dentro do fogo, e nada há de lesão neles; e o aspecto do quarto é semelhante ao Filho de Deus." <strong>Deus não impediu que aqueles jovens fossem lançados na fornalha. O mais incrível foi que o próprio Deus entrou com eles no fogo e os livrou da morte, fazendo com que nem os fios de cabelo ou suas vestes fossem queimadas.</strong>
+                </div>
+            </div>
+            
+            <div class="fornalha-card">
+                <h4>🔥 O Quarto Homem</h4>
+                <p>Quando Nabucodonosor olhou para dentro da fornalha, viu não três, mas quatro homens andando livremente no fogo. O aspecto do quarto era "semelhante ao Filho de Deus". Esta é uma das mais impressionantes teofanias (aparição de Cristo) no Antigo Testamento. Jesus estava com eles na fornalha!</p>
+                <p style="margin-top: 10px;">Alguns pensam que Deus sempre livra Seus filhos de todas as provações e dificuldades. Entretanto, a história de Daniel 3 relata que Deus não impediu que aqueles jovens fossem lançados na fornalha. Mas Ele entrou com eles no fogo e os livrou da morte. Esse mesmo Deus promete estar conosco em todas as circunstâncias da vida (João 16:33).</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Como o rei reconheceu a superioridade do Deus dos jovens hebreus? Daniel 3:28-29</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência:</strong> "Falou Nabucodonosor, dizendo: Bendito seja o Deus de Sadraque, Mesaque e Abede-Nego, que enviou o seu anjo e livrou os seus servos, que confiaram nele... Por mim, pois, é feito um decreto, pelo qual todo povo, nação e língua que disser blasfêmia contra o Deus de Sadraque, Mesaque e Abede-Nego seja despedaçado." <strong>Após presenciar tão grande livramento, Nabucodonosor bendisse ao Deus verdadeiro e O reconheceu como o único capaz de efetuar maravilhas.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">Que promessa Deus faz para aqueles que passam hoje por provações semelhantes? Isaías 43:2</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência:</strong> "Quando passares pelas águas, eu serei contigo; quando, pelos rios, eles não te submergirão; quando passares pelo fogo, não te queimarás, nem a chama arderá em ti." <strong>Não duvidemos nunca, pois Deus sempre estará conosco em todos os momentos!</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Quando passares pelo fogo, não te queimarás, nem a chama arderá em ti."
+                <span class="versiculo-ref">Isaías 43:2</span>
+            </div>
+        </div>
+
+        <!-- Aplicação -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💭</div>
+                <h3>Lições para Nossos Dias</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>1. A adoração imposta:</strong> Nabucodonosor tentou impor uma adoração por decreto. Hoje, vivemos em tempo de liberdade religiosa, mas a Bíblia alerta que isso mudará (Apocalipse 13).</p>
+                
+                <p><strong>2. Falsos deuses modernos:</strong> Dinheiro, poder, fama, prazer - são os ídolos que o mundo nos convida a adorar.</p>
+                
+                <p><strong>3. Fé inegociável:</strong> Sadraque, Mesaque e Abede-Nego não negociaram sua fé. "Ainda assim não adoraremos" - esta deve ser nossa posição.</p>
+                
+                <p><strong>4. Deus está conosco:</strong> Mesmo quando Ele não nos livra da fornalha, Ele entra nela conosco. O quarto homem nunca nos abandona.</p>
+                
+                <p><strong>5. O testemunho final:</strong> A fidelidade dos três jovens levou o rei pagão a bendizer o nome de Deus. Nossa fidelidade também testemunha ao mundo.</p>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Depois de conhecer a história de fé dos três jovens hebreus na fornalha de fogo, e compreender que muitas vezes Deus permite a provação para lapidar nosso caráter, desejo confiar mais em Deus e não adorar falsos deuses, tomando as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Não permitirei que falsos deuses ocupem minha casa e minha vida.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Tirarei de meu lar todas as imagens de escultura ou qualquer outra coisa que seja objeto de adoração.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Serei paciente nas tribulações, sabendo que Deus as usa para me fazer crescer espiritualmente, e que mesmo não vendo, Deus sempre estará ao meu lado.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Assim como Sadraque, Mesaque e Abede-Nego, decido permanecer fiel a Deus mesmo que isso me custe a vida. Creio que o quarto homem está comigo em todas as fornalhas da vida."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-3.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-5.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"O nosso Deus, a quem servimos, é que nos pode livrar" - Daniel 3:17</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Prova de Fogo",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel4', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel4');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

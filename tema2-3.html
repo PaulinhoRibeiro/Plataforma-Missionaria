@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3 - Uma Estátua Assustadora | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Uma+Estátua+Assustadora');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Modelo 3D da Estátua */
+        .modelo-3d-container {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .modelo-3d-container h4 {
+            color: #c9a05e;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .sketchfab-embed-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .sketchfab-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .modelo-credit {
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+
+        .modelo-credit a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        /* Cards dos Impérios */
+        .imperios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .imperio-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+            transition: all 0.3s ease;
+        }
+
+        .imperio-card:hover {
+            transform: translateY(-5px);
+            background: rgba(201, 160, 94, 0.15);
+        }
+
+        .imperio-titulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .imperio-metal {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .imperio-periodo {
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .imperio-descricao {
+            color: #ddd;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Tabela de Interpretação */
+        .tabela-interpretacao {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .tabela-interpretacao table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-interpretacao th {
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px;
+            font-size: 1.1rem;
+        }
+
+        .tabela-interpretacao td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-interpretacao tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabela-interpretacao td:first-child {
+            font-weight: bold;
+            color: #c9a05e;
+        }
+
+        /* Cilindro de Ciro */
+        .cilindro-box {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+
+        .cilindro-box h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .tabela-interpretacao {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 3</span>
+        </div>
+        <h1>ESTUDO 3</h1>
+        <h2>Uma Estátua Assustadora</h2>
+        <p>"Mas há um Deus nos céus, o qual revela os mistérios" (Daniel 2:28)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar como Deus revelou através do sonho de Nabucodonosor a sucessão dos reinos mundiais até o estabelecimento do reino eterno de Cristo.</p>
+            <p><strong>Texto base:</strong> Daniel 2; Isaías 44:6-7</p>
+            <p><strong>Versículos-chave:</strong> Daniel 2:44, Isaías 28:16, Apocalipse 21:1-4</p>
+            <p><strong>Destaque especial:</strong> A pedra cortada sem auxílio de mãos representa Cristo e Seu reino eterno, que será estabelecido em Sua segunda vinda.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🤔</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Já pensou como seria interessante se pudéssemos prever o futuro? Saber dos fatos antes que eles acontecessem? Poderíamos evitar um acidente de carro, uma briga, um divórcio e tantas outras coisas, não é verdade? Mas algo estranho aconteceria, pois todos saberiam o resultado final das coisas. Você iria a uma entrevista de emprego se soubesse que não seria aceito? Claro que não!</p>
+                
+                <p style="margin-top: 15px;">Em alguns momentos seria interessante conhecer o futuro, mas por outro lado, poderia ser extremamente tedioso, por exemplo: você gostaria de saber exatamente o dia e hora da perda de um amigo querido, um parente ou até mesmo saber o dia da sua morte? Não precisa dizer mais nada, certo?</p>
+                
+                <p style="margin-top: 15px;">Definitivamente, conhecer o futuro não seria tão bom como alguém imagina. Por isso, Deus não permitiu ninguém conhecer o futuro. Ninguém pode prever o amanhã, nem astrólogos, nem cartomantes, nem adivinhos, nem os que jogam búzios. <strong>Somente Deus conhece o futuro e pode dizer o que ainda vai acontecer (Isaías 44:6, 7).</strong> No estudo de hoje descobriremos como Deus revelou, através de um sonho, o futuro da humanidade.</p>
+            </div>
+        </div>
+
+        <!-- Modelo 3D da Estátua -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🗿</div>
+                <h3>Visualização 3D da Estátua</h3>
+            </div>
+            
+            <div class="modelo-3d-container">
+                <h4>O Sonho de Nabucodonosor em 3D</h4>
+                <div class="sketchfab-embed-wrapper">
+                    <iframe title="Nebuchadnezzar’s Dream Statue" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            mozallowfullscreen="true" 
+                            webkitallowfullscreen="true" 
+                            allow="autoplay; fullscreen; xr-spatial-tracking" 
+                            xr-spatial-tracking 
+                            execution-while-out-of-viewport 
+                            execution-while-not-rendered 
+                            web-share 
+                            src="https://sketchfab.com/models/10b856d606514986afba52361603d2ef/embed">
+                    </iframe>
+                </div>
+                <div class="modelo-credit">
+                    <a href="https://sketchfab.com/3d-models/nebuchadnezzars-dream-statue-10b856d606514986afba52361603d2ef" target="_blank">Nebuchadnezzar's Dream Statue</a> by Mayantique on Sketchfab
+                </div>
+                <p style="color: #ddd; margin-top: 15px;">Gire o modelo 3D para visualizar todos os detalhes da estátua: cabeça de ouro, peito e braços de prata, ventre e quadris de bronze, pernas de ferro e pés de ferro e barro.</p>
+            </div>
+        </div>
+
+        <!-- O Sonho do Rei -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👑</div>
+                <h3>O Sonho do Rei</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">O que aconteceu com Nabucodonosor, rei de Babilônia, no segundo ano do seu reinado? Daniel 2:1</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "No segundo ano do reinado de Nabucodonosor, teve este sonhos; e o seu espírito se perturbou, e passou-se-lhe o sono." <strong>O segundo ano do reinado foi 603 a.C. Ele ficou profundamente perturbado por um sonho e perdeu o sono. Os babilônicos consideravam os sonhos com temor, pois pensavam que eram revelações de suas deidades.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que ocorreria aos sábios de Babilônia se não revelassem o sonho e sua interpretação ao rei? Daniel 2:2-5</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "Respondeu o rei e disse aos caldeus: uma coisa já me esqueci; se não me fizerdes saber o sonho e a sua interpretação, sereis despedaçados, e as vossas casas serão feitas monturo." <strong>Os sábios seriam mortos se não revelassem o sonho e sua interpretação. Eles estavam numa situação delicada, pois tudo que inventassem poderia ser detectado.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Como foi revelado a Daniel o sonho do rei e sua interpretação? Daniel 2:19-23</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "Então foi revelado o mistério a Daniel numa visão de noite; e Daniel bendisse o Deus do céu." <strong>Daniel era um jovem dependente de Deus e confiava na oração. Fez saber o caso aos seus amigos e todos clamaram a Deus por misericórdia e livramento. O céu recompensou a fé dos jovens hebreus.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Sonho e sua Interpretação -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔮</div>
+                <h3>O Sonho e sua Interpretação</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">O que o rei Nabucodonosor havia sonhado? Daniel 2:31-33</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Tu, ó rei, estavas vendo, e eis aqui uma grande estátua; esta estátua, que era imensa, cujo esplendor era excelente, estava em pé diante de ti; e a sua aparência era terrível. A cabeça daquela estátua era de ouro fino; o peito e os braços, de prata; o ventre e os quadris, de bronze; as pernas, de ferro; os pés, em parte de ferro, em parte de barro." <strong>O rei ficou extasiado com a revelação de Daniel. Cada detalhe trazia à sua memória as recordações do sonho.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">O que atingiu os pés da estátua? Daniel 2:34, 35</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Estavas vendo isto, até que uma pedra foi cortada, sem auxílio de mãos, a qual feriu a estátua nos pés de ferro e de barro e os esmiuçou. Então, foi juntamente esmiuçado o ferro, o barro, o bronze, a prata e o ouro." <strong>Uma grande pedra cortada sem auxílio de mãos atingiu os pés da estátua e a destruiu completamente. Em seguida, a pedra transformou-se numa grande montanha que encheu toda a Terra.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela de Interpretação -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📋</div>
+                <h3>Interpretação Profética</h3>
+            </div>
+            
+            <div class="tabela-interpretacao">
+                <table>
+                    <tr>
+                        <th>Parte da Estátua</th>
+                        <th>Representação</th>
+                        <th>Período</th>
+                    </tr>
+                    <tr>
+                        <td>Cabeça de ouro</td>
+                        <td>Babilônia (Nabucodonosor)</td>
+                        <td>605 a.C. - 539 a.C.</td>
+                    </tr>
+                    <tr>
+                        <td>Peito e braços de prata</td>
+                        <td>Medo-Pérsia</td>
+                        <td>539 a.C. - 331 a.C.</td>
+                    </tr>
+                    <tr>
+                        <td>Ventre e quadris de bronze</td>
+                        <td>Grécia (Alexandre, o Grande)</td>
+                        <td>331 a.C. - 168 a.C.</td>
+                    </tr>
+                    <tr>
+                        <td>Pernas de ferro</td>
+                        <td>Roma</td>
+                        <td>168 a.C. - 476 d.C.</td>
+                    </tr>
+                    <tr>
+                        <td>Pés de ferro e barro</td>
+                        <td>Nações divididas da Europa</td>
+                        <td>476 d.C. - Segunda Vinda</td>
+                    </tr>
+                    <tr>
+                        <td>Pedra</td>
+                        <td>Reino de Cristo (Segunda Vinda)</td>
+                        <td>Eterno</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>A história secular é a melhor intérprete da profecia bíblica.</strong> Daniel disse claramente que Nabucodonosor, representante do Império Babilônico, era a cabeça de ouro da estátua. Babilônia dominou o mundo dos anos 605 a.C. até o ano 539 a.C.</p>
+            </div>
+        </div>
+
+        <!-- Os Impérios -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏛️</div>
+                <h3>Os Quatro Impérios Mundiais</h3>
+            </div>
+            
+            <div class="imperios-grid">
+                <div class="imperio-card">
+                    <div class="imperio-titulo">Babilônia</div>
+                    <div class="imperio-metal">Cabeça de Ouro</div>
+                    <div class="imperio-periodo">605 a.C. - 539 a.C.</div>
+                    <div class="imperio-descricao">Nabucodonosor, representante do Império Babilônico. Heródoto descreve o resplendor do ouro nos templos sagrados da cidade: "Na parte inferior do templo de Babilônia há outra capela, onde se vê uma grande estátua de ouro representando Júpiter sentado."</div>
+                </div>
+                
+                <div class="imperio-card">
+                    <div class="imperio-titulo">Medo-Pérsia</div>
+                    <div class="imperio-metal">Peito e Braços de Prata</div>
+                    <div class="imperio-periodo">539 a.C. - 331 a.C.</div>
+                    <div class="imperio-descricao">Ciro repatriou os povos deslocados e restaurou os templos e santuários religiosos pela Mesopotâmia. O Cilindro de Ciro (descoberto em 1879) comprova historicamente a queda de Babilônia e a ascensão da Medo-Pérsia.</div>
+                </div>
+                
+                <div class="imperio-card">
+                    <div class="imperio-titulo">Grécia</div>
+                    <div class="imperio-metal">Ventre e Quadris de Bronze</div>
+                    <div class="imperio-periodo">331 a.C. - 168 a.C.</div>
+                    <div class="imperio-descricao">Alexandre, o Grande, travou três batalhas até vencer Dario III: Grânico (334 a.C.), Issos (333 a.C.) e Arbela (331 a.C.). O ano 331 a.C. assinala o fim do Império Medo-Pérsia e o início do domínio grego.</div>
+                </div>
+                
+                <div class="imperio-card">
+                    <div class="imperio-titulo">Roma</div>
+                    <div class="imperio-metal">Pernas de Ferro</div>
+                    <div class="imperio-periodo">168 a.C. - 476 d.C.</div>
+                    <div class="imperio-descricao">Jesus nasceu e morreu sob a jurisdição de Roma. Edward Gibbon, em "O Declínio e Queda do Império Romano", menciona as dez tribos que minaram a autoridade de Roma.</div>
+                </div>
+                
+                <div class="imperio-card">
+                    <div class="imperio-titulo">Europa Dividida</div>
+                    <div class="imperio-metal">Pés de Ferro e Barro</div>
+                    <div class="imperio-periodo">476 d.C. - Hoje</div>
+                    <div class="imperio-descricao">Dez tribos bárbaras provocaram a queda do Império Romano em 476 d.C. Os pés de ferro e barro representam um reino dividido - as modernas nações europeias que nunca mais foram unificadas.</div>
+                </div>
+                
+                <div class="imperio-card">
+                    <div class="imperio-titulo">Reino de Deus</div>
+                    <div class="imperio-metal">Pedra (Cristo)</div>
+                    <div class="imperio-periodo">Eterno</div>
+                    <div class="imperio-descricao">"Nos dias destes reis, o Deus do céu suscitará um reino que não será jamais destruído" (Daniel 2:44). A pedra representa Cristo (Isaías 28:16) e Sua Segunda Vinda.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cilindro de Ciro -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>Evidência Arqueológica: O Cilindro de Ciro</h3>
+            </div>
+            
+            <div class="cilindro-box">
+                <h5>📌 Descoberta Histórica</h5>
+                <p>O arqueólogo britânico Hormuzd Rassam descobriu o Cilindro de Ciro em março de 1879, nas ruínas de Babilônia. Ele data do século VI a.C. e estava nas fundações de Esagila, o templo principal da cidade, consagrado ao deus Marduque.</p>
+                <p style="margin-top: 10px;">Nas linhas 15 a 21 do cilindro aparecem trechos mostrando a genealogia de Ciro, o Grande, e relatando a sua captura da Babilônia em 539 a.C. Revela ainda a queda de Nabonido, rei da Babilônia, e exalta os esforços de Ciro para repatriar os povos deslocados e restaurar templos e santuários religiosos.</p>
+                <p style="margin-top: 10px;"><strong>Esta é a comprovação histórica da queda de Babilônia e da ascensão do Império Medo-Pérsia.</strong></p>
+            </div>
+        </div>
+
+        <!-- O Clímax do Sonho -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⛰️</div>
+                <h3>O Clímax do Sonho: A Pedra</h3>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Nos dias destes reis, o Deus do céu suscitará um reino que não será jamais destruído; este reino não passará a outro povo; esmiuçará e consumirá todos estes reinos e será estabelecido para sempre."
+                <span class="versiculo-ref">Daniel 2:44</span>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Daniel disse que <strong>"nos dias destes reis"</strong> (os atuais países da Europa), "o Deus do céu suscitará um reino que não será jamais destruído". Este reino é representado no sonho por uma PEDRA, que foi cortada sem auxílio de mãos, e destruiu toda a estátua.</p>
+                
+                <p style="margin-top: 15px;">A pedra representa <strong>Cristo</strong> (Isaías 28:16; 1 Coríntios 10:4; Lucas 20:17, 18), e encontra seu cumprimento em Sua Segunda Vinda, quando dará fim aos reinos terrestres e estabelecerá Seu reino eterno, que jamais terá fim (Mateus 24:30; João 14:1-3; Apocalipse 1:7).</p>
+                
+                <p style="margin-top: 15px;">Martinho Lutero, o grande reformador do século XVI, também sustentou a interpretação de que as pernas, pés e dedos da estátua representavam Roma e que este império fora dividido nas modernas nações da Europa. Ele acreditava que a pedra representava o Reino de Cristo a ser estabelecido em Sua Segunda Vinda.</p>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Nos dias destes reis, o Deus do céu suscitará um reino que não será jamais destruído."
+                <span class="versiculo-ref">Daniel 2:44</span>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Após entender o significado do sonho profético do rei Nabucodonosor, desejo demonstrar minha confiança na direção de Deus nos negócios da história humana e no breve estabelecimento de Seu reino eterno, tomando as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Entregarei minha vontade a Deus para que Ele conduza a história da minha vida.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Não temerei o futuro, pois nada pode fugir ao controle divino.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Esperarei com alegria o dia em que esta pedra (a Volta de Jesus) será lançada sobre esta Terra e fará novas todas as coisas (Apocalipse 21:1-4).</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Creio que Deus está no controle da história e que o reino de Cristo será estabelecido para sempre. Por isso, confio meu futuro a Ele e aguardo com esperança a Sua breve volta."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-2.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-4.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"O Deus do céu suscitará um reino que não será jamais destruído" - Daniel 2:44</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Uma Estátua Assustadora",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel3', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel3');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

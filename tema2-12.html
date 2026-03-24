@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 12 - 2.300 Tardes e Manhãs (Parte 2) | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=2.300+Tardes+e+Manhãs+Parte+2');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Modelo 3D */
+        .modelo-3d-container {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .modelo-3d-container h4 {
+            color: #c9a05e;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .sketchfab-embed-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .sketchfab-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .modelo-credit {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .modelo-credit a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        /* Gráficos das Profecias */
+        .grafico-container {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+            overflow-x: auto;
+        }
+
+        .grafico-timeline {
+            min-width: 800px;
+            padding: 20px 0;
+        }
+
+        .timeline-bar {
+            position: relative;
+            height: 60px;
+            background: linear-gradient(90deg, #4a4a4a, #6a6a6a);
+            border-radius: 30px;
+            margin: 30px 0;
+        }
+
+        .timeline-segment {
+            position: absolute;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0b1a2e;
+            font-weight: bold;
+            border-radius: 30px;
+        }
+
+        .segment-7w {
+            left: 0;
+            width: 10%;
+            background: #c9a05e;
+        }
+
+        .segment-62w {
+            left: 10%;
+            width: 90%;
+            background: #d4b47c;
+        }
+
+        .timeline-markers {
+            position: relative;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .marker {
+            position: absolute;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #ddd;
+        }
+
+        .marker-year {
+            font-weight: bold;
+            color: #c9a05e;
+        }
+
+        /* Tabela de eventos */
+        .eventos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .evento-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .evento-card .ano {
+            color: #c9a05e;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .evento-card .titulo {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .evento-card p {
+            color: #ddd;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .grafico-container {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 12</span>
+        </div>
+        <h1>ESTUDO 12</h1>
+        <h2>2.300 Tardes e Manhãs e a Purificação do Santuário (Parte 2)</h2>
+        <p>"Setenta semanas estão determinadas sobre o teu povo e sobre a tua santa cidade." (Daniel 9:24)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Compreender a relação entre as 70 semanas e os 2.300 anos, o cumprimento histórico e a data de 1844 para a purificação do santuário.</p>
+            <p><strong>Texto base:</strong> Daniel 8:14; Daniel 9; Esdras 7; Lucas 3; Atos 7</p>
+            <p><strong>Versículos-chave:</strong> Daniel 9:24-27, Amós 3:7</p>
+            <p><strong>Destaque especial:</strong> As 70 semanas (490 anos) foram "cortadas" dos 2.300 anos, estabelecendo o início da profecia em 457 a.C. e seu término em 1844 d.C.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Deus declarou por meio do profeta Amós que não faria coisa alguma sem <strong>"primeiro revelar Seus segredos, aos Seus servos, os profetas" (Amós 3:7).</strong> Todas as profecias na Bíblia foram dadas ao povo de Deus com o objetivo de prepará-lo para os eventos que ainda aconteceriam e envolvê-los no cumprimento dos desígnios divinos.</p>
+                
+                <p style="margin-top: 15px;">A profecia das <strong>"2.300 tardes e manhãs"</strong> é a profecia mais longa da Bíblia e chega até nossos dias. Ela traz revelações surpreendentes sobre a vinda do Messias e a conclusão do grande plano de salvação. Hoje aprenderemos quando termina o período dos 2.300 anos e o que aconteceria no final deles.</p>
+            </div>
+        </div>
+
+        <!-- Modelo 3D -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>Visualização da Profecia</h3>
+            </div>
+            
+            <div class="modelo-3d-container">
+                <h4>⏳ A Profecia das 2.300 Tardes e Manhãs</h4>
+                <div class="sketchfab-embed-wrapper">
+                    <iframe title="Los 2300 días/The 2300 days" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            mozallowfullscreen="true" 
+                            webkitallowfullscreen="true" 
+                            allow="autoplay; fullscreen; xr-spatial-tracking" 
+                            src="https://sketchfab.com/models/9d4ea8becfe141fdba83bcf79b78bf82/embed">
+                    </iframe>
+                </div>
+                <div class="modelo-credit">
+                    <a href="https://sketchfab.com/3d-models/los-2300-diasthe-2300-days-9d4ea8becfe141fdba83bcf79b78bf82" target="_blank">Los 2300 días/The 2300 days</a> by VIRTUAL BIBLICAL MUSEUM
+                </div>
+                <p style="color: #ddd; margin-top: 15px;">A profecia das 2.300 tardes e manhãs é a mais longa da Bíblia, abrangendo da restauração de Jerusalém (457 a.C.) até a purificação do santuário celestial (1844 d.C.).</p>
+            </div>
+        </div>
+
+        <!-- A Profecia das 2.300 Tardes e Manhãs -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">❓</div>
+                <h3>O Início dos 2.300 Anos</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">De acordo com a profecia, quando ocorreria a purificação do santuário? Daniel 8:14</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Até duas mil e trezentas tardes e manhãs; e o santuário será purificado." <strong>Como vimos, o santuário a ser purificado é o celestial. Para sabermos quando terminam os 2.300 anos, precisamos descobrir quando eles começam. Para isso, estudaremos Daniel 9.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Qual foi o motivo da oração de Daniel? Daniel 9:1-3, 17, 18</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "No primeiro ano de Dario, filho de Assuero... eu, Daniel, entendi pelos livros que o número de anos, de que falara o Senhor ao profeta Jeremias, em que haviam de cumprir-se as desolações de Jerusalém, era de setenta anos." <strong>Daniel orou pelo cumprimento da profecia de Jeremias sobre os 70 anos de cativeiro. Faltavam apenas 2 anos para o fim do cativeiro (605-538 a.C.).</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que aconteceu enquanto Daniel orava? Daniel 9:21-23</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "O anjo Gabriel, que eu tinha visto na minha visão ao princípio, veio voando rapidamente e me tocou... e disse: Daniel, agora saí para fazer-te entender o sentido. No princípio das tuas súplicas, saiu a ordem, e eu vim, para to declarar, porque és muito amado." <strong>Gabriel foi enviado para explicar a "visão" - a visão das 2.300 tardes e manhãs que Daniel não havia compreendido (Daniel 8:26-27).</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- As 70 Semanas -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📊</div>
+                <h3>As 70 Semanas Proféticas</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Que outro período profético relacionado aos 2.300 anos foi também mencionado pelo anjo? Daniel 9:24</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Setenta semanas estão determinadas sobre o teu povo e sobre a tua santa cidade." <strong>A palavra "determinadas" significa "cortadas". As 70 semanas (490 anos) seriam cortadas do período maior de 2.300 anos, destinadas ao povo judeu para: fazer cessar a transgressão, dar fim aos pecados, expiar a iniquidade, trazer a justiça eterna, selar a visão e ungir o santo dos santos.</strong>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>70 semanas = 490 anos proféticos</strong> (cada semana = 7 dias = 7 anos, conforme princípio dia-ano).</p>
+                <p>Estes 490 anos foram "cortados" do período maior de 2.300 anos, destinados especificamente ao povo judeu.</p>
+            </div>
+        </div>
+
+        <!-- O Decreto de Artaxerxes -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>O Início das Profecias</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Que evento assinala o início das 70 semanas e também o início dos 2.300 anos? Daniel 9:25</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Sabe e entende: desde a saída da ordem para restaurar e para edificar Jerusalém, até ao Ungido, ao Príncipe, sete semanas e sessenta e duas semanas." <strong>O livro de Esdras registra três decretos, mas apenas o decreto de Artaxerxes em 457 a.C. (Esdras 7) cumpriu os requisitos, concedendo autonomia governamental aos judeus. Este é o marco zero das profecias.</strong>
+                </div>
+            </div>
+            
+            <div class="grafico-container">
+                <h4 style="color: #c9a05e; text-align: center; margin-bottom: 20px;">📈 Linha do Tempo das Profecias</h4>
+                <div class="grafico-timeline">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <span style="color: #c9a05e;">457 a.C.</span>
+                        <span style="color: #c9a05e;">408 a.C.</span>
+                        <span style="color: #c9a05e;">27 d.C.</span>
+                        <span style="color: #c9a05e;">31 d.C.</span>
+                        <span style="color: #c9a05e;">34 d.C.</span>
+                        <span style="color: #c9a05e;">1844 d.C.</span>
+                    </div>
+                    
+                    <div style="height: 80px; background: linear-gradient(90deg, #4a4a4a, #6a6a6a); border-radius: 40px; margin: 10px 0; position: relative;">
+                        <div style="position: absolute; left: 0; width: 10%; height: 100%; background: #c9a05e; border-radius: 40px 0 0 40px; display: flex; align-items: center; justify-content: center; color: #0b1a2e; font-weight: bold;">7 semanas</div>
+                        <div style="position: absolute; left: 10%; width: 90%; height: 100%; background: #d4b47c; display: flex; align-items: center; justify-content: center; color: #0b1a2e; font-weight: bold;">62 semanas</div>
+                    </div>
+                    
+                    <div style="height: 80px; background: linear-gradient(90deg, #4a4a4a, #6a6a6a); border-radius: 40px; margin: 10px 0; position: relative;">
+                        <div style="position: absolute; left: 0; width: 20%; height: 100%; background: #c9a05e; border-radius: 40px 0 0 40px; display: flex; align-items: center; justify-content: center; color: #0b1a2e; font-weight: bold;">1 semana</div>
+                        <div style="position: absolute; left: 20%; width: 80%; height: 100%; background: #d4b47c; border-radius: 0 40px 40px 0; display: flex; align-items: center; justify-content: center; color: #0b1a2e; font-weight: bold;">1.810 anos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Os Cálculos Proféticos -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🧮</div>
+                <h3>Os Cálculos</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Como Gabriel explicou a primeira parte da profecia das 70 semanas? Daniel 9:25</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Sete semanas e sessenta e duas semanas" = 69 semanas. <strong>69 semanas x 7 dias = 483 dias proféticos = 483 anos. Partindo de 457 a.C. e avançando 483 anos, chegamos a 27 d.C., ano do batismo de Jesus.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">O que aconteceu no ano 27 d.C., ao fim das 69 semanas da profecia? Lucas 3:1-3, 21, 22</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "No ano décimo quinto do império de Tibério César... sendo Anás e Caifás sumos sacerdotes, veio a palavra de Deus a João... E aconteceu que, ao ser todo o povo batizado, também o foi Jesus; e, estando ele a orar, o céu se abriu, e o Espírito Santo desceu sobre ele em forma corpórea, como pomba." <strong>O 15° ano de Tibério (27 d.C.) foi o ano do batismo de Jesus e início de Seu ministério.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Conforme Daniel 9:27, quanto tempo duraria o ministério terrestre de Jesus?</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 8, 'a')">
+                        <input type="radio" name="pergunta8" id="p8a">
+                        <label for="p8a">3 anos e meio ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 8, 'b')">
+                        <input type="radio" name="pergunta8" id="p8b">
+                        <label for="p8b">1 ano</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 8, 'c')">
+                        <input type="radio" name="pergunta8" id="p8c">
+                        <label for="p8c">7 anos</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>✓ Resposta correta:</strong> 3 anos e meio (metade de uma semana). Jesus foi batizado em 27 d.C. e confirmou a aliança por uma semana (7 anos). Na metade dessa semana (31 d.C.), Ele foi morto, fazendo cessar o sacrifício. Os 3,5 anos restantes (31-34 d.C.) foram dedicados aos apóstolos pregando aos judeus.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">O que aconteceria ao Ungido (Jesus) na metade da última semana? Daniel 9:27</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência:</strong> "Ele fará firme aliança com muitos, por uma semana; na metade da semana, fará cessar o sacrifício e a oferta de manjares." <strong>Jesus deu fim ao sistema de sacrifícios ao tornar-Se a própria oferta (João 1:29). No momento de Sua morte, o véu do templo rasgou-se (Mateus 27:50-51), indicando o fim do sistema tipológico.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eventos Principais -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📅</div>
+                <h3>Eventos Principais da Profecia</h3>
+            </div>
+            
+            <div class="eventos-grid">
+                <div class="evento-card">
+                    <div class="ano">457 a.C.</div>
+                    <div class="titulo">Decreto de Artaxerxes</div>
+                    <p>Início das 70 semanas e dos 2.300 anos. Ordem para restaurar e edificar Jerusalém (Esdras 7).</p>
+                </div>
+                
+                <div class="evento-card">
+                    <div class="ano">408 a.C.</div>
+                    <div class="titulo">Fim das 7 semanas</div>
+                    <p>49 anos - conclusão da reconstrução de Jerusalém em tempos angustiosos (Neemias).</p>
+                </div>
+                
+                <div class="evento-card">
+                    <div class="ano">27 d.C.</div>
+                    <div class="titulo">Batismo de Jesus</div>
+                    <p>Fim das 69 semanas (483 anos). Jesus é ungido pelo Espírito Santo e inicia Seu ministério.</p>
+                </div>
+                
+                <div class="evento-card">
+                    <div class="ano">31 d.C.</div>
+                    <div class="titulo">Crucificação</div>
+                    <p>Metade da última semana. Jesus morre, o véu se rasga, cessam os sacrifícios.</p>
+                </div>
+                
+                <div class="evento-card">
+                    <div class="ano">34 d.C.</div>
+                    <div class="titulo">Morte de Estevão</div>
+                    <p>Fim das 70 semanas (490 anos). O evangelho é levado aos gentios. Conversão de Paulo.</p>
+                </div>
+                
+                <div class="evento-card">
+                    <div class="ano">1844 d.C.</div>
+                    <div class="titulo">Fim dos 2.300 anos</div>
+                    <p>Purificação do Santuário Celestial. Início do juízo investigativo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Fim dos 2.300 Anos -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏰</div>
+                <h3>O Fim dos 2.300 Anos</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 10</span>
+                <div class="pergunta-texto">Quando terminariam as 2.300 tardes e manhãs para que o santuário fosse purificado? Daniel 8:14; 9:25; Hebreus 9:22</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(10)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito10">
+                    <strong>Referência:</strong> "Sem derramamento de sangue não há remissão." <strong>Cálculo: 2.300 anos totais - 490 anos (cortados) = 1.810 anos restantes. Partindo de 34 d.C. (fim das 70 semanas) e avançando 1.810 anos, chegamos a 1844 d.C. O décimo dia do sétimo mês do calendário judaico corresponde a 22 de outubro de 1844.</strong>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>O ano de 1844</strong> - Dois acontecimentos especiais ocorreram nessa data:</p>
+                
+                <p style="margin-top: 15px;"><strong>a) NA TERRA:</strong> No fim do século XVIII e início do século XIX, vários acontecimentos geraram expectativa em torno das profecias: o terremoto de Lisboa (1755), o escurecimento do sol (1780), a queda das estrelas (1833) e a prisão do papa (1798). Guilherme Miller liderou o movimento milerita, esperando a volta de Jesus em 1844. O desapontamento estava profetizado em Apocalipse 10 (doce na boca, amargo no estômago). Desse movimento surgiu a Igreja Adventista do Sétimo Dia (Apocalipse 12:17; 14:6-12).</p>
+                
+                <p style="margin-top: 15px;"><strong>b) NO CÉU:</strong> Em 22 de outubro de 1844, Jesus iniciou Seu ministério como Sumo Sacerdote na purificação do Santuário Celestial. Desde então, vivemos o grande dia da expiação. Quando esse juízo terminar, Jesus voltará como "Rei dos reis e Senhor dos senhores" (Apocalipse 19:16) para dar a recompensa a cada um (Mateus 25:31-46) e destruir o chifre pequeno. Finalmente, o reino será dado aos santos do Altíssimo (Daniel 7:18, 27).</p>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Setenta semanas estão determinadas sobre o teu povo e sobre a tua santa cidade, para fazer cessar a transgressão, para dar fim aos pecados, para expiar a iniquidade, para trazer a justiça eterna."
+                <span class="versiculo-ref">Daniel 9:24</span>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Após compreender o significado da profecia das 2.300 tardes e manhãs e seu cumprimento em 1844, desejo tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Creio que Jesus iniciou em 1844 Seu ministério de purificação no Santuário Celestial.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Vivemos no grande Dia da Expiação, por isso desejo examinar minha vida e me preparar para o juízo.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Anseio pela volta de Jesus, quando Ele receberá Seu povo e estabelecerá o reino eterno.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Reconheço que vivo no tempo do fim, desde 1844, e que Jesus está ministrando no Santuário Celestial. Quero estar preparado para o dia do juízo e para a Sua breve volta."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-11.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-13.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Até duas mil e trezentas tardes e manhãs; e o santuário será purificado" - Daniel 8:14</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "2.300 Tardes e Manhãs e a Purificação do Santuário (Parte 2)",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel12', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel12');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

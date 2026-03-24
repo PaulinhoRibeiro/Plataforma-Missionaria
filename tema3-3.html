@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 3: O Trono de Deus e o Livro Selado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=O+Trono+de+Deus+e+o+Livro+Selado');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Tabela comparativa */
+        .tabela-comparativa {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        .tabela-comparativa th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: center;
+            font-size: 1.1rem;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .tabela-comparativa td {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-comparativa tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Tabela de símbolos */
+        .simbolos-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .simbolos-tabela {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .simbolos-tabela table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .simbolos-tabela th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .simbolos-tabela td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .simbolos-tabela tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Estatística */
+        .estatistica-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 2px solid #c9a05e;
+        }
+
+        .numero-grande {
+            font-size: 3rem;
+            color: #c9a05e;
+            font-weight: bold;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 3</span>
+        </div>
+        <h1>ESTUDO 3</h1>
+        <h2>O Trono de Deus e o Livro Selado</h2>
+        <p>"E logo fui arrebatado em espírito, e eis que um trono estava posto no céu, e um assentado sobre o trono." (Apocalipse 4:2)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Estatística inicial -->
+        <div class="estatistica-box">
+            <p style="font-size: 1.2rem; margin-bottom: 10px;">A palavra <strong>"trono"</strong> ocorre no Novo Testamento:</p>
+            <span class="numero-grande">62</span><span style="font-size: 1.5rem; color: #c9a05e;"> vezes</span>
+            <div style="display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap;">
+                <div><span style="color: #c9a05e; font-weight: bold;">47</span> ocorrências em Apocalipse</div>
+                <div><span style="color: #c9a05e; font-weight: bold;">14</span> ocorrências no capítulo 4</div>
+            </div>
+            <p style="margin-top: 15px; color: #ddd;">O trono é uma palavra-chave neste capítulo, lembrando-nos que existe um trono exaltado acima de todos, de onde Deus governa este planeta conduzindo sua história para um final feliz.</p>
+        </div>
+
+        <!-- O Trono de Deus -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👑</div>
+                <h3>O Trono de Deus</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Que cena João viu e que convite lhe foi feito? Apocalipse 4:1</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">João viu uma porta fechada no céu e ouviu uma voz de juízo.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">João viu uma porta aberta no céu e ouviu a mesma voz de trombeta que ouvira antes, sendo convidado a subir. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">João viu apenas uma luz brilhante e não ouviu nenhuma voz.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta completa</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> João viu uma porta aberta no céu e ouviu a mesma voz de trombeta que ouvira antes, sendo convidado a subir.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Saímos de uma porta no capítulo 3 (verso 20) para uma outra no capítulo 4 (verso 1).<br>
+                    b) O santuário terrestre era um tipo do Santuário Celestial (Hebreus 8:5; 9:23,24).<br>
+                    c) A porta que João contemplou era "uma porta aberta no céu", não aberta para o céu, ou seja, era uma porta no Santuário Celestial.<br>
+                    d) A mesma voz de trombeta (1:10) convida João para mostrar o que aconteceria "depois destas coisas".
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Além de uma porta aberta no céu, o que mais João viu? Apocalipse 4:2-3</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Descreva o que João viu no céu..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência bíblica</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência completa:</strong><br>
+                    a) João viu <strong>um trono posto no céu</strong> e alguém assentado sobre ele.<br>
+                    b) João não descreve quem estava sentado no trono em termos humanos, pois havia uma presença divina com muito brilho ao redor (ver Ezequiel 1:26-28).<br>
+                    c) Aquele que está sentado no trono é <strong>Deus, o Pai</strong> (Apocalipse 4:10,11; 6:16,17; 7:9).<br>
+                    d) Havia um <strong>arco-íris semelhante à esmeralda</strong> ao redor do trono, simbolizando a misericórdia de Deus e o concerto eterno de paz (Gênesis 9:11-17).
+                </div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h5>🌈 O Significado do Arco-Íris</h5>
+                    <p>O verde vivo da esmeralda expressa a misericórdia de Deus. O arco-íris ao redor do trono é um belo símbolo de esperança. Quando apareceu pela primeira vez, foi um sinal do eterno concerto de paz da parte de Deus (Gênesis 9:11-17).</p>
+                    <p>Não pode haver arco-íris sem a união da luz solar e das gotas de água. Assim, o arco circundando o trono é uma figura da misericórdia e justiça divina que se encontram e se misturam.</p>
+                    <p class="referencia">Salmo 85:10 - "Encontraram-se a graça e a verdade, a justiça e a paz se beijaram."</p>
+                </div>
+                
+                <div class="info-card">
+                    <h5>👑 Quem está no Trono?</h5>
+                    <p>Outros textos indicam que aquele que está sentado no trono é Deus, o Pai (Apocalipse 4:10,11; 6:16,17; 7:9). Contudo, Deus e Jesus estão tão intimamente unidos (João 10:30) que algumas vezes João os vê partilhando o mesmo trono (Apocalipse 5:6; 7:17; 22:1,3).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Os 24 Anciãos -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👴</div>
+                <h3>Os Vinte e Quatro Anciãos</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Quantos anciãos haviam sentados em tronos ao redor do trono principal? Quem são eles? Apocalipse 4:4; 5:9; Mateus 27:50-53</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">12 anciãos, representando as 12 tribos de Israel.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">24 anciãos, possivelmente os mortos que ressuscitaram com Cristo, representando todos os salvos. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">70 anciãos, como os anciãos de Israel no tempo de Moisés.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> 24 anciãos, possivelmente os mortos que ressuscitaram com Cristo, representando todos os salvos.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Os 24 anciãos são mencionados 12 vezes no Apocalipse.<br>
+                    b) Vestem-se de branco (justiça dos santos) e usam coroas de ouro (vitoriosos sobre o pecado).<br>
+                    c) "Companheiros" de Jesus, possivelmente os mortos que com Ele foram despertos de suas sepulturas (Mateus 27:50-53).<br>
+                    d) Cumprem o tipo do serviço do santuário onde havia 24 turnos no sacerdócio levítico (1 Crônicas 24:3-19; Lucas 1:5,8,9).
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "E ao redor do trono havia vinte e quatro tronos; e vi assentados sobre os tronos vinte e quatro anciãos vestidos de vestes brancas; e tinham sobre suas cabeças coroas de ouro."
+                <span class="versiculo-ref">Apocalipse 4:4</span>
+            </div>
+        </div>
+
+        <!-- Diante do Trono -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚡</div>
+                <h3>Diante do Trono</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">O que mais viu João diante do trono? Apocalipse 4:5</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Relâmpagos, vozes e trovões, e sete lâmpadas de fogo que são os sete Espíritos de Deus. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Uma grande multidão com palmas e cânticos.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">Um mar de vidro e quatro cavalos.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Relâmpagos, vozes e trovões, e sete lâmpadas de fogo que são os sete Espíritos de Deus.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) No santuário terrestre havia um candelabro com sete lâmpadas sempre acesas (Êxodo 25:31-39).<br>
+                    b) O número sete simboliza totalidade e perfeição.<br>
+                    c) Refere-se ao Espírito de Deus em Sua plenitude (Zacarias 4:10; Provérbios 15:3).<br>
+                    d) Esta visão revela a presença da Trindade.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Que outros seres João viu ao redor do trono e qual era sua aparência? Apocalipse 4:6-8</div>
+                
+                <div class="simbolos-box">
+                    <h5 style="color: #c9a05e; text-align: center; margin-bottom: 15px;">OS QUATRO SERES VIVENTES</h5>
+                    <div class="simbolos-tabela">
+                        <table>
+                            <tr>
+                                <th>Ser Vivente</th>
+                                <th>Característica</th>
+                                <th>Representação do Evangelho</th>
+                            </tr>
+                            <tr>
+                                <td>Semelhante a leão</td>
+                                <td><input type="text" placeholder="Característica..." style="width:100%; padding:5px; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; border-radius:5px; color:#fff;"></td>
+                                <td>Mateus - O Rei</td>
+                            </tr>
+                            <tr>
+                                <td>Semelhante a novilho (boi)</td>
+                                <td><input type="text" placeholder="Característica..." style="width:100%; padding:5px; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; border-radius:5px; color:#fff;"></td>
+                                <td>Marcos - O Servo</td>
+                            </tr>
+                            <tr>
+                                <td>Rosto como de homem</td>
+                                <td><input type="text" placeholder="Característica..." style="width:100%; padding:5px; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; border-radius:5px; color:#fff;"></td>
+                                <td>Lucas - O Filho do Homem</td>
+                            </tr>
+                            <tr>
+                                <td>Semelhante à águia voando</td>
+                                <td><input type="text" placeholder="Característica..." style="width:100%; padding:5px; background:rgba(255,255,255,0.1); border:1px solid #c9a05e; border-radius:5px; color:#fff;"></td>
+                                <td>João - O Filho de Deus</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver interpretação</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Interpretação dos seres viventes:</strong><br><br>
+                    <strong>Características:</strong><br>
+                    - Estavam no meio do trono e ao redor dele (v.6)<br>
+                    - Cheios de olhos por diante e por detrás (onipresença, onisciência)<br>
+                    - O primeiro ser semelhante a leão<br>
+                    - O segundo ser semelhante a novilho (boi)<br>
+                    - O terceiro com rosto como de homem<br>
+                    - O quarto ser semelhante à águia voando<br>
+                    - Cada um tinha seis asas (serafins - Isaías 6:1-3)<br>
+                    - Estavam cheios de olhos ao redor e por dentro<br>
+                    - Não descansam jamais, dizendo: "Santo, Santo, Santo é o Senhor Deus, o Todo-Poderoso"<br><br>
+                    <strong>Relação com os Evangelhos:</strong><br>
+                    - Leão: Mateus destaca o caráter real de Jesus (o Rei)<br>
+                    - Novilho: Marcos retrata Jesus como Servo<br>
+                    - Homem: Lucas revela Jesus como Filho do Homem<br>
+                    - Águia: João destaca a deidade de Jesus (Filho de Deus)
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Que cântico João ouviu destes quatro seres viventes e dos vinte e quatro anciãos? Apocalipse 4:9-11</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva aqui o cântico que João ouviu..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Cântico de Louvor:</strong><br>
+                    "Digno és, Senhor nosso e Deus nosso, de receber a glória, a honra e o poder; porque todas as coisas tu criaste, e por tua vontade existiram e foram criadas."<br><br>
+                    <strong>Ênfase do cântico:</strong> Deus é o Criador de todas as coisas e por isso é o único ser digno de receber glória, honra e poder. Em toda a Bíblia, quando se faz referência ao direito de Deus à adoração, enumeram-se as provas de Seu poder criador.
+                </div>
+            </div>
+        </div>
+
+        <!-- O Livro Selado -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📜</div>
+                <h3>O Livro Selado com Sete Selos</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">João acrescenta novos detalhes à visão. O que ele viu na mão direita de Deus? Apocalipse 5:1</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'a')">
+                        <input type="radio" name="pergunta7" id="p7a">
+                        <label for="p7a">Um cetro de ouro e uma coroa.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'b')">
+                        <input type="radio" name="pergunta7" id="p7b">
+                        <label for="p7b">Um livro escrito por dentro e por fora, selado com sete selos. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'c')">
+                        <input type="radio" name="pergunta7" id="p7c">
+                        <label for="p7c">Duas tábuas de pedra como as de Moisés.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>✓ Resposta correta:</strong> Um livro escrito por dentro e por fora, selado com sete selos.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    - Os selos eram usados na antiguidade para autenticar e dar validade a documentos (1 Reis 21:8; Neemias 9:38; Ester 8:8).<br>
+                    - Também para selar (fechar) o conteúdo de uma mensagem escrita (Isaías 29:11; Daniel 12:4,9).<br>
+                    - O capítulo 6 de Apocalipse revela que o livro contém o desenrolar da história cristã através dos séculos.
+                </div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h5>😢 O Choro de João</h5>
+                    <p>João percebeu a importância do conteúdo do livro e, ansioso por conhecê-lo, entrou em desespero e começou a chorar (Apocalipse 5:4), porque não foi achado ninguém digno, no universo inteiro, de abrir o livro e desatar-lhe os selos.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h5>🦁 A Boa Notícia</h5>
+                    <p>Um dos anciãos consolou João: "Não chores; eis que o Leão da tribo de Judá, a Raiz de Davi, venceu para abrir o livro e os seus sete selos" (Apocalipse 5:5).</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Qual foi a boa notícia que um dos vinte e quatro anciãos trouxe para João? Apocalipse 5:5</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Qual foi a boa notícia?" rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Boa notícia:</strong> "Não chores; eis que o Leão da tribo de Judá, a Raiz de Davi, venceu para abrir o livro e os seus sete selos."<br><br>
+                    <strong>Significados:</strong><br>
+                    - "Leão da tribo de Judá": Baseado em Gênesis 49:9, quando Jacó profetizou que Judá teria preeminência. Jesus descendia de Judá (Mateus 1:1-16; Hebreus 7:14).<br>
+                    - "Raiz de Davi": Baseado em Isaías 11:1,10. Paulo usa esta figura referindo-se a Cristo (Romanos 15:8-12). O próprio Jesus confirma: "Eu sou a Raiz e a Geração de Davi" (Apocalipse 22:16).<br>
+                    - "Venceu": Jesus venceu a Satanás no deserto (Mateus 4:1-11), venceu na cruz (João 16:33; Apocalipse 12:10) e nos oferece vitória (1 Coríntios 15:57; Apocalipse 3:21).
+                </div>
+            </div>
+        </div>
+
+        <!-- O Cordeiro de Deus -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🐑</div>
+                <h3>O Cordeiro de Deus</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">O que João contemplou em seguida e que estava no meio do trono? Apocalipse 5:6</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 9, 'a')">
+                        <input type="radio" name="pergunta9" id="p9a">
+                        <label for="p9a">Um leão feroz rugindo.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 9, 'b')">
+                        <input type="radio" name="pergunta9" id="p9b">
+                        <label for="p9b">Um cordeiro como havendo sido morto. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 9, 'c')">
+                        <input type="radio" name="pergunta9" id="p9c">
+                        <label for="p9c">Um anjo com uma trombeta.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>✓ Resposta correta:</strong> Um cordeiro como havendo sido morto.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    - O ancião disse que o "Leão de Judá" era digno, mas quando João se volta, ele vê um cordeiro. Que contraste!<br>
+                    - O profeta Isaías usou o símbolo de um cordeiro para representar o Messias (Isaías 53:7).<br>
+                    - No Novo Testamento o simbolismo se aplica a Jesus (João 1:29; 1 Pedro 1:19).<br>
+                    - No Apocalipse a palavra "cordeiro" aparece 29 vezes e se aplica a Jesus (Apocalipse 7:14; 22:1).
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 10</span>
+                <div class="pergunta-texto">O que aconteceu quando o Cordeiro, Jesus, tomou o livro selado das mãos de Deus? Apocalipse 5:7-10</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Descreva a reação no céu quando Jesus tomou o livro..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(10)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito10">
+                    <strong>Referência completa:</strong><br>
+                    a) Quando Jesus tomou o livro, os quatro seres viventes e os vinte e quatro anciãos prostraram-se diante dEle e O adoraram.<br>
+                    b) Tinham harpas e taças de ouro cheias de incenso (orações dos santos).<br>
+                    c) Cantavam um novo cântico: "Digno és de tomar o livro e de abrir os seus selos; porque foste morto, e com o teu sangue compraste para Deus os que procedem de toda tribo, língua, povo e nação; e para o nosso Deus os fizeste reis e sacerdotes; e eles reinarão sobre a terra."<br><br>
+                    <strong>O tema central:</strong> Fomos comprados por preço de sangue. Jesus pagou o preço de nossa redenção morrendo sobre a cruz (1 Pedro 1:18-20). Por isso somente Ele é digno de ser louvado por toda a eternidade (Atos 4:11,12).
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "E cantavam um novo cântico, dizendo: Digno és de tomar o livro e de abrir os seus selos; porque foste morto, e com o teu sangue compraste para Deus os que procedem de toda tribo, língua, povo e nação."
+                <span class="versiculo-ref">Apocalipse 5:9</span>
+            </div>
+        </div>
+
+        <!-- Conclusão e Aplicação -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💝</div>
+                <h3>Conclusão e Aplicação Pessoal</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Em nosso próximo estudo aprenderemos sobre a abertura do livro selado com sete selos. Cada selo, ao ser aberto pelo Cordeiro, revela um acontecimento da história envolvendo Seu povo. Veremos que Deus não está alheio a tudo que se passa em nosso planeta. Descobriremos um Deus de amor que se importa com Seus filhos e trabalha incansavelmente para a salvação deles. De fato, na cruz, Deus entregou Seu filho como o pagamento exigido por nosso resgate (João 3:16).</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 11</span>
+                <div class="pergunta-texto">Como posso me apropriar dos méritos de Cristo para minha salvação? Apocalipse 3:20; João 1:12</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 11, 'a')">
+                        <input type="radio" name="pergunta11" id="p11a">
+                        <label for="p11a">Através de boas obras e merecimento pessoal.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 11, 'b')">
+                        <input type="radio" name="pergunta11" id="p11b">
+                        <label for="p11b">Abrindo a porta do coração e recebendo-O, crendo em Seu nome. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 11, 'c')">
+                        <input type="radio" name="pergunta11" id="p11c">
+                        <label for="p11c">Pertencendo a uma igreja específica.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(11)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito11">
+                    <strong>✓ Resposta correta:</strong> Abrindo a porta do coração e recebendo-O, crendo em Seu nome.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    Jesus foi tratado como nós merecíamos, para que pudéssemos receber o tratamento que Ele tinha direito. Foi condenado pelos nossos pecados, nos quais não tinha participação, para que fôssemos justificados por Sua justiça, na qual não tínhamos parte. Sofreu a morte que nos cabia para que recebêssemos a vida que a Ele pertencia.<br><br>
+                    <strong>Isaías 53:5</strong> - "Ele foi traspassado pelas nossas transgressões e moído pelas nossas iniquidades; o castigo que nos traz a paz estava sobre ele, e pelas suas pisaduras fomos sarados."
+                </div>
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Creio que Deus, de Seu trono no Céu, governa este planeta e está conduzindo a história para um final feliz!</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Desejo louvar a Jesus de todo o meu coração e ser-Lhe grato, todos os dias, por tão maravilhoso sacrifício em meu favor.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Desejo abrir a porta de meu coração e permitir que Jesus assuma o completo controle de minha vida. Peço sabedoria para viver o presente me preparando para as glórias da eternidade.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 BÊNÇÃO FINAL</h4>
+            <div class="compromisso-texto">
+                "... Que a paz de Deus, que excede todo entendimento, guarde seu coração e sua mente em CRISTO JESUS". (Filipenses 4:7)
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Registrar minha declaração</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Declaração registrada! A paz de Cristo seja contigo!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="apocalipse-estudo2.html" class="btn-nav">← Estudo anterior</a>
+            <a href="apocalipse-estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="apocalipse-estudo4.html" class="btn-nav">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Digno és, Senhor, de receber glória, honra e poder, porque todas as coisas criaste." - Apocalipse 4:11</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 3 - O Trono de Deus e o Livro Selado",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse3', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse3');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

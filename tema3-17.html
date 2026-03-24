@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 17: A Nova Jerusalém</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=A+Nova+Jerusalém');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo para imagens */
+        .imagem-destaque {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .imagem-destaque img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .imagem-legenda {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #ddd;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Grid para imagens */
+        .imagens-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .imagem-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .imagem-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(201, 160, 94, 0.3);
+        }
+
+        .imagem-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .imagem-card .imagem-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .imagem-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-placeholder-icon {
+            color: #c9a05e;
+            font-size: 3rem;
+        }
+
+        .img-caption {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .img-nota {
+            color: #c9a05e;
+            font-size: 0.8rem;
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Grid para portas e fundamentos */
+        .portas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .porta-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .porta-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .porta-card .imagem-placeholder {
+            width: 100%;
+            height: 80px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .porta-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .porta-card p {
+            color: #ddd;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Tabela de medidas */
+        .tabela-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .tabela-medidas {
+            width: 100%;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .tabela-medidas table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-medidas th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1rem;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .tabela-medidas td {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-medidas tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+            flex: 1;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .campo input:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid, 
+            .imagens-grid, 
+            .portas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 17</span>
+        </div>
+        <h1>ESTUDO 17</h1>
+        <h2>A Nova Jerusalém</h2>
+        <p>"Vi a cidade santa, a nova Jerusalém, que descia do céu, da parte de Deus, ataviada como noiva adornada para o seu noivo." (Apocalipse 21:2)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Existem cidades deslumbrantes em nosso mundo. Algumas alcançaram fama mundial. Nova York, a cidade cosmopolita. Paris, cidade luz. Curitiba, cidade modelo. Rio de Janeiro, cidade maravilhosa. Certamente você tem uma cidade que mais gosta, admira! A Bíblia fala também de uma cidade maravilhosa. Todavia, nossa imaginação não consegue alcançar todo o esplendor desta cidade nem, muito menos, compararmos esta cidade com as que conhecemos. Ela se chama a <strong>Nova Jerusalém</strong>.</p>
+                <p style="margin-top: 15px;">A Bíblia conta a história da cidade de Jerusalém. Esta era a capital do povo de Deus. Era conhecida como a cidade da paz (Jeremias 33:9). Jesus demonstrou Seu amor por esta cidade, mas por haver rejeitado Cristo, veio a profecia: "e te arrasarão... porque não reconheceste a oportunidade da tua visitação" (Lucas 19:44). Esta profecia teve seu exato cumprimento quando Jerusalém foi destruída no ano 70 d.C. Todavia, há ainda uma promessa para o povo de Deus. Esperamos agora pela <strong>Nova Jerusalém</strong>.</p>
+            </div>
+            
+            <!-- Imagem principal - Nova Jerusalém descendo -->
+            <div class="imagem-destaque">
+                <img src="img/nova-jerusalem-desce.jpg" alt="Nova Jerusalém descendo do céu" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🏙️✨</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Nova Jerusalém</span>
+                </div>
+                <div class="imagem-legenda">A Nova Jerusalém descendo do céu, ataviada como noiva para o seu noivo - img/nova-jerusalem-desce.jpg</div>
+            </div>
+        </div>
+
+        <!-- Deus Anuncia Surpresas -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎁</div>
+                <h3>Deus Anuncia Surpresas</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Segundo Paulo, é possível imaginar o que Deus está preparando para o futuro? 1 Coríntios 2:9</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Sim, podemos imaginar perfeitamente o que Deus preparou.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Não, olhos não viram, ouvidos não ouviram, nem jamais penetrou no coração humano o que Deus preparou para os que o amam. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Apenas os profetas podem imaginar.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Não, olhos não viram, ouvidos não ouviram, nem jamais penetrou no coração humano o que Deus preparou para os que o amam.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Coisas que nunca se imaginou e experiências jamais percebidas pelos sentidos serão oferecidas pelo Criador aos salvos.<br>
+                    b) Os redimidos ficarão extasiados diante de tanto amor expresso pelo Criador.<br>
+                    c) Todas as belas coisas que Deus está preparando para aqueles que amam Sua vinda superam nossa compreensão.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que Deus está preparando para Seus filhos? João 14:1-3; Hebreus 11:16</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Uma vida longa na Terra.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Uma pátria superior, uma cidade preparada por Deus. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">Apenas uma vida espiritual sem corpo físico.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> Uma pátria superior, uma cidade preparada por Deus.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) "Casa de Meu Pai" retrata o terno cuidado de Deus e como nos considera Seus filhos.<br>
+                    b) Paulo usa o termo "Pátria superior" - não nos esqueçamos de nossa origem e destino.<br>
+                    c) <strong>Definitivamente, aqui não é a nossa casa, estamos de passagem. Nossa casa ou pátria está nos Céus.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deus o Arquiteto e Edificador -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏛️</div>
+                <h3>Deus, o Arquiteto e Edificador</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Como João chama a cidade que Deus está preparando? Apocalipse 21:1-2</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Quais os nomes dados por João à cidade?" rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência completa:</strong><br>
+                    a) "Vi a cidade santa, a <strong>Nova Jerusalém</strong>, que descia do céu, da parte de Deus, ataviada como noiva adornada para o seu noivo."<br>
+                    b) A Bíblia declara que é o próprio Deus <strong>arquiteto e edificador</strong> desta cidade (Hebreus 11:10).<br>
+                    c) João, em visão, viu a cidade que Deus está construindo.<br>
+                    d) A Nova Jerusalém desce do Céu para ser posicionada na nova Terra, para todo o sempre - era tão linda, como uma noiva, vindo para o seu noivo (Cristo).
+                </div>
+            </div>
+        </div>
+
+        <!-- Descrição da Cidade -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏰</div>
+                <h3>Descrição da Nova Jerusalém</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Quantas portas há nesta cidade e quais os nomes relacionados a elas? Apocalipse 21:12 e Ezequiel 48:30-35</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Número de portas e os nomes nelas escritos..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência completa:</strong><br>
+                    a) A cidade tem <strong>doze portas</strong>, cada uma feita de uma única pérola.<br>
+                    b) Nas portas estão escritos os nomes das <strong>doze tribos de Israel</strong>.<br>
+                    c) As doze tribos representam o povo de Deus no Antigo Testamento.<br>
+                    d) A promessa de Deus feita a Abraão continua sobre a vida de todas as pessoas que decidem fazer parte do povo de Deus, o <strong>Israel espiritual</strong>.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Quantos fundamentos possui a cidade e quais os nomes relacionados a eles? Apocalipse 21:14</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Número de fundamentos e os nomes..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência completa:</strong><br>
+                    a) A cidade tem <strong>doze fundamentos</strong>.<br>
+                    b) Neles estão escritos os nomes dos <strong>doze apóstolos do Cordeiro</strong>.<br>
+                    c) João não vê mais uma cidade tipicamente judaica, mas uma cidade feita pelas mãos de Deus e cheia de glória.<br>
+                    d) Ela não se destina apenas a uma nação, mas a todas as pessoas que aceitarem a Cristo como Salvador e Senhor.<br>
+                    e) Os nomes das doze tribos de Israel e dos doze apóstolos do Cordeiro estarão inscritos nas doze portas e nos doze fundamentos - é a cidade do povo de Deus de todas as eras, tanto do Antigo quanto do Novo Testamento.
+                </div>
+            </div>
+            
+            <!-- Grid das portas e fundamentos -->
+            <div class="portas-grid">
+                <div class="porta-card">
+                    <h5>🚪 Portas</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/porta-perola.jpg" alt="Porta de pérola" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🚪</div>
+                    </div>
+                    <p><strong>12 portas</strong> de pérola</p>
+                    <p>Nomes das <strong>12 tribos de Israel</strong></p>
+                </div>
+                
+                <div class="porta-card">
+                    <h5>🏗️ Fundamentos</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/fundamento-pedras.jpg" alt="Fundamentos de pedras preciosas" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🏗️</div>
+                    </div>
+                    <p><strong>12 fundamentos</strong> de pedras preciosas</p>
+                    <p>Nomes dos <strong>12 apóstolos</strong></p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Qual o formato geométrico da cidade e de que material é feita? Apocalipse 21:16, 18</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'a')">
+                        <input type="radio" name="pergunta6" id="p6a">
+                        <label for="p6a">Formato redondo, feita de madeira e pedra.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'b')">
+                        <input type="radio" name="pergunta6" id="p6b">
+                        <label for="p6b">Formato de um cubo ou quadrado perfeito, feita de ouro puro e pedras preciosas. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'c')">
+                        <input type="radio" name="pergunta6" id="p6c">
+                        <label for="p6c">Formato de pirâmide, feita de diamante.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>✓ Resposta correta:</strong> Formato de um cubo ou quadrado perfeito, feita de ouro puro e pedras preciosas.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) A cidade media 12 mil estádios (aproximadamente 600 quilômetros) em cada direção.<br>
+                    b) É um <strong>quadrado perfeito, um cubo</strong> - largura, comprimento e altura iguais.<br>
+                    c) A cidade é feita de <strong>ouro puro</strong>, semelhante a vidro transparente.<br>
+                    d) Seus fundamentos são adornados com toda sorte de pedras preciosas.<br>
+                    e) O espaço é suficiente para todos os salvos de todas as eras.
+                </div>
+            </div>
+            
+            <!-- Tabela de medidas da cidade -->
+            <div class="tabela-box">
+                <h5 style="color: #c9a05e; text-align: center; margin-bottom: 15px;">📏 Dimensões da Nova Jerusalém</h5>
+                <div class="tabela-medidas">
+                    表
+                        <thead>
+                            <tr><th>Medida</th><th>Estádios</th><th>Quilômetros (aproximados)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Largura</td><td>12.000 estádios</td><td>~2.200 km</td></tr>
+                            <tr><td>Comprimento</td><td>12.000 estádios</td><td>~2.200 km</td></tr>
+                            <tr><td>Altura</td><td>12.000 estádios</td><td>~2.200 km</td></tr>
+                            <tr><td colspan="3"><strong>Área aproximada: 4.840.000 km² (maior que a Índia)</strong></td></tr>
+                        </tbody>
+                    攒
+                </div>
+                <p style="margin-top: 15px; color: #ddd;">A cidade é um cubo perfeito, simbolizando perfeição e santidade.</p>
+            </div>
+            
+            <!-- Imagem da cidade de ouro -->
+            <div class="imagem-destaque">
+                <img src="img/cidade-ouro.jpg" alt="Nova Jerusalém de ouro puro" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🏙️✨</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Cidade de ouro puro</span>
+                </div>
+                <div class="imagem-legenda">A Nova Jerusalém, uma cidade de ouro puro como vidro transparente - img/cidade-ouro.jpg</div>
+            </div>
+        </div>
+
+        <!-- Fonte de Energia da Cidade -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💡</div>
+                <h3>A Fonte de Energia da Nova Cidade</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Qual será a fonte de energia desta cidade? Apocalipse 21:23; 22:5</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'a')">
+                        <input type="radio" name="pergunta7" id="p7a">
+                        <label for="p7a">Energia solar e eólica.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'b')">
+                        <input type="radio" name="pergunta7" id="p7b">
+                        <label for="p7b">A glória de Deus ilumina a cidade, e o Cordeiro é a sua lâmpada. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'c')">
+                        <input type="radio" name="pergunta7" id="p7c">
+                        <label for="p7c">Luz natural do sol e da lua.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>✓ Resposta correta:</strong> A glória de Deus ilumina a cidade, e o Cordeiro é a sua lâmpada.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Não haverá necessidade de sol nem de lua para iluminar a cidade.<br>
+                    b) A <strong>glória de Deus</strong> será a fonte de luz.<br>
+                    c) "O Cordeiro será sua lâmpada" (Apocalipse 21:23).<br>
+                    d) Esta glória produzirá, além da luz necessária, a vida e um imenso bem-estar.<br>
+                    e) Tudo isso por causa da agradável presença do Criador.
+                </div>
+            </div>
+            
+            <!-- Imagem da luz divina -->
+            <div class="imagem-destaque">
+                <img src="img/luz-divina.jpg" alt="Glória de Deus ilumina a cidade" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">✨🕯️</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">A glória de Deus</span>
+                </div>
+                <div class="imagem-legenda">A glória de Deus ilumina a cidade, e o Cordeiro é a sua lâmpada - img/luz-divina.jpg</div>
+            </div>
+        </div>
+
+        <!-- A Árvore da Vida -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🌳</div>
+                <h3>A Árvore da Vida</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">O que haverá no meio da praça da cidade? Apocalipse 22:2</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que João viu no meio da praça?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência completa:</strong><br>
+                    a) No meio da praça da cidade está a <strong>Árvore da Vida</strong>.<br>
+                    b) Produz <strong>doze frutos</strong>, dando fruto cada mês.<br>
+                    c) As folhas da árvore servem para a <strong>cura das nações</strong>.<br>
+                    d) A árvore da vida, que ficava no Jardim do Éden (Gênesis 2:9), estará presente na cidade santa de Deus.<br>
+                    e) Seus poderes curativos evitam todos os tipos de doenças.<br>
+                    f) Nela, os santos encontrarão <strong>saúde e felicidade</strong>.
+                </div>
+            </div>
+            
+            <!-- Imagem da Árvore da Vida -->
+            <div class="imagem-destaque">
+                <img src="img/arvore-vida.jpg" alt="Árvore da Vida" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🌳🍎</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Árvore da Vida</span>
+                </div>
+                <div class="imagem-legenda">A Árvore da Vida, com seus doze frutos e folhas para a cura - img/arvore-vida.jpg</div>
+            </div>
+        </div>
+
+        <!-- Quem Pode Entrar na Cidade -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🚪</div>
+                <h3>Quem Pode Entrar na Nova Jerusalém</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">Quem não poderá entrar na Nova Jerusalém? Apocalipse 21:8; 22:15</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Liste os que não entrarão na cidade..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência completa - Não entrarão:</strong><br>
+                    a) <strong>Covardes</strong> - pessoas que parecem boas, mas têm medo de ficar ao lado do Senhor.<br>
+                    b) <strong>Incédulos</strong> - os que duvidam da Palavra de Deus.<br>
+                    c) <strong>Mentirosos</strong> - os que contam mentiras ou agem enganosamente.<br>
+                    d) <strong>Abomináveis</strong> - os que praticam abominações.<br>
+                    e) <strong>Assassinos</strong> - os que tiram vidas.<br>
+                    f) <strong>Impuros</strong> - os que vivem em imoralidade.<br>
+                    g) <strong>Idólatras</strong> - os que adoram outros deuses.<br>
+                    h) Os que amam mais o pecado do que a Deus não poderão entrar na cidade.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 10</span>
+                <div class="pergunta-texto">Quem poderá entrar na Nova Jerusalém e desfrutar de todas as suas belezas? Apocalipse 21:27; 22:14</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'a')">
+                        <input type="radio" name="pergunta10" id="p10a">
+                        <label for="p10a">Aqueles que são ricos e poderosos na Terra.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'b')">
+                        <input type="radio" name="pergunta10" id="p10b">
+                        <label for="p10b">Aqueles que lavam suas vestiduras no sangue do Cordeiro e têm seus nomes escritos no Livro da Vida. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'c')">
+                        <input type="radio" name="pergunta10" id="p10c">
+                        <label for="p10c">Apenas os que nunca pecaram.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(10)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito10">
+                    <strong>✓ Resposta correta:</strong> Aqueles que lavam suas vestiduras no sangue do Cordeiro e têm seus nomes escritos no Livro da Vida.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Felizes serão as pessoas que forem <strong>lavadas no "sangue do Cordeiro"</strong>.<br>
+                    b) Somente os inscritos no <strong>Livro da Vida do Cordeiro</strong> entrarão na cidade.<br>
+                    c) Assim como Adão alegrava-se no jardim do Éden, os remidos se alegrarão na Nova Jerusalém.<br>
+                    d) O paraíso será restaurado - sem doenças, abusos, injustiças ou tragédias.<br>
+                    e) A salvação não é para quem "pode" e sim para quem <strong>"quer"</strong>.
+                </div>
+            </div>
+            
+            <!-- Imagem dos redimidos entrando na cidade -->
+            <div class="imagem-destaque">
+                <img src="img/redimidos-entrando.jpg" alt="Redimidos entrando na Nova Jerusalém" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">👥🚪</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Redimidos entrando</span>
+                </div>
+                <div class="imagem-legenda">Os que lavaram suas vestiduras no sangue do Cordeiro entram pelas portas da cidade - img/redimidos-entrando.jpg</div>
+            </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💝</div>
+                <h3>Conclusão</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Há uma linda promessa na Bíblia: <strong>"O meu povo habitará em moradas de paz, em moradas bem seguras e em lugares quietos e tranquilos" (Isaías 32:18).</strong> Deus está preparando estas moradas de paz para os Seus escolhidos. Mas quem poderá fazer parte do grupo de escolhidos? Cristo oferece a todas as pessoas a oportunidade, como declara Paulo: <strong>"Portanto, a graça de Deus se manifestou salvadora a todos os homens" (Tito 2:11)</strong>, mas nem todos desejam aceitar.</p>
+                <p style="margin-top: 15px;">Alguém afirmou acertadamente que a salvação não é para quem "pode" e sim para quem <strong>"quer"</strong>. Todo ser humano terá que fazer sua escolha. <strong>Qual será a sua?</strong></p>
+            </div>
+            
+            <!-- Imagem final - Nova Terra -->
+            <div class="imagem-destaque">
+                <img src="img/nova-terra-paz.jpg" alt="Nova Terra com paz e alegria" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🌍🕊️</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Nova Terra</span>
+                </div>
+                <div class="imagem-legenda">A Nova Terra - moradas de paz, lugares quietos e tranquilos - img/nova-terra-paz.jpg</div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "O meu povo habitará em moradas de paz, em moradas bem seguras e em lugares quietos e tranquilos." (Isaías 32:18)
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Creio que Deus está preparando uma linda cidade para ser morada de Seus filhos.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Desejo ser um morador da Nova Jerusalém. Para tanto, desejo entregar meu coração ao Cordeiro de Deus.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Quero ter meu nome escrito no livro da vida e estar pronto para morar na cidade de Deus.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 BÊNÇÃO FINAL</h4>
+            <div class="compromisso-texto">
+                "... Que a paz de Deus, que excede todo entendimento, guarde seu coração e sua mente em CRISTO JESUS" (Filipenses 4:7).
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Registrar minha declaração</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Declaração registrada! Maranata!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="apocalipse-estudo16.html" class="btn-nav">← Estudo anterior</a>
+            <a href="apocalipse-estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="#" class="btn-nav" style="visibility: hidden;">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Vi a cidade santa, a nova Jerusalém, que descia do céu, da parte de Deus." - Apocalipse 21:2</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 17 - A Nova Jerusalém",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse17', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse17');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

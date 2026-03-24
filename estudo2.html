@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profecias de Daniel - Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header */
+        .study-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Profecias+de+Daniel');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #c9a05e;
+        }
+
+        .study-header-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .study-header-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: #c9a05e;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .study-header-content p {
+            font-size: 1.3rem;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Informações do estudo */
+        .study-info {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            text-align: center;
+        }
+
+        .study-info h2 {
+            font-size: 2.5rem;
+            color: #c9a05e;
+            margin-bottom: 20px;
+        }
+
+        .study-info p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 900px;
+            margin: 0 auto 25px;
+            line-height: 1.8;
+        }
+
+        .study-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(201, 160, 94, 0.1);
+            padding: 12px 25px;
+            border-radius: 40px;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            font-size: 1.1rem;
+        }
+
+        .meta-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Citação de destaque */
+        .quote-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            border-left: 5px solid #c9a05e;
+            border-right: 5px solid #c9a05e;
+            font-style: italic;
+        }
+
+        .quote-box p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .quote-author {
+            margin-top: 20px;
+            color: #c9a05e;
+            font-style: normal;
+            font-size: 1.2rem;
+        }
+
+        /* Título da seção de temas */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h3 {
+            font-size: 2.3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #ddd;
+            font-size: 1.2rem;
+        }
+
+        /* Grid de temas */
+        .temas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .tema-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 25px 20px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 280px;
+        }
+
+        .tema-card:hover {
+            transform: translateY(-10px);
+            border-color: #c9a05e;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .tema-number {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 6px 15px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            align-self: flex-start;
+        }
+
+        .tema-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #fff;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .tema-description {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-tema {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .btn-tema:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Linha do tempo de Daniel */
+        .timeline-section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .timeline-section h3 {
+            color: #c9a05e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .timeline-item {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 4px solid #c9a05e;
+        }
+
+        .timeline-ano {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .timeline-descricao {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Navegação */
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 15px 40px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        .btn-nav-primary {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        .btn-nav-primary:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .footer-verse {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #c9a05e;
+            font-style: italic;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .study-header-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .study-header {
+                height: 280px;
+            }
+
+            .study-info h2 {
+                font-size: 2rem;
+            }
+
+            .study-info p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h3 {
+                font-size: 1.8rem;
+            }
+
+            .temas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-nav {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .timeline-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tema-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .tema-card:nth-child(1) { animation-delay: 0.1s; }
+        .tema-card:nth-child(2) { animation-delay: 0.15s; }
+        .tema-card:nth-child(3) { animation-delay: 0.2s; }
+        .tema-card:nth-child(4) { animation-delay: 0.25s; }
+        .tema-card:nth-child(5) { animation-delay: 0.3s; }
+        .tema-card:nth-child(6) { animation-delay: 0.35s; }
+        .tema-card:nth-child(7) { animation-delay: 0.4s; }
+        .tema-card:nth-child(8) { animation-delay: 0.45s; }
+        .tema-card:nth-child(9) { animation-delay: 0.5s; }
+        .tema-card:nth-child(10) { animation-delay: 0.55s; }
+        .tema-card:nth-child(11) { animation-delay: 0.6s; }
+        .tema-card:nth-child(12) { animation-delay: 0.65s; }
+        .tema-card:nth-child(13) { animation-delay: 0.7s; }
+        .tema-card:nth-child(14) { animation-delay: 0.75s; }
+        .tema-card:nth-child(15) { animation-delay: 0.8s; }
+        .tema-card:nth-child(16) { animation-delay: 0.85s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="study-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > <span>Profecias de Daniel</span>
+        </div>
+        <div class="study-header-content">
+            <h1>Profecias de Daniel</h1>
+            <p>16 estudos para desvendar as profecias que revelam o plano de Deus para as nações e a esperança para o tempo do fim</p>
+        </div>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Informações do estudo -->
+        <div class="study-info">
+            <h2>📖 Profecias de Daniel</h2>
+            <p>O livro de Daniel é um dos mais fascinantes e proféticos das Escrituras. Escrito durante o exílio babilônico, revela como Deus governa soberanamente sobre os reinos humanos e tem um plano definido para a história. Suas profecias abrangem desde o império babilônico até o estabelecimento do reino eterno de Cristo, com especial enfoque nos eventos que precedem a segunda vinda.</p>
+            
+            <div class="study-meta">
+                <div class="meta-item">
+                    <span class="meta-icon">📖</span>
+                    <span>16 Temas</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">⏳</span>
+                    <span>2.600 anos de história</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">🔮</span>
+                    <span>Profecias do fim</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Citação -->
+        <div class="quote-box">
+            <p>"Tu, porém, Daniel, encerra as palavras e sela o livro, até ao tempo do fim; muitos o esquadrinharão, e o saber se multiplicará."</p>
+            <div class="quote-author">— Daniel 12:4</div>
+        </div>
+
+        <!-- Título da seção de temas -->
+        <div class="section-title">
+            <h3>📋 Os 16 Temas do Estudo</h3>
+            <p>Clique em cada tema para acessar o conteúdo completo</p>
+        </div>
+
+        <!-- Grid de temas -->
+        <div class="temas-grid">
+            <!-- TEMA 1 -->
+            <div class="tema-card" onclick="window.location.href='tema2-1.html'">
+                <span class="tema-number">Tema 01</span>
+                <h4>Daniel: Um Livro para os Dias de Hoje</h4>
+                <p class="tema-description">Introdução ao livro de Daniel, seu contexto histórico, propósito e relevância profética para o tempo do fim.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 2 -->
+            <div class="tema-card" onclick="window.location.href='tema2-2.html'">
+                <span class="tema-number">Tema 02</span>
+                <h4>Dois Poderes em Conflito</h4>
+                <p class="tema-description">O grande conflito entre o bem e o mal revelado através das experiências de Daniel e seus companheiros na corte babilônica.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 3 -->
+            <div class="tema-card" onclick="window.location.href='tema2-3.html'">
+                <span class="tema-number">Tema 03</span>
+                <h4>Uma Estátua Assustadora</h4>
+                <p class="tema-description">O sonho de Nabucodonosor e a interpretação de Daniel: a sucessão dos reinos mundiais e o estabelecimento do reino eterno.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 4 -->
+            <div class="tema-card" onclick="window.location.href='tema2-4.html'">
+                <span class="tema-number">Tema 04</span>
+                <h4>Prova de Fogo</h4>
+                <p class="tema-description">A corajosa fé de Sadraque, Mesaque e Abedenego na fornalha ardente e o livramento divino.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 5 -->
+            <div class="tema-card" onclick="window.location.href='tema2-5.html'">
+                <span class="tema-number">Tema 05</span>
+                <h4>Do Palácio ao Pasto</h4>
+                <p class="tema-description">O sonho da árvore e a humilhação de Nabucodonosor - uma lição sobre soberania divina e orgulho humano.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 6 -->
+            <div class="tema-card" onclick="window.location.href='tema2-6.html'">
+                <span class="tema-number">Tema 06</span>
+                <h4>A Queda de Babilônia</h4>
+                <p class="tema-description">A escrita na parede e o julgamento de Deus sobre o reino babilônico na festa profana de Belsazar.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 7 -->
+            <div class="tema-card" onclick="window.location.href='tema2-7.html'">
+                <span class="tema-number">Tema 07</span>
+                <h4>Na Cova dos Leões com Daniel</h4>
+                <p class="tema-description">A fidelidade inabalável de Daniel diante da conspiração e o livramento na cova dos leões.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 8 -->
+            <div class="tema-card" onclick="window.location.href='tema2-8.html'">
+                <span class="tema-number">Tema 08</span>
+                <h4>Quatro Animais Estranhos</h4>
+                <p class="tema-description">A visão dos quatro animais que representa os reinos mundiais sob uma perspectiva divina (capítulo 7).</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 9 -->
+            <div class="tema-card" onclick="window.location.href='tema2-9.html'">
+                <span class="tema-number">Tema 09</span>
+                <h4>O Chifre Pequeno e o Ataque à Lei de Deus</h4>
+                <p class="tema-description">O poder que tentaria mudar os tempos e a lei, perseguindo os santos do Altíssimo.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 10 -->
+            <div class="tema-card" onclick="window.location.href='tema2-10.html'">
+                <span class="tema-number">Tema 10</span>
+                <h4>Um Carneiro e um Bode</h4>
+                <p class="tema-description">A visão do carneiro (Medo-Pérsia) e do bode (Grécia) e o surgimento de um rei feroz (capítulo 8).</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 11 -->
+            <div class="tema-card" onclick="window.location.href='tema2-11.html'">
+                <span class="tema-number">Tema 11</span>
+                <h4>2.300 Tardes e Manhãs e a Purificação do Santuário (Parte 1)</h4>
+                <p class="tema-description">O período profético mais longo de Daniel e seu significado para a compreensão do ministério celestial de Cristo.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 12 -->
+            <div class="tema-card" onclick="window.location.href='tema2-12.html'">
+                <span class="tema-number">Tema 12</span>
+                <h4>2.300 Tardes e Manhãs e a Purificação do Santuário (Parte 2)</h4>
+                <p class="tema-description">A interpretação histórica da profecia e seu cumprimento no ano de 1844.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 13 -->
+            <div class="tema-card" onclick="window.location.href='tema2-13.html'">
+                <span class="tema-number">Tema 13</span>
+                <h4>Daniel no Rio Tigre</h4>
+                <p class="tema-description">A visão de Daniel junto ao rio Tigre e a revelação sobre o conflito cósmico (capítulo 10).</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 14 -->
+            <div class="tema-card" onclick="window.location.href='tema2-14.html'">
+                <span class="tema-number">Tema 14</span>
+                <h4>Reis em Guerra</h4>
+                <p class="tema-description">O conflito entre o rei do norte e o rei do sul e seu significado profético para a história (capítulo 11).</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 15 -->
+            <div class="tema-card" onclick="window.location.href='tema2-15.html'">
+                <span class="tema-number">Tema 15</span>
+                <h4>Um Tempo de Angústia sem Precedentes</h4>
+                <p class="tema-description">A intervenção de Miguel e o tempo de angústia que precederá a libertação final do povo de Deus (capítulo 12).</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 16 -->
+            <div class="tema-card" onclick="window.location.href='tema2-16.html'">
+                <span class="tema-number">Tema 16</span>
+                <h4>O Estabelecimento do Eterno Reino de Cristo</h4>
+                <p class="tema-description">A ressurreição, o juízo final e a esperança gloriosa do reino eterno de Deus.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+        </div>
+
+        <!-- Linha do tempo de Daniel -->
+        <div class="timeline-section">
+            <h3>⏳ Linha do Tempo de Daniel</h3>
+            <div class="timeline-grid">
+                <div class="timeline-item">
+                    <div class="timeline-ano">605 a.C.</div>
+                    <div class="timeline-descricao">Daniel é levado cativo para Babilônia por Nabucodonosor. Início do exílio.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-ano">604 a.C.</div>
+                    <div class="timeline-descricao">Interpretação do sonho da estátua (capítulo 2).</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-ano">597 a.C.</div>
+                    <div class="timeline-descricao">Ezequiel é levado cativo. Daniel já está no governo.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-ano">586 a.C.</div>
+                    <div class="timeline-descricao">Destruição de Jerusalém e do templo de Salomão.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-ano">570 a.C.</div>
+                    <div class="timeline-descricao">Visão dos quatro animais (capítulo 7).</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-ano">553 a.C.</div>
+                    <div class="timeline-descricao">Visão do carneiro e do bode (capítulo 8).</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-ano">539 a.C.</div>
+                    <div class="timeline-descricao">Queda de Babilônia. A escrita na parede (capítulo 5).</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-ano">538 a.C.</div>
+                    <div class="timeline-descricao">Ciro permite o retorno dos judeus. Daniel na cova dos leões (capítulo 6).</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-ano">536 a.C.</div>
+                    <div class="timeline-descricao">Última visão de Daniel (capítulos 10-12).</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegação -->
+        <div class="navigation-buttons">
+            <a href="../index.html" class="btn-nav">← Voltar para Página Inicial</a>
+            <a href="tema2-1.html" class="btn-nav btn-nav-primary">Começar Primeiro Tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p class="footer-verse">"O Senhor é quem tira os reis e estabelece os reis; é quem dá sabedoria aos sábios e entendimento aos inteligentes" - Daniel 2:21</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 7 - Na Cova dos Leões com Daniel | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Na+Cova+dos+Leões');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Card da Cova dos Leões */
+        .cova-card {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cova-card::before {
+            content: "🦁";
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+
+        .cova-card::after {
+            content: "🦁";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 4rem;
+            opacity: 0.2;
+        }
+
+        .cova-card h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .cova-card p {
+            color: #ddd;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .cova-card .anjo {
+            color: #c9a05e;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-top: 15px;
+        }
+
+        /* Linha do tempo */
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(201, 160, 94, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .timeline-ano {
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .timeline-descricao {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Comparação de adoração */
+        .adoracao-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .adoracao-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid;
+        }
+
+        .adoracao-card.verdadeira {
+            border-left-color: #2ecc71;
+        }
+
+        .adoracao-card.falsa {
+            border-left-color: #e74c3c;
+        }
+
+        .adoracao-card h5 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .adoracao-card.verdadeira h5 {
+            color: #2ecc71;
+        }
+
+        .adoracao-card.falsa h5 {
+            color: #e74c3c;
+        }
+
+        .adoracao-card p {
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .adoracao-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 7</span>
+        </div>
+        <h1>ESTUDO 7</h1>
+        <h2>Na Cova dos Leões com Daniel</h2>
+        <p>"O meu Deus enviou o seu anjo e fechou a boca dos leões" (Daniel 6:22)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar que a verdadeira adoração deve ser a Deus acima de tudo, mesmo diante de decretos humanos que tentam impedi-la, e que Deus honra aqueles que Lhe são fiéis.</p>
+            <p><strong>Texto base:</strong> Daniel 6; Atos 5:29</p>
+            <p><strong>Versículos-chave:</strong> Daniel 6:10, 22; Atos 5:29</p>
+            <p><strong>Destaque especial:</strong> Daniel não mudou seus hábitos de oração mesmo sabendo do decreto. Sua fidelidade não era circunstancial - era um estilo de vida.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🙏</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Você já observou que adorar é uma necessidade humana? Adorar é algo inerente à nossa natureza, ou seja, já nascemos como seres que adoram. Com certeza não há ninguém que não adore. Uns adoram animais, outros os astros da natureza ou ainda pessoas e objetos. E lógico, há pessoas que adoram a Deus.</p>
+                
+                <p style="margin-top: 15px;">Estamos falando aqui de uma adoração racional, ou seja, que é expressa através de oração, reverência, ofertas e louvores. A verdadeira adoração deve ser espontânea e ter a Deus como centro. Daniel compreendeu esta verdade e adorava somente ao Deus vivo (Daniel 2:20-23; 9:3, 4).</p>
+                
+                <p style="margin-top: 15px;">E você? Quem você adora? No estudo de hoje veremos como Daniel adorou a seu Deus mesmo diante de um decreto de morte.</p>
+            </div>
+        </div>
+
+        <!-- Contexto Histórico -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👑</div>
+                <h3>Daniel no Novo Império</h3>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-ano">539 a.C.</span>
+                <span class="timeline-descricao">Queda de Babilônia para o Império Medo-Pérsia. Dario assume o trono.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">539 a.C.</span>
+                <span class="timeline-descricao">Daniel é nomeado como um dos três presidentes sobre o reino.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">539 a.C.</span>
+                <span class="timeline-descricao">Conspiração dos príncipes e decreto de 30 dias.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">539 a.C.</span>
+                <span class="timeline-descricao"><strong>Daniel na cova dos leões e livramento divino.</strong></span>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Por que o rei Dario quis constituir a Daniel sobre todo o reino? Daniel 6:1-3</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Pareceu bem a Dario constituir sobre o reino a cento e vinte sátrapas... e sobre eles três presidentes, dos quais Daniel era um... Então, o mesmo Daniel se distinguiu destes presidentes e sátrapas, porque nele havia um espírito excelente; e o rei pensava em estabelecê-lo sobre todo o reino." <strong>Daniel era um homem íntegro e confiava na infalível orientação divina. Nele havia um "espírito excelente".</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Que sentimento foi despertado nos príncipes ao saberem da nomeação de Daniel? Daniel 6:4-5</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Alegria e admiração</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">Inveja e procuravam ocasião contra Daniel ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">Indiferença</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> Inveja e procuravam ocasião contra Daniel. "Então, os presidentes e sátrapas procuravam ocasião para acusar a Daniel a respeito do reino; mas não puderam achá-la, porque ele era fiel." Mesmo após apurada investigação, não encontraram nenhuma irregularidade em sua vida. Daniel era um político de ficha limpa.
+                </div>
+            </div>
+        </div>
+
+        <!-- A Conspiração -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚔️</div>
+                <h3>A Conspiração</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Que proposta os príncipes fizeram ao rei Dario? Daniel 6:6-9</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "Todos os presidentes do reino, prefeitos, sátrapas, conselheiros e governadores concordaram em que se estabeleça um edito real e se confirme a proibição, que todo aquele que, por trinta dias, fizer petição a qualquer deus ou a qualquer homem, e não a ti, ó rei, seja lançado na cova dos leões." <strong>O plano era lisonjear o rei com um decreto que o colocava no lugar de Deus por 30 dias, sabendo que Daniel não obedeceria.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">O que fez Daniel ao saber do decreto do rei? Daniel 6:10</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "Daniel, pois, quando soube que a escritura estava assinada, entrou em sua casa, e, em cima, no seu quarto, com janelas abertas para o lado de Jerusalém, três vezes no dia, se punha de joelhos, e orava, e dava graças, diante do seu Deus, como também antes costumava fazer." <strong>Daniel era um homem de oração. Era seu costume diário orar três vezes ao dia. Antes da provação ele já mantinha este hábito e não seria agora que agiria de outra forma. Sua postura exprimia o conceito: "Antes importa obedecer a Deus que aos homens" (Atos 5:29).</strong>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Três vezes no dia, se punha de joelhos, e orava, e dava graças, diante do seu Deus, como também antes costumava fazer."
+                <span class="versiculo-ref">Daniel 6:10</span>
+            </div>
+        </div>
+
+        <!-- A Acusação -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚖️</div>
+                <h3>A Acusação</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Qual foi a acusação que os príncipes fizeram contra Daniel? Daniel 6:13</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Então, responderam e disseram ao rei: Daniel, que é dos filhos dos cativos de Judá, não tem feito caso de ti, ó rei, nem do edito que assinaste; antes, três vezes por dia, faz a sua oração." <strong>A maneira como se referiram a Daniel revelava ódio e menosprezo - descreveram-no meramente como um estrangeiro, um judeu deportado. Acusaram-no de desafiar a autoridade real.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Após tentar livrar Daniel, o que o rei teve que fazer contra a sua própria vontade? Daniel 6:14-17</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Então, o rei, ouvindo estas palavras, ficou muito penalizado e determinou consigo mesmo salvar a Daniel; e, até à entrada do sol, trabalhou para o livrar. Então, estes homens se ajuntaram ao rei e disseram: Sabe, ó rei, que é lei dos medos e dos persas que nenhum edito ou decreto que o rei estabeleça pode mudar. Então, o rei ordenou que trouxessem a Daniel e o lançassem na cova dos leões." <strong>Dario percebeu a cilada, mas como a lei dos medos e persas não podia ser revogada, enviou Daniel à cova, desejando que seu Deus o livrasse.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Livramento -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🦁</div>
+                <h3>O Livramento</h3>
+            </div>
+            
+            <div class="cova-card">
+                <h4>🦁 Na Cova dos Leões 🦁</h4>
+                <p>Deus não impediu que Daniel fosse jogado na cova dos leões, mas enviou o Seu anjo para que fechasse a boca dos leões, tornando o livramento do Seu fiel servo mais marcante.</p>
+                <p class="anjo">"O meu Deus enviou o seu anjo e fechou a boca dos leões"</p>
+                <p style="margin-top: 15px;">Ao ver que Daniel permanecera vivo, o rei ordenou que os acusadores fossem lançados na cova com suas famílias, e foram mortos antes mesmo de chegarem ao fundo.</p>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Como Deus livrou Daniel da morte? Daniel 6:22</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "O meu Deus enviou o seu anjo e fechou a boca dos leões, para que não me fizessem dano, porque foi achada em mim inocência diante dele; e também contra ti, ó rei, não tenho cometido delito algum." <strong>Deus enviou Seu anjo para proteger Daniel durante toda a noite na cova.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Como o rei reconheceu a supremacia do Deus de Daniel? Daniel 6:25-27</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência:</strong> "Então, o rei Dario escreveu a todos os povos, nações e línguas: Paz vos seja multiplicada!... Faço um decreto, pelo qual em todo o domínio do meu reino os homens tremam e temam perante o Deus de Daniel; porque ele é o Deus vivo e para sempre permanente, e o seu reino não será jamais destruído." <strong>O rei exultou com o livramento e fez um decreto para que todos temessem a Deus. Suas palavras revelam que Daniel o havia instruído sobre a natureza do Deus verdadeiro.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">Qual foi o resultado da fidelidade de Daniel? Daniel 6:28</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência:</strong> "E este Daniel prosperou no reinado de Dario e no reinado de Ciro, o persa." <strong>O Deus de Daniel mostrou mais uma vez ser um Deus justo e fez prosperar a Daniel em ambos os reinados. O nome do profeta já carregava esse sentido: Daniel = "Deus é meu juiz".</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adoração Verdadeira vs Falsa -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🙌</div>
+                <h3>Adoração Verdadeira vs. Adoração Falsa</h3>
+            </div>
+            
+            <div class="adoracao-grid">
+                <div class="adoracao-card verdadeira">
+                    <h5>✅ ADORAÇÃO VERDADEIRA</h5>
+                    <p><strong>Foco:</strong> Deus como centro</p>
+                    <p><strong>Motivação:</strong> Amor e gratidão</p>
+                    <p><strong>Expressão:</strong> Espontânea, diária, sacrificial</p>
+                    <p><strong>Exemplo:</strong> Daniel orando 3x ao dia</p>
+                    <p><strong>Resultado:</strong> Livramento e testemunho</p>
+                </div>
+                
+                <div class="adoracao-card falsa">
+                    <h5>❌ ADORAÇÃO FALSA</h5>
+                    <p><strong>Foco:</strong> Homem (rei, ídolos, ego)</p>
+                    <p><strong>Motivação:</strong> Medo, interesse, imposição</p>
+                    <p><strong>Expressão:</strong> Forçada, ocasional, hipócrita</p>
+                    <p><strong>Exemplo:</strong> Príncipes bajulando Dario</p>
+                    <p><strong>Resultado:</strong> Morte e destruição</p>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Os deuses que os presidentes e sátrapas serviam nada puderam fazer por eles. O que pode fazer por você o "deus" que você adora?</p>
+            </div>
+        </div>
+
+        <!-- Lições -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💭</div>
+                <h3>Lições para Nossos Dias</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>1. A adoração é inerente ao ser humano:</strong> Todos adoram algo. A questão não é se você adora, mas QUEM você adora.</p>
+                <p><strong>2. A fidelidade não é circunstancial:</strong> Daniel não mudou seus hábitos quando soube do decreto. Ele orava "como também antes costumava fazer".</p>
+                <p><strong>3. A vida íntegra é a melhor defesa:</strong> Os inimigos não encontraram nenhuma falta em Daniel. Sua vida era limpa.</p>
+                <p><strong>4. Deus não impede a provação, mas está nela:</strong> Daniel foi para a cova, mas Deus enviou Seu anjo.</p>
+                <p><strong>5. A fidelidade gera testemunho:</strong> O rei pagão decretou que todos temessem ao Deus de Daniel.</p>
+                <p><strong>6. A prosperidade do justo:</strong> Daniel prosperou em todos os reinados, porque o Senhor era com ele.</p>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "O meu Deus enviou o seu anjo e fechou a boca dos leões, para que não me fizessem dano."
+                <span class="versiculo-ref">Daniel 6:22</span>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Depois de conhecer sobre a fidelidade e coragem de Daniel em não permitir que decretos humanos impedissem sua adoração ao Deus vivo, desejo tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Não permitirei que nada impeça minha adoração ao Deus vivo, mesmo que sofra consequências como Daniel.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Orarei pelo menos três vezes ao dia, como Daniel fazia, ao Deus vivo, que pode livrar, salvar, e fazer sinais e maravilhas.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Adorarei a Deus através de minhas orações, louvores e ofertas.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Assim como Daniel, decido manter minha fidelidade a Deus acima de qualquer decreto humano. Minha adoração será diária, constante e inegociável, confiando que Deus enviará Seus anjos para me proteger em todas as covas da vida."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-6.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-8.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Antes importa obedecer a Deus do que aos homens" - Atos 5:29</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Na Cova dos Leões com Daniel",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel7', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel7');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 2 - Dois Poderes em Conflito | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Dois+Poderes+em+Conflito');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Caixa de conflito entre cidades */
+        .cidades-conflito {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .cidade-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .cidade-card h4 {
+            color: #c9a05e;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .cidade-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .cidade-card .cidade-icone {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Três desafios */
+        .desafios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .desafio-card {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #3498db;
+        }
+
+        .desafio-card h5 {
+            color: #3498db;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .desafio-card p {
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* Tabela de nomes */
+        .tabela-nomes {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .tabela-nomes table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-nomes th {
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px;
+            font-size: 1.1rem;
+        }
+
+        .tabela-nomes td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-nomes tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabela-nomes td:first-child {
+            font-weight: bold;
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .cidades-conflito {
+                grid-template-columns: 1fr;
+            }
+
+            .desafios-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabela-nomes {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 2</span>
+        </div>
+        <h1>ESTUDO 2</h1>
+        <h2>Dois Poderes em Conflito</h2>
+        <p>"Pois aquilo que o homem semear, isso também ceifará" (Gálatas 6:7)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar o conflito entre o bem e o mal representado por Jerusalém e Babilônia, e como os jovens hebreus enfrentaram os desafios cultural, alimentar e religioso.</p>
+            <p><strong>Texto base:</strong> Daniel 1; Gálatas 6:7; 1 Coríntios 3:16-17</p>
+            <p><strong>Versículos-chave:</strong> Daniel 1:8, 1 Coríntios 6:19-20, Gálatas 6:7</p>
+            <p><strong>Destaque especial:</strong> O capítulo 1 de Daniel estabelece o padrão de fidelidade que permeará todo o livro. Aqueles que confiam em Deus sempre vencem no final.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚔️</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Estamos acostumados a ver o mais forte sempre vencendo o mais fraco, seja numa briga no colégio, numa partida de futebol ou na corrida do predador em busca da caça. O mais forte sempre vence, embora o mais forte nem sempre seja o melhor. Parece ser uma lei da vida, porém em alguns momentos, esta lei é contrariada, quando o fraco vence o forte e o menor suplanta o maior.</p>
+                
+                <p style="margin-top: 15px;">Você pode então perguntar: Como isso é possível? Não sabemos todas as respostas, mas ao estudarmos o livro de Daniel, fica muito claro que <strong>aqueles que confiam em Deus, sempre vencem no final</strong>, mesmo em menor número ou em aparente desvantagem.</p>
+                
+                <p style="margin-top: 15px;">Neste estudo veremos como Daniel e seus amigos enfrentaram três grandes desafios na corte babilônica e saíram vitoriosos por sua fidelidade a Deus.</p>
+            </div>
+        </div>
+
+        <!-- Duas Cidades em Conflito -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏙️</div>
+                <h3>Duas Cidades em Conflito</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">O livro de Daniel apresenta, em sua introdução, duas cidades em conflito. Quais são elas? Daniel 1:1</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "No ano terceiro do reinado de Jeoaquim, rei de Judá, veio Nabucodonosor, rei de Babilônia, a Jerusalém e a sitiou." <strong>As duas cidades são Jerusalém (capital do povo de Deus) e Babilônia (capital idólatra que representa a sede do poder que se opõe a Deus).</strong>
+                </div>
+            </div>
+            
+            <div class="cidades-conflito">
+                <div class="cidade-card">
+                    <div class="cidade-icone">🕍</div>
+                    <h4>Jerusalém</h4>
+                    <p>Capital do povo de Deus. Cidade da verdadeira adoração, onde estava o templo do Senhor. Representa o povo fiel que confia em Deus.</p>
+                    <p style="margin-top: 10px;"><small>Mencionada em Gênesis 14:18 e Apocalipse 21:2,3</small></p>
+                </div>
+                
+                <div class="cidade-card">
+                    <div class="cidade-icone">🏛️</div>
+                    <h4>Babilônia</h4>
+                    <p>Capital idólatra que representa a sede do poder que se opõe a Deus. Símbolo da rebelião e confusão (Gênesis 11).</p>
+                    <p style="margin-top: 10px;"><small>Mencionada em Gênesis 10:10 e Apocalipse 14 e 18</small></p>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Desde o início do livro vemos em marcha o grande conflito entre o bem e o mal, entre o culto pagão e a adoração ao verdadeiro Deus. Logo no primeiro verso, duas cidades se destacam. De fato, estas duas cidades são mencionadas em toda a Bíblia, do Gênesis (4:17; 10:10) ao Apocalipse (14 e 18; 21:2, 3), e podemos ver a intensa luta entre a luz e as trevas, a verdade e o erro em cada momento da história.</p>
+            </div>
+        </div>
+
+        <!-- O Cativeiro -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⛓️</div>
+                <h3>O Cativeiro Babilônico</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">O que Deus permitiu que Nabucodonosor fizesse ao Seu povo? Daniel 1:1, 2</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "E o Senhor entregou nas suas mãos a Jeoaquim, rei de Judá, e uma parte dos utensílios da casa de Deus; e ele os levou para a terra de Sinar, para a casa do seu deus." <strong>Deus permitiu o cativeiro para abrir os olhos do povo para as consequências de sua rebelião, cumprindo as advertências dos profetas (Isaías 39:6,7; Jeremias 25:11).</strong>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p>O cativeiro babilônico é uma prova de que o Senhor controla os acontecimentos na história e dirige Seu povo. Era Sua intenção que os judeus fossem escravizados pelos babilônicos (caldeus) para abrir-lhes os olhos para as consequências de sua rebelião, de modo a poder, futuramente, conduzi-los a um estilo de vida melhor.</p>
+                
+                <p style="margin-top: 15px;">Várias advertências haviam sido dadas denunciando seus pecados, mas nenhuma reforma foi vista. Deus então, para cumprir Seus propósitos e salvar Seu povo, permitiu o cativeiro, entregando-os a Nabucodonosor.</p>
+            </div>
+        </div>
+
+        <!-- Três Desafios -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚠️</div>
+                <h3>Três Desafios dos Jovens Hebreus</h3>
+            </div>
+            
+            <div class="desafios-grid">
+                <div class="desafio-card">
+                    <h5>1️⃣ Desafio Cultural</h5>
+                    <p><strong>Pergunta 3:</strong> Qual foi o primeiro desafio imposto aos jovens cativos na Babilônia? Daniel 1:3, 4</p>
+                    <textarea placeholder="Sua resposta..." rows="3" style="width:100%; padding:10px; background:rgba(255,255,255,0.05); border:1px solid #3498db; border-radius:5px; color:#fff; margin-top:10px;"></textarea>
+                    <button class="btn-resposta" onclick="mostrarGabarito(3)" style="margin-top:10px;">Ver resposta</button>
+                    <div class="gabarito" id="gabarito3">
+                        <strong>Referência:</strong> "Então, o rei ordenou a Aspenaz, chefe dos seus eunucos, que trouxesse alguns dos filhos de Israel, tanto da linhagem real como dos nobres, jovens sem nenhum defeito, de boa aparência, instruídos em toda a sabedoria, doutos em ciência, versados no conhecimento e que tivessem habilidade para viver no palácio do rei." <strong>O primeiro desafio foi cultural: aprender as ciências dos caldeus e adotar elementos da cultura babilônica que contrariavam os princípios da religião hebraica.</strong>
+                    </div>
+                </div>
+                
+                <div class="desafio-card">
+                    <h5>2️⃣ Desafio Alimentar</h5>
+                    <p><strong>Pergunta 4:</strong> Qual foi o segundo desafio que Daniel e seus amigos tiveram que se submeter durante três anos? Daniel 1:5, 6</p>
+                    <textarea placeholder="Sua resposta..." rows="3" style="width:100%; padding:10px; background:rgba(255,255,255,0.05); border:1px solid #3498db; border-radius:5px; color:#fff; margin-top:10px;"></textarea>
+                    <button class="btn-resposta" onclick="mostrarGabarito(4)" style="margin-top:10px;">Ver resposta</button>
+                    <div class="gabarito" id="gabarito4">
+                        <strong>Referência:</strong> "Determinou-lhes o rei a ração diária, das iguarias do rei e do vinho que ele bebia, e que assim fossem mantidos por três anos." <strong>O segundo desafio foi alimentar: participar dos manjares e iguarias da mesa real, que provavelmente incluíam alimentos imundos e bebidas alcoólicas, proibidos pela lei judaica (Levítico 11; Provérbios 20:1).</strong>
+                    </div>
+                </div>
+                
+                <div class="desafio-card">
+                    <h5>3️⃣ Desafio Religioso</h5>
+                    <p><strong>Pergunta 7:</strong> O terceiro desafio refere-se à mudança dos nomes. Que novos nomes receberam Daniel e seus amigos? Daniel 1:7</p>
+                    <textarea placeholder="Sua resposta..." rows="3" style="width:100%; padding:10px; background:rgba(255,255,255,0.05); border:1px solid #3498db; border-radius:5px; color:#fff; margin-top:10px;"></textarea>
+                    <button class="btn-resposta" onclick="mostrarGabarito(7)" style="margin-top:10px;">Ver resposta</button>
+                    <div class="gabarito" id="gabarito7">
+                        <strong>Referência:</strong> "O chefe dos eunucos lhes pôs outros nomes, a saber: a Daniel, Beltessazar; a Hananias, Sadraque; a Misael, Mesaque; e a Azarias, Abede-nego." <strong>A mudança de nomes significava que estes jovens estavam sendo adotados na corte babilônica, com a intenção de que abandonassem sua religião hebraica e aceitassem o politeísmo de Babilônia.</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela de Nomes -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📋</div>
+                <h3>O Significado dos Nomes</h3>
+            </div>
+            
+            <div class="tabela-nomes">
+                <table>
+                    <tr>
+                        <th>Nome Hebraico</th>
+                        <th>Significado</th>
+                        <th>Nome Babilônico</th>
+                        <th>Significado</th>
+                    </tr>
+                    <tr>
+                        <td>Daniel</td>
+                        <td>"Deus é meu juiz"</td>
+                        <td>Beltessazar</td>
+                        <td>"Bel proteja sua vida [a do rei]"</td>
+                    </tr>
+                    <tr>
+                        <td>Hananias</td>
+                        <td>"O Senhor é bondoso comigo"</td>
+                        <td>Sadraque</td>
+                        <td>"Inspiração ao deus sol"</td>
+                    </tr>
+                    <tr>
+                        <td>Misael</td>
+                        <td>"Quem é como Deus?"</td>
+                        <td>Mesaque</td>
+                        <td>"Quem é como o deus lua?"</td>
+                    </tr>
+                    <tr>
+                        <td>Azarias</td>
+                        <td>"O Senhor é meu ajudador"</td>
+                        <td>Abede-nego</td>
+                        <td>"Servo do deus Nego (Nebo)"</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="destaque-box">
+                <p>A mudança de seus nomes representava divindades caldeias. Isso simbolizava a tentativa de apagar sua identidade religiosa e incorporá-los à cultura pagã. No entanto, mesmo com novos nomes, seus corações permaneceram fiéis ao Deus de Israel.</p>
+            </div>
+        </div>
+
+        <!-- A Decisão de Daniel -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💪</div>
+                <h3>A Decisão de Daniel</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Que atitude Daniel tomou com relação à dieta determinada pelo rei? Daniel 1:8</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "Daniel, porém, decidiu no seu coração não se contaminar com a porção das iguarias do rei, nem com o vinho que ele bebia." <strong>No momento de prova, Daniel manteve-se fiel a Deus e decidiu seguir os princípios de temperança, mesmo que com isso contrariasse a ordem do rei e pusesse em risco a própria vida.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Que experimento Daniel propôs ao cozinheiro-chefe e qual foi o resultado? Daniel 1:11-16</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Experimenta, peço-te, os teus servos dez dias; e que se nos dêem legumes a comer e água a beber. Então, se veja diante de ti a nossa aparência e a dos jovens que comem as iguarias do rei; e, segundo vires, age com os teus servos." <strong>Daniel propôs uma alimentação alternativa durante dez dias. Ao final, os que haviam sido temperantes estavam mais saudáveis, mais fortes e possuíam maior capacidade mental. Ao término dos três anos, foram considerados "dez vezes mais doutos do que todos os magos e encantadores" (Daniel 1:20).</strong>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Pois aquilo que o homem semear, isso também ceifará."
+                <span class="versiculo-ref">Gálatas 6:7</span>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Os jovens haviam aprendido a desenvolver hábitos corretos que promoviam a saúde plena, pois a capacidade intelectual, a força física e a longevidade dependem de leis imutáveis criadas por Deus. Nesta questão o acaso não existe. É uma lei do céu.</p>
+                
+                <p style="margin-top: 15px;">É impressionante notar que ao término dos três anos de estudos, Daniel e seus amigos foram considerados "dez vezes mais doutos do que todos os magos e encantadores" de todo o reino de Babilônia (Daniel 1:20). O texto ainda mostra que a Daniel foi dada "inteligência de todas as visões e sonhos" (Daniel 1:17). Isso demonstra que ele já estava sendo preparado para o exercício do ministério profético e que seria um veículo das surpreendentes revelações divinas à posteridade.</p>
+            </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">✨</div>
+                <h3>Líções para Nossos Dias</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>Logo no primeiro capítulo de Daniel aprendemos que Deus nunca desampara Seu povo</strong>, mas concede sabedoria, coragem e livramento diante das circunstâncias adversas. No conflito entre o bem e o mal, Deus e Seu povo sempre têm a vitória final.</p>
+                
+                <p style="margin-top: 15px;">Os três desafios enfrentados por Daniel e seus amigos também são nossos:</p>
+                <ul style="margin-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.8;">
+                    <li><strong>Desafio Cultural:</strong> Somos constantemente pressionados a adotar valores contrários à Palavra de Deus.</li>
+                    <li><strong>Desafio Alimentar:</strong> Somos chamados a cuidar do corpo como templo do Espírito Santo.</li>
+                    <li><strong>Desafio Religioso:</strong> Somos tentados a adorar outros deuses - dinheiro, prazer, fama, poder.</li>
+                </ul>
+                
+                <p style="margin-top: 15px;">Que possamos, como Daniel, decidir em nosso coração não nos contaminar com as coisas deste mundo.</p>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Após conhecer melhor a história de Daniel e dos seus três amigos, desejo demonstrar em minha vida a mesma firmeza de caráter que eles demonstraram tomando as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Não permitirei que elementos de minha cultura, contrários aos ensinos da Palavra de Deus, sejam assimilados em minha vida.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Não usarei alimentos condenados pela Bíblia (Levítico 11), nem farei uso de qualquer tipo de bebida alcoólica (Provérbios 20:1; 23:31-35).</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Não me dobrarei aos ídolos modernos, mas adorarei somente ao Deus verdadeiro.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Assim como Daniel decidiu em seu coração não se contaminar, eu também decido permanecer fiel a Deus em todas as áreas da minha vida - cultural, alimentar e religiosa - confiando que Ele me dará vitória."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-1.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-3.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Daniel, porém, decidiu no seu coração não se contaminar" - Daniel 1:8</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção (mantida para compatibilidade)
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Dois Poderes em Conflito",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel2', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel2');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

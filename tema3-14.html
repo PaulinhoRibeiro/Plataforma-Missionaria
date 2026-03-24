@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 14: A Queda da Grande Meretriz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=A+Queda+da+Grande+Meretriz');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo para imagens */
+        .imagem-destaque {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .imagem-destaque img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .imagem-legenda {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #ddd;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Grid para imagens */
+        .imagens-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .imagem-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .imagem-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(201, 160, 94, 0.3);
+        }
+
+        .imagem-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .imagem-card .imagem-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .imagem-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-placeholder-icon {
+            color: #c9a05e;
+            font-size: 3rem;
+        }
+
+        .img-caption {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .img-nota {
+            color: #c9a05e;
+            font-size: 0.8rem;
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Grid para as cabeças */
+        .cabecas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .cabeca-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .cabeca-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .cabeca-card .imagem-placeholder {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .cabeca-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cabeca-card p {
+            color: #ddd;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Tabela de paralelos */
+        .tabela-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .tabela-paralelos {
+            width: 100%;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .tabela-paralelos table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-paralelos th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1rem;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .tabela-paralelos td {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-paralelos tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+            flex: 1;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .campo input:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid, 
+            .imagens-grid, 
+            .cabecas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 14</span>
+        </div>
+        <h1>ESTUDO 14</h1>
+        <h2>A Queda da Grande Meretriz</h2>
+        <p>"E sobre a sua fronte estava escrito um nome: Mistério, a grande Babilônia, a mãe das prostituições e das abominações da terra." (Apocalipse 17:5)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Chegamos ao capítulo 17 do livro do Apocalipse. Este é, sem dúvida, um dos capítulos mais difíceis de interpretação e talvez não tenhamos respostas para tudo que ele revela. Ele trata do julgamento da grande meretriz. Há duas palavras no grego, língua original do Apocalipse, que se referem a juízo: CRISIS e KRIMA. Quando se usa CRISIS, temos um juízo em andamento, mas quando se usa KRIMA, é a pronúncia do resultado, que pode ser positivo (absolvição) ou negativo (condenação). Aqui João usa a palavra KRIMA, é a sentença que será pronunciada sobre Babilônia, uma vez que o juízo que antecede a Volta de Jesus já foi concluído quando Ele deixou o Santuário Celestial (Apocalipse 15:8) e as pragas já estão caindo sobre a Terra (Apocalipse 16).</p>
+                <p style="margin-top: 15px;">João recebeu as revelações do Apocalipse em forma de audiovisual. Ele ouviu e viu muitas coisas. Em alguns momentos ele apenas ouvia para depois ver (Apocalipse 1:10 e 12; 7:4 e 9). Em Apocalipse 17 acontece a mesma coisa. Primeiro, o anjo disse que lhe mostraria o julgamento da "grande meretriz que se acha sentada sobre muitas águas" (Apocalipse 17:1). Mas quando o anjo o transporta em espírito, ele chega a um deserto e vê uma mulher montada em uma besta escarlate (17:3).</p>
+            </div>
+            
+            <!-- Imagem principal - A mulher sobre a besta escarlate -->
+            <div class="imagem-destaque">
+                <img src="img/meretriz-besta.jpg" alt="A grande meretriz montada na besta escarlate" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">👩‍🐉</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">A grande meretriz</span>
+                </div>
+                <div class="imagem-legenda">A mulher vestida de púrpura e escarlate montada na besta de sete cabeças - img/meretriz-besta.jpg</div>
+            </div>
+        </div>
+
+        <!-- Divisões do Capítulo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📑</div>
+                <h3>Divisões do Capítulo</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Podemos dividir o capítulo 17 em três partes muito claras:</p>
+                <ul style="list-style-type: none; padding: 0; margin-top: 15px;">
+                    <li style="margin-bottom: 10px; border-left: 3px solid #c9a05e; padding-left: 15px;"><strong>Versos 1-2:</strong> A fala do anjo anunciando o juízo da grande meretriz.</li>
+                    <li style="margin-bottom: 10px; border-left: 3px solid #c9a05e; padding-left: 15px;"><strong>Versos 3-6:</strong> Descrição dos símbolos (a mulher e a besta).</li>
+                    <li style="margin-bottom: 10px; border-left: 3px solid #c9a05e; padding-left: 15px;"><strong>Versos 7-18:</strong> Explicação do anjo sobre a visão (primeiro a besta, depois a meretriz).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- A Visão da Meretriz -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👩</div>
+                <h3>A Visão da Meretriz</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">O que o anjo disse para João sobre a meretriz (prostituta)? Apocalipse 17:1-3</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Complete as frases baseado em Apocalipse 17:1-3..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência completa:</strong><br>
+                    a) Achava-se sentada sobre <strong>muitas águas</strong> (17:1).<br>
+                    b) Com quem se prostituíram os <strong>reis da terra</strong> (17:2).<br>
+                    c) Com seu vinho ela embebedou os <strong>habitantes da terra</strong> (17:2).<br><br>
+                    <strong>Significado:</strong><br>
+                    - "Muitas águas" = povos, multidões, nações e línguas (17:15).<br>
+                    - Prostituição com reis = união ilícita entre igreja e estado.<br>
+                    - Vinho = falsas doutrinas (imortalidade da alma, purgatório, domingo, etc.).
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Quando João é transportado em espírito, o anjo o leva para um deserto. O que João viu agora? Apocalipse 17:4-6</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Complete as frases baseado em Apocalipse 17:4-6..." rows="5"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência completa:</strong><br>
+                    a) A mulher estava montada numa <strong>besta escarlate</strong> (17:3).<br>
+                    b) Achava-se a mulher vestida de <strong>púrpura e escarlate</strong> (17:4).<br>
+                    c) Adornada de <strong>ouro, pedras preciosas e pérolas</strong> (17:4).<br>
+                    d) Tinha em sua mão <strong>um cálice de ouro cheio de abominações</strong> (17:4).<br><br>
+                    <strong>Significado:</strong><br>
+                    - Púrpura/escarlate = ostentação, riqueza, mas também pecado (Isaías 1:18) e Satanás (Apocalipse 12:3).<br>
+                    - Cálice de ouro = aparência de fé pura, mas conteúdo corrupto.<br>
+                    - Embriagada com sangue dos santos = perseguição aos fiéis durante a Idade Média.
+                </div>
+            </div>
+            
+            <!-- Grid dos símbolos da meretriz -->
+            <div class="imagens-grid">
+                <div class="imagem-card">
+                    <h5>👑 Vestes de púrpura</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/vestes-purpura.jpg" alt="Vestes de púrpura e escarlate" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">👑</div>
+                    </div>
+                    <p class="img-caption">Ostentação e poder terreno</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>🥂 Cálice de ouro</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/calice-ouro.jpg" alt="Cálice de ouro com abominações" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🥂</div>
+                    </div>
+                    <p class="img-caption">Falsa doutrina em aparência pura</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>🩸 Embriagada com sangue</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/sangue-santos.jpg" alt="Sangue dos santos" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-icon').style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🩸</div>
+                    </div>
+                    <p class="img-caption">Perseguição aos fiéis</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que estava escrito na fronte da mulher? Apocalipse 17:5</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">"Roma, a cidade eterna"</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">"Mistério, a grande Babilônia, a mãe das prostituições e das abominações da terra" ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">"A besta que sobe do mar"</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> "Mistério, a grande Babilônia, a mãe das prostituições e das abominações da terra"<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) A igreja de Roma é a <strong>igreja-mãe</strong>, pois possui filhas.<br>
+                    b) As filhas são as igrejas que se apegam às doutrinas e tradições de Roma não baseadas na Bíblia.<br>
+                    c) Muitas destas filhas saíram dela, mas conservam seus vícios e conduta religiosa equivocada.<br>
+                    d) "Mistério" - revela que há um significado oculto a ser desvendado.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Com o que a mulher estava embriagada? Apocalipse 17:6</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Com vinho comum.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Com o sangue dos santos e das testemunhas de Jesus. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">Com vinho de sua própria videira.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Com o sangue dos santos e das testemunhas de Jesus.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Linguagem figurada sobre os milhares perseguidos e mortos durante a Idade Média.<br>
+                    b) Cristãos fiéis foram designados "hereges" e perseguidos por não concordarem com erros e tradições de Roma.<br>
+                    c) Valdenses, Albigenses, Huguenotes e outros sofreram martírio.<br>
+                    d) Apocalipse 16:6 confirma: "Derramaram sangue de santos e de profetas, também sangue lhes tens dado a beber".
+                </div>
+            </div>
+        </div>
+
+        <!-- A Besta Escarlate -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🐉</div>
+                <h3>A Besta Escarlate</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Qual a descrição que o anjo faz da Besta? Apocalipse 17:3</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Descreva a besta escarlate..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência completa:</strong><br>
+                    a) <strong>Cor:</strong> Escarlate (vermelho) - associada a pecado (Isaías 1:18) e a Satanás (Apocalipse 12:3).<br>
+                    b) <strong>Estava repleta de:</strong> Nomes de blasfêmia (assim como a besta de Apocalipse 13).<br>
+                    c) <strong>Cabeças:</strong> Sete cabeças.<br>
+                    d) <strong>Chifres:</strong> Dez chifres.<br><br>
+                    <strong>Duas possíveis interpretações:</strong><br>
+                    <strong>a) Satanás:</strong> Paralelo com Apocalipse 12:3 (sete cabeças, dez chifres, cor vermelha).<br>
+                    <strong>b) Estados Unidos:</strong> Último poder político-militar global, "oitava cabeça" procedente da Europa.
+                </div>
+            </div>
+            
+            <!-- Grid comparativo - Besta x Dragão -->
+            <div class="tabela-box">
+                <h5 style="color: #c9a05e; text-align: center; margin-bottom: 15px;">📊 Paralelo: Dragão (Apoc 12) x Besta Escarlate (Apoc 17)</h5>
+                <div class="tabela-paralelos">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Característica</th>
+                                <th>Dragão (Apoc 12)</th>
+                                <th>Besta Escarlate (Apoc 17)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cor</td><td>Vermelho (escarlate)</td><td>Escarlate</td></tr>
+                            <tr><td>Cabeças</td><td>Sete cabeças</td><td>Sete cabeças</td></tr>
+                            <tr><td>Chifres</td><td>Dez chifres</td><td>Dez chifres</td></tr>
+                            <tr><td>Oposição</td><td>Guerra contra a mulher</td><td>Guerra contra o Cordeiro</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- As Sete Cabeças -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👑</div>
+                <h3>As Sete Cabeças - Sete Montes e Sete Reis</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>O anjo explicou para João: "Aqui está o sentido, que tem sabedoria: as sete cabeças são sete montes, nos quais a mulher está sentada. São também sete reis" (Apocalipse 17:9).</p>
+                <p style="margin-top: 10px;">Os sete "montes" na mentalidade hebraica representam reinos. Isaías usa de forma intercambiável "montes" e povo/nação (Isaías 37:32; Salmo 48:2; Jeremias 51:25). O termo "rei" também é usado como equivalente de "reino" (Daniel 7:17; 8:21,23).</p>
+            </div>
+            
+            <!-- Grid dos sete reinos -->
+            <div class="cabecas-grid">
+                <div class="cabeca-card"><h5>1º</h5><div class="imagem-placeholder"><img src="img/egito.jpg" alt="Egito" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="img-placeholder-icon" style="display: none;">🇪🇬</div></div><p>Egito</p></div>
+                <div class="cabeca-card"><h5>2º</h5><div class="imagem-placeholder"><img src="img/assiria.jpg" alt="Assíria" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="img-placeholder-icon" style="display: none;">🏛️</div></div><p>Assíria</p></div>
+                <div class="cabeca-card"><h5>3º</h5><div class="imagem-placeholder"><img src="img/babilonia.jpg" alt="Babilônia" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="img-placeholder-icon" style="display: none;">🏰</div></div><p>Babilônia</p></div>
+                <div class="cabeca-card"><h5>4º</h5><div class="imagem-placeholder"><img src="img/medo-persia.jpg" alt="Medo-Pérsia" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="img-placeholder-icon" style="display: none;">🐏</div></div><p>Medo-Pérsia</p></div>
+                <div class="cabeca-card"><h5>5º</h5><div class="imagem-placeholder"><img src="img/grecia.jpg" alt="Grécia" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="img-placeholder-icon" style="display: none;">🏺</div></div><p>Grécia</p></div>
+                <div class="cabeca-card"><h5>6º</h5><div class="imagem-placeholder"><img src="img/roma.jpg" alt="Roma Pagã" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="img-placeholder-icon" style="display: none;">🏛️</div></div><p>Roma Pagã</p></div>
+                <div class="cabeca-card"><h5>7º</h5><div class="imagem-placeholder"><img src="img/roma-papal.jpg" alt="Roma Papal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="img-placeholder-icon" style="display: none;">👑</div></div><p>Roma Papal</p></div>
+                <div class="cabeca-card"><h5>8º</h5><div class="imagem-placeholder"><img src="img/eua.jpg" alt="EUA (oitava cabeça)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="img-placeholder-icon" style="display: none;">🇺🇸</div></div><p>EUA (procedente)</p></div>
+            </div>
+            
+            <div class="destaque-box">
+                <h5 style="color: #c9a05e;">Interpretação dos Sete Reis:</h5>
+                <p>Cinco já tinham caído (Egito, Assíria, Babilônia, Medo-Pérsia, Grécia).</p>
+                <p>Um existia (Roma Pagã - no tempo de João).</p>
+                <p>O outro ainda não havia chegado (Roma Papal - 538 d.C.).</p>
+                <p>A oitava cabeça procede das sete e vai para a perdição.</p>
+            </div>
+        </div>
+
+        <!-- Os Dez Chifres -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🦌</div>
+                <h3>Os Dez Chifres</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Os dez chifres representam poderes políticos durante o tempo da sétima cabeça, que apoiarão a besta (Apocalipse 17:13). Estas nações têm o propósito de se unir com a besta para forçar os habitantes da Terra a "beber" o vinho de Babilônia, isto é, unir o mundo sob seu controle e eliminar todos os que se recusam a cooperar.</p>
+                <p style="margin-top: 10px;">O anjo explica que estes dez reis receberão autoridade juntamente com a besta e farão guerra contra o Cordeiro. Mas o Cordeiro os vencerá (Apocalipse 17:14).</p>
+            </div>
+            
+            <!-- Imagem dos dez chifres -->
+            <div class="imagem-destaque">
+                <img src="img/dez-chifres.jpg" alt="Dez chifres" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🦌🦌🦌</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Dez chifres</span>
+                </div>
+                <div class="imagem-legenda">Os dez chifres representam dez reinos que apoiam a besta - img/dez-chifres.jpg</div>
+            </div>
+        </div>
+
+        <!-- A Queda de Babilônia -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💔</div>
+                <h3>A Queda de Babilônia</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Apocalipse 17:16-17 revela que os próprios poderes que antes apoiavam a meretriz se voltarão contra ela: "E os dez chifres que viste na besta, esses odiarão a meretriz, e a farão desolada e nua, e comerão as suas carnes, e a queimarão no fogo."</p>
+                <p style="margin-top: 10px;">Esta é uma verdadeira reviravolta! O sistema que uniu igreja e estado será destruído pelos próprios poderes políticos que o apoiavam. Deus usará os corações endurecidos dos ímpios para executar Seu juízo sobre Babilônia.</p>
+            </div>
+            
+            <!-- Imagem da queda de Babilônia -->
+            <div class="imagem-destaque">
+                <img src="img/queda-babilonia.jpg" alt="Queda de Babilônia" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🏛️💔</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Queda de Babilônia</span>
+                </div>
+                <div class="imagem-legenda">Os dez reis se voltam contra a meretriz e a destroem - img/queda-babilonia.jpg</div>
+            </div>
+        </div>
+
+        <!-- Vitória do Cordeiro -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏆</div>
+                <h3>Vitória do Cordeiro</h3>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Estes pelejarão contra o Cordeiro, e o Cordeiro os vencerá, pois é o Senhor dos senhores e o Rei dos reis; e vencerão também os que estão com ele, os chamados, eleitos e fiéis." (Apocalipse 17:14)
+            </div>
+            
+            <div class="destaque-box">
+                <p>Embora o capítulo 17 de Apocalipse fale de poderes malignos ativos contra Deus e Seu povo, o controle da história deste mundo ainda está nas mãos de Deus. Ele traz juízo sobre os inimigos de Seu povo e livra Seus santos de todas as perseguições.</p>
+                <p style="margin-top: 15px;">Podemos estar cientes que, a despeito das uniões dos poderes das trevas, no tempo do fim, contra Deus e Seu povo, nossa vitória está garantida. A promessa é que <strong>"Em todas as coisas, porém, somos mais que vencedores, por meio daquele que nos amou" (Romanos 8:37).</strong></p>
+            </div>
+            
+            <!-- Imagem da vitória -->
+            <div class="imagem-destaque">
+                <img src="img/cordeiro-vitoria.jpg" alt="Cordeiro vitorioso" onerror="this.style.display='none'; this.parentNode.querySelector('.img-placeholder-fallback').style.display='flex';">
+                <div class="img-placeholder-fallback" style="display: none; width: 100%; height: 300px; background: rgba(201,160,94,0.1); align-items: center; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 4rem;">🐑🏆</span>
+                    <span style="color: #c9a05e; margin-top: 10px;">Cordeiro vitorioso</span>
+                </div>
+                <div class="imagem-legenda">O Cordeiro, Senhor dos senhores e Rei dos reis, vence todos os inimigos - img/cordeiro-vitoria.jpg</div>
+            </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">💪</div>
+                <h3>Conclusão</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>A grande meretriz, Babilônia, representa o sistema religioso apostatado que se uniu ao poder político para perseguir os fiéis de Deus. Suas filhas são as igrejas que herdaram suas doutrinas contrárias à Palavra de Deus. Mas o juízo de Deus virá sobre este sistema.</p>
+                <p style="margin-top: 15px;">A mensagem do capítulo 17 é de esperança para o povo de Deus. Embora os poderes das trevas se unam contra o Cordeiro, a vitória já está assegurada. Aqueles que estão com Ele - os chamados, eleitos e fiéis - também vencerão.</p>
+                <p style="margin-top: 15px;">A nossa posição deve ser ao lado do Cordeiro, confiando em Sua proteção e aguardando a Sua gloriosa volta. Como João, que ficou admirado diante das visões, nós também podemos nos espantar. Mas a promessa do anjo é também para nós: "Dir-te-ei o mistério" (Apocalipse 17:7). Com a ajuda do Espírito Santo, podemos compreender os planos de Deus para o tempo do fim.</p>
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Acredito que Deus está no controle da história e que nada foge ao Seu poder.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Desejo me posicionar ao lado do Cordeiro, nesta grande batalha entre o bem e o mal.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Vou consagrar minha vida a Deus, orar todos os dias, e estarei pronto para as batalhas espirituais do tempo do fim.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 BÊNÇÃO FINAL</h4>
+            <div class="compromisso-texto">
+                "... Que a paz de Deus, que excede todo entendimento, guarde seu coração e sua mente em CRISTO JESUS" (Filipenses 4:7).
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Registrar minha declaração</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Declaração registrada! Maranata!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="apocalipse-estudo13.html" class="btn-nav">← Estudo anterior</a>
+            <a href="apocalipse-estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="apocalipse-estudo15.html" class="btn-nav">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Estes pelejarão contra o Cordeiro, e o Cordeiro os vencerá, pois é o Senhor dos senhores e o Rei dos reis." - Apocalipse 17:14</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 14 - A Queda da Grande Meretriz",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse14', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse14');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

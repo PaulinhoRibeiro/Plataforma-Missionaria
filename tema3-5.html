@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 5: Os 144 Mil Selados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Os+144+Mil+Selados');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo para imagens */
+        .imagem-destaque {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .imagem-destaque img {
+            width: 100%;
+            display: block;
+        }
+
+        .imagem-legenda {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #ddd;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Grid para imagens dos selos */
+        .selos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .selo-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .selo-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .selo-imagem {
+            width: 100%;
+            height: 150px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .selo-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-placeholder {
+            color: #c9a05e;
+            font-size: 3rem;
+        }
+
+        /* Tabela comparativa */
+        .tabela-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .tabela-selos {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .tabela-selos table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-selos th {
+            background: rgba(201, 160, 94, 0.3);
+            color: #c9a05e;
+            padding: 12px;
+            text-align: center;
+            font-size: 1.1rem;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .tabela-selos td {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        .tabela-selos tr:hover {
+            background: rgba(201, 160, 94, 0.1);
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid, .selos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 5</span>
+        </div>
+        <h1>ESTUDO 5</h1>
+        <h2>Os 144 Mil Selados</h2>
+        <p>"Não danifiqueis a terra, nem o mar, nem as árvores, até selarmos na fronte os servos do nosso Deus." (Apocalipse 7:3)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Em toda a Bíblia apenas os capítulos 7 e 14 de Apocalipse tratam do tema dos 144 mil selados. É interessante notarmos que o capítulo 7 encontra-se entre a abertura do sexto selo (Apocalipse 6) e a abertura do sétimo selo (Apocalipse 8). Apocalipse 6 termina falando dos eventos finais da história humana indicando a iminência da vinda de Jesus. Então surge a pergunta: <strong>"Por que chegou o grande dia da ira deles e quem é que pode suster-se?"</strong> (Apocalipse 6:17).</p>
+                <p style="margin-top: 15px;">Quando lemos Apocalipse 8:1, vemos a abertura do sétimo e último selo, que é a própria Volta de Cristo com todos os anjos (Mateus 25:31). Nesta ocasião o Céu estará em silêncio, vazio, por cerca de meia hora profética, ou seja, uma semana literal. Assim, o capítulo 7 responde a pergunta formulada no fim do capítulo 6, <strong>"quem poderá suster-se?"</strong> Resposta: os 144 mil selados.</p>
+            </div>
+            
+            <!-- Imagem ilustrativa (placeholder) -->
+            <div class="imagem-destaque">
+                <img src="img/144-mil.jpg" alt="Os 144 mil selados" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display: none; text-align: center; padding: 50px; background: rgba(0,0,0,0.3);">🕊️ Representação dos 144 mil</div>
+                <div class="imagem-legenda">Os 144 mil selados diante do trono de Deus - Clique para imagem (img/144-mil.jpg)</div>
+            </div>
+        </div>
+
+        <!-- O Selo de Deus -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔏</div>
+                <h3>O Selo de Deus</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">João vê um anjo vindo do nascente do sol (Oriente). O que ele carrega e que pedido faz aos quatro anjos? Apocalipse 7:2-3</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Ele carrega uma espada e pede para destruir a terra.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Ele carrega o selo do Deus vivo e pede que não danifiquem a terra até que os servos de Deus sejam selados. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Ele carrega uma trombeta e pede para anunciar o juízo.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta completa</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Ele carrega o selo do Deus vivo e pede que não danifiquem a terra até que os servos de Deus sejam selados.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Os anjos na Bíblia são mensageiros de Deus (Mateus 13:41; 2 Reis 19:35).<br>
+                    b) Estes quatro anjos estão retendo os ventos para que não soprem sobre a terra.<br>
+                    c) Na profecia, ventos simbolizam guerras e lutas por supremacia entre as nações (Daniel 7:2; Jeremias 4:11-13).<br>
+                    d) Deus não permitirá que os poderes do mal façam sua obra de morte até que o povo de Deus tenha sido selado.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Qual é o selo do Deus vivo? Apocalipse 7:2-3; Isaías 8:16; Ezequiel 20:12, 20</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que a Bíblia identifica como selo de Deus?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência completa:</strong><br>
+                    a) Selo ou sinal são sinônimos na Bíblia (Gênesis 17:11; Ezequiel 9:4; Romanos 4:11).<br>
+                    b) Os selos antigos continham três elementos principais: <strong>nome do governante, seu cargo e a jurisdição ou domínio</strong>.<br>
+                    c) O <strong>sábado de Deus</strong> é o único dos Dez Mandamentos que contém:<br>
+                    - <strong>Nome:</strong> "o Senhor teu Deus"<br>
+                    - <strong>Título:</strong> Criador, "pois em seis dias fez o Senhor"<br>
+                    - <strong>Jurisdição:</strong> "o céu e a terra, o mar e tudo o que neles há" (Êxodo 20:8-11)<br>
+                    d) O sábado do sétimo dia é um eterno sinal de lealdade a Deus.<br>
+                    e) Por extensão, são selados apenas aqueles que forem leais não só ao sábado, mas a toda a Lei de Deus (Tiago 2:10).
+                </div>
+            </div>
+            
+            <!-- Grid com imagens comparativas (selo x marca) -->
+            <div class="selos-grid">
+                <div class="selo-card">
+                    <h5>🔏 Selo de Deus</h5>
+                    <div class="selo-imagem">
+                        <img src="img/selo-deus.jpg" alt="Selo de Deus - Sábado" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🔏</div>
+                    </div>
+                    <p style="color: #c9a05e;">Nome, Título e Jurisdição</p>
+                    <p class="img-caption">img/selo-deus.jpg</p>
+                </div>
+                
+                <div class="selo-card">
+                    <h5>⚠️ Marca da Besta</h5>
+                    <div class="selo-imagem">
+                        <img src="img/ma" alt="Marca da Besta" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">⚠️</div>
+                    </div>
+                    <p style="color: #c9a05e;">Nome da besta na testa ou mão</p>
+                    <p class="img-caption">img/marca-besta.jpg</p>
+                </div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h5>📜 Os Três Elementos do Selo</h5>
+                    <p><strong>Nome:</strong> "O Senhor teu Deus"</p>
+                    <p><strong>Título:</strong> Criador - "fez o Senhor"</p>
+                    <p><strong>Jurisdição:</strong> "os céus e a terra, o mar e tudo o que neles há"</p>
+                    <p class="referencia">Êxodo 20:8-11</p>
+                </div>
+                
+                <div class="info-card">
+                    <h5>🔗 Lealdade a Toda a Lei</h5>
+                    <p>Tiago afirma que se alguém guarda nove mandamentos e tropeça em um, se torna culpado de todos (Tiago 2:10). O selo representa lealdade completa a Deus.</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Segundo o livro do Apocalipse, quem recebe o selo de Deus? Apocalipse 7:4</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'a')">
+                        <input type="radio" name="pergunta3" id="p3a">
+                        <label for="p3a">Todos os que creem em Jesus, sem distinção.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'b')">
+                        <input type="radio" name="pergunta3" id="p3b">
+                        <label for="p3b">Os 144 mil, de todas as tribos dos filhos de Israel. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 3, 'c')">
+                        <input type="radio" name="pergunta3" id="p3c">
+                        <label for="p3c">Apenas os judeus literais de Jerusalém.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>✓ Resposta correta:</strong> Os 144 mil, de todas as tribos dos filhos de Israel.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) O selo de Deus é aplicado com duas finalidades específicas:<br>
+                    - Indicar que os 144 mil pertencem ao Senhor, trazendo o nome de Deus em suas frontes (Apocalipse 14:1). O "nome" de Deus representa Seu caráter.<br>
+                    - Proteger os filhos de Deus dos juízos que sobrevirão aos ímpios por ocasião das sete pragas (Apocalipse 7:3; 9:4; 16:2).<br>
+                    b) O selo é símbolo de <strong>pertencimento e proteção</strong>.
+                </div>
+            </div>
+        </div>
+
+        <!-- Por que 144 Mil? -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔢</div>
+                <h3>Por que 144 Mil?</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>O número 144 mil é resultado da multiplicação de <strong>12 X 12 X 1.000 = 144.000</strong>.</p>
+                <p style="margin-top: 10px;">• <strong>12</strong> é o número das tribos de Israel do Antigo Testamento. Representa também o número da igreja construída sobre o fundamento dos doze apóstolos (Efésios 2:20). Na Nova Jerusalém, as doze portas são nomeadas após as doze tribos de Israel e seus doze fundamentos com os nomes dos doze apóstolos.</p>
+                <p>• Assim, o número <strong>144 (12 x 12)</strong> representa a totalidade de Israel, ou seja, a totalidade do povo de Deus - Antigo e Novo Testamento.</p>
+            </div>
+            
+            <div class="tabela-box">
+                <h5 style="color: #c9a05e; text-align: center; margin-bottom: 15px;">📊 O Significado do Número 1.000</h5>
+                <div class="tabela-selos">
+                    <table>
+                        <tr>
+                            <th>Significado</th>
+                            <th>Referência Bíblica</th>
+                        </tr>
+                        <tr>
+                            <td>Número literal</td>
+                            <td>Números 31:5</td>
+                        </tr>
+                        <tr>
+                            <td>Subdivisão tribal</td>
+                            <td>Josué 22:14,21; 1 Samuel 10:19; 23:23</td>
+                        </tr>
+                        <tr>
+                            <td>Unidade militar (1.000 soldados)</td>
+                            <td>Números 1:16; 10:4; 31:4-6; 1 Samuel 8:12; 18:13</td>
+                        </tr>
+                        <tr>
+                            <td>"Milhares de Israel" = exército de Israel</td>
+                            <td>Êxodo 18:21,25; 1 Samuel 22:7</td>
+                        </tr>
+                    </table>
+                </div>
+                <p style="margin-top: 15px; color: #ddd;">Os 144 mil selados compõem-se de <strong>144 unidades militares</strong>, doze de cada tribo, significando uma totalidade de Israel. João utiliza imagens de uma batalha para retratar a igreja em seu aspecto de luta terrestre, uma igreja militante.</p>
+            </div>
+        </div>
+
+        <!-- Identificando os 144 Mil -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔍</div>
+                <h3>Identificando os 144 Mil</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Qual é a primeira informação que o Apocalipse dá a respeito dos 144 mil? Apocalipse 7:3, 4</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Que eles são mártires que morreram pela fé.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Que eles são selados com o selo do Deus vivo. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">Que eles são os apóstolos de Jesus.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Que eles são selados com o selo do Deus vivo.<br><br>
+                    <strong>Detalhamento - Referência a Ezequiel 9:</strong><br>
+                    a) A cena do selamento de Apocalipse 7 é tomada de Ezequiel 9.<br>
+                    b) Ezequiel viu um homem vestido de linho que recebeu ordem de marcar com um sinal na testa os homens fiéis, antes que os executores chegassem (Ezequiel 9:6).<br>
+                    c) Na crise final, o selo aplicado aos 144 mil é um sinal de proteção.<br>
+                    d) A primeira característica: possuem o selo de Deus, ou seja, são leais aos mandamentos de Deus, inclusive o quarto mandamento (Êxodo 20:8-11).
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Qual o significado dos 144 mil terem na fronte escrito o nome de Deus? Apocalipse 14:1</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que significa ter o nome de Deus na fronte?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência completa:</strong><br>
+                    a) Enquanto os 144 mil possuem o selo de Deus com Seu nome sobre a fronte, a marca da besta consiste no nome da besta na testa ou na mão (Apocalipse 13:16-17; 14:9; 16:2; 19:20).<br>
+                    b) A recepção do selo de Deus ou marca da besta denota <strong>conformidade com o caráter de Deus ou de Satanás</strong>.<br>
+                    c) No conflito final, todo mundo terá ou a imagem de Deus ou a do inimigo de Deus.<br>
+                    d) O selo de Deus não é um sinal visível. A característica que identifica os selados é seu firme compromisso em <strong>guardar os mandamentos de Deus e a fé de Jesus</strong>.<br>
+                    e) Isso é o que significa ter o "nome" ou caráter de Deus escrito em suas testas (Apocalipse 14:1).
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Que outras informações o Apocalipse fornece sobre os 144 mil? Apocalipse 14:4-5</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Liste as características dos 144 mil segundo Apocalipse 14..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Características dos 144 mil:</strong><br><br>
+                    <strong>1. "Não se contaminaram com mulheres"</strong> - Refere-se à decisão de não participarem de práticas idólatras, que em profecia equivale a adultério e fornicação (Apocalipse 2:14-15, 20-25; 17:1-7). Os 144 mil não tiveram relações ilícitas com "a grande meretriz" (Apocalipse 17:1), "a grande Babilônia".<br><br>
+                    <strong>2. "São virgens"</strong> - A palavra grega pode aplicar-se a ambos os sexos. São chamados "virgens" porque levam o sinal da pureza. São castos e têm-se mantido permanentemente incontaminados. Conservam uma fé pura.<br><br>
+                    <strong>3. "Seguem o Cordeiro por onde quer que vai"</strong> - Obediência completa a Cristo.<br><br>
+                    <strong>4. "São os primeiros frutos para Deus e para o Cordeiro"</strong> - Representam a colheita especial da redenção.<br><br>
+                    <strong>5. "Não se achou mentira em sua boca"</strong> - São verdadeiros, íntegros.<br><br>
+                    <strong>6. "São irrepreensíveis"</strong> - Sua vida reflete perfeitamente o caráter de Cristo.
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Estes são os que não se contaminaram com mulheres, porque são virgens. Estes são os que seguem o Cordeiro para onde quer que vai. Estes são os que foram redimidos dentre os homens, primícias para Deus e para o Cordeiro." (Apocalipse 14:4)
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Este número, 144 mil, é um número simbólico ou literal? João 3:16; 1 Timóteo 2:4; Apocalipse 22:17</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'a')">
+                        <input type="radio" name="pergunta7" id="p7a">
+                        <label for="p7a">Número literal, apenas 144 mil pessoas serão salvas.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'b')">
+                        <input type="radio" name="pergunta7" id="p7b">
+                        <label for="p7b">Número simbólico, representando a totalidade do povo remanescente de Deus. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 7, 'c')">
+                        <input type="radio" name="pergunta7" id="p7c">
+                        <label for="p7c">Apenas judeus literais convertidos.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>✓ Resposta correta:</strong> Número simbólico, representando a totalidade do povo remanescente de Deus.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) O fato de Apocalipse 7:4 mencionar "de todas as tribos dos filhos de Israel" não indica apenas judeus literais.<br>
+                    b) As tribos mencionadas não são exatamente as mesmas de Ezequiel 48 e Gênesis 49.<br>
+                    c) Dez tribos não existiam mais na época de João (2 Reis 17:5-23).<br>
+                    d) No Novo Testamento, a salvação "em Cristo" desfaz toda distinção étnica (Gálatas 3:26-29).<br>
+                    e) Conclusão: os 144 mil representam o <strong>Israel espiritual</strong>, a última geração do povo remanescente de Deus (Romanos 9:6-8; Gálatas 3:29; 6:16; Tiago 1:1; 1 Pedro 2:9-10).<br>
+                    f) João vê uma <strong>grande multidão</strong> que ninguém podia enumerar (Apocalipse 7:9), mostrando que a salvação é para todos (João 3:16; 1 Timóteo 2:4; Apocalipse 22:17).
+                </div>
+            </div>
+        </div>
+
+        <!-- A Grande Multidão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👥</div>
+                <h3>A Grande Multidão</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Na visão, João vê uma grande multidão vestida de branco, com palmas nas mãos e um cântico nos lábios. Este é o cântico da vitória, ou seja, terminou o tempo de prova e eles agora se encontram diante de Deus.</p>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Depois destas coisas, olhei, e eis aqui uma multidão, a qual ninguém podia contar, de todas as nações, tribos, povos e línguas, que estavam diante do trono e perante o Cordeiro, vestidos de vestes brancas e com palmas nas suas mãos." (Apocalipse 7:9)
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h5>👑 Vestes Brancas</h5>
+                    <p>Símbolo da justiça de Cristo imputada aos salvos (Apocalipse 19:8). Representa a pureza e vitória alcançada através do sangue do Cordeiro.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h5>🌴 Palmas nas Mãos</h5>
+                    <p>Símbolo de vitória e triunfo. No Antigo Testamento, as palmas eram usadas nas festas de celebração (Levítico 23:40). Aqui representam a vitória final sobre o pecado.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚖️</div>
+                <h3>Conclusão: A Grande Decisão</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Aproxima-se o dia em que todos os seres humanos estarão divididos em apenas dois grupos. Cada um deles terá seu sinal identificador - <strong>selo de Deus ou selo da besta</strong>.</p>
+                <p style="margin-top: 15px;">Escolher a qual destes grupos vamos pertencer é um assunto de vida ou morte, que devemos resolver aqui e agora. A quem vamos manifestar lealdade? Que nome vamos ter? Que sinal ou selo vamos possuir? Decida agora mesmo obedecer a Deus e à Sua palavra.</p>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "Eis que venho sem demora; guarda o que tens, para que ninguém tome a tua coroa." (Apocalipse 3:11)
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Creio que Deus está selando Seus filhos sinceros com o sinal de Sua propriedade e proteção, e desejo receber o selo de Deus em minha vida.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Compreendendo que o selo de Deus é o sábado e, por extensão, toda a Lei de Deus. Desejo, pela graça de Cristo, colocar minha vida em harmonia com estes princípios.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Desejo orar e me consagrar para estar entre os 144 mil que hão de estar vivos e salvos na volta de Jesus.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 BÊNÇÃO FINAL</h4>
+            <div class="compromisso-texto">
+                "... Que a paz de Deus, que excede todo entendimento, guarde seu coração e sua mente em CRISTO JESUS" (Filipenses 4:7).
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Registrar minha declaração</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Declaração registrada! Maranata!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="apocalipse-estudo4.html" class="btn-nav">← Estudo anterior</a>
+            <a href="apocalipse-estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="apocalipse-estudo6.html" class="btn-nav">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Não danifiqueis a terra... até selarmos na fronte os servos do nosso Deus." - Apocalipse 7:3</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 5 - Os 144 Mil Selados",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse5', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse5');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

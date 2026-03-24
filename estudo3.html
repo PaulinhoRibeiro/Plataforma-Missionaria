@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revelações do Apocalipse - Caminho da Revelação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header */
+        .study-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Revelações+do+Apocalipse');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #c9a05e;
+        }
+
+        .study-header-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .study-header-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: #c9a05e;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .study-header-content p {
+            font-size: 1.3rem;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Informações do estudo */
+        .study-info {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            text-align: center;
+        }
+
+        .study-info h2 {
+            font-size: 2.5rem;
+            color: #c9a05e;
+            margin-bottom: 20px;
+        }
+
+        .study-info p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 900px;
+            margin: 0 auto 25px;
+            line-height: 1.8;
+        }
+
+        .study-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(201, 160, 94, 0.1);
+            padding: 12px 25px;
+            border-radius: 40px;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            font-size: 1.1rem;
+        }
+
+        .meta-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Citação de destaque */
+        .quote-box {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            border-left: 5px solid #c9a05e;
+            border-right: 5px solid #c9a05e;
+            font-style: italic;
+        }
+
+        .quote-box p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .quote-author {
+            margin-top: 20px;
+            color: #c9a05e;
+            font-style: normal;
+            font-size: 1.2rem;
+        }
+
+        /* Título da seção de temas */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h3 {
+            font-size: 2.3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #ddd;
+            font-size: 1.2rem;
+        }
+
+        /* Grid de temas */
+        .temas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .tema-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 25px 20px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 280px;
+        }
+
+        .tema-card:hover {
+            transform: translateY(-10px);
+            border-color: #c9a05e;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .tema-number {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 6px 15px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            align-self: flex-start;
+        }
+
+        .tema-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #fff;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .tema-description {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-tema {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .btn-tema:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Seções especiais */
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 50px 0;
+        }
+
+        .section-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .section-card .icone {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #c9a05e;
+        }
+
+        .section-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .section-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Navegação */
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 15px 40px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        .btn-nav-primary {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        .btn-nav-primary:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .footer-verse {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #c9a05e;
+            font-style: italic;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .study-header-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .study-header {
+                height: 280px;
+            }
+
+            .study-info h2 {
+                font-size: 2rem;
+            }
+
+            .study-info p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h3 {
+                font-size: 1.8rem;
+            }
+
+            .temas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-nav {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .sections-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tema-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .tema-card:nth-child(1) { animation-delay: 0.05s; }
+        .tema-card:nth-child(2) { animation-delay: 0.1s; }
+        .tema-card:nth-child(3) { animation-delay: 0.15s; }
+        .tema-card:nth-child(4) { animation-delay: 0.2s; }
+        .tema-card:nth-child(5) { animation-delay: 0.25s; }
+        .tema-card:nth-child(6) { animation-delay: 0.3s; }
+        .tema-card:nth-child(7) { animation-delay: 0.35s; }
+        .tema-card:nth-child(8) { animation-delay: 0.4s; }
+        .tema-card:nth-child(9) { animation-delay: 0.45s; }
+        .tema-card:nth-child(10) { animation-delay: 0.5s; }
+        .tema-card:nth-child(11) { animation-delay: 0.55s; }
+        .tema-card:nth-child(12) { animation-delay: 0.6s; }
+        .tema-card:nth-child(13) { animation-delay: 0.65s; }
+        .tema-card:nth-child(14) { animation-delay: 0.7s; }
+        .tema-card:nth-child(15) { animation-delay: 0.75s; }
+        .tema-card:nth-child(16) { animation-delay: 0.8s; }
+        .tema-card:nth-child(17) { animation-delay: 0.85s; }
+        .tema-card:nth-child(18) { animation-delay: 0.9s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="study-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > <span>Revelações do Apocalipse</span>
+        </div>
+        <div class="study-header-content">
+            <h1>Revelações do Apocalipse</h1>
+            <p>18 estudos para desvendar as profecias do livro que revela o futuro e a vitória final de Cristo</p>
+        </div>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Informações do estudo -->
+        <div class="study-info">
+            <h2>📖 Estudo 3: Revelações do Apocalipse</h2>
+            <p>O Apocalipse é a revelação de Jesus Cristo, dada por Deus para mostrar aos seus servos as coisas que em breve devem acontecer. Escrito pelo apóstolo João na ilha de Patmos, este livro profético desvenda o grande conflito entre o bem e o mal, a perseguição à igreja, o juízo divino e a gloriosa vitória final do Cordeiro. Mais do que um livro de mistérios, o Apocalipse é uma mensagem de esperança para o povo de Deus que aguarda a volta de Jesus.</p>
+            
+            <div class="study-meta">
+                <div class="meta-item">
+                    <span class="meta-icon">📖</span>
+                    <span>18 Temas</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">👑</span>
+                    <span>Revelação de Jesus Cristo</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">⏳</span>
+                    <span>Eventos Finais</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Citação -->
+        <div class="quote-box">
+            <p>"Bem-aventurado aquele que lê, e bem-aventurados os que ouvem as palavras desta profecia e guardam as coisas nela escritas, porque o tempo está próximo."</p>
+            <div class="quote-author">— Apocalipse 1:3</div>
+        </div>
+
+        <!-- Seções do Apocalipse -->
+        <div class="sections-grid">
+            <div class="section-card">
+                <div class="icone">🕯️</div>
+                <h5>As 7 Igrejas</h5>
+                <p>Mensagens proféticas para as igrejas da Ásia que se aplicam a toda a história da igreja cristã.</p>
+            </div>
+            <div class="section-card">
+                <div class="icone">📜</div>
+                <h5>Os 7 Selos</h5>
+                <p>A abertura do livro selado revela os eventos que antecedem o fim e a proteção do povo de Deus.</p>
+            </div>
+            <div class="section-card">
+                <div class="icone">📯</div>
+                <h5>As 7 Trombetas</h5>
+                <p>Juízos divinos anunciando o juízo de Deus sobre as potências que perseguem Seu povo.</p>
+            </div>
+            <div class="section-card">
+                <div class="icone">🐉</div>
+                <h5>O Grande Conflito</h5>
+                <p>A mulher, o dragão e as bestas revelam a guerra espiritual nos bastidores da história.</p>
+            </div>
+            <div class="section-card">
+                <div class="icone">⚱️</div>
+                <h5>As 7 Pragas</h5>
+                <p>O derramamento final da ira de Deus sobre Babilônia antes da volta de Cristo.</p>
+            </div>
+            <div class="section-card">
+                <div class="icone">🏰</div>
+                <h5>A Nova Jerusalém</h5>
+                <p>A cidade santa, a morada eterna dos redimidos, onde Deus habitará com Seu povo.</p>
+            </div>
+        </div>
+
+        <!-- Título da seção de temas -->
+        <div class="section-title">
+            <h3>📋 Os 18 Temas do Estudo</h3>
+            <p>Clique em cada tema para acessar o conteúdo completo</p>
+        </div>
+
+        <!-- Grid de temas -->
+        <div class="temas-grid">
+            <!-- TEMA 1 -->
+            <div class="tema-card" onclick="window.location.href='tema3-1.html'">
+                <span class="tema-number">Tema 01</span>
+                <h4>Apocalipse - Contagem regressiva para o futuro</h4>
+                <p class="tema-description">Introdução ao livro do Apocalipse, sua autoria, contexto histórico e propósito profético.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 2 -->
+            <div class="tema-card" onclick="window.location.href='tema3-2.html'">
+                <span class="tema-number">Tema 02</span>
+                <h4>As sete igrejas do Apocalipse</h4>
+                <p class="tema-description">Estudo das sete igrejas da Ásia Menor e seu significado profético para as diferentes eras da igreja cristã.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 3 -->
+            <div class="tema-card" onclick="window.location.href='tema3-3.html'">
+                <span class="tema-number">Tema 03</span>
+                <h4>O trono de Deus e o livro selado</h4>
+                <p class="tema-description">A visão do trono celestial, os 24 anciãos e o livro selado com sete selos que somente o Cordeiro pode abrir.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 4 -->
+            <div class="tema-card" onclick="window.location.href='tema3-4.html'">
+                <span class="tema-number">Tema 04</span>
+                <h4>Os sete selos</h4>
+                <p class="tema-description">A abertura dos primeiros seis selos e os eventos que se desenrolam na história da igreja.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 5 -->
+            <div class="tema-card" onclick="window.location.href='tema3-5.html'">
+                <span class="tema-number">Tema 05</span>
+                <h4>Os 144 mil selados</h4>
+                <p class="tema-description">Quem são os 144 mil selados, sua missão e seu papel nos últimos dias.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 6 -->
+            <div class="tema-card" onclick="window.location.href='tema3-6.html'">
+                <span class="tema-number">Tema 06</span>
+                <h4>As sete trombetas</h4>
+                <p class="tema-description">O toque das sete trombetas anunciando juízos divinos ao longo da história.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 7 -->
+            <div class="tema-card" onclick="window.location.href='tema3-7.html'">
+                <span class="tema-number">Tema 07</span>
+                <h4>João e o livrinho aberto</h4>
+                <p class="tema-description">A visão do anjo poderoso, o livrinho aberto e a experiência de João (doce na boca, amargo no ventre).</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 8 -->
+            <div class="tema-card" onclick="window.location.href='tema3-8.html'">
+                <span class="tema-number">Tema 08</span>
+                <h4>Duas testemunhas mártires</h4>
+                <p class="tema-description">Quem são as duas testemunhas, seu ministério, morte e ressurreição profética.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 9 -->
+            <div class="tema-card" onclick="window.location.href='tema3-9.html'">
+                <span class="tema-number">Tema 09</span>
+                <h4>A mulher e o dragão</h4>
+                <p class="tema-description">O grande conflito entre a mulher (a igreja) e o dragão (Satanás) e a perseguição aos santos.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 10 -->
+            <div class="tema-card" onclick="window.location.href='tema3-10.html'">
+                <span class="tema-number">Tema 10</span>
+                <h4>Uma besta que sobe do mar</h4>
+                <p class="tema-description">Identificação da besta que sobe do mar, seu poder e sua guerra contra os santos.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 11 -->
+            <div class="tema-card" onclick="window.location.href='tema3-11.html'">
+                <span class="tema-number">Tema 11</span>
+                <h4>Uma besta que sobe da terra</h4>
+                <p class="tema-description">A besta que sobe da terra, seu papel na imposição da marca da besta e na perseguição final.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 12 -->
+            <div class="tema-card" onclick="window.location.href='tema3-12.html'">
+                <span class="tema-number">Tema 12</span>
+                <h4>Três anjos e suas mensagens</h4>
+                <p class="tema-description">O evangelho eterno proclamado por três anjos, o chamado para adorar o Criador e a queda de Babilônia.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 13 -->
+            <div class="tema-card" onclick="window.location.href='tema3-13.html'">
+                <span class="tema-number">Tema 13</span>
+                <h4>As sete últimas pragas</h4>
+                <p class="tema-description">O derramamento das sete pragas, a ira de Deus sobre Babilônia e a proteção dos selados.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 14 -->
+            <div class="tema-card" onclick="window.location.href='tema3-14.html'">
+                <span class="tema-number">Tema 14</span>
+                <h4>A queda da grande meretriz</h4>
+                <p class="tema-description">O julgamento de Babilônia, a grande meretriz, e o chamado de Deus: "Sai dela, povo meu".</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 15 -->
+            <div class="tema-card" onclick="window.location.href='tema3-15.html'">
+                <span class="tema-number">Tema 15</span>
+                <h4>A Volta de Jesus</h4>
+                <p class="tema-description">A gloriosa segunda vinda de Cristo, o Rei dos reis e Senhor dos senhores.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 16 -->
+            <div class="tema-card" onclick="window.location.href='tema3-16.html'">
+                <span class="tema-number">Tema 16</span>
+                <h4>Um reino de mil anos</h4>
+                <p class="tema-description">O milênio: os salvos reinam com Cristo no céu, a terra desolada e Satanás preso.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 17 -->
+            <div class="tema-card" onclick="window.location.href='tema3-17.html'">
+                <span class="tema-number">Tema 17</span>
+                <h4>A Nova Jerusalém</h4>
+                <p class="tema-description">A cidade santa que desce do céu, suas dimensões, suas ruas de ouro e suas doze portas de pérola.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+
+            <!-- TEMA 18 -->
+            <div class="tema-card" onclick="window.location.href='tema3-18.html'">
+                <span class="tema-number">Tema 18</span>
+                <h4>A Nova Terra</h4>
+                <p class="tema-description">A morada eterna dos salvos, onde não haverá mais morte, nem pranto, nem dor, e Deus habitará com Seu povo.</p>
+                <button class="btn-tema">Acessar Tema</button>
+            </div>
+        </div>
+
+        <!-- Estrutura do Apocalipse -->
+        <div class="study-info" style="margin-top: 30px;">
+            <h3 style="color: #c9a05e;">📊 Estrutura do Apocalipse</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px;">
+                <span style="background: rgba(201, 160, 94, 0.2); padding: 8px 15px; border-radius: 30px; border: 1px solid #c9a05e;">Capítulos 1-3: As 7 Igrejas</span>
+                <span style="background: rgba(201, 160, 94, 0.2); padding: 8px 15px; border-radius: 30px; border: 1px solid #c9a05e;">Capítulos 4-5: O Trono Celestial</span>
+                <span style="background: rgba(201, 160, 94, 0.2); padding: 8px 15px; border-radius: 30px; border: 1px solid #c9a05e;">Capítulos 6-7: Os 7 Selos</span>
+                <span style="background: rgba(201, 160, 94, 0.2); padding: 8px 15px; border-radius: 30px; border: 1px solid #c9a05e;">Capítulos 8-11: As 7 Trombetas</span>
+                <span style="background: rgba(201, 160, 94, 0.2); padding: 8px 15px; border-radius: 30px; border: 1px solid #c9a05e;">Capítulos 12-14: O Conflito</span>
+                <span style="background: rgba(201, 160, 94, 0.2); padding: 8px 15px; border-radius: 30px; border: 1px solid #c9a05e;">Capítulos 15-16: As 7 Pragas</span>
+                <span style="background: rgba(201, 160, 94, 0.2); padding: 8px 15px; border-radius: 30px; border: 1px solid #c9a05e;">Capítulos 17-18: Queda de Babilônia</span>
+                <span style="background: rgba(201, 160, 94, 0.2); padding: 8px 15px; border-radius: 30px; border: 1px solid #c9a05e;">Capítulo 19: A Volta de Jesus</span>
+                <span style="background: rgba(201, 160, 94, 0.2); padding: 8px 15px; border-radius: 30px; border: 1px solid #c9a05e;">Capítulo 20: O Milênio</span>
+                <span style="background: rgba(201, 160, 94, 0.2); padding: 8px 15px; border-radius: 30px; border: 1px solid #c9a05e;">Capítulos 21-22: Nova Jerusalém</span>
+            </div>
+        </div>
+
+        <!-- Navegação -->
+        <div class="navigation-buttons">
+            <a href="../index.html" class="btn-nav">← Voltar para Página Inicial</a>
+            <a href="tema3-1.html" class="btn-nav btn-nav-primary">Começar Primeiro Tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p class="footer-verse">"Bem-aventurado aquele que lê, e bem-aventurados os que ouvem as palavras desta profecia e guardam as coisas nela escritas." - Apocalipse 1:3</p>
+        </div>
+    </footer>
+</body>
+</html>

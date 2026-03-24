@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 14 - Reis em Guerra | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Reis+em+Guerra');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Tabela dos Reis Persas */
+        .tabela-reis {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+            overflow-x: auto;
+        }
+
+        .tabela-reis table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-reis th {
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px;
+            font-size: 1rem;
+        }
+
+        .tabela-reis td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        /* Card dos Generais de Alexandre */
+        .generais-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .general-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            border-left: 4px solid #c9a05e;
+        }
+
+        .general-card h5 {
+            color: #c9a05e;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .general-card p {
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+
+        .general-card .regiao {
+            color: #c9a05e;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        /* Comparação Rei do Norte vs Rei do Sul */
+        .norte-sul-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .norte-card {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #3498db;
+        }
+
+        .sul-card {
+            background: rgba(231, 76, 60, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .norte-card h5, .sul-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .norte-card p, .sul-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .norte-card .rei, .sul-card .rei {
+            font-weight: bold;
+            color: #c9a05e;
+        }
+
+        /* Linha do tempo */
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(201, 160, 94, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .timeline-ano {
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .timeline-descricao {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .generais-grid,
+            .norte-sul-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 14</span>
+        </div>
+        <h1>ESTUDO 14</h1>
+        <h2>Reis em Guerra</h2>
+        <p>"Ele conhece todas as coisas e conduz o rumo da História em direção ao evento mais esperado - Seu glorioso retorno."</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Mostrar a precisão da profecia bíblica ao descrever a sucessão dos impérios e o conflito entre o rei do norte e o rei do sul, culminando com o poder papal.</p>
+            <p><strong>Texto base:</strong> Daniel 11; Esdras; 1 Macabeus (história)</p>
+            <p><strong>Versículos-chave:</strong> Daniel 11:31, 33, 45; 2 Tessalonicenses 2:8</p>
+            <p><strong>Destaque especial:</strong> A profecia de Daniel 11 é tão detalhada que alguns críticos tentaram datar o livro após os eventos, mas a arqueologia confirma sua autoria no século VI a.C.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🎲</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Existe um jogo de tabuleiro chamado War em que os participantes representam as nações que estão em guerra. Ninguém sabe ao certo quem vencerá. É um jogo de estratégia e sorte. Diferentemente deste jogo, o capítulo 11 de Daniel não deixa espaço para sorte.</p>
+                
+                <p style="margin-top: 15px;">Na descrição de eventos que ainda deveriam ocorrer, o profeta descreve inúmeros conflitos envolvendo o povo de Deus e seus perseguidores. De maneira precisa Deus revela o futuro das nações e o estabelecimento de Seu reino eterno.</p>
+            </div>
+        </div>
+
+        <!-- Os Reis da Pérsia -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👑</div>
+                <h3>Os Reis da Pérsia</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Quantos reis ainda se levantariam na Pérsia? Daniel 11:2</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Dois reis</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Três reis ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">Quatro reis</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Três reis. Visto que Daniel teve esta visão no terceiro ano de Ciro, os três reis que o sucederam foram: Cambises (530-522 a.C.), Falso Smerdis (522 a.C.) e Dario I (522-486 a.C.). O quarto rei é Xerxes (486-465 a.C.), identificado como Assuero, marido de Ester.
+                </div>
+            </div>
+            
+            <div class="tabela-reis">
+                <h4 style="color: #c9a05e; text-align: center; margin-bottom: 15px;">📋 Reis da Pérsia (Após Ciro)</h4>
+                <table>
+                    <tr>
+                        <th>Rei</th>
+                        <th>Período</th>
+                        <th>Identificação</th>
+                    </tr>
+                    <tr>
+                        <td>Cambises</td>
+                        <td>530-522 a.C.</td>
+                        <td>Filho de Ciro</td>
+                    </tr>
+                    <tr>
+                        <td>Falso Smerdis (Gaumata)</td>
+                        <td>522 a.C.</td>
+                        <td>Usurpador (poucos meses)</td>
+                    </tr>
+                    <tr>
+                        <td>Dario I</td>
+                        <td>522-486 a.C.</td>
+                        <td>Grande organizador do império</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Xerxes I</strong></td>
+                        <td><strong>486-465 a.C.</strong></td>
+                        <td><strong>Assuero (Ester) - o quarto rei, mais rico</strong></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">De acordo com a visão, o que o quarto rei faria contra a Grécia? Daniel 11:2 e 8:7</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> O verso 2 diz que o quarto rei (Xerxes) empregaria toda sua riqueza "contra o reino da Grécia". Em 490 a.C., Dario I fora detido em sua tentativa de subjugar os gregos. Xerxes ajuntou o maior exército da História (mais de 40 nações), mas foi vergonhosamente derrotado, cumprindo a profecia de Daniel 8:7.
+                </div>
+            </div>
+        </div>
+
+        <!-- Alexandre, o Grande -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🐐</div>
+                <h3>Alexandre, o Grande</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">Que rei poderoso é mencionado nesta visão e o que a profecia fala a respeito de sua queda? Daniel 11:3, 4</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> O "rei poderoso" é Alexandre, o Grande. Seu exército conquistou em tempo relâmpago o vasto Império Persa. Contudo, no auge do seu poder, o reino de Alexandre foi quebrado e dividido entre seus generais. A profecia especificava que seu reino não seria para a sua posteridade. Alexandre morreu em 323 a.C., aos 32 anos, após dois dias de bebedeira. Seu filho e seu irmão foram assassinados, e o império dividido entre quatro generais.
+                </div>
+            </div>
+            
+            <div class="generais-grid">
+                <div class="general-card">
+                    <h5>Cassandro</h5>
+                    <p>Governou o Oeste</p>
+                    <p class="regiao">Macedônia e Grécia</p>
+                </div>
+                <div class="general-card">
+                    <h5>Lisímaco</h5>
+                    <p>Governou o Norte</p>
+                    <p class="regiao">Trácia</p>
+                </div>
+                <div class="general-card">
+                    <h5>Selêuco</h5>
+                    <p>Governou o Leste</p>
+                    <p class="regiao">Síria e Ásia Menor</p>
+                </div>
+                <div class="general-card">
+                    <h5>Ptolomeu</h5>
+                    <p>Governou o Sul</p>
+                    <p class="regiao">Egito</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rei do Norte vs Rei do Sul -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⚔️</div>
+                <h3>Rei do Norte e Rei do Sul</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Conforme a visão, que generais ou "reis" recebem destaque entre os demais? Daniel 11:5</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> O império de Alexandre foi dividido entre quatro sucessores, mas não demorou para que esses quatro fossem reduzidos a dois: o "Rei do Sul" (Egito - Ptolomeus) e o "Rei do Norte" (Síria - Selêucidas). A profecia dedica atenção especial a esses dois porque eles controlaram o território de Israel. Do ponto de vista da História da Redenção, os acontecimentos políticos adquirem significado quando têm relação com o povo de Deus.
+                </div>
+            </div>
+            
+            <div class="norte-sul-grid">
+                <div class="norte-card">
+                    <h5>🏛️ REI DO NORTE</h5>
+                    <p class="rei">Selêucidas (Síria)</p>
+                    <p><strong>Capital:</strong> Antioquia</p>
+                    <p><strong>Período:</strong> 312-64 a.C.</p>
+                    <p><strong>Principal inimigo:</strong> Ptolomeus (Egito)</p>
+                    <p><strong>Antíoco Epifânio:</strong> Perseguidor dos judeus</p>
+                </div>
+                
+                <div class="sul-card">
+                    <h5>🛕 REI DO SUL</h5>
+                    <p class="rei">Ptolomeus (Egito)</p>
+                    <p><strong>Capital:</strong> Alexandria</p>
+                    <p><strong>Período:</strong> 323-30 a.C.</p>
+                    <p><strong>Principal inimigo:</strong> Selêucidas (Síria)</p>
+                    <p><strong>Cleópatra:</strong> Última governante</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">O que fariam estes dois reinos para promoverem a paz entre si? Daniel 11:6</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> O rei do Egito (Ptolomeu II) e o rei da Síria (Antíoco II) tentaram estabelecer paz através de um casamento. Antíoco II deveria se casar com Berenice, filha de Ptolomeu II, mas teve que divorciar-se de sua esposa Laodice. Após a morte de Ptolomeu II, Antíoco se divorciou de Berenice e retomou Laodice, que o envenenou e matou Berenice e seu filho, garantindo que seu próprio filho (Seleuco II) subisse ao trono. <strong>A Bíblia predisse esses acontecimentos com detalhes 300 anos antes de ocorrerem!</strong>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Há algo extraordinário nisso tudo: a Bíblia predisse esses acontecimentos com detalhes, 300 anos antes de ocorrerem! Isso nos diz algo sobre Deus. Ele conhece todas as coisas e conduz o rumo da História em direção ao evento mais esperado - Seu glorioso retorno.</p>
+            </div>
+        </div>
+
+        <!-- Roma Pagã e Papal -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏛️</div>
+                <h3>Roma Pagã e Papal</h3>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-ano">168 a.C.</span>
+                <span class="timeline-descricao">Roma conquista a Macedônia e torna-se o poder mundial. Início da influência romana sobre Israel.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">63 a.C.</span>
+                <span class="timeline-descricao">Pompeu conquista Jerusalém. Roma assume controle direto sobre a Judeia.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">31 d.C.</span>
+                <span class="timeline-descricao">Crucificação de Cristo (o "Príncipe da Aliança" quebrantado).</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">70 d.C.</span>
+                <span class="timeline-descricao">Destruição de Jerusalém por Tito.</span>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Como podemos ter certeza de que os versos 21 em diante se referem à Roma Pagã e Papal? Daniel 11:21, 22, 28, 31, 33, 36</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> As mesmas ações do "chifre pequeno" registradas nos capítulos 7 e 8 são reproduzidas com maiores detalhes neste capítulo. Segundo Daniel 11:22, "o rei do norte" quebrantaria "o príncipe da aliança". A palavra hebraica "Nagid" (príncipe) ocorre apenas em Daniel 9:25-27, referindo-se ao Messias. Portanto, o Nagid que seria "quebrantado" é Jesus. Tanto a morte de Cristo como a destruição de Jerusalém ocorreram durante o domínio romano.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Que faria este "homem vil" contra o santuário? Daniel 11:31</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> O "chifre pequeno" profanaria o santuário, retirando o "contínuo" (tamid). Conforme estudado na lição 10, os serviços diários e anuais do santuário tipificavam o sacrifício de Cristo e Seu ministério sacerdotal. O poder papal estabeleceu um sistema sacerdotal paralelo ao de Cristo com a confissão auricular e o sacrifício da missa em lugar da obra mediadora de Cristo.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">O que mais este poder faria contra os santos do Altíssimo? Daniel 11:33; 12:7; 7:25</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência:</strong> O profeta viu que o verdadeiro povo de Deus enfrentaria perseguições e dificuldades impostas por Roma. Esta igreja apóstata utilizaria a força, a tortura e a inquisição para eliminar qualquer um que ensinasse de maneira diferente. Os santos seriam perseguidos por "um tempo, dois tempos e metade de um tempo" (1.260 anos - 538 a 1798 d.C.).
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">Qual será o fim deste poder perseguidor do povo de Deus? Daniel 11:45</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="2"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Referência:</strong> "Chegará ao seu fim, e não haverá quem o socorra." A Bíblia descreve que esse poder continuará sua guerra contra os santos até o fim e, então, seu domínio será retirado para sempre, e será consumido quando Jesus se manifestar em Sua Segunda Vinda (2 Tessalonicenses 2:8).
+                </div>
+            </div>
+        </div>
+
+        <!-- Quadro Resumo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📊</div>
+                <h3>Quadro Resumo de Daniel 11</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>Versículos 1-2:</strong> Reis da Pérsia (Cambises, Dario, Xerxes)</p>
+                <p><strong>Versículos 3-4:</strong> Alexandre, o Grande, e a divisão do império grego</p>
+                <p><strong>Versículos 5-20:</strong> Conflitos entre o rei do norte (Selêucidas) e rei do sul (Ptolomeus)</p>
+                <p><strong>Versículos 21-35:</strong> Roma Pagã - destruição de Jerusalém e perseguição inicial</p>
+                <p><strong>Versículos 36-45:</strong> Roma Papal - perseguição aos santos e fim do poder papal</p>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Chegará ao seu fim, e não haverá quem o socorra."
+                <span class="versiculo-ref">Daniel 11:45</span>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Compreendo que Jesus é Soberano na história das nações e que em breve Ele voltará. Diante disso, desejo tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Entregar meu coração a Jesus e pedir que Ele me ajude a confiar nEle, mesmo diante dos momentos mais difíceis da minha vida.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Preparar-me para encontrar com Jesus, o meu Senhor e Salvador.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Anunciar aos outros as verdades do evangelho e compartilhar a grande esperança que tenho de ver Jesus voltar.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Reconheço que Deus está no controle da história e que todas as nações estão em Suas mãos. Confio que Ele tem um plano para minha vida e para o mundo, e aguardo com esperança a volta de Jesus."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-13.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-15.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Ele conhece todas as coisas e conduz o rumo da História" - Daniel 11</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Reis em Guerra",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel14', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel14');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

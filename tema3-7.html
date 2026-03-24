@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse - Estudo 7: João e o Livrinho Aberto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=João+e+o+Livrinho+Aberto');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Cards de Informação */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #c9a05e;
+        }
+
+        .info-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .info-card .referencia {
+            color: #c9a05e;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo para imagens */
+        .imagem-destaque {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .imagem-destaque img {
+            width: 100%;
+            display: block;
+        }
+
+        .imagem-legenda {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #ddd;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Grid para imagens */
+        .imagens-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .imagem-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .imagem-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(201, 160, 94, 0.3);
+        }
+
+        .imagem-card h5 {
+            color: #c9a05e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .imagem-card .imagem-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: rgba(201, 160, 94, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed rgba(201, 160, 94, 0.5);
+            overflow: hidden;
+        }
+
+        .imagem-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-placeholder-icon {
+            color: #c9a05e;
+            font-size: 3rem;
+        }
+
+        .img-caption {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .img-nota {
+            color: #c9a05e;
+            font-size: 0.8rem;
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Linha do tempo */
+        .timeline-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #c9a05e;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .timeline-year {
+            min-width: 80px;
+            color: #c9a05e;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .timeline-desc {
+            color: #ddd;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .info-grid, .imagens-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="apocalipse.html">Apocalipse</a> > 
+            <span>Estudo 7</span>
+        </div>
+        <h1>ESTUDO 7</h1>
+        <h2>João e o Livrinho Aberto</h2>
+        <p>"Foi-me doce como mel; mas, depois de o ter comido, o meu estômago ficou amargo." (Apocalipse 10:10)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📖</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Assim como o capítulo 7, o capítulo 10 de Apocalipse é uma profecia parentética. Ela se encontra entre a sexta e a sétima trombetas dos capítulos 8, 9 e 11:15. Ela apresenta um quadro da última mensagem de Deus antes da Segunda Vinda de Cristo.</p>
+                <p style="margin-top: 15px;">A linguagem do capítulo sugere que o livrinho que o anjo traz em suas mãos não estivera sempre aberto, mas agora seu conteúdo será revelado. Na lição de hoje, aprenderemos sobre esse livrinho misterioso e os impressionantes desdobramentos da descoberta de seu significado.</p>
+            </div>
+            
+            <!-- Imagem principal - Anjo forte com livrinho -->
+            <div class="imagem-destaque">
+                <img src="img/anjo-forte-livrinho.jpg" alt="Anjo forte com livrinho aberto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display: none; text-align: center; padding: 50px; background: rgba(0,0,0,0.3);">👼 Anjo forte com livrinho aberto</div>
+                <div class="imagem-legenda">O anjo forte descendo do céu com o livrinho aberto - img/anjo-forte-livrinho.png</div>
+            </div>
+        </div>
+
+        <!-- O Anjo Forte -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👼</div>
+                <h3>O Anjo Forte</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Qual foi a cena vista por João no capítulo 10 de Apocalipse? Apocalipse 10:1</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'a')">
+                        <input type="radio" name="pergunta1" id="p1a">
+                        <label for="p1a">Sete anjos com sete trombetas.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'b')">
+                        <input type="radio" name="pergunta1" id="p1b">
+                        <label for="p1b">Um anjo forte descendo do céu, envolto em nuvem, com arco-íris sobre a cabeça, rosto como sol e pés como colunas de fogo. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 1, 'c')">
+                        <input type="radio" name="pergunta1" id="p1c">
+                        <label for="p1c">A mulher vestida de sol com a lua debaixo dos pés.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver resposta completa</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>✓ Resposta correta:</strong> Um anjo forte descendo do céu, envolto em nuvem, com arco-íris sobre a cabeça, rosto como sol e pés como colunas de fogo.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Exilado em Patmos, João contemplou mais uma magnífica revelação divina.<br>
+                    b) As nuvens nas Escrituras frequentemente estão associadas a aparições de Cristo (Apocalipse 1:7; 14:14).<br>
+                    c) O arco-íris lembra a aliança de Deus com Noé (Gênesis 9:12-15).<br>
+                    d) O arco representa a misericórdia e justiça divina como base do governo de Deus.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Quem era esse anjo visto por João? Apocalipse 10:1. Comparar com Apocalipse 1:13-16</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'a')">
+                        <input type="radio" name="pergunta2" id="p2a">
+                        <label for="p2a">Um anjo criado, mensageiro comum.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'b')">
+                        <input type="radio" name="pergunta2" id="p2b">
+                        <label for="p2b">O próprio Jesus Cristo, o Criador, o Deus eterno. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 2, 'c')">
+                        <input type="radio" name="pergunta2" id="p2c">
+                        <label for="p2c">O profeta Daniel.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>✓ Resposta correta:</strong> O próprio Jesus Cristo, o Criador, o Deus eterno.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) A descrição é muito semelhante à de Cristo em Apocalipse 1:13-16.<br>
+                    b) Ele é "o Criador do céu, da terra, do mar e de tudo que neles existe" (Apocalipse 10:6; cf. João 1:3).<br>
+                    c) Ele não é um ser criado, mas o Criador.<br>
+                    d) Ele disse de Si mesmo: "Eu sou o Alfa e o Ômega" (Apocalipse 1:8, 17,18).<br>
+                    e) Quão confortante foi para João contemplar Jesus, o Senhor da história.
+                </div>
+            </div>
+            
+            <!-- Grid de imagens - Comparação Cristo em Apocalipse 1 e 10 -->
+            <div class="imagens-grid">
+                <div class="imagem-card">
+                    <h5>👑 Cristo em Apocalipse 1</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/cristo-apocalipse1.jpg" alt="Cristo em Apocalipse 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">👑</div>
+                    </div>
+                    <p style="color: #c9a05e;">Filho do Homem, cabelos brancos, olhos como fogo</p>
+                    <p class="img-caption">img/cristo-apocalipse1.png</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>☁️ Cristo em Apocalipse 10</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/cristo-apocalipse10.jpg" alt="Cristo em Apocalipse 10" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">☁️</div>
+                    </div>
+                    <p style="color: #c9a05e;">Anjo forte, envolto em nuvem, rosto como sol</p>
+                    <p class="img-caption">img/cristo-apocalipse10.png</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>🌈 Arco-íris</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/arco-iris-trono.jpg" alt="Arco-íris ao redor do trono" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🌈</div>
+                    </div>
+                    <p style="color: #c9a05e;">Símbolo da aliança e misericórdia divina</p>
+                    <p class="img-caption">img/arco-iris-trono.png</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Livrinho Aberto -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📕</div>
+                <h3>O Livrinho Aberto</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que esse anjo trazia em sua mão? Apocalipse 10:2. Comparar com Daniel 12:4, 7</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="O que o anjo segurava e qual a relação com o livro de Daniel?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência completa:</strong><br>
+                    a) O anjo segurava na mão um <strong>"livrinho aberto"</strong>.<br>
+                    b) Daniel foi instruído a <strong>"encerrar as palavras e selar o livro até o tempo do fim"</strong> (Daniel 12:4).<br>
+                    c) O livrinho aberto na visão de João é o mesmo que estava fechado na visão de Daniel.<br>
+                    d) Portanto, este "livrinho" é o <strong>livro do profeta Daniel</strong>.<br>
+                    e) As palavras permaneceriam "fechadas" até o "tempo do fim" (Daniel 12:9).<br>
+                    f) O período de "um tempo, dois tempos e metade de um tempo" (Daniel 12:7) = 1.260 anos (538-1798 d.C.).<br>
+                    g) Após 1798, as palavras seriam desseladas e compreendidas: "muitos o esquadrinharão, e o saber se multiplicará" (Daniel 12:4).
+                </div>
+            </div>
+            
+            <!-- Imagem do livrinho -->
+            <div class="imagem-destaque">
+                <img src="img/livrinho-aberto-daniel.jpg" alt="Livrinho aberto - profecia de Daniel" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display: none; text-align: center; padding: 50px; background: rgba(0,0,0,0.3);">📖 Livrinho aberto</div>
+                <div class="imagem-legenda">O livrinho aberto - As profecias de Daniel sendo reveladas no tempo do fim - img/livrinho-aberto-daniel.png</div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h5>📅 Período de Selamento</h5>
+                    <p><strong>1.260 anos:</strong> 538 d.C. (supremacia papal) - 1798 d.C. (prisão do papa Pio VI)</p>
+                    <p>Neste período, as profecias de Daniel permaneceram seladas.</p>
+                    <p class="referencia">Daniel 7:25; 12:7</p>
+                </div>
+                
+                <div class="info-card">
+                    <h5>🔓 Período de Abertura</h5>
+                    <p><strong>Após 1798:</strong> "tempo do fim"</p>
+                    <p>As profecias seriam compreendidas e o saber se multiplicaria.</p>
+                    <p class="referencia">Daniel 12:4, 9</p>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Qual foi o juramento feito pelo anjo? Apocalipse 10:5-6</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'a')">
+                        <input type="radio" name="pergunta4" id="p4a">
+                        <label for="p4a">Jurou que o fim do mundo chegaria em 1844.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'b')">
+                        <input type="radio" name="pergunta4" id="p4b">
+                        <label for="p4b">Jurou por Aquele que vive para todo o sempre que não haveria mais demora. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 4, 'c')">
+                        <input type="radio" name="pergunta4" id="p4c">
+                        <label for="p4c">Jurou que o livro de Daniel permaneceria selado para sempre.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>✓ Resposta correta:</strong> Jurou por Aquele que vive para todo o sempre que não haveria mais demora.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Nenhum juramento mais solene poderia ser feito (Hebreus 6:13).<br>
+                    b) Ao jurar pelo Criador, o anjo (Cristo) jura por Si mesmo.<br>
+                    c) "Já não haverá demora" - refere-se ao ponto na história em que as profecias de tempo de Daniel se cumpririam.<br>
+                    d) As duas maiores profecias de Daniel (1.260 e 2.300 dias/anos) cumprem-se em 1798 e 1844.<br>
+                    e) O período seguinte é chamado de "tempo do fim" (Daniel 11:40; 12:4,9).
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Que ordem recebeu João? Apocalipse 10:8</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 5, 'a')">
+                        <input type="radio" name="pergunta5" id="p5a">
+                        <label for="p5a">Vá e sele o livro novamente.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 5, 'b')">
+                        <input type="radio" name="pergunta5" id="p5b">
+                        <label for="p5b">Vá, toma o livrinho aberto da mão do anjo. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 5, 'c')">
+                        <input type="radio" name="pergunta5" id="p5c">
+                        <label for="p5c">Jogue o livro no mar.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>✓ Resposta correta:</strong> Vá, toma o livrinho aberto da mão do anjo.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Esta imagem do anjo com o pé direito sobre o mar e o esquerdo sobre a terra representa a <strong>abrangência mundial</strong> da mensagem.<br>
+                    b) Simboliza o surgimento de um <strong>movimento mundial</strong> de pregação das verdades do livro de Daniel em conexão com Apocalipse.
+                </div>
+            </div>
+        </div>
+
+        <!-- A Experiência Agridoce -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🍯</div>
+                <h3>A Experiência Agridoce</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">O que o anjo disse aconteceria depois que João comesse o livrinho? Apocalipse 10:9</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'a')">
+                        <input type="radio" name="pergunta6" id="p6a">
+                        <label for="p6a">Seria doce na boca, mas amargo no estômago. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'b')">
+                        <input type="radio" name="pergunta6" id="p6b">
+                        <label for="p6b">Seria amargo na boca e doce no estômago.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 6, 'c')">
+                        <input type="radio" name="pergunta6" id="p6c">
+                        <label for="p6c">Não teria gosto algum.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>✓ Resposta correta:</strong> Seria doce na boca, mas amargo no estômago.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) Multidões de estudiosos fremiam com a mensagem de que o tempo do fim se aproximava.<br>
+                    b) Muitos acreditavam que o término dos 2.300 anos assinalava a Volta de Jesus.<br>
+                    c) A alegria com a certeza de que Jesus voltaria em 1844 foi como mel na boca.<br>
+                    d) Porém, Jesus não voltou na data esperada - o doce se tornou amargo no estômago.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">O que representa essa experiência agridoce vivida por João? Apocalipse 10:10</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Qual evento histórico está simbolizado nesta experiência?" rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência histórica:</strong><br>
+                    a) Eventos do fim do século XVIII e início do XIX:<br>
+                    - <strong>1755:</strong> Grande terremoto de Lisboa<br>
+                    - <strong>1780:</strong> Escurecimento do sol (19 de maio)<br>
+                    - <strong>1798:</strong> Aprisionamento do papa Pio VI<br>
+                    - <strong>1833:</strong> Queda de estrelas (13 de novembro)<br><br>
+                    b) Estes sinais provocaram um grande despertamento religioso.<br>
+                    c) Guilherme Miller calculou a profecia das 2.300 tardes e manhãs (Daniel 8:14).<br>
+                    d) Samuel Snow refinou os cálculos para 22 de outubro de 1844.<br>
+                    e) Milhares aguardaram o retorno de Cristo, mas Ele não voltou - o <strong>Grande Desapontamento</strong>.<br>
+                    f) O doce (expectativa) tornou-se amargo (desapontamento).
+                </div>
+            </div>
+            
+            <!-- Grid de imagens - Eventos proféticos -->
+            <div class="imagens-grid">
+                <div class="imagem-card">
+                    <h5>🌍 Terremoto de Lisboa</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/terremoto-lisboa-1755.jpg" alt="Terremoto de Lisboa 1755" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">🌍</div>
+                    </div>
+                    <p style="color: #c9a05e;">1º de novembro de 1755</p>
+                    <p class="img-caption">img/terremoto-lisboa-1755.png</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>☀️ Escurecimento do sol</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/sol-escuro-1780.jpg" alt="Escurecimento do sol 1780" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">☀️</div>
+                    </div>
+                    <p style="color: #c9a05e;">19 de maio de 1780</p>
+                    <p class="img-caption">img/sol-escuro-1780.png</p>
+                </div>
+                
+                <div class="imagem-card">
+                    <h5>⭐ Queda de estrelas</h5>
+                    <div class="imagem-placeholder">
+                        <img src="img/chuva-estrelas-1833.jpg" alt="Chuva de estrelas 1833" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder-icon" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center;">⭐</div>
+                    </div>
+                    <p style="color: #c9a05e;">13 de novembro de 1833</p>
+                    <p class="img-caption">img/chuva-estrelas-1833.png</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Profecia das 2.300 Tardes e Manhãs -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>A Profecia das 2.300 Tardes e Manhãs</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">Segundo a profecia, quando o Santuário Celestial deveria ser purificado? Daniel 8:14; Hebreus 9:23</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 8, 'a')">
+                        <input type="radio" name="pergunta8" id="p8a">
+                        <label for="p8a">Em 31 d.C., na morte de Cristo.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 8, 'b')">
+                        <input type="radio" name="pergunta8" id="p8b">
+                        <label for="p8b">Após 2.300 tardes e manhãs, que se cumpriram em 1844. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 8, 'c')">
+                        <input type="radio" name="pergunta8" id="p8c">
+                        <label for="p8c">No ano 1000 d.C., com o milênio.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>✓ Resposta correta:</strong> Após 2.300 tardes e manhãs, que se cumpriram em 1844.<br><br>
+                    <strong>Cálculo profético detalhado:</strong><br>
+                    a) A chave é a profecia das 70 semanas de Daniel 9 (490 anos).<br>
+                    b) Início: decreto de Artaxerxes em <strong>457 a.C.</strong> (Esdras 7:11-26).<br>
+                    c) 7 semanas (49 anos) = 408 a.C. - reconstrução de Jerusalém.<br>
+                    d) 69 semanas (483 anos) = <strong>27 d.C.</strong> - unção do Messias (batismo de Jesus).<br>
+                    e) Na metade da última semana (31 d.C.) - morte de Cristo.<br>
+                    f) 70 semanas (490 anos) terminam em <strong>34 d.C.</strong> (apedrejamento de Estevão).<br>
+                    g) As 70 semanas (490 anos) são cortadas das 2.300.<br>
+                    h) 2.300 - 490 = 1.810 anos restantes.<br>
+                    i) 34 d.C. + 1.810 = <strong>1844</strong>.<br>
+                    j) No calendário judaico, 10º dia do 7º mês = 22 de outubro de 1844.
+                </div>
+            </div>
+            
+            <!-- Linha do tempo profética -->
+            <div class="timeline-box">
+                <h5 style="color: #c9a05e; text-align: center; margin-bottom: 20px;">📅 Linha do Tempo Profética - 2.300 Dias/Anos</h5>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">457 a.C.</div>
+                    <div class="timeline-desc">Decreto de Artaxerxes para reconstruir Jerusalém - Início das 70 semanas e dos 2.300 anos</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">408 a.C.</div>
+                    <div class="timeline-desc">Fim das 7 semanas (49 anos) - reconstrução de Jerusalém completa</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">27 d.C.</div>
+                    <div class="timeline-desc">Fim das 69 semanas (483 anos) - Batismo de Jesus, unção do Messias</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">31 d.C.</div>
+                    <div class="timeline-desc">Metade da última semana - Crucificação de Jesus, fim dos sacrifícios</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">34 d.C.</div>
+                    <div class="timeline-desc">Fim das 70 semanas (490 anos) - Apedrejamento de Estevão, evangelho aos gentios</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">538 d.C.</div>
+                    <div class="timeline-desc">Início dos 1.260 anos de supremacia papal (Daniel 7:25)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1798 d.C.</div>
+                    <div class="timeline-desc">Fim dos 1.260 anos - Prisão do papa Pio VI</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1844 d.C.</div>
+                    <div class="timeline-desc"><strong>Fim dos 2.300 anos</strong> - Início do juízo investigativo no Santuário Celestial</div>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 9</span>
+                <div class="pergunta-texto">O que pensavam os Mileritas ser a purificação do santuário? Atos 17:31; Mateus 25:31</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Qual era o entendimento de Guilherme Miller sobre a purificação do santuário?" rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(9)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito9">
+                    <strong>Entendimento de Guilherme Miller:</strong><br>
+                    a) Miller acreditava que a purificação do santuário era a <strong>purificação da Terra e da Igreja</strong>.<br>
+                    b) Ocorreria na <strong>Segunda Vinda de Cristo</strong>.<br>
+                    c) A Terra seria "purificada pelo fogo" (2 Pedro 3:7-12) no dia do juízo final.<br>
+                    d) Por isso, milhares de Mileritas se prepararam para encontrar o Senhor em 22 de outubro de 1844.<br>
+                    e) Embora o tempo estivesse correto, o evento não era a volta de Cristo, mas a purificação do Santuário Celestial.
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 10</span>
+                <div class="pergunta-texto">O que de fato ocorreu no dia 22 de outubro de 1844? Hebreus 4:14-15</div>
+                
+                <div class="resposta-opcoes">
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'a')">
+                        <input type="radio" name="pergunta10" id="p10a">
+                        <label for="p10a">Jesus voltou à Terra em glória.</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'b')">
+                        <input type="radio" name="pergunta10" id="p10b">
+                        <label for="p10b">Jesus passou a atuar no lugar santíssimo do Santuário Celestial, iniciando o juízo investigativo. ✓</label>
+                    </div>
+                    <div class="opcao" onclick="selecionarOpcao(this, 10, 'c')">
+                        <input type="radio" name="pergunta10" id="p10c">
+                        <label for="p10c">O templo de Jerusalém foi reconstruído.</label>
+                    </div>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(10)">Ver resposta</button>
+                
+                <div class="gabarito" id="gabarito10">
+                    <strong>✓ Resposta correta:</strong> Jesus passou a atuar no lugar santíssimo do Santuário Celestial, iniciando o juízo investigativo.<br><br>
+                    <strong>Detalhamento:</strong><br>
+                    a) No Dia da Expiação (10º dia do 7º mês), o sumo-sacerdote purificava o santuário terrestre (Levítico 16).<br>
+                    b) Assim como o sumo-sacerdote ministrava o sangue no santuário terrestre, Jesus aplica os méritos de Seu sangue no Santuário Celestial.<br>
+                    c) Em 22 de outubro de 1844, Jesus iniciou Seu ministério no lugar santíssimo.<br>
+                    d) Estamos vivendo o grande dia profético da expiação.<br>
+                    e) Quando Cristo encerrar esta obra de mediação e juízo, Ele voltará (Mateus 25:31-46).<br>
+                    f) A igreja remanescente restauraria as verdades pisoteadas (Daniel 8:12; Isaías 58:12; Apocalipse 14:6-12).
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "É necessário que ainda profetizes a respeito de muitos povos, nações, línguas e reis." (Apocalipse 10:11)
+            </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏰</div>
+                <h3>Conclusão: Vivemos no Tempo do Fim</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Estamos vivendo o grande dia profético da expiação. Jesus está no Santuário Celestial neste exato momento, trabalhando em prol de nossa salvação. Quando Cristo encerrar esta obra de mediação e juízo, Ele voltará para dar a recompensa a cada um.</p>
+                <p style="margin-top: 15px;">A profecia do livrinho aberto que seria doce na boca e amargo no estômago é uma alusão ao grande desapontamento de 1844, quando milhares de cristãos aguardavam pela vinda de Jesus e Ele não voltou. Porém, o anjo instruiu: "É necessário que ainda profetizes a respeito de muitos povos, nações, línguas e reis" (Apocalipse 10:11).</p>
+                <p style="margin-top: 15px;">A igreja remanescente que estivera oculta no deserto por 1.260 anos (Apocalipse 12:6,14), seria revelada como um movimento mundial, e as verdades que foram pisoteadas seriam restauradas (Daniel 8:12; Isaías 58:12; Apocalipse 14:6-12).</p>
+            </div>
+            
+            <!-- Imagem da mensagem final -->
+            <div class="imagem-destaque">
+                <img src="img/mensagem-tres-anjos.jpg" alt="Mensagem dos três anjos" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display: none; text-align: center; padding: 50px; background: rgba(0,0,0,0.3);">📯 Mensagem dos três anjos</div>
+                <div class="imagem-legenda">A mensagem dos três anjos - Apocalipse 14:6-12 - img/mensagem-tres-anjos.png</div>
+            </div>
+        </div>
+
+        <!-- Minha declaração de fé -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECLARAÇÃO DE FÉ</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Assinale com um X se concordar com as declarações abaixo:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Acredito que estamos vivendo no tempo do fim e que em breve Jesus voltará.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Quero agradecer a Jesus por estar no Santuário Celestial neste exato momento trabalhando em prol de minha salvação.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Desejo fazer parte do povo de Deus, a igreja remanescente, entregar minha vida a Jesus e me preparar para a Sua vinda.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 BÊNÇÃO FINAL</h4>
+            <div class="compromisso-texto">
+                "... Que a paz de Deus, que excede todo entendimento, guarde seu coração e sua mente em CRISTO JESUS" (Filipenses 4:7).
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Registrar minha declaração</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Declaração registrada! Maranata!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="apocalipse-estudo6.html" class="btn-nav">← Estudo anterior</a>
+            <a href="apocalipse-estudo1.html" class="btn-nav">Voltar ao menu</a>
+            <a href="apocalipse-estudo8.html" class="btn-nav">Próximo estudo →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Foi-me doce como mel; mas, depois de o ter comido, o meu estômago ficou amargo." - Apocalipse 10:10</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            if (gabarito) {
+                gabarito.classList.toggle('mostrar');
+            }
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    estudo: "Estudo 7 - João e o Livrinho Aberto",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_apocalipse7', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_apocalipse7');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>

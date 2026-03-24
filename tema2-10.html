@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 10 - Um Carneiro e um Bode | Profecias de Daniel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f3f 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Header do tema */
+        .tema-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x400/1a2f3f/c9a05e?text=Um+Carneiro+e+um+Bode');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c9a05e;
+            position: relative;
+        }
+
+        .tema-header h1 {
+            font-size: 3rem;
+            color: #c9a05e;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tema-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .tema-header p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .breadcrumb a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seções do estudo */
+        .estudo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #c9a05e;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-icone {
+            font-size: 2rem;
+            background: rgba(201, 160, 94, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #c9a05e;
+        }
+
+        .section-titulo h3 {
+            font-size: 1.8rem;
+            color: #c9a05e;
+        }
+
+        .section-subtitulo {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        /* Caixas de destaque */
+        .destaque-box {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .destaque-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .destaque-box strong {
+            color: #c9a05e;
+        }
+
+        /* Modelos 3D */
+        .modelos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .modelo-card {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid #c9a05e;
+            text-align: center;
+        }
+
+        .modelo-card h4 {
+            color: #c9a05e;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .sketchfab-embed-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .sketchfab-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .modelo-credit {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .modelo-credit a {
+            color: #c9a05e;
+            text-decoration: none;
+        }
+
+        /* Tabela comparativa Cap 7 vs Cap 8 */
+        .tabela-comparativa {
+            background: rgba(201, 160, 94, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+            overflow-x: auto;
+        }
+
+        .tabela-comparativa table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-comparativa th {
+            background: #c9a05e;
+            color: #0b1a2e;
+            padding: 12px;
+            font-size: 1rem;
+        }
+
+        .tabela-comparativa td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+
+        /* Cards de crescimento */
+        .crescimento-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .crescimento-card {
+            background: rgba(201, 160, 94, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid;
+        }
+
+        .crescimento-card.horizontal {
+            border-left-color: #3498db;
+        }
+
+        .crescimento-card.vertical {
+            border-left-color: #e74c3c;
+        }
+
+        .crescimento-card h5 {
+            color: #c9a05e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .crescimento-card p {
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* Linha do tempo */
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(201, 160, 94, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .timeline-ano {
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .timeline-descricao {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Versículo destaque */
+        .versiculo-destaque {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #c9a05e;
+            border: 1px dashed #c9a05e;
+        }
+
+        .versiculo-ref {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        /* Lista de perguntas */
+        .pergunta-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 160, 94, 0.2);
+        }
+
+        .pergunta-numero {
+            display: inline-block;
+            background: #c9a05e;
+            color: #0b1a2e;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-texto {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .resposta-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .opcao:hover {
+            background: rgba(201, 160, 94, 0.1);
+            border-color: #c9a05e;
+        }
+
+        .opcao input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c9a05e;
+        }
+
+        .opcao label {
+            font-size: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .gabarito {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .gabarito.mostrar {
+            display: block;
+        }
+
+        .gabarito strong {
+            color: #4CAF50;
+        }
+
+        .btn-resposta {
+            background: transparent;
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-resposta:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Pergunta aberta */
+        .pergunta-aberta {
+            margin: 20px 0;
+        }
+
+        .pergunta-aberta textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            min-height: 80px;
+            margin: 10px 0;
+        }
+
+        .pergunta-aberta textarea:focus {
+            outline: 2px solid #c9a05e;
+        }
+
+        /* Minha decisão */
+        .decisao-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #c9a05e;
+        }
+
+        .decisao-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .decisao-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .decisao-opcao input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #c9a05e;
+        }
+
+        .decisao-opcao label {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Compromisso de fé */
+        .compromisso-box {
+            background: rgba(201, 160, 94, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #c9a05e;
+            margin-top: 30px;
+        }
+
+        .compromisso-box h4 {
+            color: #c9a05e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .compromisso-texto {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .compromisso-campos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a05e;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 160, 94, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .btn-salvar {
+            background: #c9a05e;
+            color: #0b1a2e;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-salvar:hover {
+            background: #b88d4a;
+            transform: scale(1.05);
+        }
+
+        /* Navegação */
+        .navegacao-temas {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .btn-nav {
+            background: rgba(201, 160, 94, 0.1);
+            border: 2px solid #c9a05e;
+            color: #c9a05e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav:hover {
+            background: #c9a05e;
+            color: #0b1a2e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(201, 160, 94, 0.3);
+        }
+
+        .footer-content p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Notas para o professor */
+        .professor-nota {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .professor-nota h5 {
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .professor-nota p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .tema-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .tema-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-titulo h3 {
+                font-size: 1.4rem;
+            }
+
+            .section-icone {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .navegacao-temas {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-nav {
+                justify-content: center;
+            }
+
+            .modelos-grid,
+            .crescimento-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabela-comparativa {
+                overflow-x: auto;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header do tema -->
+    <header class="tema-header">
+        <div class="breadcrumb">
+            <a href="../index.html">Página Inicial</a> > 
+            <a href="profecias-daniel.html">Profecias de Daniel</a> > 
+            <span>Tema 10</span>
+        </div>
+        <h1>ESTUDO 10</h1>
+        <h2>Um Carneiro e um Bode</h2>
+        <p>"Aquele carneiro com dois chifres, que viste, são os reis da Média e da Pérsia; mas o bode peludo é o rei da Grécia." (Daniel 8:20-21)</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- NOTA PARA O PROFESSOR -->
+        <div class="professor-nota">
+            <h5>👨‍🏫 NOTA PARA O PROFESSOR</h5>
+            <p><strong>Objetivo do estudo:</strong> Compreender a visão do carneiro e do bode (Medo-Pérsia e Grécia) e a continuidade do poder do chifre pequeno (Roma Papal) com seu ataque ao santuário celestial.</p>
+            <p><strong>Texto base:</strong> Daniel 8; Levítico 16; 2 Tessalonicenses 2</p>
+            <p><strong>Versículos-chave:</strong> Daniel 8:14, 17, 25</p>
+            <p><strong>Destaque especial:</strong> Esta visão ocorreu cerca de dois anos após a visão do capítulo 7, em Susã, e introduz a profecia das 2.300 tardes e manhãs.</p>
+        </div>
+
+        <!-- Introdução -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">👁️</div>
+                <h3>Introdução</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>Passados cerca de dois anos depois da visão do capítulo 7, Daniel recebeu outra visão, conforme registrada no capítulo 8 de seu livro. Novamente animais surgem na cena profética e mais uma vez representam nações que lutavam pelo poder.</p>
+                
+                <p style="margin-top: 15px;">Daniel declara: <strong>"Pareceu-me estar eu na cidadela de Susã, que é província de Elão, e vi que estava junto ao rio Ulai" (Daniel 8:2).</strong> É provável que Daniel não estivesse lá fisicamente, mas fora levado ao local em visão. Há na Bíblia outros exemplos de profetas sendo arrebatados em visão, mas que não foram transpostos na realidade para tais localidades (ver Ezequiel 8:3; Apocalipse 17:3).</p>
+                
+                <p style="margin-top: 15px;">Pegue a sua Bíblia, faça uma oração e vamos estudar os significados desta visão para os nossos dias a fim de compreender a vontade de Deus para nossa vida.</p>
+            </div>
+        </div>
+
+        <!-- Modelos 3D -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🐏</div>
+                <h3>Visualização 3D dos Animais</h3>
+            </div>
+            
+            <div class="modelos-grid">
+                <div class="modelo-card">
+                    <h4>🐏 O Carneiro com Dois Chifres</h4>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Daniel 8 Ram" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                src="https://sketchfab.com/models/b8c9465750e9463581d462c6858d3748/embed">
+                        </iframe>
+                    </div>
+                    <div class="modelo-credit">
+                        <a href="https://sketchfab.com/3d-models/daniel-8-ram-b8c9465750e9463581d462c6858d3748" target="_blank">Daniel 8 Ram</a> by Upcoming Project
+                    </div>
+                    <p style="color: #c9a05e; margin-top: 10px;">Medo-Pérsia (539-331 a.C.)</p>
+                </div>
+                
+                <div class="modelo-card">
+                    <h4>🐐 O Bode com Chifre Notável</h4>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe title="Daniel 8 Goat with Prominent Horn" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                src="https://sketchfab.com/models/65deea5f0d51483c874ca063a4b869cc/embed">
+                        </iframe>
+                    </div>
+                    <div class="modelo-credit">
+                        <a href="https://sketchfab.com/3d-models/daniel-8-goat-with-prominent-horn-65deea5f0d51483c874ca063a4b869cc" target="_blank">Daniel 8 Goat with Prominent Horn</a> by Upcoming Project
+                    </div>
+                    <p style="color: #c9a05e; margin-top: 10px;">Grécia (331-168 a.C.)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Carneiro (Medo-Pérsia) -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🐏</div>
+                <h3>O Carneiro com Dois Chifres</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 1</span>
+                <div class="pergunta-texto">Qual foi o primeiro animal visto por Daniel? Daniel 8:3, 4</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(1)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito1">
+                    <strong>Referência:</strong> "Levantei os olhos e vi, e eis que um carneiro estava diante do rio, o qual tinha dois chifres; e os dois chifres eram altos, mas um era mais alto do que o outro; e o mais alto subiu por último." <strong>O carneiro representa os reis da Média e da Pérsia (Daniel 8:20). O chifre mais alto representa a Pérsia, que assumiu o poder por último com Ciro, o Grande.</strong>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>Paralelo com o capítulo 7:</strong> O carneiro de dois chifres corresponde ao urso que "se levantou sobre um de seus lados" (Daniel 7:5). Ambos representam a Medo-Pérsia, com a Pérsia (o lado mais forte) assumindo a supremacia.</p>
+                <p style="margin-top: 10px;"><strong>Confirmação do anjo Gabriel:</strong> "Aquele carneiro com dois chifres, que viste, são os reis da Média e da Pérsia" (Daniel 8:20).</p>
+            </div>
+        </div>
+
+        <!-- O Bode (Grécia) -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🐐</div>
+                <h3>O Bode Peludo</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 2</span>
+                <div class="pergunta-texto">Qual foi o segundo animal visto por Daniel? Daniel 8:5</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(2)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito2">
+                    <strong>Referência:</strong> "Estando eu considerando, eis que um bode peludo vinha do ocidente sobre toda a terra, mas sem tocar no chão; e este bode tinha um chifre notável entre os olhos." <strong>O bode representa a Grécia (Daniel 8:21). O fato de não tocar o chão está em paralelo com as quatro asas do leopardo (Daniel 7:6), significando a velocidade das conquistas de Alexandre, o Grande.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 3</span>
+                <div class="pergunta-texto">O que aconteceu em seguida com os dois animais? Daniel 8:6, 7</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(3)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito3">
+                    <strong>Referência:</strong> "Dirigiu-se ao carneiro que tinha os dois chifres... correu contra ele com todo o furor da sua força. Vi-o chegar perto do carneiro, e, enfurecendo-se contra ele, feriu-o e lhe quebrou os dois chifres." <strong>Alexandre travou três batalhas até vencer Dario III: Grânico (334 a.C.), Issos (333 a.C.) e Arbela/Gaugamela (331 a.C.). O ano 331 a.C. assinala o fim da Medo-Pérsia e o início do domínio grego.</strong>
+                </div>
+            </div>
+            
+            <div class="versiculo-destaque">
+                "O bode peludo é o rei da Grécia; o chifre grande entre os olhos é o primeiro rei."
+                <span class="versiculo-ref">Daniel 8:21</span>
+            </div>
+        </div>
+
+        <!-- Tabela Comparativa -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📊</div>
+                <h3>Comparação: Capítulo 7 vs Capítulo 8</h3>
+            </div>
+            
+            <div class="tabela-comparativa">
+                <table>
+                    <tr>
+                        <th>Capítulo 7</th>
+                        <th>Capítulo 8</th>
+                        <th>Império</th>
+                        <th>Período</th>
+                    </tr>
+                    <tr>
+                        <td>Urso com três costelas</td>
+                        <td>Carneiro com dois chifres</td>
+                        <td>Medo-Pérsia</td>
+                        <td>539-331 a.C.</td>
+                    </tr>
+                    <tr>
+                        <td>Leopardo com quatro asas e quatro cabeças</td>
+                        <td>Bode com chifre notável (depois quatro chifres)</td>
+                        <td>Grécia</td>
+                        <td>331-168 a.C.</td>
+                    </tr>
+                    <tr>
+                        <td>Animal terrível com dez chifres</td>
+                        <td>Chifre pequeno (mencionado em 8:9)</td>
+                        <td>Roma (Imperial e Papal)</td>
+                        <td>168 a.C.-1798 d.C.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Os Quatro Chifres -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔢</div>
+                <h3>Os Quatro Chifres</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 4</span>
+                <div class="pergunta-texto">Depois de sair vitorioso, o que aconteceu com o grande chifre do bode? Daniel 8:8, 22</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(4)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito4">
+                    <strong>Referência:</strong> "O bode se engrandeceu sobremaneira; mas, estando na sua maior força, quebrou-se-lhe o grande chifre, e em seu lugar saíram quatro chifres notáveis, para os quatro ventos do céu." <strong>O grande chifre (Alexandre, o Grande) quebrou-se com sua morte em 323 a.C. Seu império foi dividido entre seus quatro generais: Ptolomeu (Egito), Selêuco (Síria), Lisímaco (Trácia) e Cassandro (Macedônia).</strong>
+                </div>
+            </div>
+            
+            <div class="destaque-box">
+                <p><strong>Os quatro generais de Alexandre:</strong></p>
+                <ul style="color: #ddd; margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Ptolomeu</strong> - Governou o Egito</li>
+                    <li><strong>Selêuco</strong> - Governou a Síria e a Ásia Menor</li>
+                    <li><strong>Lisímaco</strong> - Governou a Trácia</li>
+                    <li><strong>Cassandro</strong> - Governou a Macedônia e a Grécia</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- O Chifre Pequeno (Roma) -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🔴</div>
+                <h3>O Chifre Pequeno</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 5</span>
+                <div class="pergunta-texto">Que novo elemento surge na visão de Daniel e o que ele faria? Daniel 8:9-12, 23-25</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="4"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(5)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito5">
+                    <strong>Referência:</strong> "De um deles saiu um chifre pequeno, o qual cresceu muito para o sul, para o oriente e para a terra gloriosa... se engrandeceu até ao exército do céu; e a alguns do exército e das estrelas lançou por terra e os pisou. Sim, se engrandeceu até ao príncipe do exército; e tirou-lhe o sacrifício contínuo, e o lugar do seu santuário foi deitado abaixo." <strong>O chifre pequeno representa Roma, em suas duas fases: Imperial (crescimento horizontal) e Papal (crescimento vertical).</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crescimento Horizontal e Vertical -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">📈</div>
+                <h3>O Crescimento do Chifre Pequeno</h3>
+            </div>
+            
+            <div class="crescimento-grid">
+                <div class="crescimento-card horizontal">
+                    <h5>📌 CRESCIMENTO HORIZONTAL (Roma Imperial)</h5>
+                    <p><strong>Para o sul:</strong> Roma conquistou a Península Itálica e as ilhas do Mediterrâneo (334-202 a.C.).</p>
+                    <p><strong>Para o oriente:</strong> Conquista da Grécia, Macedônia, Ásia Menor e Síria (168 a.C.).</p>
+                    <p><strong>Terra gloriosa:</strong> Conquista da Gália, Britânia e todo o continente europeu.</p>
+                </div>
+                
+                <div class="crescimento-card vertical">
+                    <h5>📌 CRESCIMENTO VERTICAL (Roma Papal)</h5>
+                    <p><strong>Contra o exército do céu:</strong> Perseguição aos santos (Daniel 8:10, 24).</p>
+                    <p><strong>Contra o Príncipe:</strong> Ataca a Cristo, substituindo Seu ministério celestial por tradições humanas.</p>
+                    <p><strong>Tira o contínuo:</strong> Substitui o sacrifício de Cristo pela missa e a mediação de Cristo pela mediação de santos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- O Ataque ao Santuário -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">🏛️</div>
+                <h3>O Ataque ao Santuário e à Lei</h3>
+            </div>
+            
+            <div class="destaque-box">
+                <p>A expressão hebraica <strong>TAMID</strong> ("sacrifício contínuo" ou "contínuo") refere-se a todas as cerimônias do santuário que apontavam para Cristo. O papado atacou esse ministério ao:</p>
+                
+                <ul style="color: #ddd; margin-left: 20px; margin-top: 15px; line-height: 1.8;">
+                    <li>Substituir o sacerdócio de Cristo por sacerdotes humanos</li>
+                    <li>Substituir o sacrifício único de Cristo pela missa (sacrifício repetido)</li>
+                    <li>Substituir a mediação de Cristo pela mediação de Maria e dos santos</li>
+                    <li>Afirmar que o papa é "cabeça da igreja" e "vigário de Cristo" na terra</li>
+                </ul>
+                
+                <p style="margin-top: 15px;">Como escreveu Paulo: <strong>"O qual se opõe e se levanta contra tudo que se chama Deus ou é objeto de culto, a ponto de assentar-se no santuário de Deus, ostentando-se como se fosse o próprio Deus" (2 Tessalonicenses 2:4).</strong></p>
+            </div>
+        </div>
+
+        <!-- As 2.300 Tardes e Manhãs -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>As 2.300 Tardes e Manhãs</h3>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 6</span>
+                <div class="pergunta-texto">Até quando durariam os ataques do chifre pequeno ao povo de Deus e Sua Lei? Daniel 8:13, 14</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(6)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito6">
+                    <strong>Referência:</strong> "Até duas mil e trezentas tardes e manhãs; e o santuário será purificado." <strong>Esta é a profecia das 2.300 tardes e manhãs, que estudaremos em detalhes nas próximas lições. Assim como a purificação do santuário terrestre representava um juízo, ao término deste período o santuário celestial seria purificado e o chifre pequeno seria julgado.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 7</span>
+                <div class="pergunta-texto">Quando Daniel quis saber o significado da visão, qual foi a resposta que o anjo Gabriel lhe deu? Daniel 8:16-19</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(7)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito7">
+                    <strong>Referência:</strong> "Entendi, filho do homem, porque esta visão se refere ao tempo do fim... Eis que eu te farei saber o que há de acontecer no último tempo da ira, porque ela se refere ao tempo determinado do fim." <strong>As expressões "tempo do fim" e "tempo determinado do fim" mostram que certas profecias de Daniel aplicam-se exclusivamente aos nossos dias.</strong>
+                </div>
+            </div>
+            
+            <div class="pergunta-item">
+                <span class="pergunta-numero">Pergunta 8</span>
+                <div class="pergunta-texto">O anjo explicou alguns elementos da visão, mas qual a parte que Daniel não entendeu? Daniel 8:26, 27</div>
+                
+                <div class="pergunta-aberta">
+                    <textarea placeholder="Escreva sua resposta aqui..." rows="3"></textarea>
+                </div>
+                
+                <button class="btn-resposta" onclick="mostrarGabarito(8)">Ver referência</button>
+                
+                <div class="gabarito" id="gabarito8">
+                    <strong>Referência:</strong> "A visão da tarde e da manhã, que foi dita, é verdadeira. Tu, porém, guarda a visão, porque se refere a dias distantes. Eu, Daniel, enfraqueci e estive enfermo alguns dias; então, levantei-me e tratei dos negócios do rei. Espantei-me acerca da visão, e não havia quem a entendesse." <strong>Daniel não compreendeu a profecia das 2.300 tardes e manhãs, que seria aberta apenas no tempo do fim.</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha do tempo -->
+        <div class="estudo-section">
+            <div class="section-titulo">
+                <div class="section-icone">⏳</div>
+                <h3>Linha do Tempo</h3>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-ano">334-331 a.C.</span>
+                <span class="timeline-descricao">Batalhas de Alexandre: Grânico, Issos e Gaugamela. Fim da Medo-Pérsia.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">331-323 a.C.</span>
+                <span class="timeline-descricao">Domínio de Alexandre, o Grande (chifre notável).</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">323 a.C.</span>
+                <span class="timeline-descricao">Morte de Alexandre. Império dividido entre quatro generais.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">168 a.C.</span>
+                <span class="timeline-descricao">Roma conquista a Macedônia e torna-se o poder mundial.</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">538 d.C.</span>
+                <span class="timeline-descricao">Início do domínio papal (1.260 anos).</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-ano">1798 d.C.</span>
+                <span class="timeline-descricao">Fim do período papal. Início do tempo do fim.</span>
+            </div>
+        </div>
+
+        <!-- Versículo para memorizar -->
+        <div class="estudo-section">
+            <div class="versiculo-destaque">
+                "Ele se engrandeceu até ao Príncipe do exército; e tirou-lhe o sacrifício contínuo, e o lugar do seu santuário foi deitado abaixo."
+                <span class="versiculo-ref">Daniel 8:11</span>
+            </div>
+        </div>
+
+        <!-- Minha decisão -->
+        <div class="decisao-box">
+            <h4>📝 MINHA DECISÃO</h4>
+            <p style="color: #ddd; margin-bottom: 20px; text-align: center;">Depois de compreender os simbolismos de Daniel 8 e as ações do papado contra Deus, Seu povo e Sua verdade, desejo tomar as seguintes decisões:</p>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao1">
+                <label for="decisao1">Adorarei apenas a Deus e confiarei somente em Cristo como meu intercessor junto ao Pai.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao2">
+                <label for="decisao2">Praticarei, por amor a Cristo e pelo poder dEle, todas as verdades que aprendi, principalmente os eternos princípios da Lei de Deus.</label>
+            </div>
+            
+            <div class="decisao-opcao">
+                <input type="checkbox" id="decisao3">
+                <label for="decisao3">Buscarei, de todo coração, alertar os sinceros filhos de Deus que ainda não compreenderam as verdades bíblicas, e confiam em obras humanas para sua salvação.</label>
+            </div>
+        </div>
+
+        <!-- Compromisso de fé -->
+        <div class="compromisso-box">
+            <h4>📝 Compromisso de fé</h4>
+            <div class="compromisso-texto">
+                "Reconheço que Cristo é meu único Sumo Sacerdote e que Seu sacrifício foi único e perfeito. Não confio em obras humanas para minha salvação, mas somente na graça de Jesus."
+            </div>
+            
+            <div class="compromisso-campos">
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>Data:</label>
+                    <input type="text" id="data" placeholder="__/__/____">
+                </div>
+            </div>
+            
+            <button class="btn-salvar" onclick="salvarCompromisso()">Assumir este compromisso</button>
+            <p id="mensagem-compromisso" style="margin-top: 15px; color: #4CAF50; display: none;">✓ Compromisso registrado!</p>
+        </div>
+
+        <!-- Navegação entre temas -->
+        <div class="navegacao-temas">
+            <a href="tema2-9.html" class="btn-nav">← Tema anterior</a>
+            <a href="profecias-daniel.html" class="btn-nav">Voltar ao menu</a>
+            <a href="tema2-11.html" class="btn-nav">Próximo tema →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Caminho da Revelação - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">"Até duas mil e trezentas tardes e manhãs; e o santuário será purificado" - Daniel 8:14</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o gabarito
+        function mostrarGabarito(numero) {
+            const gabarito = document.getElementById('gabarito' + numero);
+            gabarito.classList.toggle('mostrar');
+        }
+
+        // Função para selecionar opção
+        function selecionarOpcao(elemento, pergunta, opcao) {
+            const radio = elemento.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+                
+                // Pequeno feedback visual
+                elemento.style.backgroundColor = 'rgba(201, 160, 94, 0.2)';
+                setTimeout(() => {
+                    elemento.style.backgroundColor = '';
+                }, 200);
+            }
+        }
+
+        // Função para salvar compromisso
+        function salvarCompromisso() {
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            
+            if (nome && data) {
+                document.getElementById('mensagem-compromisso').style.display = 'block';
+                
+                // Salvar no localStorage
+                const compromisso = {
+                    nome: nome,
+                    data: data,
+                    tema: "Um Carneiro e um Bode",
+                    dataRegistro: new Date().toLocaleString()
+                };
+                
+                localStorage.setItem('compromisso_daniel10', JSON.stringify(compromisso));
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem-compromisso').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, preencha seu nome e a data.');
+            }
+        }
+
+        // Carregar dados salvos (se houver)
+        document.addEventListener('DOMContentLoaded', function() {
+            const compromissoSalvo = localStorage.getItem('compromisso_daniel10');
+            if (compromissoSalvo) {
+                const dados = JSON.parse(compromissoSalvo);
+                document.getElementById('nome').value = dados.nome || '';
+                document.getElementById('data').value = dados.data || '';
+            }
+            
+            // Auto preencher a data atual
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+            const ano = hoje.getFullYear();
+            
+            if (!document.getElementById('data').value) {
+                document.getElementById('data').value = `${dia}/${mes}/${ano}`;
+            }
+        });
+    </script>
+</body>
+</html>
